@@ -1,0 +1,17 @@
+library_info
+pdt_info
+pctsv_info
+exam_schedule
+class_schedule
+course_regis
+restroom_location
+canteen_info
+parking_info
+building_info
+resting_area
+student_certificate
+student_card
+academic_transcript
+activities transcript
+gym_info
+medical_room_info

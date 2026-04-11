@@ -19,7 +19,7 @@ ARCampusExplorer/Build/
 ARCampusExplorer/Builds/
 ARCampusExplorer/Logs/
 ARCampusExplorer/UserSettings/
-
+ARCampusExplorer/.utmp/
 # Unity generated files
 *.csproj
 *.unityproj
