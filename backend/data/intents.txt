@@ -8,9 +8,9 @@ restroom_location
 canteen_info
 parking_info
 building_info
+room_location
 resting_area
 student_certificate
-student_card
 academic_transcript
 activities transcript
 gym_info
