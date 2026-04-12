@@ -1,0 +1,142 @@
+{
+  "library_info": {
+    "info": "Vị trí: lầu 1 dãy C.\n Thời gian mở cửa: Thứ 2 - Thứ 7 từ 7h30 - 16h.\n Lưu ý: Cần mang thẻ sinh viên.",
+    "links": ["https://glib.hcmus.edu.vn/vi/contact"],
+    "action": null
+  },
+  "parking_info": {
+    "info": "Có 2 bãi giữ xe:\n- Bãi xe ở Cổng chính.\n- Bãi xe ở Cổng sau).\nPhí gửi xe: 3.000đ/lượt (4.000đ sau 17h).",
+    "links": [],
+    "action": null
+  },
+  "medical_room_info": {
+    "info": "Vị trí: phòng 102 Tòa E.\n Thời gian mở: Thứ 2 - Thứ 7 từ 7h30 - 16h",
+    "links": [],
+    "action": null  
+  },
+  "pdt_info": {
+    "info": {
+        "thông tin chung": "quản lý chương trình đào tạo các khoa, giải đáp thắc mắc sinh viên về đăng ký môn học.",
+        "Vị trí": "Tầng 1 nhà điều hành",
+        "Thời gian hoạt động": "Thứ 2 - Thứ 7 từ 7h30 - 16h"  
+    },
+    "links": ["https://hcmus.edu.vn/phong-dao-tao/"],
+    "email": ["pdt_khtn@hcmus.edu.vn"],
+    "action": null
+    },
+  "pctsv_info": {
+    "info": {
+        "thông tin chung": "có chức năng tham mưu và giúp Hiệu trưởng xây dựng các kế hoạch, biện pháp tổ chức thực hiện các hoạt động nhằm giáo dục về chính trị, tư tưởng cho sinh viên; xây dựng các quy chế, quy định và kế hoạch tổ chức quản lý sinh viên; phục vụ quyền lợi chính đáng của sinh viên; tổ chức giám sát, kiểm tra, đánh giá kết quả thực hiện công tác sinh viên theo nhiệm vụ được giao.",
+        "Vị trí": "Tầng 1 nhà điều hành",
+        "Thời gian hoạt động": "Thứ 2 - Thứ 7 từ 7h30 - 16h"  
+    },
+    "links": ["https://hcmus.edu.vn/phong-cong-tac-sinh-vien/"],
+    "email": ["congtacsinhvien@hcmus.edu.vn"],
+    "action": null
+    },
+  "exam_schedule": {
+    "info": "Xem trên Portal sinh viên",
+    "links": ["https://portal.hcmus.edu.vn/"],
+    "action": null
+    },
+  "class_schedule": {
+    "info": "Xem trên Portal sinh viên mục ĐKHP - KQĐKHP",
+    "links": ["https://portal.hcmus.edu.vn/"],
+    "action": null
+    },
+  "course_regis": {
+    "info": "Đăng ký theo lịch của phòng đào tạo trên Portal.\n Cách thức: vào mục ĐKHP - ĐKHP",
+    "links": ["https://portal.hcmus.edu.vn/"],
+    "action": null
+    },
+
+  "restroom_location": {
+    "info": {
+      "chung": "Hầu hết các tòa nhà trong campus đều bố trí nhà vệ sinh ở mỗi tầng. Bạn có thể tìm thấy ở gần khu vực cầu thang hoặc cuối hành lang.",
+      "tòa a": "Thông tin đang được cập nhật.",
+      "tòa b": "Thông tin đang được cập nhật.",
+      "tòa c": "Nhà vệ sinh nằm ở dưới tầng hầm tòa C.",
+      "tòa d": "Nhà vệ sinh nằm tại lầu 2 của tòa nhà.",
+      "tòa e": "Cầu thang số 1: có tại tầng 1 và tầng 3. Cầu thang số 2: có tại tầng hầm và tầng 3.",
+      "tòa f": "Thông tin đang được cập nhật.",
+      "tòa g": "Thông tin đang được cập nhật."
+    },
+    "links": [],
+    "action": null
+  },
+  "building_info": {
+    "info": {
+      "chung": "Campus bao gồm các dãy nhà từ A đến G phục vụ cho công tác giảng dạy, hành chính và nghiên cứu.",
+      "tòa a": "Khu vực hành chính tập trung và Thư viện trung tâm.",
+      "tòa b": "Khu vực các phòng máy tính và phòng thực hành chuyên sâu.",
+      "tòa c": "Khu giảng đường chính cho các môn lý thuyết.",
+      "tòa d": "Khu vực văn phòng khoa và các phòng học chức năng.",
+      "tòa e": "Tòa nhà đa năng với hệ thống phòng học hiện đại.",
+      "tòa f": "Khu vực dành cho các phòng thí nghiệm và nghiên cứu khoa học.",
+      "tòa g": "Khu vực giảng đường mới và các đơn vị liên kết."
+    },
+    "links": [],
+    "action": null
+  },
+  "room_location": {
+    "info": {
+      "chung": "Số phòng học thường được đánh dấu theo quy tắc: Chữ cái tòa nhà + Số tầng + Số thứ tự phòng.",
+      "nhà điều hành": "Hướng dẫn vị trí các phòng tại Nhà điều hành",
+      "tòa a": "Hướng dẫn vị trí các phòng tại tòa A.",
+      "tòa b": "Hướng dẫn vị trí các phòng tại tòa B.",
+      "tòa c": "Hướng dẫn vị trí các phòng tại tòa C.",
+      "tòa d": "Hướng dẫn vị trí các phòng tại tòa D.",
+      "tòa e": "Hướng dẫn vị trí các phòng tại tòa E.",
+      "tòa f": "Hướng dẫn vị trí các phòng tại tòa F.",
+      "tòa g": "Hướng dẫn vị trí các phòng tại tòa G."
+    },
+    "links": [],
+    "action": null
+  },
+  "resting_area": {
+    "info": {
+      "chung": "Là các phòng có treo bảng 'Phòng nghỉ trưa'.\n Thời gian mở: từ 11h20 - 12h20",
+      "nhà điều hành": "Tầng 5: dành cho nữ, Tầng 6: dành cho nam",
+      "tòa a": "Khu vực nghỉ trưa tại tòa A.",
+      "tòa b": "Khu vực nghỉ trưa tại tòa B.",
+      "tòa c": "Khu vực nghỉ trưa tại tòa C.",
+      "tòa d": "Khu vực nghỉ trưa tại tòa D.",
+      "tòa e": "Khu vực nghỉ trưa tại tòa E.",
+      "tòa f": "Khu vực nghỉ trưa tại tòa F.",
+      "tòa g": "Khu vực nghỉ trưa tại tòa G."
+    },
+    "links": [],
+    "action": null
+  },
+
+  "student_certificate": {
+    "info": "",
+    "links": ["https://hcmus.edu.vn/quytrinh-bieumau/"],
+    "action": null
+    },
+  "academic_transcript": {
+    "info": "",
+    "links": [],
+    "action": null
+    },
+  "activities_transcript": {
+    "info": "",
+    "links": [],
+    "action": null
+    },
+  "gym_info": {
+    "info": "Nhà thể dục nằm ở giữa tòa E và F, gần bãi giữ xe sau.",
+    "links": [],
+    "action": null
+    },
+  "canteen_info": {
+    "info": "Vị trí: Sau tòa D. Có bán đồ ăn sáng, trưa và các loại đồ uống",
+    "links": [],
+    "action": null
+    },
+
+
+  "fallback": {
+    "info": "Không biết thông tin"
+  }
+}

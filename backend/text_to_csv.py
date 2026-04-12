@@ -1,7 +1,7 @@
 import csv
 
-input_file = "data/data.txt"
-output_file = "data/data.csv"
+input_file = "data/NewData.txt"
+output_file = "data/NewData.csv"
 
 with open(input_file, "r", encoding="utf-8") as f_in, \
      open(output_file, "w", encoding="utf-8-sig", newline="") as f_out:
@@ -16,8 +16,8 @@ with open(input_file, "r", encoding="utf-8") as f_in, \
         if not line:
             continue
 
-        # tách theo dấu phẩy đầu tiên
-        parts = line.split(",", 1)
+        # tách theo dấu phẩy đầu tiên từ bên phải
+        parts = line.rsplit(",", 1)
 
         if len(parts) == 2:
             text = parts[0].strip()
