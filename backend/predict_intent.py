@@ -24,7 +24,7 @@ data = np.load("data/intent_vectors.npz", allow_pickle=True)
 labels = data["labels"]
 vectors = data["vectors"]  # shape (num_intents, 384)
 
-def predict_intent(query, top_k=5):
+def predict_intent(query, top_k=3):
     query = data_processing(query)
     query_emb = model.encode([query], normalize_embeddings=True)
 
@@ -36,17 +36,8 @@ def predict_intent(query, top_k=5):
 
     results = []
     for idx in top_indices:
-        results.append({
-            "intent": labels[idx],
-            "score": float(scores[0][idx])
-        })
+        results.append(labels[idx])
 
     return results
 
-request = input("Question: ")
-
-best_intent = predict_intent(request)
-
-print(best_intent)
-
-
+print(predict_intent("Thư viện ở đâu vậy"))
