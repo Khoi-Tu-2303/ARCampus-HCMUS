@@ -2,6 +2,7 @@
 # 🔥 Python / Backend
 #################################
 backend/venv/
+backend/key/
 __pycache__/
 *.pyc
 *.pyo
