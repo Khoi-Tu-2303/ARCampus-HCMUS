@@ -26,6 +26,7 @@ def chatbot(user_input):
     }
     payload = {
     "model": "google/gemma-3n-e2b-it:free",
+    "temperature": 0.2,
     "messages": [
         {
             "role": "user",
