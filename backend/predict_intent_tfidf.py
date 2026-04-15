@@ -24,3 +24,22 @@ def predict(text, k=3):
 
     return [model.classes_[i] for i in top_idx]
 
+def predict_debug(text, k=3):
+
+    text = preprocess(text)
+
+    vec = vectorizer.transform([text])
+
+    probs = model.predict_proba(vec)[0]
+
+    top_idx = probs.argsort()[::-1][:k]
+
+    results = []
+    for i in top_idx:
+        results.append({
+            "intent": model.classes_[i],
+            "score": float(probs[i])
+        })
+
+    return results
+

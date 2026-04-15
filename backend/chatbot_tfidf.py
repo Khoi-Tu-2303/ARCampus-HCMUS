@@ -68,7 +68,10 @@ def chatbot(user_input):
     response = requests.post(url, headers=headers, json=payload)
 
     data = response.json()
-    print(data)
+    # print(data)
+    # print(response.status_code)   # kiểm tra mã lỗi
+    # print(response.text)          # xem nội dung lỗi
+    # print(response.headers)
     reply = data["choices"][0]["message"]["content"]
     
     return reply

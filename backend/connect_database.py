@@ -18,4 +18,14 @@ def get_info_by_intent(intent: str):
 
     except Exception as e:
         return ""
+
+def update_chatbot_api(data: dict):
+    try:
+        db.collection("api").document("chatbot").set(data, merge=True)
+        return True
+    except Exception as e:
+        print("Error:", e)
+        return False
     
+update = {"name": "ollama", "url" : "abcdeee"}
+update_chatbot_api(update)
