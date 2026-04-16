@@ -1,6 +1,6 @@
 import requests
 from predict_intent_tfidf import predict
-from connect_database import get_info_by_intent, update_chatbot_api
+from connect_database import get_info_by_intent
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 

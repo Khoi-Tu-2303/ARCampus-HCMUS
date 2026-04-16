@@ -40,4 +40,17 @@ def predict_intent(query, top_k=3):
 
     return results
 
+def predict_intent_threshold(query, threshold=0.3):
+    query = data_processing(query)
+    query_emb = model.encode([query], normalize_embeddings=True)
+
+    scores = query_emb @ vectors.T
+    scores = scores[0]
+
+    indices = np.where(scores > threshold)[0]
+
+    results = [labels[idx] for idx in indices]
+
+    return results
+
 print(predict_intent("Thư viện ở đâu vậy"))
