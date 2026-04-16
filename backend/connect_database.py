@@ -26,6 +26,3 @@ def update_chatbot_api(data: dict):
     except Exception as e:
         print("Error:", e)
         return False
-    
-update = {"name": "ollama", "url" : "abcdeee"}
-update_chatbot_api(update)
