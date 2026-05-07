@@ -39,7 +39,7 @@ if __name__ == "__main__":
     embeddings = model.encode(texts, normalize_embeddings=True)
 
     np.savez(
-        "data/intent_vectors_v2.npz",
+        "ai/intent/data/intent_vectors.npz",
         texts=texts,
         labels=labels,
         vectors=embeddings

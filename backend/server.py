@@ -10,6 +10,7 @@ import re
 from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
+
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
 SYSTEM_INSTRUCTION = """
@@ -41,6 +42,7 @@ SYSTEM_INSTRUCTION = """
     - Nhẹ nhàng, rõ ràng, giống người thật
     - Không dài dòng
     """
+    
 LOCATION_TRIGGERS = {
     "TOA_A": ["tòa a", "toà a", "khu a", "dãy a", "nhà a", "phòng a"],
     
