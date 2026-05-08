@@ -3,6 +3,7 @@
 #################################
 backend/venv/
 backend/key/
+backend/campus.db
 __pycache__/
 *.pyc
 *.pyo
