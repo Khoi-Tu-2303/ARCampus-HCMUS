@@ -2,8 +2,7 @@ import json
 import uuid
 
 from database.db import fetch_one, fetch_all, execute_query, get_connection
-from app.utils.mock_ai import mock_answer
-
+from app.utils.chat_ai import get_answer
 
 def _is_guest_id(identifier) -> bool:
     return isinstance(identifier, str) and identifier.startswith('guest_')
@@ -86,7 +85,7 @@ def send_message(conversation_id: str, content: str):
             )
             user_id = cursor.lastrowid
 
-            assistant_content = mock_answer(content)
+            assistant_content = get_answer(conversation_id, content)
             cursor.execute(
                 'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
                 (conversation_id, 'assistant', assistant_content),
