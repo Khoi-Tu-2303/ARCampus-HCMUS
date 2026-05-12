@@ -10,7 +10,7 @@ class FacilityExtractor(BaseExtractor):
 
     FACILITY_MAP: Dict[str, Dict] = {
         "library": {
-            "patterns": ["thư viện", "phòng đọc", "khu thư viện", ],
+            "patterns": ["thư viện", "phòng đọc", "khu thư viện",],
         },
         "canteen": {
             "patterns": ["căn tin", "nhà ăn", "canteen"],
