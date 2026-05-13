@@ -13,21 +13,27 @@ class AcademicExtractor(BaseExtractor):
             "patterns": [
                 "lịch học",
                 "thời khóa biểu",
-                "tkb"
+                "tkb",
+                
+                
             ],
         },
 
         "exam_schedule": {
             "patterns": [
                 "lịch thi",
-                "thi cử"
+                "thi cử",
+                "thời gian thi",
+                "ngày thi"
             ],
         },
 
         "course_registration": {
             "patterns": [
                 "đăng ký học phần",
-                "đăng ký môn"
+                "đăng ký môn",
+                "đkhp",
+                "dkhp"
             ],
         },
 
@@ -35,6 +41,8 @@ class AcademicExtractor(BaseExtractor):
             "patterns": [
                 "môn học",
                 "thông tin môn học",
+                "thông tin môn",
+                "môn gì"
             ],
         },
 
@@ -45,7 +53,10 @@ class AcademicExtractor(BaseExtractor):
                 "ca học",
                 "tiết học",
                 "tiết lý thuyết",
-                "tiết thực hành"
+                "tiết thực hành",
+                "thời gian bắt đầu tiết"
+                "thời gian kết thúc tiết"
+                
             ],
         }
     }

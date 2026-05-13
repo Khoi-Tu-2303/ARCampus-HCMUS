@@ -68,7 +68,9 @@ if __name__ == "__main__":
     keys = [
         "library",
         "canteen",
-        "parking"
+        "parking",
+        "building_a",
+        "building_c"
     ]
 
     result = firebase.get_multiple_descriptions(keys)

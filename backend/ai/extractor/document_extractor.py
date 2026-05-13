@@ -13,14 +13,21 @@ class DocumentServiceExtractor(BaseExtractor):
             "patterns": [
                 "giấy xác nhận sinh viên",
                 "xác nhận sinh viên",
-                "giấy sinh viên"
+                "giấy sinh viên",
+                "giấy cnsv",
+                "giấy chứng nhận sinh viên",
+                "cnsv",
+                "chứng nhận sinh viên",
+                "tạm hoãn nghĩa vụ quân sự",
+                "hoãn nvqs"
             ],
         },
 
         "academic_transcript": {
             "patterns": [
                 "bảng điểm",
-                "bảng điểm học tập"
+                "bảng điểm học tập",
+                "bảng điểm giấy"
             ],
         },
 
@@ -28,7 +35,10 @@ class DocumentServiceExtractor(BaseExtractor):
             "patterns": [
                 "bảng điểm rèn luyện",
                 "giấy rèn luyện",
-                "điểm rèn luyện"
+                "điểm rèn luyện",
+                "giấy chứng nhận điểm rèn luyện",
+                "đrl",
+                "drl"
             ],
         },
 
@@ -37,7 +47,7 @@ class DocumentServiceExtractor(BaseExtractor):
                 "thủ tục",
                 "quy trình",
                 "xin giấy",
-                "đăng ký giấy"
+                "đăng ký giấy",
             ],
         }
     }

@@ -2,7 +2,7 @@ import requests
 from typing import Any
 
 OLLAMA_BASE_URL = "http://localhost:11434"
-DEFAULT_MODEL   = "gemma:2b"          # đổi model tại đây khi cần
+DEFAULT_MODEL   = "qwen2.5:3b"      # đổi model tại đây khi cần ("llama3.2")      
 
 
 class OllamaClient:
