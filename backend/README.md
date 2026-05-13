@@ -11,9 +11,9 @@ pip freeze > requirements.txt //trước khi push lên git
 ## Run
 ```bash
 cd campus_backend
-python -m venv .venv
+python -m venv venv
 # Windows
-.venv\Scripts\activate
+.\venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
 pip install -r requirements.txt

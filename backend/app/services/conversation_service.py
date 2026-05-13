@@ -31,7 +31,7 @@ def create_conversation(owner_id):
             )
         else:
             return None, (400, {'error': 'Invalid user'})
-        return {'id': conv_id, 'title': 'New Conversation'}, None
+        return {'id_conversation': conv_id, 'title': 'New Conversation'}, None
     except Exception:
         return None, (400, {'error': 'Invalid user'})
 
@@ -48,13 +48,25 @@ def get_conversations(owner_id):
                 'SELECT id, conversation_title, created_at FROM conversations WHERE user_id = ? ORDER BY created_at DESC, id DESC',
                 (int(owner_id),),
             )
-
-        return [
-            {'id': row['id'], 'title': row['conversation_title'], 'created_at': row['created_at']}
-            for row in rows
-        ], None
+        return {
+            "conversations": [
+                {
+                    "id_conversation": row["id"],
+                    "title": row["conversation_title"],
+                    "created_at": row["created_at"]
+                }
+                for row in rows
+            ]
+        }, None
+        # return [
+        #     {'id': row['id'], 'title': row['conversation_title'], 'created_at': row['created_at']}
+        #     for row in rows
+        # ], None
     except Exception:
-        return [], None
+        return {
+            "conversations": []
+        }, None
+        # return [], None
 
 
 def get_messages(conversation_id):
@@ -62,15 +74,65 @@ def get_messages(conversation_id):
         return None, (404, {'error': 'Conversation not found'})
 
     rows = fetch_all(
-        'SELECT id, role, content, created_at FROM messages WHERE conversation_id = ? ORDER BY created_at ASC, id ASC',
+        '''
+        SELECT id, conversation_id, role, content, created_at
+        FROM messages
+        WHERE conversation_id = ?
+        ORDER BY created_at ASC, id ASC
+        ''',
         (conversation_id,),
     )
-    return [
-        {'id': row['id'], 'role': row['role'], 'content': row['content'], 'created_at': row['created_at']}
-        for row in rows
-    ], None
+    # return [
+    #     {'id': row['id'], 'role': row['role'], 'content': row['content'], 'created_at': row['created_at']}
+    #     for row in rows
+    # ], None
+    return {
+        'messages': [
+            {
+                'id': row['id'],
+                'conversation_id': row['conversation_id'],
+                'role': row['role'],
+                'content': row['content'],
+                'created_at': row['created_at']
+            }
+            for row in rows
+        ]
+    }, None
 
 
+# def send_message(conversation_id: str, content: str):
+#     if not _conversation_exists(conversation_id):
+#         return None, (404, {'error': 'Conversation not found'})
+
+#     try:
+#         conn = get_connection()
+#         try:
+#             cursor = conn.cursor()
+#             cursor.execute(
+#                 'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
+#                 (conversation_id, 'user', content),
+#             )
+#             user_id = cursor.lastrowid
+
+#             assistant_content = get_answer(conversation_id, content)
+#             cursor.execute(
+#                 'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
+#                 (conversation_id, 'assistant', assistant_content),
+#             )
+#             assistant_id = cursor.lastrowid
+
+#             conn.commit()
+#         finally:
+#             conn.close()
+
+#         return {
+#             'user_message': {'id': user_id, 'role': 'user', 'content': content},
+#             'assistant_message': {'id': assistant_id, 'role': 'assistant', 'content': assistant_content},
+#         }, None
+
+    # except Exception:
+    #     return None, (500, {'error': 'Internal server error'})
+    
 def send_message(conversation_id: str, content: str):
     if not _conversation_exists(conversation_id):
         return None, (404, {'error': 'Conversation not found'})
@@ -79,29 +141,74 @@ def send_message(conversation_id: str, content: str):
         conn = get_connection()
         try:
             cursor = conn.cursor()
+
+            # User message
             cursor.execute(
-                'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
+                '''
+                INSERT INTO messages (conversation_id, role, content)
+                VALUES (?, ?, ?)
+                ''',
                 (conversation_id, 'user', content),
             )
             user_id = cursor.lastrowid
 
+            # Assistant response
             assistant_content = get_answer(conversation_id, content)
+
             cursor.execute(
-                'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
+                '''
+                INSERT INTO messages (conversation_id, role, content)
+                VALUES (?, ?, ?)
+                ''',
                 (conversation_id, 'assistant', assistant_content),
             )
             assistant_id = cursor.lastrowid
 
             conn.commit()
+
+            # Fetch created_at values
+            user_row = cursor.execute(
+                '''
+                SELECT created_at
+                FROM messages
+                WHERE id = ?
+                ''',
+                (user_id,)
+            ).fetchone()
+
+            assistant_row = cursor.execute(
+                '''
+                SELECT created_at
+                FROM messages
+                WHERE id = ?
+                ''',
+                (assistant_id,)
+            ).fetchone()
+
         finally:
             conn.close()
 
         return {
-            'user_message': {'id': user_id, 'role': 'user', 'content': content},
-            'assistant_message': {'id': assistant_id, 'role': 'assistant', 'content': assistant_content},
+            'user_message': {
+                'id': str(user_id),
+                'conversation_id': conversation_id,
+                'role': 'user',
+                'content': content,
+                'created_at': user_row['created_at']
+            },
+
+            'assistant_message': {
+                'id': str(assistant_id),
+                'conversation_id': conversation_id,
+                'role': 'assistant',
+                'content': assistant_content,
+                'created_at': assistant_row['created_at']
+            }
         }, None
-    except Exception:
-        return None, (500, {'error': 'Internal server error'})
+
+    except Exception as e:
+        print(e)
+        return None, (500, {'error': 'Internal server error'})  
 
 
 def rename_conversation(conversation_id: str, title: str):
