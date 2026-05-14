@@ -52,3 +52,139 @@ class OllamaClient:
         except Exception as e:
             print(f"[OllamaClient] Lỗi: {e}")
             return "Đã xảy ra lỗi khi xử lý yêu cầu."
+
+# class QueryRewriter:
+
+#     def __init__(self, llm_client: OllamaClient):
+#         self.llm = llm_client
+
+#     def rewrite(
+#         self,
+#         history: list[dict[str, str]],
+#         current_query: str,
+#     ) -> str:
+
+#         history_text = ""
+
+#         for msg in history:
+#             role = msg["role"].capitalize()
+#             content = msg["content"]
+
+#             history_text += f"{role}: {content}\n"
+
+#         prompt = f"""
+# You are a retrieval query rewriting assistant.
+
+# Your task:
+# Rewrite the current user query into a standalone query
+# using the conversation history.
+
+# IMPORTANT RULES:
+# - DO NOT answer the question
+# - ONLY rewrite it
+# - Resolve pronouns:
+#   it, this, that, they, he, she, there
+# - Keep original meaning
+# - Output ONLY the rewritten query
+
+# Conversation History:
+# {history_text}
+
+# Current Query:
+# {current_query}
+
+# Rewritten Query:
+# """
+
+#         messages = [
+#             {
+#                 "role": "system",
+#                 "content": (
+#                     "You rewrite conversational queries "
+#                     "into standalone retrieval queries."
+#                 )
+#             },
+#             {
+#                 "role": "user",
+#                 "content": prompt
+#             }
+#         ]
+
+#         rewritten_query = self.llm.chat(messages)
+
+#         return rewritten_query.strip()
+
+
+# # =========================================================
+# # TEST
+# # =========================================================
+
+# if __name__ == "__main__":
+
+#     ollama_client = OllamaClient(
+#         model="qwen2.5:3b"
+#     )
+
+#     rewriter = QueryRewriter(
+#         llm_client=ollama_client
+#     )
+
+#     # -------------------------------
+#     # TEST CASE 1
+#     # -------------------------------
+
+#     history = [
+#         {
+#             "role": "user",
+#             "content": "Thư viện trường mở cửa lúc mấy giờ?"
+#         },
+#         {
+#             "role": "assistant",
+#             "content": "Thư viện mở từ 7h đến 21h."
+#         }
+#     ]
+
+#     current_query = "Nó nằm ở đâu?"
+
+#     rewritten = rewriter.rewrite(
+#         history=history,
+#         current_query=current_query
+#     )
+
+#     print("=" * 80)
+#     print("CURRENT QUERY:")
+#     print(current_query)
+
+#     print("\nREWRITTEN QUERY:")
+#     print(rewritten)
+#     print("=" * 80)
+
+#     # -------------------------------
+#     # TEST CASE 2
+#     # -------------------------------
+
+#     history = [
+#         {
+#             "role": "user",
+#             "content": "Ngày mai tôi học môn AI ở phòng B203."
+#         },
+#         {
+#             "role": "assistant",
+#             "content": "Môn AI bắt đầu lúc 7h30."
+#         }
+#     ]
+
+#     current_query = "Tôi đi tới đó như thế nào?"
+
+#     rewritten = rewriter.rewrite(
+#         history=history,
+#         current_query=current_query
+#     )
+
+#     print("=" * 80)
+#     print("CURRENT QUERY:")
+#     print(current_query)
+
+#     print("\nREWRITTEN QUERY:")
+#     print(rewritten)
+#     print("=" * 80)

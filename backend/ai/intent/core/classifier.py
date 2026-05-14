@@ -33,7 +33,12 @@ class IntentClassifier:
             }
 
         return {
-            "intent": self.vector_store.labels[best_index],
+            "intent": self.vector_store.intents[best_index],
+            "target": self.vector_store.targets[best_index],
+            "metadata" : self.vector_store.metadata[best_index],
             "confidence": round(best_score, 4),
             "matched_text": self.vector_store.texts[best_index]
         }
+if __name__ == "__main__":
+    a = IntentClassifier()
+    print(a.predict("hello"))

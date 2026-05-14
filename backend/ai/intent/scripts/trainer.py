@@ -42,13 +42,15 @@ class IntentTrainer:
     def train_and_save(self):
         """Đọc CSV, tạo Embeddings và lưu ra NPZ"""
         print("Starting embedding process...")
-        texts, labels = [], []
+        texts, intents, targets, metadata = [], [], [], []
         
         with open(self.config.CSV_PATH, "r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 texts.append(row["text"])
-                labels.append(row["label"])
+                intents.append(row["intent"])
+                targets.append(row["target"])
+                metadata.append(row["metadata"])
 
         # Encode toàn bộ (batch)
         embeddings = self.embedder.encode_batch(texts)
@@ -59,14 +61,16 @@ class IntentTrainer:
         np.savez(
             self.config.VECTOR_PATH,
             texts=texts,
-            labels=labels,
-            vectors=embeddings
+            intents=intents,
+            vectors=embeddings,
+            targets=targets,
+            metadata=metadata
         )
         print(f"Successfully trained! Saved {len(texts)} samples to {self.config.VECTOR_PATH}.")
         print(f"Embedding shape: {embeddings.shape}")
 
     def run_pipeline(self):
-        self.txt_to_csv()
+        # self.txt_to_csv()
         self.train_and_save()
 
 if __name__ == "__main__":

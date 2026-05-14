@@ -14,15 +14,15 @@ Luồng:
 """
 
 from ai.intent.core.classifier import IntentClassifier
-from ai.extractor.facility_extractor import FacilityExtractor
-from ai.extractor.academic_extractor import AcademicExtractor
-from ai.extractor.document_extractor import DocumentServiceExtractor
+# from ai.extractor.facility_extractor import FacilityExtractor
+# from ai.extractor.academic_extractor import AcademicExtractor
+# from ai.extractor.document_extractor import DocumentServiceExtractor
 from ai.agents.agent_factory import AgentFactory
 from ai.agents.conversation_memory import ConversationMemoryManager
 from firebase.firebase_service import FirebaseService
 
 # ─── Số lượng tin nhắn lịch sử mặc định ──────────────────────
-HISTORY_K = 10
+HISTORY_K = 5
 
 
 class ChatbotPipeline:
@@ -37,11 +37,11 @@ class ChatbotPipeline:
         self.classifier = IntentClassifier()
 
         # Step 2 – Extractors (map intent → extractor instance)
-        self._extractors = {
-            "facility_query":  FacilityExtractor(),
-            "academic_query":  AcademicExtractor(),
-            "document_service":  DocumentServiceExtractor(),
-        }
+        # self._extractors = {
+        #     "facility_query":  FacilityExtractor(),
+        #     "academic_query":  AcademicExtractor(),
+        #     "document_service":  DocumentServiceExtractor(),
+        # }
 
         # Step 3 – Memory manager
         self.firebase = FirebaseService()
@@ -64,8 +64,12 @@ class ChatbotPipeline:
         """
 
         # ── Step 1: Classify intent ────────────────────────────
+        print("[CHATBOT PILELINE] 0")
         classification = self.classifier.predict(message)
         intent: str = classification.get("intent", "fallback")
+        print("[CHATBOT PILELINE] 1")
+        keys: list = [classification.get("target", "")]
+        print("[CHATBOT PILELINE] 2")
         print("[DEBUG] [CHATBOTPIPELINE] Intent = ", intent)
         
         # Trường hợp nâng cấp sau
@@ -74,8 +78,8 @@ class ChatbotPipeline:
             return "Tính năng chưa cập nhật ..."
         
         # ── Step 2: Extract keys ───────────────────────────
-        extractor = self._extractors.get(intent)
-        keys: list[str] = extractor.extract(message) if extractor else []
+        # extractor = self._extractors.get(intent)
+        # keys: list[str] = extractor.extract(message) if extractor else []
         print("[DEBUG] [CHATBOTPIPELINE] Keys = ", keys)
         
         # ── Step 3: Load context từ Firebase ──────────────────
