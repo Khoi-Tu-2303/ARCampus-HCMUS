@@ -64,13 +64,13 @@ class ChatbotPipeline:
         """
 
         # ── Step 1: Classify intent ────────────────────────────
-        print("[CHATBOT PILELINE] 0")
+        
         classification = self.classifier.predict(message)
         intent: str = classification.get("intent", "fallback")
-        print("[CHATBOT PILELINE] 1")
         keys: list = [classification.get("target", "")]
-        print("[CHATBOT PILELINE] 2")
-        print("[DEBUG] [CHATBOTPIPELINE] Intent = ", intent)
+        matched_text: str = classification.get("matched_text", None)
+        print("[DEBUG] [CHATBOTPIPELINE] Intent =", intent)
+        print("[DEBUG] [CHATBOTPIPELINE] Mathced text =", matched_text)
         
         # Trường hợp nâng cấp sau
         if intent in ["schedule_management", "navigation"]:
