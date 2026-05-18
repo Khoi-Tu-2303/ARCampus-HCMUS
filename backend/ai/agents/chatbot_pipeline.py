@@ -67,7 +67,12 @@ class ChatbotPipeline:
         
         classification = self.classifier.predict(message)
         intent: str = classification.get("intent", "fallback")
-        keys: list = [classification.get("target", "")]
+        
+        keys: list = []
+        key = classification.get("target", "")
+        if key != "":
+            keys.append(key)
+            
         matched_text: str = classification.get("matched_text", None)
         print("[DEBUG] [CHATBOTPIPELINE] Intent =", intent)
         print("[DEBUG] [CHATBOTPIPELINE] Mathced text =", matched_text)

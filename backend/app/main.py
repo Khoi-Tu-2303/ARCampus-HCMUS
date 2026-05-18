@@ -25,6 +25,8 @@ load_dotenv()
 from app.routes.auth import router as auth_router
 from app.routes.conversations import router as conv_router
 from app.tunnel import CloudflareTunnel, publish_url
+from ai.intent.core.vector_store import VectorStore
+from ai.intent.core.embedder import TextEmbedder
 
 # ------------------------------------------------------------------ #
 #  Logging                                                             #
@@ -81,6 +83,16 @@ tunnel = CloudflareTunnel(
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # ── Startup ──────────────────────────────────────────────────
+    logger.info("Loading AI resources...")
+
+    # Load embedding model vào RAM
+    embedder = TextEmbedder()
+
+    # Load vector DB vào RAM
+    vector_store = VectorStore()
+
+    logger.info("AI resources loaded successfully.")
+
     logger.info("Starting Cloudflare Tunnel...")
     tunnel.start()
     yield
