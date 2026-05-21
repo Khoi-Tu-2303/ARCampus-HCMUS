@@ -9,6 +9,7 @@ __pycache__/
 *.pyo
 *.pyd
 
+
 .env
 
 #################################
@@ -49,3 +50,9 @@ ARCampusExplorer/Assets/Firebase/Plugins/x86_64/*.so
 #################################
 .DS_Store
 Thumbs.db
+
+#################################
+# Phuong's
+#################################
+backend/seed/
+backend/key/

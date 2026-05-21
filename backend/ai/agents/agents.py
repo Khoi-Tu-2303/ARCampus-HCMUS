@@ -30,7 +30,9 @@ Quy tắc:
 - Trả lời chính xác câu hỏi, không hỏi thêm, không trả lời dư thừa (ví dụ: câu trả hỏi về thư viện. Câu trả lời chỉ có thông tin của thư viện).
 - Trả lời ngắn gọn, chính xác, thân thiện.
 - Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Không bịa đặt thông tin không có trong context."""
+- Không bịa đặt thông tin không có trong context.
+- Không sử dụng emoji và các ký tự đặc biệt.
+- Trả lời bằng ngôn ngữ tương ứng với câu hỏi. Ví dụ ngôn ngữ của câu hỏi là tiếng Anh thì câu trả lời là tiếng Anh"""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -53,7 +55,9 @@ thời khóa biểu, lịch thi, đăng ký học phần, thông tin môn học,
 Quy tắc:
 - Hướng dẫn sinh viên tra cứu thông tin trên hệ thống nhà trường khi cần.
 - Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Trả lời ngắn gọn, rõ ràng."""
+- Trả lời ngắn gọn, rõ ràng.
+- Không sử dụng emoji và các ký tự đặc biệt.
+- Trả lời bằng ngôn ngữ tương ứng với câu hỏi. Ví dụ ngôn ngữ của câu hỏi là tiếng Anh thì câu trả lời là tiếng Anh"""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -77,7 +81,9 @@ Quy tắc:
 - Cung cấp thông tin lịch chính xác và đầy đủ.
 - Nếu có thông tin do sinh viên cung cấp trong lịch sử trò chuyện, có thể dùng để trả lời nhưng phải nhắc nhở kiểm tra lại trên cổng thông tin chính thức.
 - Nhắc nhở sinh viên kiểm tra lại trên cổng thông tin chính thức.
-- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật"."""
+- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
+- Không sử dụng emoji và các ký tự đặc biệt.
+- Trả lời bằng ngôn ngữ tương ứng với câu hỏi. Ví dụ ngôn ngữ của câu hỏi là tiếng Anh thì câu trả lời là tiếng Anh"""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -101,7 +107,9 @@ Quy tắc:
 - Hướng dẫn rõ ràng từng bước thủ tục.
 - Nêu rõ thời gian xử lý nếu biết.
 - Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Hướng dẫn sinh viên liên hệ phòng ban phụ trách nếu cần."""
+- Hướng dẫn sinh viên liên hệ phòng ban phụ trách nếu cần.
+- Không sử dụng emoji và các ký tự đặc biệt.
+- Trả lời bằng ngôn ngữ tương ứng với câu hỏi. Ví dụ ngôn ngữ của câu hỏi là tiếng Anh thì câu trả lời là tiếng Anh"""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -123,7 +131,9 @@ trong khuôn viên trường: vị trí tòa nhà, phòng học, phòng ban, cơ
 Quy tắc:
 - Mô tả đường đi rõ ràng, từng bước.
 - Sử dụng các mốc dễ nhận biết (cổng trường, tòa nhà, sân...).
-- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật"."""
+- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
+- Không sử dụng emoji và các ký tự đặc biệt.
+- Trả lời bằng ngôn ngữ tương ứng với câu hỏi. Ví dụ ngôn ngữ của câu hỏi là tiếng Anh thì câu trả lời là tiếng Anh"""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -143,7 +153,9 @@ Hỗ trợ sinh viên với mọi câu hỏi liên quan đến trường học.
 Quy tắc:
 - Trả lời nhiệt tình, thân thiện.
 - Hướng dẫn sinh viên tới đúng bộ phận/kênh hỗ trợ khi cần.
-- Nếu không biết: thành thật nói "Thông tin đang cập nhật" thay vì bịa đặt."""
+- Nếu không biết: thành thật nói "Thông tin đang cập nhật" không bịa đặt.
+- Không sử dụng emoji và các ký tự không phải tiếng Việt
+- Chỉ trả lời bằng tiếng Việt, trả lời "Tính năng không được hỗ trợ" nếu được yêu cầu trả lời bằng ngôn ngữ khác."""
 
     def _handle(self, input_data: dict) -> str:
         messages = self.build_messages(input_data)
@@ -154,7 +166,7 @@ if __name__ == "__main__":
         # "query": "Tôi muốn mượn sách thì mượn ở đâu?",
         # "query": "Phòng công tác sinh viên ở đâu?",
         # "query": "Không biết phòng công tác sinh viên có link website không?",
-        "query": "Nhà vệ sinh trong tòa C ở đâu?",
+        "query": "Hello",
         
         "contexts": [
             # "Tòa A có các phòng thí nghiệm của các Khoa Vật Lý, Hóa học, Môi Trường, Địa Chất và Sinh Học. Mở cửa vào các giờ thực hành theo thời khóa biểu.",
@@ -175,7 +187,7 @@ if __name__ == "__main__":
         "user_info": "Nguyễn Văn A - MSSV: 20210001 - Khoa CNTT",
         
     }
-    ag = FacilityAgent()
+    ag = GeneralAgent()
     mess = ag.build_messages(input_data)
     print(mess[0]['content'])
     print("-"*7)
