@@ -5,6 +5,14 @@ using TMPro;
 using System.Collections.Generic;
 using System.Linq;
 
+// ✅ TẠO 1 STRUCT ĐỂ LƯU KẾT QUẢ TÌM KIẾM (Cho cả Tòa nhà thật lẫn Phòng ảo)
+public struct SearchResultItem
+{
+    public string DisplayText;
+    public string TargetBuildingName; // Tên tòa nhà để dẫn đường tới
+    public string IndoorDocId;        // ID của phòng (VD: F102, library). Rỗng thì là tòa nhà bthg.
+}
+
 public class SearchPanelController : MonoBehaviour
 {
     public static SearchPanelController Instance;
@@ -22,19 +30,28 @@ public class SearchPanelController : MonoBehaviour
 
     private List<string> _buildingNames = new List<string>(32);
     private List<string> _normalizedNames = new List<string>(32);
-    private List<string> _filteredNames = new List<string>(32);
-
-    private List<string> _recentNames = new List<string>();
-    private List<string> _recommendedNames = new List<string>(4);
+    
+    // ✅ ĐỔI TỪ LIST STRING SANG LIST CỦA STRUCT
+    private List<SearchResultItem> _filteredResults = new List<SearchResultItem>(32);
+    private List<SearchResultItem> _recentResults = new List<SearchResultItem>();
+    private List<SearchResultItem> _recommendedResults = new List<SearchResultItem>(4);
 
     private List<GameObject> _buttonPool = new List<GameObject>(32);
     private List<Button> _buttonComponents = new List<Button>(32);
     private List<TextMeshProUGUI> _buttonTexts = new List<TextMeshProUGUI>(32);
-    void Awake()
+
+    // ✅ BỘ TỪ ĐIỂN MAPPING (Khách gõ chữ bên trái -> Map ra dữ liệu bên phải)
+    private Dictionary<string, (string building, string indoorId, string displayName)> specialAliases = new Dictionary<string, (string, string, string)>()
     {
-        // ✅ THÊM CẢ DÒNG NÀY VÀO AWAKE ĐỂ GÁN INSTANCE
-        Instance = this;
-    }
+        { "thư viện", ("Tòa C", "library", "Thư viện (Tòa C)") },
+        { "library", ("Tòa C", "library", "Thư viện (Tòa C)") },
+        { "căn tin", ("Tòa D", "canteen", "Căn tin (Tòa D)") },
+        { "canteen", ("Tòa D", "canteen", "Căn tin (Tòa D)") },
+        { "nhà ăn", ("Tòa D", "canteen", "Căn tin (Tòa D)") }
+    };
+
+    void Awake() { Instance = this; }
+
     void OnEnable()
     {
         searchInput.onValueChanged.AddListener(OnSearchChanged);
@@ -78,10 +95,13 @@ public class SearchPanelController : MonoBehaviour
 
     void GenerateRecommendations()
     {
-        _recommendedNames.Clear();
+        _recommendedResults.Clear();
         if (_buildingNames.Count == 0) return;
         var randomList = _buildingNames.OrderBy(x => Random.value).Take(4).ToList();
-        _recommendedNames.AddRange(randomList);
+        foreach (var name in randomList)
+        {
+            _recommendedResults.Add(new SearchResultItem { DisplayText = name, TargetBuildingName = name, IndoorDocId = "" });
+        }
     }
 
     string GetBuildingNameFromLocation(LocationData loc)
@@ -107,37 +127,120 @@ public class SearchPanelController : MonoBehaviour
 
     void OnSearchChanged(string keyword)
     {
-        _filteredNames.Clear();
+        _filteredResults.Clear();
 
         if (string.IsNullOrEmpty(keyword))
         {
-            bool hasRecent = _recentNames.Count > 0;
+            bool hasRecent = _recentResults.Count > 0;
             if (recentHeader != null) recentHeader.SetActive(hasRecent);
             if (recommendedHeader != null) recommendedHeader.SetActive(true);
 
-            _filteredNames.AddRange(_recentNames);
-            _filteredNames.AddRange(_recommendedNames);
+            _filteredResults.AddRange(_recentResults);
+            _filteredResults.AddRange(_recommendedResults);
 
-            ShowResults(_filteredNames, true, _recentNames.Count);
+            ShowResults(_filteredResults, true, _recentResults.Count);
         }
         else
         {
             if (recentHeader != null) recentHeader.SetActive(false);
             if (recommendedHeader != null) recommendedHeader.SetActive(false);
 
-            string lkw = keyword.ToLowerInvariant();
+            string lkw = keyword.ToLowerInvariant().Trim();
+            
+            // 1. TÌM THEO TÊN TÒA NHÀ GỐC NHƯ BÌNH THƯỜNG
             for (int i = 0; i < _normalizedNames.Count; i++)
             {
                 if (_normalizedNames[i].Contains(lkw))
-                    _filteredNames.Add(_buildingNames[i]);
+                    _filteredResults.Add(new SearchResultItem { DisplayText = _buildingNames[i], TargetBuildingName = _buildingNames[i], IndoorDocId = "" });
             }
-            ShowResults(_filteredNames, false, 0);
+
+            // 2. KÍCH HOẠT BỘ NÃO TÌM KIẾM PHÒNG/TIỆN ÍCH
+            var indoorMatches = ParseIndoorSearch(lkw);
+            _filteredResults.AddRange(indoorMatches);
+
+            ShowResults(_filteredResults, false, 0);
         }
     }
 
-    void ShowResults(List<string> names, bool isDefaultMode, int recentCount)
+    // ✅ BỘ NÃO PHÂN TÍCH TỪ KHÓA ĐỂ SINH RA KẾT QUẢ ẢO (Magic lies here)
+    List<SearchResultItem> ParseIndoorSearch(string lkw)
     {
-        int needed = names.Count;
+        List<SearchResultItem> list = new List<SearchResultItem>();
+        
+        // 1. Check Tiện ích (Canteen, Thư viện)
+        foreach (var alias in specialAliases)
+        {
+            if (alias.Key.Contains(lkw) || lkw.Contains(alias.Key))
+            {
+                list.Add(new SearchResultItem { 
+                    TargetBuildingName = alias.Value.building, 
+                    IndoorDocId = alias.Value.indoorId, 
+                    DisplayText = alias.Value.displayName 
+                });
+            }
+        }
+
+        string cleanKw = lkw.Replace(" ", "");
+
+        // 2. Check Phòng Học (VD: f102, a205)
+        if (cleanKw.Length >= 2 && cleanKw.Length <= 4)
+        {
+            char buildingChar = char.ToUpper(cleanKw[0]);
+            if (buildingChar >= 'A' && buildingChar <= 'G') // Tòa A đến G
+            {
+                string roomNumber = cleanKw.Substring(1);
+                if (int.TryParse(roomNumber, out _)) // Đảm bảo phần đuôi là số
+                {
+                    string indoorId = $"{buildingChar}{roomNumber}"; // Nặn ra F102
+                    string bName = $"Tòa {buildingChar}";
+                    list.Add(new SearchResultItem {
+                        TargetBuildingName = bName,
+                        IndoorDocId = indoorId,
+                        DisplayText = $"Phòng {indoorId} ({bName})"
+                    });
+                }
+            }
+        }
+
+        // 3. Check Nhà điều hành (VD: dh2.3, dh23)
+        // 3. Check Nhà điều hành (VD: dh2.3, dh23, ndh2.3, nd2.3)
+        if (cleanKw.StartsWith("dh") || cleanKw.StartsWith("đh") || cleanKw.StartsWith("ndh") || cleanKw.StartsWith("nđh") || cleanKw.StartsWith("nd"))
+        {
+            // Bóc hết đống chữ cái rườm rà ra, chỉ chừa lại phần số
+            string nums = cleanKw.Replace("dh", "").Replace("đh", "").Replace("ndh", "").Replace("nđh", "").Replace("nd", "")
+                                 .Replace(".", "_").Replace("-", "_");
+
+            if (!string.IsNullOrEmpty(nums))
+            {
+                if (nums.Contains("_")) // User gõ dh2_3 hoặc nd6.3
+                {
+                    list.Add(new SearchResultItem
+                    {
+                        TargetBuildingName = "Nhà điều hành",
+                        IndoorDocId = $"DH_{nums}", // Ép thành format DH_2_3 để map với Firebase
+                        DisplayText = $"Phòng {nums.Replace("_", ".")} (Nhà điều hành)"
+                    });
+                }
+                else if (nums.Length >= 2) // User gõ lười dh23 hoặc nd63 -> tự bóc tách thành 6 và 3
+                {
+                    string floor = nums.Substring(0, 1);
+                    string room = nums.Substring(1);
+                    list.Add(new SearchResultItem
+                    {
+                        TargetBuildingName = "Nhà điều hành",
+                        IndoorDocId = $"DH_{floor}_{room}",
+                        DisplayText = $"Phòng {floor}.{room} (Nhà điều hành)"
+                    });
+                }
+            }
+        }
+
+        return list;
+    }
+
+    void ShowResults(List<SearchResultItem> results, bool isDefaultMode, int recentCount)
+    {
+        int needed = results.Count;
 
         while (_buttonPool.Count < needed)
         {
@@ -155,7 +258,7 @@ public class SearchPanelController : MonoBehaviour
 
             if (active)
             {
-                _buttonTexts[i].text = names[i];
+                _buttonTexts[i].text = results[i].DisplayText;
 
                 if (isDefaultMode)
                 {
@@ -169,20 +272,21 @@ public class SearchPanelController : MonoBehaviour
                     _buttonPool[i].transform.SetAsLastSibling();
                 }
 
-                string captured = names[i];
+                var capturedItem = results[i];
                 _buttonComponents[i].onClick.RemoveAllListeners();
                 _buttonComponents[i].onClick.AddListener(() => {
-                    OnBuildingSelected(captured);
+                    OnItemSelected(capturedItem);
                 });
             }
         }
     }
 
-    void OnBuildingSelected(string buildingName)
+    // ✅ HÀM CLICK ĐÃ ĐƯỢC NÂNG CẤP ĐỂ HIỂU ĐƯỢC KẾT QUẢ ẢO
+    void OnItemSelected(SearchResultItem item)
     {
-        if (groupedBuildings.ContainsKey(buildingName))
+        if (groupedBuildings.ContainsKey(item.TargetBuildingName))
         {
-            List<LocationData> gates = groupedBuildings[buildingName];
+            List<LocationData> gates = groupedBuildings[item.TargetBuildingName];
             float userLat = (float)GPSService.Instance.Latitude;
             float userLng = (float)GPSService.Instance.Longitude;
             LocationData nearestGate = null;
@@ -200,7 +304,9 @@ public class SearchPanelController : MonoBehaviour
 
             if (LocationDetailController.Instance != null)
             {
-                LocationDetailController.Instance.OpenDetailPanel(nearestGate);
+
+                // ⚠️ BƯỚC 3 SẮP TỚI MÌNH SẼ SỬA THÀNH:
+                LocationDetailController.Instance.OpenDetailPanel(nearestGate, item.IndoorDocId, item.DisplayText);
             }
         }
     }

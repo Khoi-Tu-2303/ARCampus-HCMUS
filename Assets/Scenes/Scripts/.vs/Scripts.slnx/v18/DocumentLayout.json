@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\FirebaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\FirebaseService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\LocationDetailController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\LocationDetailController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AR\\ARLabelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,24 +38,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FirebaseService.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\FirebaseService.cs",
+              "RelativeDocumentMoniker": "Services\\FirebaseService.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\FirebaseService.cs",
+              "RelativeToolTip": "Services\\FirebaseService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwHUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T14:56:14.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocationDetailController.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\LocationDetailController.cs",
+              "RelativeDocumentMoniker": "UI\\LocationDetailController.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\LocationDetailController.cs",
+              "RelativeToolTip": "UI\\LocationDetailController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAIwGoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T14:53:29.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SearchPanelController.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeDocumentMoniker": "UI\\SearchPanelController.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeToolTip": "UI\\SearchPanelController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAIwOsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T14:52:06.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ARLabelManager.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs",
               "RelativeDocumentMoniker": "AR\\ARLabelManager.cs",
               "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs",
               "RelativeToolTip": "AR\\ARLabelManager.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFcAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T17:36:10.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BillboardLabel.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\BillboardLabel.cs",
               "RelativeDocumentMoniker": "AR\\BillboardLabel.cs",
@@ -51,12 +102,11 @@
               "RelativeToolTip": "AR\\BillboardLabel.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwCoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T16:31:23.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T16:31:23.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ARNavigationView.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\ARNavigationView.cs",
               "RelativeDocumentMoniker": "Navigation\\ARNavigationView.cs",
@@ -64,12 +114,11 @@
               "RelativeToolTip": "Navigation\\ARNavigationView.cs",
               "ViewState": "AgIAAHQAAAAAAAAAAADwv48AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T15:11:27.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T15:11:27.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "NavigationSession.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs",
               "RelativeDocumentMoniker": "Navigation\\NavigationSession.cs",
@@ -77,8 +126,7 @@
               "RelativeToolTip": "Navigation\\NavigationSession.cs",
               "ViewState": "AgIAAI0AAAAAAAAAAAAIwLYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T13:23:23.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T13:23:23.393Z"
             }
           ]
         }

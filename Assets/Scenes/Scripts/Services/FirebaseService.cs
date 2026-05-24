@@ -95,4 +95,25 @@ public class FirebaseService : MonoBehaviour
                 }
             });
     }
+    public void GetIndoorDescription(string docId, Action<string> onComplete)
+    {
+        FirebaseFirestore.DefaultInstance
+            .Collection("description") // Chui vào collection mới
+            .Document(docId)           // Tìm đúng ID phòng
+            .GetSnapshotAsync()
+            .ContinueWithOnMainThread((System.Threading.Tasks.Task<DocumentSnapshot> task) => {
+                if (task.IsCompleted && !task.IsFaulted && task.Result.Exists)
+                {
+                    var snapshot = task.Result;
+                    string content = snapshot.ContainsField("content")
+                        ? snapshot.GetValue<string>("content")
+                        : "Phòng/Khu vực này chưa có bài mô tả chi tiết.";
+                    onComplete?.Invoke(content);
+                }
+                else
+                {
+                    onComplete?.Invoke("Không tìm thấy thông tin chi tiết trên hệ thống.");
+                }
+            });
+    }
 }

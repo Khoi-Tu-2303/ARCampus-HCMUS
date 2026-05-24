@@ -50,24 +50,42 @@ public class LocationDetailController : MonoBehaviour
         if (btnIndoorMap != null) btnIndoorMap.onClick.AddListener(OnIndoorMapClicked);
     }
 
-    public void OpenDetailPanel(LocationData locData)
+    // ✅ CẬP NHẬT: Thêm 2 tham số để chứa thông tin ảo từ thanh Search
+    public void OpenDetailPanel(LocationData locData, string indoorDocId = "", string customTitle = "")
     {
         if (locData == null) return;
         _currentData = locData;
 
-        // Đổ Data vào UI mới
-        if (txtName != null) txtName.text = locData.display_name;
-        if (txtCategory != null) txtCategory.text = locData.category;
+        // 1. TÊN HIỂN THỊ: Nếu Search truyền vào Tên Phòng thì xài, không thì xài Tên Tòa
+        if (txtName != null)
+            txtName.text = string.IsNullOrEmpty(customTitle) ? locData.display_name : customTitle;
 
-        // Nếu DB chưa có description thì để dòng chữ chờ, có rồi thì hiện ra
-        if (txtDescription != null)
+        if (txtCategory != null)
+            txtCategory.text = string.IsNullOrEmpty(indoorDocId) ? locData.category : "Phòng / Khu vực";
+
+        // 2. MÔ TẢ: Phân luồng thần thánh ở đây!
+        if (!string.IsNullOrEmpty(indoorDocId))
         {
-            txtDescription.text = string.IsNullOrEmpty(locData.description)
-                ? "Chưa có thông tin mô tả cho địa điểm này."
-                : locData.description;
+            // BẬT CHẾ ĐỘ INDOOR: Chạy lệnh kéo Firebase mới
+            if (txtDescription != null) txtDescription.text = "Đang tải thông tin chi tiết...";
+
+            // Gọi hàm mới ông vừa viết trong FirebaseService
+            FirebaseService.Instance.GetIndoorDescription(indoorDocId, (desc) => {
+                if (txtDescription != null) txtDescription.text = desc;
+            });
+        }
+        else
+        {
+            // CHẾ ĐỘ BÌNH THƯỜNG: Hiện mô tả của Tòa nhà
+            if (txtDescription != null)
+            {
+                txtDescription.text = string.IsNullOrEmpty(locData.description)
+                    ? "Chưa có thông tin mô tả cho địa điểm này."
+                    : locData.description;
+            }
         }
 
-        // Logic Load Ảnh
+        // 3. ẢNH: Vẫn lấy ID gốc của Tòa nhà (locData) nên ảnh Tòa không bao giờ bị đổi!
         if (imgCover != null)
         {
             if (defaultPlaceholder != null) imgCover.sprite = defaultPlaceholder;
@@ -76,7 +94,7 @@ public class LocationDetailController : MonoBehaviour
             _imageLoadCoroutine = StartCoroutine(LoadCoverImageAsync(imageName));
         }
 
-        // Logic Tự động ẩn/hiện nút Indoor Map
+        // Logic Indoor Map giữ nguyên
         _currentBuildingIdForMap = GetBuildingImageName(locData.location_id);
         if (btnIndoorMap != null)
         {

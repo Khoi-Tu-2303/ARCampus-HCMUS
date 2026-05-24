@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AR",
-    "\\Core"
+    "\\Core",
+    "\\Debug",
+    "\\Indoor",
+    "\\Map",
+    "\\Modal",
+    "\\Models",
+    "\\Navigation",
+    "\\Services",
+    "\\UI"
   ],
-  "SelectedNode": "\\AR\\BillboardLabel.cs",
+  "SelectedNode": "\\UI\\SearchPanelController.cs",
   "PreviewInSolutionExplorer": false
 }
