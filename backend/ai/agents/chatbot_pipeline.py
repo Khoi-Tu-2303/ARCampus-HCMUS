@@ -20,6 +20,7 @@ from ai.intent.core.classifier import IntentClassifier
 from ai.agents.agent_factory import AgentFactory
 from ai.agents.conversation_memory import ConversationMemoryManager
 from firebase.firebase_service import FirebaseService
+from typing import Tuple
 
 # ─── Số lượng tin nhắn lịch sử mặc định ──────────────────────
 HISTORY_K = 5
@@ -51,7 +52,7 @@ class ChatbotPipeline:
     # Public API
     # ──────────────────────────────────────────────────────────
 
-    def process(self, conversation_id: str, message: str) -> str:
+    def process(self, conversation_id: str, message: str) -> Tuple[str, dict]:
         """
         Hàm tích hợp với API.
 
@@ -78,7 +79,7 @@ class ChatbotPipeline:
         print("[DEBUG] [CHATBOTPIPELINE] Mathced text =", matched_text)
         
         # Trường hợp nâng cấp sau
-        if intent in ["schedule_management", "navigation"]:
+        if intent in ["schedule_management"]:
             print("[DEBUG] [CHATBOTPIPELINE] Tính năng chưa cập nhật.")
             return "Tính năng chưa cập nhật ..."
         
@@ -98,6 +99,7 @@ class ChatbotPipeline:
         # ── Step 4: Build input_data ───────────────────────────
         input_data = {
             "query":     message,
+            "keys" :      keys,
             "intent":    intent,
             "contexts":  contexts,
             "history":   history,
@@ -106,10 +108,11 @@ class ChatbotPipeline:
 
         # ── Step 5: Route đến Agent → Call LLM ─────────────────
         agent    = AgentFactory.get(intent)
-        response = agent.run(input_data)
+        response, metadata = agent.run(input_data)
         print("[DEBUG] [CHATBOTPIPELINE] Response = ", response)
+        print("[DEBUG] [CHATBOTPIPELINE] Metadata = ", metadata)
         
-        return response
+        return response, metadata
 
 
 # ─── Module-level convenience function ────────────────────────────────────────
@@ -124,7 +127,7 @@ def get_pipeline() -> ChatbotPipeline:
     return _pipeline
 
 
-def chat(conversation_id: str, message: str) -> str:
+def chat(conversation_id: str, message: str) -> Tuple[str, dict]:
     """
     Hàm tiện ích để gọi từ API layer.
 

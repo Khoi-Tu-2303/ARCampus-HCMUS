@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
-
+from typing import Tuple
 
 class BaseAgent(ABC):
     """
@@ -11,7 +11,7 @@ class BaseAgent(ABC):
     name: str = "base_agent"
     prompt: str = ""
 
-    def run(self, input_data: dict) -> str:
+    def run(self, input_data: dict) -> Tuple[str, dict]:
         """
         Entry point chính.
         input_data gồm:
@@ -27,7 +27,7 @@ class BaseAgent(ABC):
             return "Đã xảy ra lỗi, vui lòng thử lại sau."
 
     @abstractmethod
-    def _handle(self, input_data: dict) -> str:
+    def _handle(self, input_data: dict) -> Tuple[str, dict]:
         """Subclass implement logic xử lý thật tại đây."""
         pass
 

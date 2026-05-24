@@ -1,5 +1,6 @@
 from ai.agents.chatbot_pipeline import chat
-def get_answer(conversation_id : str, query: str) -> str:
+from typing import Tuple
+def get_answer(conversation_id : str, query: str) -> Tuple[str, dict]:
     try:
         return chat(conversation_id, query)
     except:

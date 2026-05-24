@@ -1,6 +1,5 @@
 import json
 import uuid
-
 from database.db import fetch_one, fetch_all, execute_query, get_connection
 from app.utils.chat_ai import get_answer
 
@@ -75,7 +74,7 @@ def get_messages(conversation_id):
 
     rows = fetch_all(
         '''
-        SELECT id, conversation_id, role, content, created_at
+        SELECT id, conversation_id, role, content, created_at, metadata
         FROM messages
         WHERE conversation_id = ?
         ORDER BY created_at ASC, id ASC
@@ -93,7 +92,8 @@ def get_messages(conversation_id):
                 'conversation_id': row['conversation_id'],
                 'role': row['role'],
                 'content': row['content'],
-                'created_at': row['created_at']
+                'created_at': row['created_at'],
+                'metadata' : json.loads(row['metadata'])
             }
             for row in rows
         ]
@@ -153,14 +153,14 @@ def send_message(conversation_id: str, content: str):
             user_id = cursor.lastrowid
 
             # Assistant response
-            assistant_content = get_answer(conversation_id, content)
+            assistant_content, metadata = get_answer(conversation_id, content)
 
             cursor.execute(
                 '''
-                INSERT INTO messages (conversation_id, role, content)
-                VALUES (?, ?, ?)
+                INSERT INTO messages (conversation_id, role, content, metadata)
+                VALUES (?, ?, ?, ?)
                 ''',
-                (conversation_id, 'assistant', assistant_content),
+                (conversation_id, 'assistant', assistant_content, json.dumps(metadata)),
             )
             assistant_id = cursor.lastrowid
 
@@ -169,7 +169,7 @@ def send_message(conversation_id: str, content: str):
             # Fetch created_at values
             user_row = cursor.execute(
                 '''
-                SELECT created_at
+                SELECT created_at, metadata
                 FROM messages
                 WHERE id = ?
                 ''',
@@ -194,7 +194,8 @@ def send_message(conversation_id: str, content: str):
                 'conversation_id': conversation_id,
                 'role': 'user',
                 'content': content,
-                'created_at': user_row['created_at']
+                'created_at': user_row['created_at'],
+                'metadata' : user_row['metadata']
             },
 
             'assistant_message': {
@@ -202,7 +203,8 @@ def send_message(conversation_id: str, content: str):
                 'conversation_id': conversation_id,
                 'role': 'assistant',
                 'content': assistant_content,
-                'created_at': assistant_row['created_at']
+                'created_at': assistant_row['created_at'],
+                'metadata' : metadata
             }
         }, None
 
