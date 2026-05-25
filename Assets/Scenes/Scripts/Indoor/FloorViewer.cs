@@ -1,6 +1,4 @@
-// Indoor/FloorViewer.cs
-// BẢN UPDATE: Đổi từ SetActive sang hệ Canvas độc lập để quản lý giao diện thông minh.
-
+// Đè đoạn này vào file FloorViewer.cs
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -12,17 +10,17 @@ public class FloorViewer : MonoBehaviour
     public static FloorViewer Instance;
 
     [Header("UI References (Hệ Canvas Xịn)")]
-    public Canvas indoorViewerCanvas;         // ĐỔI TỪ GAMEOBJECT SANG CANVAS ĐỂ ĐIỀU KHIỂN
+    public Canvas indoorViewerCanvas;
     public Image indoorMapDisplay;
     public Button btnCloseViewer;
     public ScrollRect scrollRect;
 
-    [Header("Floor Navigation (MỚI)")]
+    [Header("Floor Navigation")]
     public TextMeshProUGUI txtCurrentFloorLabel;
     public Transform floorButtonParent;
     public GameObject floorButtonPrefab;
 
-    [Header("Màu sắc Nút Tầng (MỚI)")]
+    [Header("Màu sắc Nút Tầng")]
     public Color selectedBgColor = new Color(0.1f, 0.3f, 0.8f, 1f);
     public Color unselectedBgColor = new Color(0.9f, 0.9f, 0.9f, 1f);
     public Color selectedTextColor = Color.white;
@@ -46,6 +44,32 @@ public class FloorViewer : MonoBehaviour
     private RectTransform viewportRect;
     private Coroutine _loadCoroutine;
 
+    // ✅ BỘ NÃO QUẢN LÝ TẦNG: (ID Tòa -> [Mã đuôi ảnh, Tên Hiển Thị])
+    // ✅ BỘ NÃO QUẢN LÝ TẦNG FULL TOPPING CỦA SẾP
+    private Dictionary<string, List<(string fileSuffix, string displayName)>> buildingStructure = new Dictionary<string, List<(string, string)>>()
+    {
+        // Tòa A (VD: Có hầm và 4 tầng) -> Tên file ảnh cần có: A_ham, A_1, A_2, A_3, A_4
+        { "A", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
+        
+        // Tòa C (VD: Có hầm và 2 tầng) -> C_ham, C_1, C_2
+        { "C", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2") } },
+        
+        // Tòa D (VD: Có 3 tầng, không hầm) -> D_1, D_2, D_3
+        { "D", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2") } },
+        
+        // Tòa E (VD: Có 3 tầng) -> E_1, E_2, E_3
+        { "E", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
+        
+        // Tòa F (VD: Có 3 tầng) -> F_1, F_2, F_3
+        { "F", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
+        
+        // Tòa G (VD: Có 3 tầng) -> G_1, G_2, G_3
+        { "G", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3"), ("4", "Tầng 4"), ("5", "Tầng 5") } },
+        
+        // Nhà Điều Hành (Từng cụm 2 tầng) -> NDH_1, NDH_2...
+        { "NĐH", new List<(string, string)> { ("1", "Tầng 1-2"), ("2", "Tầng 3-4"), ("3", "Tầng 5-6"), ("4", "Tầng 7-8"), ("5", "Tầng 9") } }
+    };
+
     void Awake()
     {
         Instance = this;
@@ -53,29 +77,10 @@ public class FloorViewer : MonoBehaviour
         if (scrollRect != null && scrollRect.viewport != null) viewportRect = scrollRect.viewport;
     }
 
-    void OnEnable()
-    {
-        if (btnCloseViewer != null) btnCloseViewer.onClick.AddListener(HideIndoorViewer);
-    }
-
-    void OnDisable()
-    {
-        if (btnCloseViewer != null) btnCloseViewer.onClick.RemoveListener(HideIndoorViewer);
-    }
-
-    void Start()
-    {
-        // ✅ Ẩn bằng cách tắt Canvas lúc đầu game (Dù ngoài Editor ông có đang bật hay tắt)
-        if (indoorViewerCanvas != null) indoorViewerCanvas.enabled = false;
-        if (scrollRect != null) scrollRect.enabled = false;
-    }
-
-    void Update()
-    {
-        // ✅ Kiểm tra trạng thái bằng canvas.enabled
-        if (indoorViewerCanvas == null || !indoorViewerCanvas.enabled || contentRect == null) return;
-        HandleZoom();
-    }
+    void OnEnable() { if (btnCloseViewer != null) btnCloseViewer.onClick.AddListener(HideIndoorViewer); }
+    void OnDisable() { if (btnCloseViewer != null) btnCloseViewer.onClick.RemoveListener(HideIndoorViewer); }
+    void Start() { if (indoorViewerCanvas != null) indoorViewerCanvas.enabled = false; if (scrollRect != null) scrollRect.enabled = false; }
+    void Update() { if (indoorViewerCanvas == null || !indoorViewerCanvas.enabled || contentRect == null) return; HandleZoom(); }
 
     public void ZoomIn() => ApplyZoom(0.5f);
     public void ZoomOut() => ApplyZoom(-0.5f);
@@ -94,7 +99,6 @@ public class FloorViewer : MonoBehaviour
     {
         bool isZooming = false;
         float finalZoomDelta = 0f;
-
 #if UNITY_EDITOR
         if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.LeftShift))
         {
@@ -107,8 +111,7 @@ public class FloorViewer : MonoBehaviour
         if (Input.touchCount == 2)
         {
             Touch t0 = Input.GetTouch(0), t1 = Input.GetTouch(1);
-            if (t0.phase == TouchPhase.Began || t1.phase == TouchPhase.Began)
-                previousDistance = Vector2.Distance(t0.position, t1.position);
+            if (t0.phase == TouchPhase.Began || t1.phase == TouchPhase.Began) previousDistance = Vector2.Distance(t0.position, t1.position);
             else if (t0.phase == TouchPhase.Moved || t1.phase == TouchPhase.Moved)
             {
                 isZooming = true;
@@ -140,18 +143,29 @@ public class FloorViewer : MonoBehaviour
             foreach (Transform child in floorButtonParent) Destroy(child.gameObject);
         }
 
-        for (int i = 1; i <= 9; i++)
+        // ✅ LOGIC MỚI: DÒ TÌM TRONG TỪ ĐIỂN
+        if (buildingStructure.ContainsKey(buildingId))
         {
-            var request = Resources.LoadAsync<Sprite>($"IndoorMaps/{buildingId}_{i}");
-            yield return request;
-            if (request.asset == null) break;
-
-            loadedFloorSprites.Add((Sprite)request.asset);
-            loadedFloorNames.Add(buildingId == "NĐH" ? (i == 5 ? "Tầng 9" : $"Tầng {i * 2 - 1}-{i * 2}") : $"Floor {i}");
+            var floorsInfo = buildingStructure[buildingId];
+            foreach (var floor in floorsInfo)
+            {
+                // Gọi load file (VD: C_ham, C_1)
+                var request = Resources.LoadAsync<Sprite>($"IndoorMaps/{buildingId}_{floor.fileSuffix}");
+                yield return request;
+                if (request.asset != null)
+                {
+                    loadedFloorSprites.Add((Sprite)request.asset);
+                    loadedFloorNames.Add(floor.displayName);
+                }
+                else
+                {
+                    Debug.LogWarning($"[FloorViewer] Mất file ảnh: IndoorMaps/{buildingId}_{floor.fileSuffix}");
+                }
+            }
         }
-
-        if (loadedFloorSprites.Count == 0)
+        else
         {
+            // NẾU TÒA NÀO CHƯA ĐƯỢC CHIA TẦNG -> LOAD 1 ẢNH GỐC Y NHƯ CŨ
             var fallbackRequest = Resources.LoadAsync<Sprite>($"IndoorMaps/{buildingId}");
             yield return fallbackRequest;
             if (fallbackRequest.asset != null)
@@ -163,11 +177,11 @@ public class FloorViewer : MonoBehaviour
 
         if (loadedFloorSprites.Count == 0) yield break;
 
-        // ✅ KHI TẢI XONG THÌ BẬT CANVAS LÊN ĐỂ HIỆN HỒN
         indoorViewerCanvas.enabled = true;
         if (scrollRect != null) scrollRect.enabled = true;
         if (viewportRect == null && scrollRect != null) viewportRect = scrollRect.viewport;
 
+        // TẠO NÚT BẤM
         if (loadedFloorSprites.Count > 1 && floorButtonPrefab != null && floorButtonParent != null)
         {
             floorButtonParent.parent.gameObject.SetActive(true);
@@ -193,10 +207,7 @@ public class FloorViewer : MonoBehaviour
         SwitchToTargetFloorIndex(0);
     }
 
-    public void SwitchToAdjacentFloor(int step)
-    {
-        SwitchToTargetFloorIndex(Mathf.Clamp(currentFloorIndex + step, 0, loadedFloorSprites.Count - 1));
-    }
+    public void SwitchToAdjacentFloor(int step) => SwitchToTargetFloorIndex(Mathf.Clamp(currentFloorIndex + step, 0, loadedFloorSprites.Count - 1));
 
     void SwitchToTargetFloorIndex(int index)
     {
@@ -208,7 +219,7 @@ public class FloorViewer : MonoBehaviour
         if (txtCurrentFloorLabel != null) txtCurrentFloorLabel.text = loadedFloorNames[index];
         if (contentRect != null) contentRect.localScale = Vector3.one;
 
-        float containerWidth = UIConstants.DefaultContainerWidth;
+        float containerWidth = 1080f; // UIConstants.DefaultContainerWidth - Dùng cứng số cho an toàn
         if (viewportRect != null) containerWidth = viewportRect.rect.width;
         else if (indoorViewerCanvas != null) containerWidth = indoorViewerCanvas.GetComponent<RectTransform>().rect.width;
 
@@ -223,13 +234,8 @@ public class FloorViewer : MonoBehaviour
             bool isSelected = (i == index);
             floorBtnBackgrounds[i].color = isSelected ? selectedBgColor : unselectedBgColor;
             floorBtnTexts[i].color = isSelected ? selectedTextColor : unselectedTextColor;
-            floorBtnTexts[i].fontStyle = isSelected ? FontStyles.Bold : FontStyles.Bold;
         }
     }
 
-    public void HideIndoorViewer()
-    {
-        // ✅ ĐÓNG BẢNG BẰNG CÁCH TẮT CANVAS
-        if (indoorViewerCanvas != null) indoorViewerCanvas.enabled = false;
-    }
+    public void HideIndoorViewer() { if (indoorViewerCanvas != null) indoorViewerCanvas.enabled = false; }
 }
