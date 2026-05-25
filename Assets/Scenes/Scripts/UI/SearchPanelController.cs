@@ -106,10 +106,11 @@ public class SearchPanelController : MonoBehaviour
         string id = loc.location_id;
         if (string.IsNullOrEmpty(id)) return "Khác";
         if (id.StartsWith("FOOD_")) return string.IsNullOrEmpty(loc.display_name) ? "Quán ăn" : loc.display_name;
+        if (id.StartsWith("DRINK_")) return string.IsNullOrEmpty(loc.display_name) ? "Quán nước" : loc.display_name;
         if (id.StartsWith("NĐH")) return "Nhà điều hành";
         if (id.StartsWith("NTD")) return "Nhà thể dục";
         if (id.StartsWith("NXT") || id.StartsWith("NXS")) return "Nhà xe";
-        if (id.StartsWith("CAFE") || id.StartsWith("CT")) || id.StartsWith("Căn")) return "Khu ăn uống / Cafe";
+        if (id.StartsWith("CT") || id.StartsWith("Căn")) return "Căn tin";
 
         if (id.StartsWith("A")) return "Tòa A";
         if (id.StartsWith("B")) return "Tòa B";
@@ -146,26 +147,26 @@ public class SearchPanelController : MonoBehaviour
 
             if (lkw.Contains("căng tin") || lkw.Contains("canteen") || lkw.Contains("nhà ăn"))
             {
-                lkw = "căn tin"; // Tự động lái về chữ "căn tin" để khớp với Data
+                lkw = "căn tin";
             }
 
             bool isSearchingFood = lkw.Contains("quán ăn") || lkw.Contains("đồ ăn") || lkw.Contains("ăn uống");
+            bool isSearchingDrink = lkw.Contains("quán nước") || lkw.Contains("cafe") || lkw.Contains("cà phê")
+                                 || lkw.Contains("trà sữa") || lkw.Contains("giải khát") || lkw.Contains("ăn uống");
             // 1. TÌM THEO TÊN TÒA NHÀ GỐC NHƯ BÌNH THƯỜNG
             for (int i = 0; i < _normalizedNames.Count; i++)
             {
                 string bName = _buildingNames[i];
                 string bNameLower = _normalizedNames[i];
-
-                // Lấy ID của điểm đang xét để check Prefix
                 string firstId = groupedBuildings[bName][0].location_id;
 
                 bool isMatch = bNameLower.Contains(lkw);
 
-                // Nếu user gõ "quán ăn" và ID của điểm này bắt đầu bằng "FOOD_" -> Duyệt ngay & luôn!
-                if (isSearchingFood && firstId.StartsWith("FOOD_"))
-                {
-                    isMatch = true;
-                }
+                // Nếu gõ tìm đồ ăn -> Móc hết ID FOOD_ ra
+                if (isSearchingFood && firstId.StartsWith("FOOD_")) isMatch = true;
+
+                // Nếu gõ tìm nước uống -> Móc hết ID DRINK_ ra
+                if (isSearchingDrink && firstId.StartsWith("DRINK_")) isMatch = true;
 
                 if (isMatch)
                 {
