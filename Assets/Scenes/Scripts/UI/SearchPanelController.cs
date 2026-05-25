@@ -109,7 +109,7 @@ public class SearchPanelController : MonoBehaviour
         if (id.StartsWith("NĐH")) return "Nhà điều hành";
         if (id.StartsWith("NTD")) return "Nhà thể dục";
         if (id.StartsWith("NXT") || id.StartsWith("NXS")) return "Nhà xe";
-        if (id.StartsWith("CAFE") || id.StartsWith("CT")) || id.StartsWith("Căn")) return "Khu ăn uống / Cafe";
+        if (id.StartsWith("CAFE") || id.StartsWith("CT") || id.StartsWith("Căn")) return "Khu ăn uống / Cafe";
 
         if (id.StartsWith("A")) return "Tòa A";
         if (id.StartsWith("B")) return "Tòa B";
