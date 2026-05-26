@@ -15,36 +15,6 @@ class ConversationMemoryManager:
         """
         return get_conversation_history(conversation_id, k)
 
-    # def get_user_info(self, conversation_id: str) -> Optional[Dict]:
-    #     """
-    #     Lấy thông tin user từ bảng conversations
-    #     """
-    #     query = """
-    #     SELECT user_id, is_guest, metadata
-    #     FROM conversations
-    #     WHERE id = ?
-    #     """
-    #     row = fetch_one(query, (conversation_id,))
-
-    #     if not row:
-    #         return None
-
-    #     return {
-    #         "user_id": row["user_id"],
-    #         "is_guest": row["is_guest"],
-    #         "metadata": row["metadata"],
-    #     }
-
-    # def save_message(self, conversation_id: str, role: str, content: str) -> None:
-    #     """
-    #     Lưu message vào SQLite (cần bảng messages)
-    #     """
-    #     query = """
-    #     INSERT INTO messages (conversation_id, role, content, timestamp)
-    #     VALUES (?, ?, ?, CURRENT_TIMESTAMP)
-    #     """
-    #     execute_query(query, (conversation_id, role, content))
-
     
 def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[Dict]:
     """
@@ -73,6 +43,4 @@ def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[D
     
     
 if __name__ == "__main__":
-    # guest_c3a50890
-    # conv_4cfb8c17
     print(get_conversation_history(conversation_id="conv_4cfb8c17", k=2))
