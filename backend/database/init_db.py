@@ -28,14 +28,9 @@ def init_db():
         for file in files:
             _apply_sql_file(cursor, file)
 
-        # Minimal runtime fix: schema/messages.sql in the prompt references sessions(id)
-        # while the project actually stores chat threads in conversations(id).
-        # We recreate the messages table with the correct foreign key only if needed.
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='messages';")
         if cursor.fetchone():
             cursor.execute("PRAGMA foreign_key_check;")
-            # SQLite cannot alter FK easily; leave as-is if the table already exists.
-            # New installs will use the corrected schema file that ships with this backend.
 
         conn.commit()
         print('Database initialized!')

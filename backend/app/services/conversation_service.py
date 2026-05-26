@@ -30,6 +30,12 @@ def create_conversation(owner_id):
             )
         else:
             return None, (400, {'error': 'Invalid user'})
+        default_message = "Xin chào! Tôi là AR Campus Assistant — trợ lý thông minh hỗ trợ bạn khám phá khuôn viên HCMUS. Tôi có thể giúp bạn tìm kiếm phòng học, tòa nhà, địa điểm trong trường và cung cấp thông tin cần thiết một cách nhanh chóng."
+        execute_query(
+            'INSERT INTO messages (conversation_id, role, content, metadata) VALUES (?, ?, ?, ?)',
+            (conv_id, 'assistant', default_message, '{}'),
+        )
+
         return {'id_conversation': conv_id, 'title': 'New Conversation'}, None
     except Exception:
         return None, (400, {'error': 'Invalid user'})
@@ -57,15 +63,10 @@ def get_conversations(owner_id):
                 for row in rows
             ]
         }, None
-        # return [
-        #     {'id': row['id'], 'title': row['conversation_title'], 'created_at': row['created_at']}
-        #     for row in rows
-        # ], None
     except Exception:
         return {
             "conversations": []
         }, None
-        # return [], None
 
 
 def get_messages(conversation_id):
@@ -81,10 +82,7 @@ def get_messages(conversation_id):
         ''',
         (conversation_id,),
     )
-    # return [
-    #     {'id': row['id'], 'role': row['role'], 'content': row['content'], 'created_at': row['created_at']}
-    #     for row in rows
-    # ], None
+
     return {
         'messages': [
             {
@@ -98,40 +96,6 @@ def get_messages(conversation_id):
             for row in rows
         ]
     }, None
-
-
-# def send_message(conversation_id: str, content: str):
-#     if not _conversation_exists(conversation_id):
-#         return None, (404, {'error': 'Conversation not found'})
-
-#     try:
-#         conn = get_connection()
-#         try:
-#             cursor = conn.cursor()
-#             cursor.execute(
-#                 'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
-#                 (conversation_id, 'user', content),
-#             )
-#             user_id = cursor.lastrowid
-
-#             assistant_content = get_answer(conversation_id, content)
-#             cursor.execute(
-#                 'INSERT INTO messages (conversation_id, role, content) VALUES (?, ?, ?)',
-#                 (conversation_id, 'assistant', assistant_content),
-#             )
-#             assistant_id = cursor.lastrowid
-
-#             conn.commit()
-#         finally:
-#             conn.close()
-
-#         return {
-#             'user_message': {'id': user_id, 'role': 'user', 'content': content},
-#             'assistant_message': {'id': assistant_id, 'role': 'assistant', 'content': assistant_content},
-#         }, None
-
-    # except Exception:
-    #     return None, (500, {'error': 'Internal server error'})
     
 def send_message(conversation_id: str, content: str):
     if not _conversation_exists(conversation_id):
@@ -142,7 +106,6 @@ def send_message(conversation_id: str, content: str):
         try:
             cursor = conn.cursor()
 
-            # User message
             cursor.execute(
                 '''
                 INSERT INTO messages (conversation_id, role, content)
@@ -152,7 +115,6 @@ def send_message(conversation_id: str, content: str):
             )
             user_id = cursor.lastrowid
 
-            # Assistant response
             assistant_content, metadata = get_answer(conversation_id, content)
 
             cursor.execute(
@@ -166,7 +128,6 @@ def send_message(conversation_id: str, content: str):
 
             conn.commit()
 
-            # Fetch created_at values
             user_row = cursor.execute(
                 '''
                 SELECT created_at, metadata
