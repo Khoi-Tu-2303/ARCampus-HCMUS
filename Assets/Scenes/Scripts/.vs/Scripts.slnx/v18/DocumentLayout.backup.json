@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Indoor\\FloorViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Indoor\\IndoorSwipeListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Indoor\\IndoorSwipeListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SearchPanelController.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeDocumentMoniker": "UI\\SearchPanelController.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeToolTip": "UI\\SearchPanelController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T15:25:52.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IndoorSwipeListener.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Indoor\\IndoorSwipeListener.cs",
               "RelativeDocumentMoniker": "Indoor\\IndoorSwipeListener.cs",
@@ -30,8 +47,7 @@
               "RelativeToolTip": "Indoor\\IndoorSwipeListener.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T15:05:48.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T15:05:48.756Z"
             },
             {
               "$type": "Document",
@@ -41,7 +57,7 @@
               "RelativeDocumentMoniker": "Indoor\\FloorViewer.cs",
               "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Indoor\\FloorViewer.cs",
               "RelativeToolTip": "Indoor\\FloorViewer.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-25T15:05:44.008Z",
               "EditorCaption": ""

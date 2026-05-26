@@ -67,7 +67,7 @@ public class FloorViewer : MonoBehaviour
         { "G", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3"), ("4", "Tầng 4"), ("5", "Tầng 5") } },
         
         // Nhà Điều Hành (Từng cụm 2 tầng) -> NDH_1, NDH_2...
-        { "NĐH", new List<(string, string)> { ("1", "Tầng 1-2"), ("2", "Tầng 3-4"), ("3", "Tầng 5-6"), ("4", "Tầng 7-8"), ("5", "Tầng 9") } }
+        { "NĐH", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3"), ("4", "Tầng 4"), ("5", "Tầng 5"), ("6", "Tầng 6"), ("7", "Tầng 7"), ("8", "Tầng 8"), ("9", "Tầng 9") } }
     };
 
     void Awake()
