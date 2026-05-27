@@ -86,7 +86,7 @@ def get_messages(conversation_id):
     return {
         'messages': [
             {
-                'id': row['id'],
+                'id': str(row['id']),
                 'conversation_id': row['conversation_id'],
                 'role': row['role'],
                 'content': row['content'],
