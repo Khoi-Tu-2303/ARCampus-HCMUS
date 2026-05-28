@@ -31,4 +31,8 @@ def login(payload: LoginRequest):
 @router.post('/guest', response_model=GuestResponse)
 def guest_login():
     # Tạo phiên guest không lưu vào users.
-    return {'id': create_guest_id(), 'username': None}
+    return {
+        'id': create_guest_id(),
+        'username': None,
+        'user_role': 'guest'
+    }

@@ -67,7 +67,7 @@ class ChatbotPipeline:
         
         print("[DEBUG] [CHATBOTPIPELINE] Keys = ", keys)
         
-        contexts = self.firebase.get_multiple_descriptions(keys)
+        contexts = self.firebase.get_multiple_descriptions_v2(keys)
         print("[DEBUG] [CHATBOTPIPELINE] Contexts = ", contexts)
         
         history   = self.memory.get_history(conversation_id, self.history_k)

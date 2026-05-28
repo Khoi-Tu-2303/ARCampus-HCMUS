@@ -62,19 +62,38 @@ class FirebaseService:
             print(f"[Firebase Error] get_multiple_descriptions: {e}")
             return []
         
+    def get_multiple_descriptions_v2(self, keys: List[str]) -> str:
+        try:
+            if not keys:
+                return ""
+
+            result_text = []
+
+            for key in keys:
+                doc = self.db.collection("description").document(key).get()
+
+                if not doc.exists:
+                    continue
+
+                data = doc.to_dict()
+
+                # duyệt các key nhỏ bên trong document
+                for sub_key, value in sorted(data.items()):
+                    # print(sub_key, value)
+                    result_text.append(f"{sub_key}: {value.strip()}")
+
+            return "\n".join(result_text)
+
+        except Exception as e:
+            print(f"[Firebase Error] get_multiple_descriptions_text: {e}")
+            return ""
+    
 if __name__ == "__main__":
     firebase = FirebaseService()
 
     keys = [
-        "library",
-        "canteen",
-        "parking",
-        "building_a",
-        "building_c"
+        "library"
     ]
 
-    result = firebase.get_multiple_descriptions(keys)
-
-    print("RESULT:")
-    for i, r in enumerate(result):
-        print(keys[i], "=>", r)
+    result = firebase.get_multiple_descriptions_v2(keys)
+    print(result)

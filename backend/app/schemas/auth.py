@@ -17,8 +17,10 @@ class LoginRequest(BaseModel):
 class UserResponse(BaseModel):
     id: int
     username: str
+    user_role: str
 
 
 class GuestResponse(BaseModel):
     id: str
     username: Optional[str] = None
+    user_role: Optional[str] = None
