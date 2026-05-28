@@ -78,9 +78,9 @@ class FirebaseService:
                 data = doc.to_dict()
 
                 # duyệt các key nhỏ bên trong document
-                for sub_key, value in sorted(data.items()):
+                for sub_key, value in data.items():
                     # print(sub_key, value)
-                    result_text.append(f"{sub_key}: {value.strip()}")
+                    result_text.append(value.strip() + "\n")
 
             return "\n".join(result_text)
 

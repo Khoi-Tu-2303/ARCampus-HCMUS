@@ -63,7 +63,7 @@ class ChatbotPipeline:
         
         if intent in ["schedule_management"]:
             print("[DEBUG] [CHATBOTPIPELINE] Tính năng chưa cập nhật.")
-            return "Tính năng chưa cập nhật ..."
+            return "Tính năng chưa cập nhật.", {}
         
         print("[DEBUG] [CHATBOTPIPELINE] Keys = ", keys)
         

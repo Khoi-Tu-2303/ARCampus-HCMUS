@@ -1,6 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import Any
 from typing import Tuple
+from datetime import datetime
+
+VIET_DAYS = {
+    0: "Thứ 2", 1: "Thứ 3", 2: "Thứ 4",
+    3: "Thứ 5", 4: "Thứ 6", 5: "Thứ 7", 6: "Chủ nhật"
+}
+
 
 class BaseAgent(ABC):
     """
@@ -53,7 +60,13 @@ class BaseAgent(ABC):
         Subclass có thể override nếu cần format phức tạp hơn.
 
         """
-        parts = [self.prompt]
+        now = datetime.now()
+        time_context = (
+            f"[Thời gian hiện tại: {VIET_DAYS[now.weekday()]}, "
+            f"ngày {now.strftime('%d/%m/%Y')}, "
+            f"lúc {now.strftime('%H:%M')}]"
+        )
+        parts = [self.prompt, time_context]
 
         contexts = input_data.get("contexts", [])
         if contexts:
@@ -64,3 +77,5 @@ class BaseAgent(ABC):
             parts.append(f"\nThông tin sinh viên: {user_info}")
 
         return "\n".join(parts)
+
+    
