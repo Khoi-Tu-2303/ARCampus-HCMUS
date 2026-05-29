@@ -62,20 +62,21 @@ class BaseAgent(ABC):
         """
         now = datetime.now()
         time_context = (
-            f"[Thời gian hiện tại: {VIET_DAYS[now.weekday()]}, "
+            f"Thời gian hiện tại: {VIET_DAYS[now.weekday()]}, "
             f"ngày {now.strftime('%d/%m/%Y')}, "
-            f"lúc {now.strftime('%H:%M')}]"
+            f"lúc {now.strftime('%H:%M')}"
         )
-        parts = [self.prompt, time_context]
-
+        parts = [self.prompt]
+        contexts = input_data.get("contexts", [])
+        print("[DEBUG] [BUILD_PROMPT] contexts =", contexts)
         contexts = input_data.get("contexts", [])
         if contexts:
             parts.append(f"\nThông tin bổ sung để trả lời: {', '.join(contexts)}")
-
+        parts.append(time_context)
         user_info = input_data.get("user_info")
         if user_info:
             parts.append(f"\nThông tin sinh viên: {user_info}")
-
+        print("\n".join(parts))
         return "\n".join(parts)
 
     

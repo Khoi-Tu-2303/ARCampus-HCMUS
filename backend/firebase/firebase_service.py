@@ -82,7 +82,7 @@ class FirebaseService:
                     # print(sub_key, value)
                     result_text.append(value.strip() + "\n")
 
-            return "\n".join(result_text)
+            return result_text
 
         except Exception as e:
             print(f"[Firebase Error] get_multiple_descriptions_text: {e}")
