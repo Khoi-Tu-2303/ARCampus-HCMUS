@@ -1,63 +1,129 @@
-// AR/ARLabelBehavior.cs
+// AR/ARLabelBehavior.cs — PATCHED
+// FIXES:
+// [CRITICAL] Race condition: Setup() called AFTER SetActive(true) → OnEnable fired with lat=0, lng=0
+//            Solution: SetupBeforeEnable() injects data BEFORE SetActive, OnEnable guards on _lat!=0
+// [HIGH]     DistanceUpdateLoop now guards against GPS not ready to avoid bad positions
+
 using UnityEngine;
 using TMPro;
 using System.Collections;
 
 public class ARLabelBehavior : MonoBehaviour
 {
-    [Header("Cấu hình Nhãn")]
+    [Header("Label Config")]
     public float maxHeight = 15f;
     public float minHeight = 2f;
-    public float farDistance = 40f;
-    public float nearDistance = 5f;
+    public float farDistance = 100f;
+    public float nearDistance = 10f;
     public string buildingName;
 
-    [Header("UI Mới (Thiết kế Google Maps)")]
-    public TextMeshProUGUI txtDistance; // Kéo thả cái Text hiển thị "45m" vào đây
+    [Header("UI")]
+    public TextMeshProUGUI txtDistance;
 
     private double _lat;
     private double _lng;
+    private bool _dataReady = false;
     private Coroutine _distanceRoutine;
 
-    // Sếp Spawner sẽ gọi hàm này lúc đẻ nhãn ra để bơm Data vào
+    // ──────────────────────────────────────────────────────────
+    // SETUP — MUST be called BEFORE SetActive(true)
+    // ARLabelSpawner.SpawnLabels() calls this via GetFromPoolInactive()
+    // ──────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Inject position data before the GameObject is activated.
+    /// This prevents OnEnable from running with lat=0, lng=0.
+    /// </summary>
+    public void SetupBeforeEnable(string name, double lat, double lng)
+    {
+        buildingName = name;
+        _lat = lat;
+        _lng = lng;
+        _dataReady = true;
+        // Do NOT call UpdateDistance here — camera may not be ready yet.
+    }
+
+    /// <summary>
+    /// Legacy path — only use if caller activates the object before calling Setup.
+    /// Prefer SetupBeforeEnable() instead.
+    /// </summary>
     public void Setup(string name, double lat, double lng)
     {
         buildingName = name;
         _lat = lat;
         _lng = lng;
-        UpdateDistance(); // Tính ngay lập tức phát đầu tiên
+        _dataReady = true;
+        UpdateDistance();
     }
+
+    // ──────────────────────────────────────────────────────────
+    // LIFECYCLE
+    // ──────────────────────────────────────────────────────────
 
     void OnEnable()
     {
         ARLabelManager.Register(transform, minHeight, maxHeight, nearDistance, farDistance);
-        _distanceRoutine = StartCoroutine(DistanceUpdateLoop());
+
+        // Guard: only start coroutine when data has been injected
+        if (_dataReady && (_lat != 0.0 || _lng != 0.0))
+        {
+            if (_distanceRoutine != null) StopCoroutine(_distanceRoutine);
+            _distanceRoutine = StartCoroutine(DistanceUpdateLoop());
+        }
     }
 
     void OnDisable()
     {
         ARLabelManager.Unregister(transform);
-        if (_distanceRoutine != null) StopCoroutine(_distanceRoutine);
+        if (_distanceRoutine != null)
+        {
+            StopCoroutine(_distanceRoutine);
+            _distanceRoutine = null;
+        }
     }
+
+    // ──────────────────────────────────────────────────────────
+    // DISTANCE UPDATE LOOP
+    // ──────────────────────────────────────────────────────────
 
     IEnumerator DistanceUpdateLoop()
     {
+        // Small initial delay — let the camera settle after activation
+        yield return new WaitForSeconds(0.1f);
+
         while (true)
         {
-            yield return new WaitForSeconds(1f); // Cứ 1 giây tính khoảng cách 1 lần cho nhẹ máy
             UpdateDistance();
+            yield return new WaitForSeconds(1f);
         }
     }
 
     void UpdateDistance()
     {
-        if (GPSService.Instance == null || !GPSService.Instance.IsReady || txtDistance == null) return;
+        if (!_dataReady) return;
+        if (GPSService.Instance == null || !GPSService.Instance.IsReady) return;
+        if (ARLabelManager.Instance != null && ARLabelManager.Instance.isPausedByNav) return;
 
-        float dist = GeoMath.Haversine(
-            GPSService.Instance.Latitude, GPSService.Instance.Longitude,
-            _lat, _lng
-        );
+        double userLat = GPSService.Instance.Latitude;
+        double userLng = GPSService.Instance.Longitude;
 
-        txtDistance.text = $"{dist:F0}m away";
+        // 1. Distance text
+        if (txtDistance != null)
+        {
+            float dist = GeoMath.HaversineDouble(userLat, userLng, _lat, _lng);
+            txtDistance.text = $"{dist:F0}m";
+        }
+
+        // 2. AR drift correction — recompute world position from latest GPS
+        if (Camera.main != null)
+        {
+            Vector3 correctPos = GeoMath.GpsToARWorldPosition(
+                _lat, _lng,
+                userLat, userLng,
+                Camera.main.transform);
+
+            // Only correct X/Z — leave Y to ARLabelManager (height management)
+            transform.position = new Vector3(correctPos.x, transform.position.y, correctPos.z);
+        }
     }
 }

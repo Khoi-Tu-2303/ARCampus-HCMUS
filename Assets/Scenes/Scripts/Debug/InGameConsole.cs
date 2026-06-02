@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿// Debug/InGameConsole.cs — PATCHED
+// FIXES:
+// [LOW] seenLogs HashSet grew unboundedly — unique stackTraces could consume MBs over a long
+//       debug session. Solution: evict oldest entry when limit is exceeded (FIFO via Queue).
+
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -11,10 +16,12 @@ public class InGameConsole : MonoBehaviour
     public ScrollRect scrollRect;
 
     private List<string> logLines = new List<string>();
-    private int maxLines = 50;
+    private const int MAX_LINES = 50;
 
-    // NÂNG CẤP: Dùng bộ nhớ HashSet để nhớ mặt TẤT CẢ các log đã từng in ra
+    // Bounded deduplication: HashSet for O(1) lookup, Queue for eviction order
     private HashSet<string> seenLogs = new HashSet<string>();
+    private Queue<string> seenLogsQ = new Queue<string>();
+    private const int MAX_SEEN = 200; // cap memory usage
 
     void OnEnable() { Application.logMessageReceived += HandleLog; }
     void OnDisable() { Application.logMessageReceived -= HandleLog; }
@@ -27,45 +34,44 @@ public class InGameConsole : MonoBehaviour
     public void ClearLog()
     {
         logLines.Clear();
-        seenLogs.Clear(); // Xóa luôn bộ nhớ để nếu nó bị lại thì còn biết
+        seenLogs.Clear();
+        seenLogsQ.Clear();
         if (logText != null) logText.text = "";
     }
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
-        // 1. Chỉ lọc duy nhất cái cảnh báo Font chữ (vì cái này chắc chắn vô hại và chiếm diện tích)
+        // Filter known-harmless Unity font warnings
         if (logString.Contains("Unicode value") || logString.Contains("LiberationSans SDF"))
-        {
             return;
-        }
 
-        // 2. CHỐNG SPAM TUYỆT ĐỐI: Tạo "CMND" cho từng dòng log
+        // Deduplication — bounded by MAX_SEEN
         string uniqueKey = logString + stackTrace;
+        if (seenLogs.Contains(uniqueKey)) return;
 
-        // Nếu bộ nhớ đã từng thấy dòng log này rồi -> Chặn họng luôn, không in nữa
-        if (seenLogs.Contains(uniqueKey))
+        // Evict oldest entry if at capacity
+        if (seenLogs.Count >= MAX_SEEN)
         {
-            return;
+            string oldest = seenLogsQ.Dequeue();
+            seenLogs.Remove(oldest);
         }
 
-        // Nếu là lỗi mới -> Lưu vào bộ nhớ để chặn các lần sau
         seenLogs.Add(uniqueKey);
+        seenLogsQ.Enqueue(uniqueKey);
 
         string color = "white";
         string finalMessage = logString;
 
-        if (type == LogType.Warning) color = "yellow";
+        if (type == LogType.Warning)
+            color = "yellow";
         else if (type == LogType.Error || type == LogType.Exception)
         {
             color = "red";
-            // Kèm theo vị trí dòng code bị lỗi để anh em mình biết đường sửa
             finalMessage = logString + "\n<size=70%>" + stackTrace + "</size>";
         }
 
-        string newLog = $"<color={color}>{finalMessage}</color>";
-        logLines.Add(newLog);
-
-        if (logLines.Count > maxLines) logLines.RemoveAt(0);
+        logLines.Add($"<color={color}>{finalMessage}</color>");
+        if (logLines.Count > MAX_LINES) logLines.RemoveAt(0);
 
         if (logText != null) logText.text = string.Join("\n\n", logLines);
     }

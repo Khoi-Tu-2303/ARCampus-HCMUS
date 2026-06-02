@@ -14,6 +14,7 @@ public class FloorViewer : MonoBehaviour
     public Image indoorMapDisplay;
     public Button btnCloseViewer;
     public ScrollRect scrollRect;
+    public TextMeshProUGUI txtBuildingTitle;
 
     [Header("Floor Navigation")]
     public TextMeshProUGUI txtCurrentFloorLabel;
@@ -133,6 +134,15 @@ public class FloorViewer : MonoBehaviour
 
     private IEnumerator LoadFloorSpritesAsync(string buildingId)
     {
+        if (txtBuildingTitle != null)
+        {
+            if (buildingId == "NĐH")
+                txtBuildingTitle.text = "Nhà điều hành";
+            else if (buildingId.Length == 1)
+                txtBuildingTitle.text = "Tòa " + buildingId; // Dịch "A" thành "Tòa A"
+            else
+                txtBuildingTitle.text = buildingId;
+        }
         loadedFloorSprites.Clear();
         loadedFloorNames.Clear();
         floorBtnBackgrounds.Clear();

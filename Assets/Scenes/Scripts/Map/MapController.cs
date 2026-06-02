@@ -159,7 +159,8 @@ public class MapController : MonoBehaviour
 
     private System.Collections.IEnumerator WaitAndRecalculateZoom()
     {
-        yield return null;
+        yield return new WaitForSeconds(0.35f);
+
         CalculateAndApplyMinZoom();
     }
 }

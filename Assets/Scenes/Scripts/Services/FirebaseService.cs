@@ -20,6 +20,8 @@ public class FirebaseService : MonoBehaviour
 
     public List<LocationData> GetAllLocations() => AllLocations;
 
+    public HashSet<string> ValidIndoorIds = new HashSet<string>();
+
     void Start()
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
@@ -68,8 +70,8 @@ public class FirebaseService : MonoBehaviour
                 });
             }
             Debug.Log($"✅ Total locations loaded: {AllLocations.Count}");
+            FetchAllIndoorRooms();
 
-            OnLocationsLoaded?.Invoke();
         });
     }
 
@@ -115,5 +117,22 @@ public class FirebaseService : MonoBehaviour
                     onComplete?.Invoke("Không tìm thấy thông tin chi tiết trên hệ thống.");
                 }
             });
+    }
+    private void FetchAllIndoorRooms()
+    {
+        db.Collection("description").GetSnapshotAsync().ContinueWithOnMainThread((Task<QuerySnapshot> task) => {
+            if (task.IsCompleted && !task.IsFaulted)
+            {
+                ValidIndoorIds.Clear();
+                foreach (var doc in task.Result.Documents)
+                {
+                    ValidIndoorIds.Add(doc.Id); // VD: doc.Id là "A102", "DH_1_2"...
+                }
+                Debug.Log($"✅ Tải xong {ValidIndoorIds.Count} mã phòng vào kho!");
+
+                // Báo cho UI biết là đã tải xong TẤT CẢ
+                OnLocationsLoaded?.Invoke();
+            }
+        });
     }
 }

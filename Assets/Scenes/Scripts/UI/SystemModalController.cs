@@ -1,4 +1,9 @@
-// UI/SystemModalController.cs
+// UI/SystemModalController.cs — PATCHED
+// FIXES:
+// [CRITICAL] OnRetryClicked only checked IsReady flag — now calls GPSService.RequestRestart()
+//            which actually restarts Input.location.Start(), allowing true GPS recovery.
+// [HIGH]     Added public HideModal() already present — kept for GPSService to auto-dismiss.
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,10 +23,11 @@ public class SystemModalController : MonoBehaviour
     [Header("Buttons")]
     public Button btnRetry;
     public Button btnBack;
-    public TextMeshProUGUI txtBtnBack; // Để đổi chữ "Quay lại" hoặc "Thoát"
+    public TextMeshProUGUI txtBtnBack;
 
     private WarningType _currentType;
     private BackActionTarget _currentBackTarget;
+    private bool _retryInProgress = false;
 
     void Awake()
     {
@@ -32,33 +38,31 @@ public class SystemModalController : MonoBehaviour
     void Start()
     {
         if (modalPanel != null) modalPanel.SetActive(false);
-
-        // Cắm dây sự kiện
         if (btnRetry != null) btnRetry.onClick.AddListener(OnRetryClicked);
         if (btnBack != null) btnBack.onClick.AddListener(OnBackClicked);
     }
 
-    /// <summary>
-    /// Gọi hàm này ở bất cứ đâu để bật Modal lên
-    /// VD: SystemModalController.Instance.ShowWarning(WarningType.GPS, BackActionTarget.GoToMain);
-    /// </summary>
+    // ──────────────────────────────────────────────────────────
+    // PUBLIC API
+    // ──────────────────────────────────────────────────────────
+
     public void ShowWarning(WarningType type, BackActionTarget backTarget)
     {
         _currentType = type;
         _currentBackTarget = backTarget;
+        _retryInProgress = false;
 
-        // Tự động "thay ruột" Modal dựa vào loại lỗi
         if (type == WarningType.GPS)
         {
             if (txtTitle) txtTitle.text = "Mất tín hiệu GPS";
-            if (txtDesc) txtDesc.text = "Không xác định được vị trí hiện tại\nVui lòng tìm vị trí tín hiệu tốt hơn";
+            if (txtDesc) txtDesc.text = "Không xác định được vị trí hiện tại\nVui lòng bật GPS và nhấn Thử lại";
             if (txtBtnBack) txtBtnBack.text = "Quay lại";
         }
         else if (type == WarningType.Server)
         {
             if (txtTitle) txtTitle.text = "Server mất kết nối";
             if (txtDesc) txtDesc.text = "Kết nối Server của bạn đã mất\nVui lòng kiểm tra kết nối mạng";
-            if (txtBtnBack) txtBtnBack.text = "Thoát"; // Figma của ông để chữ Thoát
+            if (txtBtnBack) txtBtnBack.text = "Thoát";
         }
 
         if (modalPanel != null) modalPanel.SetActive(true);
@@ -67,34 +71,38 @@ public class SystemModalController : MonoBehaviour
     public void HideModal()
     {
         if (modalPanel != null) modalPanel.SetActive(false);
+        _retryInProgress = false;
     }
 
-    // ==========================================
-    // LOGIC NÚT BẤM
-    // ==========================================
+    // ──────────────────────────────────────────────────────────
+    // BUTTON HANDLERS
+    // ──────────────────────────────────────────────────────────
+
     private void OnRetryClicked()
     {
         if (_currentType == WarningType.GPS)
         {
-            Debug.Log("🔄 [Modal] Đang tải lại GPS...");
-            // CHECK LOGIC GPS: Nếu đã có tín hiệu trở lại thì tắt bảng
-            if (GPSService.Instance != null && GPSService.Instance.IsReady)
+            if (GPSService.Instance == null) return;
+
+            if (GPSService.Instance.IsReady)
             {
-                // Thêm logic check sai số (Accuracy) ở đây nếu cần.
-                // VD: if (GPSService.Instance.Accuracy < 20f) { ... }
+                // GPS already recovered (monitor loop called HandleGPSRestored)
                 HideModal();
+                return;
             }
-            else
-            {
-                Debug.LogWarning("⚠️ [Modal] GPS vẫn chưa có, không tắt bảng!");
-                // (Có thể thêm hiệu ứng rung lắc cái bảng ở đây cho sinh động)
-            }
+
+            if (_retryInProgress) return; // prevent double-tap
+            _retryInProgress = true;
+
+            // FIX: Call RequestRestart() which actually calls Input.location.Start()
+            // Modal will auto-dismiss when GPSService fires OnGPSRecovered → HandleGPSRestored → HideModal()
+            if (txtDesc != null) txtDesc.text = "Đang kết nối lại GPS...";
+            GPSService.Instance.RequestRestart();
         }
         else if (_currentType == WarningType.Server)
         {
-            Debug.Log("🔄 [Modal] Đang kết nối lại Server...");
-            // Tạm để đó, sau này team Server nối API vô đây
-            // Gọi hàm check server, nếu OK thì HideModal();
+            if (txtDesc != null) txtDesc.text = "Đang kết nối lại...";
+            FirebaseService.Instance?.FetchAllLocations();
         }
     }
 
@@ -104,29 +112,19 @@ public class SystemModalController : MonoBehaviour
 
         if (_currentBackTarget == BackActionTarget.GoToLogin)
         {
-            Debug.Log("🚪 [Modal] Quay về màn hình Đăng Nhập (Login Scene)");
-
-            // =========================================================
-            // 🛑 TODO CHO TEAM: KHI NÀO CÓ MÀN HÌNH ĐĂNG NHẬP THÌ MỞ COMMENT DÒNG DƯỚI
-            // (Nhớ đổi "LoginScene" thành tên Scene thật của team làm)
-            // =========================================================
+            Debug.Log("🚪 [Modal] Quay về màn hình Đăng Nhập");
             // UnityEngine.SceneManagement.SceneManager.LoadScene("LoginScene");
         }
         else if (_currentBackTarget == BackActionTarget.GoToMain)
         {
-            Debug.Log("🏠 [Modal] Quay về màn hình Main (Hủy các tác vụ đang dở)");
+            Debug.Log("🏠 [Modal] Quay về Main");
 
-            // 1. Nếu đang dẫn đường thì tắt cmn đi để dọn sạch bản đồ
-            if (NavigationSession.Instance != null)
-            {
-                NavigationSession.Instance.CancelNavigation();
-            }
+            NavigationSession.Instance?.CancelNavigation();
 
-            // =========================================================
-            // 🛑 TODO CHO TEAM: NẾU MUỐN KHI VỀ MAIN NÓ TẮT LUÔN CẢ BẢNG TÌM KIẾM/CHI TIẾT:
-            // =========================================================
-            if (SearchPanelController.Instance != null) SearchPanelController.Instance.gameObject.SetActive(false);
-            if (LocationDetailController.Instance != null) LocationDetailController.Instance.ClosePanel();
+            if (SearchPanelController.Instance != null)
+                SearchPanelController.Instance.gameObject.SetActive(false);
+            if (LocationDetailController.Instance != null)
+                LocationDetailController.Instance.ClosePanel();
         }
     }
 }

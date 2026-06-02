@@ -183,20 +183,21 @@ public class SearchPanelController : MonoBehaviour
         }
     }
 
-    // ✅ BỘ NÃO PHÂN TÍCH TỪ KHÓA ĐỂ SINH RA KẾT QUẢ ẢO (Magic lies here)
+    // ✅ BỘ NÃO PHÂN TÍCH TỪ KHÓA ĐỂ SINH RA KẾT QUẢ ẢO (Đã nâng cấp Tường Lửa Firebase)
     List<SearchResultItem> ParseIndoorSearch(string lkw)
     {
         List<SearchResultItem> list = new List<SearchResultItem>();
-        
+
         // 1. Check Tiện ích (Canteen, Thư viện)
         foreach (var alias in specialAliases)
         {
             if (alias.Key.Contains(lkw) || lkw.Contains(alias.Key))
             {
-                list.Add(new SearchResultItem { 
-                    TargetBuildingName = alias.Value.building, 
-                    IndoorDocId = alias.Value.indoorId, 
-                    DisplayText = alias.Value.displayName 
+                list.Add(new SearchResultItem
+                {
+                    TargetBuildingName = alias.Value.building,
+                    IndoorDocId = alias.Value.indoorId,
+                    DisplayText = alias.Value.displayName
                 });
             }
         }
@@ -214,16 +215,22 @@ public class SearchPanelController : MonoBehaviour
                 {
                     string indoorId = $"{buildingChar}{roomNumber}"; // Nặn ra F102
                     string bName = $"Tòa {buildingChar}";
-                    list.Add(new SearchResultItem {
-                        TargetBuildingName = bName,
-                        IndoorDocId = indoorId,
-                        DisplayText = $"Phòng {indoorId} ({bName})"
-                    });
+
+                    // 🛑 BỨC TƯỜNG LỬA CHẶN PHÒNG ẢO 🛑
+                    // Chỉ hiển thị nếu Firebase thực sự có lưu ID phòng này
+                    if (FirebaseService.Instance.ValidIndoorIds.Contains(indoorId))
+                    {
+                        list.Add(new SearchResultItem
+                        {
+                            TargetBuildingName = bName,
+                            IndoorDocId = indoorId,
+                            DisplayText = $"Phòng {indoorId} ({bName})"
+                        });
+                    }
                 }
             }
         }
 
-        // 3. Check Nhà điều hành (VD: dh2.3, dh23)
         // 3. Check Nhà điều hành (VD: dh2.3, dh23, ndh2.3, nd2.3)
         if (cleanKw.StartsWith("dh") || cleanKw.StartsWith("đh") || cleanKw.StartsWith("ndh") || cleanKw.StartsWith("nđh") || cleanKw.StartsWith("nd"))
         {
@@ -233,24 +240,30 @@ public class SearchPanelController : MonoBehaviour
 
             if (!string.IsNullOrEmpty(nums))
             {
+                string indoorId = "";
+                string displayRoom = "";
+
                 if (nums.Contains("_")) // User gõ dh2_3 hoặc nd6.3
                 {
-                    list.Add(new SearchResultItem
-                    {
-                        TargetBuildingName = "Nhà điều hành",
-                        IndoorDocId = $"DH_{nums}", // Ép thành format DH_2_3 để map với Firebase
-                        DisplayText = $"Phòng {nums.Replace("_", ".")} (Nhà điều hành)"
-                    });
+                    indoorId = $"DH_{nums}";
+                    displayRoom = nums.Replace("_", ".");
                 }
                 else if (nums.Length >= 2) // User gõ lười dh23 hoặc nd63 -> tự bóc tách thành 6 và 3
                 {
                     string floor = nums.Substring(0, 1);
                     string room = nums.Substring(1);
+                    indoorId = $"DH_{floor}_{room}";
+                    displayRoom = $"{floor}.{room}";
+                }
+
+                // 🛑 BỨC TƯỜNG LỬA CHẶN PHÒNG ẢO 🛑
+                if (!string.IsNullOrEmpty(indoorId) && FirebaseService.Instance.ValidIndoorIds.Contains(indoorId))
+                {
                     list.Add(new SearchResultItem
                     {
                         TargetBuildingName = "Nhà điều hành",
-                        IndoorDocId = $"DH_{floor}_{room}",
-                        DisplayText = $"Phòng {floor}.{room} (Nhà điều hành)"
+                        IndoorDocId = indoorId,
+                        DisplayText = $"Phòng {displayRoom} (Nhà điều hành)"
                     });
                 }
             }

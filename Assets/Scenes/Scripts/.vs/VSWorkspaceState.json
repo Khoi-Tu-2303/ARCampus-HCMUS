@@ -1,7 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Core",
+    "\\AR",
     "\\Debug",
     "\\Indoor",
     "\\Map",
@@ -11,6 +11,6 @@
     "\\Services",
     "\\UI"
   ],
-  "SelectedNode": "\\Map\\MapController.cs",
+  "SelectedNode": "\\UI\\TopHeaderControler.cs",
   "PreviewInSolutionExplorer": false
 }
