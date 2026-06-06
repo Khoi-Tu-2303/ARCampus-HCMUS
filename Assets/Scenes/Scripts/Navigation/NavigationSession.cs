@@ -72,7 +72,7 @@ public class NavigationSession : MonoBehaviour
 
         if (!GraphService.Instance.IsLoaded) return;
 
-        string startNode = FindNearestNode();
+        string startNode = FindBestStartNode(destinationNodeId);
         if (startNode == null)
         {
             Debug.LogWarning("⚠️ [Nav] Start node not found (outside campus?)");
@@ -212,7 +212,6 @@ public class NavigationSession : MonoBehaviour
                 break;
         }
 
-    target_changed:; // update bearing immediately
         if (waypointIndex < currentPath.Count)
         {
             bearing = GeoMath.CalculateBearing(
@@ -263,32 +262,65 @@ public class NavigationSession : MonoBehaviour
     // FIND NEAREST NODE — with distance guard
     // ──────────────────────────────────────────────────────────
 
-    string FindNearestNode()
+    string FindBestStartNode(string destId)
     {
         if (!GPSService.Instance.IsReady) return null;
 
-        double lat = GPSService.Instance.Latitude;
-        double lng = GPSService.Instance.Longitude;
-        string nearest = null;
-        float minDist = float.MaxValue;
+        double uLat = GPSService.Instance.Latitude;
+        double uLng = GPSService.Instance.Longitude;
+
+        // Lấy thông tin node đích để tính toán hướng
+        if (!GraphService.Instance.Nodes.TryGetValue(destId, out var destNode))
+            return null;
+
+        string bestNode = null;
+        float bestScore = float.MaxValue;
+
+        // 1. Vector Hướng từ Vị trí User đâm thẳng tới Đích
+        Vector2 vecToDest = new Vector2((float)(destNode.lng - uLng), (float)(destNode.lat - uLat)).normalized;
+        float distUserToDest = GeoMath.HaversineDouble(uLat, uLng, destNode.lat, destNode.lng);
 
         foreach (var node in GraphService.Instance.Nodes.Values)
         {
-            float d = GeoMath.HaversineDouble(lat, lng, node.lat, node.lng);
-            if (d < minDist)
+            float distUserToNode = GeoMath.HaversineDouble(uLat, uLng, node.lat, node.lng);
+
+            // Guard: don't snap to a node that is far outside campus
+            if (distUserToNode > MAX_SNAP_DISTANCE) continue;
+
+            // 2. TÍCH VÔ HƯỚNG (Dot Product)
+            Vector2 vecToNode = new Vector2((float)(node.lng - uLng), (float)(node.lat - uLat));
+            float dotProduct = 0f;
+            if (vecToNode.sqrMagnitude > 0)
             {
-                minDist = d;
-                nearest = node.id;
+                dotProduct = Vector2.Dot(vecToDest, vecToNode.normalized);
+            }
+
+            // 3. TÍNH ĐIỂM (Càng thấp càng tốt)
+            // Hệ số phạt góc: (1.5 - 0.5 * dot) -> Cùng hướng = x1.0, Vuông góc = x1.5, Ngược hướng = x2.0
+            float anglePenalty = 1.5f - 0.5f * dotProduct;
+            float score = distUserToNode * anglePenalty;
+
+            // 4. Phạt lỗi "Đi lùi"
+            // Nếu node bắt đầu lại nằm xa đích hơn cả vị trí sếp đang đứng -> Phạt nặng!
+            float distNodeToDest = GeoMath.HaversineDouble(node.lat, node.lng, destNode.lat, destNode.lng);
+            if (distNodeToDest > distUserToDest)
+            {
+                score += (distNodeToDest - distUserToDest) * 2f;
+            }
+
+            if (score < bestScore)
+            {
+                bestScore = score;
+                bestNode = node.id;
             }
         }
 
-        // Guard: don't snap to a node that is far outside campus
-        if (minDist > MAX_SNAP_DISTANCE)
+        if (bestScore == float.MaxValue)
         {
-            Debug.LogWarning($"⚠️ [Nav] Nearest node is {minDist:F0}m away. User may be outside campus.");
+            Debug.LogWarning("⚠️ [Nav] User ở quá xa (ngoài MAX_SNAP_DISTANCE), không tìm thấy Node khởi đầu.");
             return null;
         }
 
-        return nearest;
+        return bestNode;
     }
 }

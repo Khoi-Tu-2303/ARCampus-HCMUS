@@ -1,16 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AR",
-    "\\Debug",
-    "\\Indoor",
-    "\\Map",
-    "\\Modal",
-    "\\Models",
-    "\\Navigation",
-    "\\Services",
-    "\\UI"
+    "\\AR"
   ],
-  "SelectedNode": "\\UI\\TopHeaderControler.cs",
+  "SelectedNode": "\\AR\\ARRaycastInput.cs",
   "PreviewInSolutionExplorer": false
 }

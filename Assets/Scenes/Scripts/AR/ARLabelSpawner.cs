@@ -8,7 +8,7 @@ public class ARLabelSpawner : MonoBehaviour
 {
     [Header("Setup")]
     public GameObject labelPrefab;
-    public float spawnRadius = 80f;
+    public float spawnRadius = 100f;
     public float updateInterval = 5f;
     public int poolSize = 20;
 
