@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "117075637687",
+    "firebase_url": "https://aicampus-858b3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "aicampus-858b3",
+    "storage_bucket": "aicampus-858b3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117075637687:android:1456c36303e3ec64fe2432",
+        "android_client_info": {
+          "package_name": "com.khoitu.arcampus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb_V3g7WXCBvOSjKOv9UMS7OHKnJDMTvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
