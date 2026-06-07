@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AR"
+    "\\Core"
   ],
-  "SelectedNode": "\\AR\\ARRaycastInput.cs",
+  "SelectedNode": "\\Core\\GeoMath.cs",
   "PreviewInSolutionExplorer": false
 }

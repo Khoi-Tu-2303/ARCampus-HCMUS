@@ -1,5 +1,14 @@
-// Navigation/ARNavigationView.cs
-// BẢN UPDATE CUỐI: Zero GC + Trả tự do Mũi tên (60FPS) + Cache Camera
+// Navigation/ARNavigationView.cs — PATCHED v2
+// FIXES (Phase 6 — GC & Memory):
+// [LOW] _linePointsBuffer re-allocated with `new Vector3[count + 16]` on path length growth.
+//       In practice this triggers on first navigation (default 64 slots may be enough),
+//       but re-routing with a longer path mid-session creates a GC spike.
+//       Fix: Grow buffer by 2× (not +16) — ensures O(log n) total allocations over the
+//       session lifetime rather than O(n/16) linear growth.
+// [LOW] ClearAll() called Destroy() on arrow/label — creating and destroying GameObjects
+//       every navigation is wasteful. Fix: SetActive(false) instead of Destroy, and
+//       re-use via SetActive(true) on next SpawnArrow()/SpawnNodeLabel().
+//       (Requires arrow and label prefabs to be tolerant of re-activation — they are.)
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,99 +33,115 @@ public class ARNavigationView : MonoBehaviour
     private GameObject currentNextNodeLabel;
     private TMP_Text nextNodeText;
 
-    // Mỏ neo tọa độ — được set khi bắt đầu navigation
+    // Navigation anchor — set at StartNavigation time
     private double navStartLat;
     private double navStartLng;
     private Vector3 navStartFeetPos;
 
-    // ✅ TỐI ƯU ZERO GC: Pre-alloc mảng cố định để không đẻ rác khi vẽ LineRenderer
+    // FIX: Buffer starts at 64, grows by 2× — O(log n) allocs over session
     private Vector3[] _linePointsBuffer = new Vector3[64];
 
-    // ✅ BIẾN GIAO TIẾP TỐI ƯU MƯỢT 60FPS
+    // Decoupled bearing for smooth 60Hz arrow without 2Hz GPS stutter
     private float _targetBearing;
 
-    // ✅ CACHE CAMERA: Tránh gọi Camera.main gây lag
+    // Cached camera — never call Camera.main in a hot path
     private Camera _cachedCamera;
-    private Camera GetCamera() => _cachedCamera != null ? _cachedCamera : (_cachedCamera = Camera.main);
+    private Camera GetCamera() =>
+        _cachedCamera != null ? _cachedCamera : (_cachedCamera = Camera.main);
 
-
+    // ── ANCHOR ───────────────────────────────────────────────────
     public void InitAnchor(double startLat, double startLng)
     {
         navStartLat = startLat;
         navStartLng = startLng;
         Camera cam = GetCamera();
         if (cam != null)
-        {
             navStartFeetPos = cam.transform.position + new Vector3(0, lineYOffset, 0);
-        }
     }
 
+    // ── SPAWN ────────────────────────────────────────────────────
+    // FIX: Re-use existing GameObjects via SetActive instead of Instantiate/Destroy
     public void SpawnArrow()
     {
-        if (currentArrow3D == null && arrow3DPrefab != null)
+        if (arrow3DPrefab == null) return;
+        if (currentArrow3D == null)
             currentArrow3D = Instantiate(arrow3DPrefab);
+        else
+            currentArrow3D.SetActive(true); // re-use from previous navigation
     }
 
     public void SpawnNodeLabel()
     {
-        if (nextNodeLabelPrefab != null && currentNextNodeLabel == null)
+        if (nextNodeLabelPrefab == null) return;
+        if (currentNextNodeLabel == null)
         {
             currentNextNodeLabel = Instantiate(nextNodeLabelPrefab);
             nextNodeText = currentNextNodeLabel.GetComponent<TMP_Text>()
-                            ?? currentNextNodeLabel.GetComponentInChildren<TMP_Text>();
+                           ?? currentNextNodeLabel.GetComponentInChildren<TMP_Text>();
+        }
+        else
+        {
+            currentNextNodeLabel.SetActive(true); // re-use
         }
     }
 
+    // ── DRAW PATH ────────────────────────────────────────────────
     public void DrawARPath(List<GraphNode> path)
     {
         Camera cam = GetCamera();
         if (pathLine == null || path == null || cam == null) return;
         pathLine.useWorldSpace = true;
 
-        int count = path.Count; // start point + nodes
+        int count = path.Count;
 
-        // Nới rộng cái túi (buffer) nếu đường đi đợt này quá dài
+        // FIX: Grow by 2× instead of +16 to reduce alloc frequency on large campuses
         if (_linePointsBuffer.Length < count)
-            _linePointsBuffer = new Vector3[count + 16]; // grow thêm dự phòng
+        {
+            int newSize = _linePointsBuffer.Length;
+            while (newSize < count) newSize *= 2;
+            _linePointsBuffer = new Vector3[newSize];
+        }
 
         _linePointsBuffer[0] = navStartFeetPos;
-
-        for (int i = 1; i < path.Count; i++)
+        for (int i = 1; i < count; i++)
         {
-            Vector3 offset = GeoMath.LatLngToMeterOffset(navStartLat, navStartLng, path[i].lat, path[i].lng);
+            Vector3 offset = GeoMath.LatLngToMeterOffset(
+                navStartLat, navStartLng,
+                path[i].lat, path[i].lng);
             _linePointsBuffer[i] = navStartFeetPos + offset;
         }
 
         pathLine.positionCount = count;
-        // ✅ Cực kỳ an toàn: SetPositions sẽ tự động chỉ lấy đúng `positionCount` điểm đầu tiên trong Buffer
-        pathLine.SetPositions(_linePointsBuffer);
+        pathLine.SetPositions(_linePointsBuffer); // only reads [0..positionCount-1]
     }
 
-    // ✅ NHẬN LỆNH TỪ SESSION (2Hz): Chỉ cập nhật góc quay mục tiêu
+    // ── ARROW (60Hz smooth) ──────────────────────────────────────
+    // Called by NavigationSession at 2Hz — sets target only
     public void UpdateARArrow(float bearing)
     {
         _targetBearing = bearing;
     }
 
-    // ✅ THỰC THI ĐỒ HỌA (60Hz): Xử lý mượt mà mỗi frame
     void Update()
     {
-        if (currentArrow3D == null) return;
+        if (currentArrow3D == null || !currentArrow3D.activeSelf) return;
 
         Camera cam = GetCamera();
         if (cam == null) return;
 
-        // 1. Tính tọa độ ngay trước mặt Camera (ĐÃ FIX: Thêm .transform)
         Vector3 targetPos = cam.transform.position + cam.transform.forward * arrowDistance;
         targetPos.y = cam.transform.position.y + arrowHeightOffset;
 
-        // 2. Ép Mũi tên bay theo Camera liên tục (Mượt như Sunsilk)
-        currentArrow3D.transform.position = Vector3.Lerp(currentArrow3D.transform.position, targetPos, Time.deltaTime * 5f);
+        currentArrow3D.transform.position = Vector3.Lerp(
+            currentArrow3D.transform.position, targetPos, Time.deltaTime * 5f);
 
-        // 3. Xoay Mũi tên theo góc GPS đã được nạp từ UpdateARArrow
-        currentArrow3D.transform.rotation = Quaternion.Slerp(currentArrow3D.transform.rotation,
-                                                               Quaternion.Euler(0, _targetBearing, 0), Time.deltaTime * 5f);
+        currentArrow3D.transform.rotation = Quaternion.Slerp(
+            currentArrow3D.transform.rotation,
+            Quaternion.Euler(0, _targetBearing, 0),
+            Time.deltaTime * 5f);
     }
+
+    // ── PATH LINE UPDATE ─────────────────────────────────────────
     public void UpdateARPathLine(int waypointIndex)
     {
         Camera cam = GetCamera();
@@ -132,28 +157,34 @@ public class ARNavigationView : MonoBehaviour
         }
     }
 
+    // ── NODE LABEL UPDATE ────────────────────────────────────────
     public void UpdateNextNodeLabel(GraphNode target, float distanceToTarget)
     {
         if (currentNextNodeLabel == null) return;
-        Vector3 offset = GeoMath.LatLngToMeterOffset(navStartLat, navStartLng, target.lat, target.lng);
+
+        Vector3 offset = GeoMath.LatLngToMeterOffset(
+            navStartLat, navStartLng, target.lat, target.lng);
         currentNextNodeLabel.transform.position = navStartFeetPos + offset;
+
         if (nextNodeText != null)
         {
-            // ✅ ĐÃ FIX: Nếu không có tên, hoặc tên là cái Node rác W_ thì in chữ "Điểm tiếp theo"
             string name = target.name;
-            if (string.IsNullOrEmpty(name) || target.id.StartsWith("W_") || target.id.StartsWith("CP_"))
+            if (string.IsNullOrEmpty(name) ||
+                target.id.StartsWith("W_") ||
+                target.id.StartsWith("CP_"))
             {
                 name = "Điểm tiếp theo";
             }
-
             nextNodeText.text = $"{name}\n{distanceToTarget:F0} m";
         }
     }
 
+    // ── CLEAR ────────────────────────────────────────────────────
+    // FIX: SetActive(false) instead of Destroy — objects pooled for next navigation
     public void ClearAll()
     {
-        if (currentArrow3D != null) { Destroy(currentArrow3D); currentArrow3D = null; }
+        if (currentArrow3D != null) currentArrow3D.SetActive(false);
+        if (currentNextNodeLabel != null) currentNextNodeLabel.SetActive(false);
         if (pathLine != null) pathLine.positionCount = 0;
-        if (currentNextNodeLabel != null) { Destroy(currentNextNodeLabel); currentNextNodeLabel = null; }
     }
 }

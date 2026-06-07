@@ -1,8 +1,11 @@
-﻿// Navigation/PathFinder.cs — PATCHED
-// FIXES:
-// [MEDIUM] SortedList key collision: Random.value * 0.001f hack could still collide on large graphs.
-//          Solution: Use (float f, int tie) tuple key — tiebreaker guarantees uniqueness.
-// No other logic changes — A* algorithm and neighbor cache are correct.
+﻿// Navigation/PathFinder.cs — PATCHED v2
+// FIXES (Phase 6 — Hidden Performance):
+// [MEDIUM] ReconstructPath() called path.Insert(0, node) inside a while loop.
+//          List.Insert(0) is O(n) — shifts every existing element right on each call.
+//          For a 50-node path this is 1+2+...+50 = 1275 element moves.
+//          Fix: build the list in reverse (path.Add at end = O(1)), then call List.Reverse()
+//          once at the end — O(n) total instead of O(n²).
+// (All other fixes from PATCHED v1 retained: SortedList tuple key, neighbor cache, score buffer reuse.)
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -25,10 +28,7 @@ public class PathFinder : MonoBehaviour
         Instance = this;
     }
 
-    // ──────────────────────────────────────────────────────────
-    // NEIGHBOR CACHE — call from GraphService after ParseGeoJSON
-    // ──────────────────────────────────────────────────────────
-
+    // ── NEIGHBOR CACHE ───────────────────────────────────────────
     public void BuildNeighborCache()
     {
         var nodes = GraphService.Instance.Nodes;
@@ -47,12 +47,7 @@ public class PathFinder : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // A* PATHFINDING
-    // FIX: Replaced SortedList<float, string> (collision-prone) with
-    //      SortedList<(float f, int tie), string> — guaranteed unique keys.
-    // ──────────────────────────────────────────────────────────
-
+    // ── A* PATHFINDING ───────────────────────────────────────────
     public List<GraphNode> FindPath(string startId, string goalId)
     {
         if (_neighbors == null) BuildNeighborCache();
@@ -64,7 +59,7 @@ public class PathFinder : MonoBehaviour
         _fScore.Clear();
         _cameFrom.Clear();
 
-        // Tiebreaker counter — guarantees unique keys even when f-scores collide
+        // Guaranteed-unique key via (f-score, insertion counter) tuple
         int insertionCounter = 0;
         var openSet = new SortedList<(float f, int tie), string>(
             Comparer<(float f, int tie)>.Create((a, b) =>
@@ -81,7 +76,6 @@ public class PathFinder : MonoBehaviour
         _fScore[startId] = h0;
         openSet[(h0, insertionCounter++)] = startId;
 
-        // Track which node IDs are currently in the open set (for fast contains check)
         var inOpen = new HashSet<string> { startId };
 
         while (openSet.Count > 0)
@@ -119,27 +113,29 @@ public class PathFinder : MonoBehaviour
             }
         }
 
-        return null; // no path found
+        return null; // no path
     }
 
-    // ──────────────────────────────────────────────────────────
-    // RECONSTRUCT PATH
-    // ──────────────────────────────────────────────────────────
-
+    // ── RECONSTRUCT PATH ─────────────────────────────────────────
+    // FIX: Build reversed (O(1) Add each node), then Reverse() once → O(n) total.
+    // Old code used Insert(0) in a loop → O(n²) for large paths.
     List<GraphNode> ReconstructPath(
         Dictionary<string, string> cameFrom,
         string current,
         Dictionary<string, GraphNode> nodes)
     {
-        var path = new List<GraphNode>(16);
-        path.Add(nodes[current]);
+        var path = new List<GraphNode>(32);
 
+        // Walk backwards: Add to end is O(1)
+        path.Add(nodes[current]);
         while (cameFrom.TryGetValue(current, out string prev))
         {
             current = prev;
-            path.Insert(0, nodes[current]);
+            path.Add(nodes[current]);
         }
 
+        // One O(n) reverse instead of O(n²) repeated Insert(0)
+        path.Reverse();
         return path;
     }
 }

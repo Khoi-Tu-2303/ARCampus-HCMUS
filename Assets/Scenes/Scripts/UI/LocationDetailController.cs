@@ -1,4 +1,12 @@
-// UI/LocationDetailController.cs
+// UI/LocationDetailController.cs — PATCHED v2
+// FIXES (Phase 6):
+// [MEDIUM] FindNearestNodeToLocation() used float-cast Haversine — same 1-2m precision issue
+//          as checkpoint detection. For node snapping from a LocationData point, the error is
+//          usually harmless, BUT if two nodes are very close (<5m apart) the wrong one could be
+//          selected. Fix: switch to HaversineDouble to stay consistent with NavigationSession.
+// [LOW]    _imageCache never evicted — over a long session, loading many buildings fills memory.
+//          Fix: cap cache at MAX_IMAGE_CACHE entries, evict by insertion order via a Queue.
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,7 +17,7 @@ public class LocationDetailController : MonoBehaviour
 {
     public static LocationDetailController Instance;
 
-    [Header("UI References (Popup Card Style)")]
+    [Header("UI References")]
     public GameObject detailPanel;
     public GameObject dimmedOverlay;
 
@@ -17,18 +25,23 @@ public class LocationDetailController : MonoBehaviour
     public Image imgCover;
     public Sprite defaultPlaceholder;
 
-    [Header("Texts (Theo UI Mới)")]
+    [Header("Texts")]
     public TextMeshProUGUI txtName;
-    public TextMeshProUGUI txtCategory;    // Hiện chữ "Phòng chức năng" màu xanh
-    public TextMeshProUGUI txtDescription; // Hiện đoạn văn mô tả
+    public TextMeshProUGUI txtCategory;
+    public TextMeshProUGUI txtDescription;
 
     [Header("Buttons")]
-    public Button btnDimmedOverlay; // Bấm ra ngoài vùng xám để tắt
+    public Button btnDimmedOverlay;
     public Button btnStartNavigation;
     public Button btnIndoorMap;
 
     private LocationData _currentData;
-    private Dictionary<string, Sprite> _imageCache = new Dictionary<string, Sprite>();
+
+    // FIX: Bounded image cache — evict oldest when over limit
+    private const int MAX_IMAGE_CACHE = 10;
+    private Dictionary<string, Sprite> _imageCache = new Dictionary<string, Sprite>(MAX_IMAGE_CACHE);
+    private Queue<string> _imageCacheOrder = new Queue<string>(MAX_IMAGE_CACHE);
+
     private Coroutine _imageLoadCoroutine;
     private string _currentBuildingIdForMap = "";
 
@@ -43,49 +56,38 @@ public class LocationDetailController : MonoBehaviour
         if (detailPanel != null) detailPanel.SetActive(false);
         if (dimmedOverlay != null) dimmedOverlay.SetActive(false);
 
-        // Vùng xám đã được cài đặt để tắt Popup
         if (btnDimmedOverlay != null) btnDimmedOverlay.onClick.AddListener(ClosePanel);
-
         if (btnStartNavigation != null) btnStartNavigation.onClick.AddListener(OnNavigationClicked);
         if (btnIndoorMap != null) btnIndoorMap.onClick.AddListener(OnIndoorMapClicked);
     }
 
-    // ✅ CẬP NHẬT: Thêm 2 tham số để chứa thông tin ảo từ thanh Search
+    // ── OPEN ─────────────────────────────────────────────────────
     public void OpenDetailPanel(LocationData locData, string indoorDocId = "", string customTitle = "")
     {
         if (locData == null) return;
         _currentData = locData;
 
-        // 1. TÊN HIỂN THỊ: Nếu Search truyền vào Tên Phòng thì xài, không thì xài Tên Tòa
         if (txtName != null)
             txtName.text = string.IsNullOrEmpty(customTitle) ? locData.display_name : customTitle;
 
         if (txtCategory != null)
             txtCategory.text = string.IsNullOrEmpty(indoorDocId) ? locData.category : "Phòng / Khu vực";
 
-        // 2. MÔ TẢ: Phân luồng thần thánh ở đây!
         if (!string.IsNullOrEmpty(indoorDocId))
         {
-            // BẬT CHẾ ĐỘ INDOOR: Chạy lệnh kéo Firebase mới
             if (txtDescription != null) txtDescription.text = "Đang tải thông tin chi tiết...";
-
-            // Gọi hàm mới ông vừa viết trong FirebaseService
             FirebaseService.Instance.GetIndoorDescription(indoorDocId, (desc) => {
                 if (txtDescription != null) txtDescription.text = desc;
             });
         }
         else
         {
-            // CHẾ ĐỘ BÌNH THƯỜNG: Hiện mô tả của Tòa nhà
             if (txtDescription != null)
-            {
                 txtDescription.text = string.IsNullOrEmpty(locData.description)
                     ? "Chưa có thông tin mô tả cho địa điểm này."
                     : locData.description;
-            }
         }
 
-        // 3. ẢNH: Vẫn lấy ID gốc của Tòa nhà (locData) nên ảnh Tòa không bao giờ bị đổi!
         if (imgCover != null)
         {
             if (defaultPlaceholder != null) imgCover.sprite = defaultPlaceholder;
@@ -94,18 +96,22 @@ public class LocationDetailController : MonoBehaviour
             _imageLoadCoroutine = StartCoroutine(LoadCoverImageAsync(imageName));
         }
 
-        // Logic Indoor Map giữ nguyên
         _currentBuildingIdForMap = GetBuildingImageName(locData.location_id);
         if (btnIndoorMap != null)
-        {
-            bool hasMap = !string.IsNullOrEmpty(_currentBuildingIdForMap);
-            btnIndoorMap.gameObject.SetActive(hasMap);
-        }
+            btnIndoorMap.gameObject.SetActive(!string.IsNullOrEmpty(_currentBuildingIdForMap));
 
         if (dimmedOverlay != null) dimmedOverlay.SetActive(true);
         if (detailPanel != null) detailPanel.SetActive(true);
     }
 
+    // ── CLOSE ────────────────────────────────────────────────────
+    public void ClosePanel()
+    {
+        if (detailPanel != null) detailPanel.SetActive(false);
+        if (dimmedOverlay != null) dimmedOverlay.SetActive(false);
+    }
+
+    // ── INDOOR MAP ───────────────────────────────────────────────
     void OnIndoorMapClicked()
     {
         if (string.IsNullOrEmpty(_currentBuildingIdForMap)) return;
@@ -113,6 +119,69 @@ public class LocationDetailController : MonoBehaviour
         ClosePanel();
     }
 
+    // ── NAVIGATION ──────────────────────────────────────────────
+    void OnNavigationClicked()
+    {
+        if (_currentData == null) return;
+        ClosePanel();
+
+        // FIX: Use HaversineDouble for node snap (consistent with NavigationSession precision)
+        string nearestNode = FindNearestNodeToLocation(_currentData);
+        if (nearestNode == null) return;
+
+        CampusUIManager.Instance?.StartNavigation();
+        NavigationSession.Instance?.StartNavigation(nearestNode);
+    }
+
+    // FIX: switched from float Haversine to HaversineDouble for sub-metre accuracy
+    string FindNearestNodeToLocation(LocationData loc)
+    {
+        if (GraphService.Instance == null || GraphService.Instance.Nodes == null) return null;
+
+        string nearest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var node in GraphService.Instance.Nodes.Values)
+        {
+            // HaversineDouble → consistent precision with NavigationSession
+            float d = GeoMath.HaversineDouble(loc.lat, loc.lng, node.lat, node.lng);
+            if (d < minDist) { minDist = d; nearest = node.id; }
+        }
+        return nearest;
+    }
+
+    // ── IMAGE CACHE (bounded) ────────────────────────────────────
+    IEnumerator LoadCoverImageAsync(string imageName)
+    {
+        if (string.IsNullOrEmpty(imageName)) yield break;
+
+        if (_imageCache.TryGetValue(imageName, out Sprite cached))
+        {
+            imgCover.sprite = cached;
+            yield break;
+        }
+
+        ResourceRequest request = Resources.LoadAsync<Sprite>($"LocationImages/{imageName}");
+        yield return request;
+
+        if (request.asset == null) yield break;
+
+        Sprite loaded = request.asset as Sprite;
+
+        // FIX: evict oldest entry if cache is full
+        if (_imageCache.Count >= MAX_IMAGE_CACHE)
+        {
+            string oldest = _imageCacheOrder.Dequeue();
+            _imageCache.Remove(oldest);
+        }
+
+        _imageCache[imageName] = loaded;
+        _imageCacheOrder.Enqueue(imageName);
+
+        imgCover.sprite = loaded;
+    }
+
+    // ── HELPERS ──────────────────────────────────────────────────
     string GetBuildingImageName(string nodeId)
     {
         if (string.IsNullOrEmpty(nodeId)) return "";
@@ -122,47 +191,5 @@ public class LocationDetailController : MonoBehaviour
         char c = nodeId[0];
         if (c >= 'A' && c <= 'G') return c.ToString();
         return nodeId;
-    }
-
-    IEnumerator LoadCoverImageAsync(string imageName)
-    {
-        if (string.IsNullOrEmpty(imageName)) yield break;
-        if (_imageCache.ContainsKey(imageName)) { imgCover.sprite = _imageCache[imageName]; yield break; }
-        ResourceRequest request = Resources.LoadAsync<Sprite>($"LocationImages/{imageName}");
-        yield return request;
-        if (request.asset != null)
-        {
-            Sprite loadedSprite = request.asset as Sprite;
-            _imageCache[imageName] = loadedSprite;
-            imgCover.sprite = loadedSprite;
-        }
-    }
-
-    public void ClosePanel()
-    {
-        if (detailPanel != null) detailPanel.SetActive(false);
-        if (dimmedOverlay != null) dimmedOverlay.SetActive(false);
-    }
-
-    void OnNavigationClicked()
-    {
-        if (_currentData == null) return;
-        ClosePanel();
-        string nearestNode = FindNearestNodeToLocation(_currentData);
-        if (CampusUIManager.Instance != null) CampusUIManager.Instance.StartNavigation();
-        if (NavigationSession.Instance != null) NavigationSession.Instance.StartNavigation(nearestNode);
-    }
-
-    string FindNearestNodeToLocation(LocationData loc)
-    {
-        string nearest = null;
-        float minDist = float.MaxValue;
-        if (GraphService.Instance == null || GraphService.Instance.Nodes == null) return null;
-        foreach (var node in GraphService.Instance.Nodes.Values)
-        {
-            float d = GeoMath.Haversine((float)loc.lat, (float)loc.lng, (float)node.lat, (float)node.lng);
-            if (d < minDist) { minDist = d; nearest = node.id; }
-        }
-        return nearest;
     }
 }
