@@ -1,0 +1,1728 @@
+[
+    {
+    "text": "xin chào!",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chào bot, mình cần hỏi chút",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hi, bạn có thể giúp mình không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hello, cho hỏi tí nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chao buoi sang, minh can tim it thong tin",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ê bot ơi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hey, mình mới vào trường không biết gì hết",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "alo có ai ở đó không",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chao ban nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "Hi bot, cứu mình với",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hellooooo",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chao buoi chieu",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cho hoi xiu dc ko",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn ơi giúp mình xíu",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "s'up bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "Chào buổi tối nhé!",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hello bot dthw ^^",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ad ơi cho em hỏi cái này",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "alo bot nghe rõ trả lời",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "he lô",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chao buoi trua",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hi bạn, mình cần hỗ trợ",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot ơi có nhà không",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bat dau ntn day",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "xin chao bot ho tro",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hi nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn ơi cho hỏi nè",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chao nha minh sinh vien nam nhat",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "yoooo bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chào đằng ấy",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tạm biệt bạn nhé",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bye bye, cảm ơn nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thôi mình đi rồi, hẹn gặp lại",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok mình hỏi vậy thôi, bye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cam on da giup, tam biet",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "xin chào và tạm biệt!",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thôi không cần nữa, cảm ơn",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bye nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "goodbye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hen gap lai sau",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "minh thoat day",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thôi dẹp đi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "out nha, thanks",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bai bai bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chào nhé",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "vậy nghen, tam biet",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thôi đi ngủ đây bye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok chao b",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "de hom khac minh hoi sau",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ngủ ngon nha bot, bye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "off day",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tam biet, chuc mot ngay tot lanh",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "kết thúc trò chuyện tại đây nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "k can nua bye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thoi k hoi nua",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "pp nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bái bai",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bái bai bot iu",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "mình đi học đây bye",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "the thoi chao b",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cảm ơn bạn nhiều lắm",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thanks nha, mình hiểu rồi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn hữu ích quá trời",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok rõ rồi, cám ơn",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cam on, minh biet roi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "giỏi thật, cảm ơn bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thông tin rất hữu ích, cảm ơn nhé",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tks bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cam on nhieu nhe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn xịn quá 👍",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "quá đỉnh luôn cảm ơn nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot thong minh ghe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "okie thanks",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thank u",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "dạ vâng em cảm ơn",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "da ro roi a",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hay qua, thanks b",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cam on nha bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "siêu quá, cám ơn nhiều",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chuc bot mot ngay vui ve nhe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tuyệt vời, cảm ơn",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thank kiu bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "dc roi cam on ban",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "10 điểm không có nhưng",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok da nhan dc thong tin tks",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot cute quá củm ơn nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "rat cam on vi su ho tro",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "oki minh xong roi tks bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tks bot nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "minh hieu roi cam on b nhe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn hiểu mình nói gì không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "câu trả lời chưa đúng ý mình lắm",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "để mình hỏi lại nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ủa sao bot không hiểu vậy?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ban tra loi gi vay khong hieu",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "mình hỏi khác đi, bạn chờ chút",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "trả lời kỳ quá, thử lại đi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn có chắc thông tin đó đúng không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot ngáo rồi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tra loi sai bet",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot chán quá",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ko dung cai minh can tim",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "nhầm rồi bot ơi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "y minh khong phai vay",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "trả lời linh tinh gì đâu ko á",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ban bi loi a",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ủa alo tui đâu hỏi cái đó",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "rep hong dung trong tam gi het",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thôi de minh tim cach hoi khac",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tui viet the ma bot ko hieu ak",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "sai roi ban ei",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hỏi một đằng trả lời một nẻo",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "m noi cai gi vay bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot bi hong r",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tu dung tra loi xam xam",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "rep ki cuc v",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "reset bot đi, nói xàm k",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hong tin bot lam, sai hoai",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn cập nhật lại dữ liệu đi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "de m reset lai cau hoi nhe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ừ rồi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "được, mình hiểu rồi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "vâng ạ",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hmm vậy hả",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "rồi sao nữa bạn?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ờ thì được",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ah vậy à",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "the ah",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tiep tuc di",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ukm",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "uk",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "oki",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "roi sao nua",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "the lam the nao",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "da",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "k co gi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hmm",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "v a",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "vaang",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thi ra la the",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "z hả",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "o oh",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "roi ok",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "tiep nhe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ok roi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "binh thuong",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "the thoi ak",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "sao cung duoc",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "u r",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hôm nay bạn có khỏe không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "mình đang buồn ngủ quá trời",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hôm nay trời nắng đẹp ghê",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn thích môn học nào nhất?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "minh dang rat doi bung",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bạn có biết hôm nay có sự kiện gì không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cuối tuần này có gì vui không nhỉ",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "mình vừa thi xong mệt quá",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot biet hat khong",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "e bot an com chua",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "troi nay mua hoai ta",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thay minh dep trai ko bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "dạo này học hành áp lực quá bạn ạ",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hnay di hoc k co gi vui",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "ban co the ke chuyen cuoi khong",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "sap tet roi ta",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "m hoc nganh gi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chan qua di mat",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "lam sao de co nguoi yeu ha bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "buon ngu den noi ko mo mat len dc",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "oi doi oi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot ban trai hay ban gai the",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "dang hoc bai tu nhien cup dien",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "b có cảm xúc không?",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "h nay la thu may vay",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "moi chay deadline xong rụng roi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot bn tuoi roi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "dao nay stress qua ban oi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "di an bun bo khong b",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "qua mon roi an mung thoi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chan nan doi sinh vien",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "co choi game ko bot",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hnoi mat troi lanh qá",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot yeu ai nhat tren doi",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "muon duoc ngu 10 tieng mot ngay",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thay co nay giao bai tap nhieu gi dau",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "lam the nao de dat diem A ta",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "thi cu cuoi ky ap luc qua",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "muon di choi ma ko co tien",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "mua xuan hoa no that dep",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "minh bi giang vien la huhu",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "chuc mung nam moi bot nha",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "hom nay sinh nhat tui do",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "bot chuc minh di thi may man di",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "cuoi cung cung nop bai tap xong",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "toi thich uong trà sữa",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "làm sao để hết làm biếng đây trời",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "troi nang muon chay da luon",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "sang som da ket xe met ghe",
+    "intent": "general",
+    "entities": []
+    },
+    {
+    "text": "o que moi len chua quen dg xá",
+    "intent": "general",
+    "entities": []
+    },
+    {"text": "xin chào", "intent": "general", "entities": []},
+    {"text": "chào bạn", "intent": "general", "entities": []},
+    {"text": "hi", "intent": "general", "entities": []},
+    {"text": "hello", "intent": "general", "entities": []},
+    {"text": "alo", "intent": "general", "entities": []},
+    {"text": "chào buổi sáng", "intent": "general", "entities": []},
+    {"text": "chào buổi chiều", "intent": "general", "entities": []},
+    {"text": "chào buổi tối", "intent": "general", "entities": []},
+    {"text": "xin chào bot", "intent": "general", "entities": []},
+    {"text": "chào bot", "intent": "general", "entities": []},
+    {"text": "chào buổi trưa", "intent": "general", "entities": []},
+    {"text": "chào ngày mới", "intent": "general", "entities": []},
+    {"text": "hi bạn", "intent": "general", "entities": []},
+    {"text": "hello bot nha", "intent": "general", "entities": []},
+    {"text": "alo bot nghe không", "intent": "general", "entities": []},
+    {"text": "ê bot ơi", "intent": "general", "entities": []},
+    {"text": "có ai ở đó không", "intent": "general", "entities": []},
+    {"text": "bạn ơi", "intent": "general", "entities": []},
+    {"text": "chào nha", "intent": "general", "entities": []},
+    {"text": "xin chào bạn bot", "intent": "general", "entities": []},
+    {"text": "chào đằng ấy", "intent": "general", "entities": []},
+    {"text": "hey", "intent": "general", "entities": []},
+    {"text": "chào nhé", "intent": "general", "entities": []},
+    {"text": "hihi chào bot", "intent": "general", "entities": []},
+    {"text": "helo", "intent": "general", "entities": []},
+    {"text": "xchao", "intent": "general", "entities": []},
+    {"text": "chàooo", "intent": "general", "entities": []},
+    {"text": "chào buổi sáng nhé", "intent": "general", "entities": []},
+    {"text": "hiii", "intent": "general", "entities": []},
+    {"text": "chào con bot", "intent": "general", "entities": []},
+    {"text": "xin chao", "intent": "general", "entities": []},
+    {"text": "chao ban", "intent": "general", "entities": []},
+    {"text": "chao buoi sang", "intent": "general", "entities": []},
+    {"text": "alo co do khong", "intent": "general", "entities": []},
+    {"text": "e bot", "intent": "general", "entities": []},
+    {"text": "chao nhe", "intent": "general", "entities": []},
+    {"text": "xin chao bot", "intent": "general", "entities": []},
+    {"text": "he lo", "intent": "general", "entities": []},
+    {"text": "chao cac ban", "intent": "general", "entities": []},
+    {"text": "chao buoi trua nha", "intent": "general", "entities": []},
+    {"text": "hi bot", "intent": "general", "entities": []},
+    {"text": "hello bạn", "intent": "general", "entities": []},
+    {"text": "có bot ở đây không", "intent": "general", "entities": []},
+    {"text": "chào cưng", "intent": "general", "entities": []},
+    {"text": "chào người anh em", "intent": "general", "entities": []},
+    {"text": "alo alo", "intent": "general", "entities": []},
+    {"text": "chào b", "intent": "general", "entities": []},
+    {"text": "xin chào mọi người", "intent": "general", "entities": []},
+    {"text": "chào bot dễ thương", "intent": "general", "entities": []},
+    {"text": "hi bot, mình cần hỏi chút", "intent": "general", "entities": []},
+    {"text": "xin chào, bạn giúp mình được không", "intent": "general", "entities": []},
+    {"text": "chào bạn, cho mình hỏi tí", "intent": "general", "entities": []},
+    {"text": "hello, mình mới vào trường", "intent": "general", "entities": []},
+    {"text": "alo bot ơi giúp mình với", "intent": "general", "entities": []},
+    {"text": "chào buổi sáng, mình cần hỗ trợ", "intent": "general", "entities": []},
+    {"text": "xin chào nha", "intent": "general", "entities": []},
+    {"text": "chào bot, nay khỏe không", "intent": "general", "entities": []},
+    {"text": "hi cậu", "intent": "general", "entities": []},
+    {"text": "hello cậu", "intent": "general", "entities": []},
+    {"text": "chào nhé bot", "intent": "general", "entities": []},
+    {"text": "xin chao nha", "intent": "general", "entities": []},
+    {"text": "hi ban nha", "intent": "general", "entities": []},
+    {"text": "hello nha", "intent": "general", "entities": []},
+    {"text": "chao bot minh can hoi", "intent": "general", "entities": []},
+    {"text": "alo minh hoi xiu", "intent": "general", "entities": []},
+    {"text": "xin chao moi nguoi", "intent": "general", "entities": []},
+    {"text": "chao ngay moi nhe", "intent": "general", "entities": []},
+    {"text": "hi cac ban", "intent": "general", "entities": []},
+    {"text": "alo bot", "intent": "general", "entities": []},
+    {"text": "ê", "intent": "general", "entities": []},
+    {"text": "có ai rảnh không", "intent": "general", "entities": []},
+    {"text": "chào nha ^^", "intent": "general", "entities": []},
+    {"text": "hello bot 👋", "intent": "general", "entities": []},
+    {"text": "xin chào cả nhà", "intent": "general", "entities": []},
+    {"text": "chào buổi tối nha", "intent": "general", "entities": []},
+    {"text": "hi bot ơiiii", "intent": "general", "entities": []},
+    {"text": "xin chào, rất vui được gặp", "intent": "general", "entities": []},
+    {"text": "chào bạn hỗ trợ sinh viên", "intent": "general", "entities": []},
+    {"text": "hi, bot làm việc chưa", "intent": "general", "entities": []},
+    {"text": "chào bot nhé", "intent": "general", "entities": []},
+    {"text": "chào", "intent": "general", "entities": []},
+    {"text": "chao", "intent": "general", "entities": []},
+    {"text": "hihi", "intent": "general", "entities": []},
+    {"text": "hellu", "intent": "general", "entities": []},
+    {"text": "hí lô", "intent": "general", "entities": []},
+    {"text": "2222", "intent": "general", "entities": []},
+    {"text": "chào ad", "intent": "general", "entities": []},
+    {"text": "xin chao ad", "intent": "general", "entities": []},
+    {"text": "hello admin", "intent": "general", "entities": []},
+    {"text": "chào buổi sáng bot", "intent": "general", "entities": []},
+    {"text": "chào chiều", "intent": "general", "entities": []},
+    {"text": "xin chào bot nhé", "intent": "general", "entities": []},
+    {"text": "hiii bạn", "intent": "general", "entities": []},
+    {"text": "chào bạn hiền", "intent": "general", "entities": []},
+    {"text": "hello bạn hiền", "intent": "general", "entities": []},
+    {"text": "chào đồng chí", "intent": "general", "entities": []},
+    {"text": "chào cậu nha", "intent": "general", "entities": []},
+    {"text": "alo cậu", "intent": "general", "entities": []},
+    {"text": "chao cau", "intent": "general", "entities": []},
+    {"text": "xin chao nhe", "intent": "general", "entities": []},
+    {"text": "tạm biệt", "intent": "general", "entities": []},
+    {"text": "tạm biệt bạn nhé", "intent": "general", "entities": []},
+    {"text": "bye", "intent": "general", "entities": []},
+    {"text": "bye nha", "intent": "general", "entities": []},
+    {"text": "thôi mình đi", "intent": "general", "entities": []},
+    {"text": "hẹn gặp lại", "intent": "general", "entities": []},
+    {"text": "hẹn gặp lại bạn sau", "intent": "general", "entities": []},
+    {"text": "ok mình biết rồi, bye", "intent": "general", "entities": []},
+    {"text": "hỏi vậy thôi cảm ơn nha", "intent": "general", "entities": []},
+    {"text": "chào nhé", "intent": "general", "entities": []},
+    {"text": "bb", "intent": "general", "entities": []},
+    {"text": "bye bye", "intent": "general", "entities": []},
+    {"text": "bái bai", "intent": "general", "entities": []},
+    {"text": "thôi bận rồi bye", "intent": "general", "entities": []},
+    {"text": "đi đây", "intent": "general", "entities": []},
+    {"text": "thoát nha", "intent": "general", "entities": []},
+    {"text": "ok done", "intent": "general", "entities": []},
+    {"text": "out đây", "intent": "general", "entities": []},
+    {"text": "tạm biệt bot", "intent": "general", "entities": []},
+    {"text": "goodbye", "intent": "general", "entities": []},
+    {"text": "pp nha", "intent": "general", "entities": []},
+    {"text": "thôi mình hỏi xong rồi", "intent": "general", "entities": []},
+    {"text": "xin chào và tạm biệt", "intent": "general", "entities": []},
+    {"text": "chào tạm biệt", "intent": "general", "entities": []},
+    {"text": "không có gì nữa, bye", "intent": "general", "entities": []},
+    {"text": "mình out nha", "intent": "general", "entities": []},
+    {"text": "kết thúc nhé", "intent": "general", "entities": []},
+    {"text": "dừng lại ở đây nhé", "intent": "general", "entities": []},
+    {"text": "tạm biệt hẹn mai gặp", "intent": "general", "entities": []},
+    {"text": "gud bye", "intent": "general", "entities": []},
+    {"text": "tam biet", "intent": "general", "entities": []},
+    {"text": "bye ban", "intent": "general", "entities": []},
+    {"text": "hen gap lai", "intent": "general", "entities": []},
+    {"text": "ok minh biet roi bye", "intent": "general", "entities": []},
+    {"text": "tam biet nhe", "intent": "general", "entities": []},
+    {"text": "thoi minh di", "intent": "general", "entities": []},
+    {"text": "cam on da giup, tam biet", "intent": "general", "entities": []},
+    {"text": "chao tam biet", "intent": "general", "entities": []},
+    {"text": "bb nha", "intent": "general", "entities": []},
+    {"text": "out nha", "intent": "general", "entities": []},
+    {"text": "tạm biệt cậu", "intent": "general", "entities": []},
+    {"text": "bye cậu", "intent": "general", "entities": []},
+    {"text": "bye bot nha", "intent": "general", "entities": []},
+    {"text": "ok cảm ơn và tạm biệt", "intent": "general", "entities": []},
+    {"text": "mình rõ rồi, hẹn gặp lại", "intent": "general", "entities": []},
+    {"text": "thôi không cần nữa, cảm ơn", "intent": "general", "entities": []},
+    {"text": "không hỏi nữa bye", "intent": "general", "entities": []},
+    {"text": "mai mốt nói chuyện tiếp nha", "intent": "general", "entities": []},
+    {"text": "thôi ngừng ở đây", "intent": "general", "entities": []},
+    {"text": "end game", "intent": "general", "entities": []},
+    {"text": "hết chuyện rồi bye", "intent": "general", "entities": []},
+    {"text": "mình bận xíu bye bot", "intent": "general", "entities": []},
+    {"text": "bai bai", "intent": "general", "entities": []},
+    {"text": "bibi", "intent": "general", "entities": []},
+    {"text": "tạm biệt bạn ^^", "intent": "general", "entities": []},
+    {"text": "bye 👋", "intent": "general", "entities": []},
+    {"text": "tạm biệt nha", "intent": "general", "entities": []},
+    {"text": "cảm ơn rồi tạm biệt luôn", "intent": "general", "entities": []},
+    {"text": "bye nhé mọi người", "intent": "general", "entities": []},
+    {"text": "thôi ngủ đây bye", "intent": "general", "entities": []},
+    {"text": "hẹn ngày mai", "intent": "general", "entities": []},
+    {"text": "tam biet ban", "intent": "general", "entities": []},
+    {"text": "bye ban nha", "intent": "general", "entities": []},
+    {"text": "ok bye bot", "intent": "general", "entities": []},
+    {"text": "thoi nghi day", "intent": "general", "entities": []},
+    {"text": "khong hoi nua", "intent": "general", "entities": []},
+    {"text": "tam biet nhe bot", "intent": "general", "entities": []},
+    {"text": "bai bai nha", "intent": "general", "entities": []},
+    {"text": "bb nhe", "intent": "general", "entities": []},
+    {"text": "bye nhe", "intent": "general", "entities": []},
+    {"text": "out day", "intent": "general", "entities": []},
+    {"text": "tạm biệt chúc ngủ ngon", "intent": "general", "entities": []},
+    {"text": "bye bye chúc vui vẻ", "intent": "general", "entities": []},
+    {"text": "đi nhé", "intent": "general", "entities": []},
+    {"text": "thôi nhé", "intent": "general", "entities": []},
+    {"text": "dừng nhé", "intent": "general", "entities": []},
+    {"text": "kết thúc", "intent": "general", "entities": []},
+    {"text": "cảm ơn", "intent": "general", "entities": []},
+    {"text": "cảm ơn bạn nhiều", "intent": "general", "entities": []},
+    {"text": "thanks", "intent": "general", "entities": []},
+    {"text": "cám ơn", "intent": "general", "entities": []},
+    {"text": "thanks nha", "intent": "general", "entities": []},
+    {"text": "cảm ơn nhé", "intent": "general", "entities": []},
+    {"text": "bạn giỏi quá", "intent": "general", "entities": []},
+    {"text": "bot này hữu ích ghê", "intent": "general", "entities": []},
+    {"text": "ok hiểu rồi cảm ơn", "intent": "general", "entities": []},
+    {"text": "rõ rồi, thanks nha", "intent": "general", "entities": []},
+    {"text": "cảm ơn nhiều lắm", "intent": "general", "entities": []},
+    {"text": "đa tạ", "intent": "general", "entities": []},
+    {"text": "tks", "intent": "general", "entities": []},
+    {"text": "tuyệt vời", "intent": "general", "entities": []},
+    {"text": "bạn thông minh quá", "intent": "general", "entities": []},
+    {"text": "cảm ơn vì sự hỗ trợ", "intent": "general", "entities": []},
+    {"text": "hay quá cảm ơn", "intent": "general", "entities": []},
+    {"text": "giỏi thật, cảm ơn bot", "intent": "general", "entities": []},
+    {"text": "thông tin rất hữu ích, cảm ơn nhé", "intent": "general", "entities": []},
+    {"text": "cảm ơn bạn đã giúp", "intent": "general", "entities": []},
+    {"text": "thanks kiu", "intent": "general", "entities": []},
+    {"text": "tk nha", "intent": "general", "entities": []},
+    {"text": "cảm ơn bot", "intent": "general", "entities": []},
+    {"text": "bot xịn quá", "intent": "general", "entities": []},
+    {"text": "trả lời hay lắm", "intent": "general", "entities": []},
+    {"text": "cảm ơn đằng ấy", "intent": "general", "entities": []},
+    {"text": "thank you", "intent": "general", "entities": []},
+    {"text": "ty", "intent": "general", "entities": []},
+    {"text": "mình hiểu rồi, cảm ơn", "intent": "general", "entities": []},
+    {"text": "dạ cảm ơn", "intent": "general", "entities": []},
+    {"text": "cam on", "intent": "general", "entities": []},
+    {"text": "cam on nhieu", "intent": "general", "entities": []},
+    {"text": "thanks ban", "intent": "general", "entities": []},
+    {"text": "ok cam on nha", "intent": "general", "entities": []},
+    {"text": "cam on, minh biet roi", "intent": "general", "entities": []},
+    {"text": "tks nha", "intent": "general", "entities": []},
+    {"text": "da ta ban", "intent": "general", "entities": []},
+    {"text": "cam on bot nhe", "intent": "general", "entities": []},
+    {"text": "tks bot", "intent": "general", "entities": []},
+    {"text": "bot hay qua", "intent": "general", "entities": []},
+    {"text": "cảm ơn vì thông tin", "intent": "general", "entities": []},
+    {"text": "đội ơn bot", "intent": "general", "entities": []},
+    {"text": "xin chân thành cảm ơn", "intent": "general", "entities": []},
+    {"text": "bạn giúp mình nhiều lắm", "intent": "general", "entities": []},
+    {"text": "hữu ích lắm", "intent": "general", "entities": []},
+    {"text": "ok thanks", "intent": "general", "entities": []},
+    {"text": "thanks u", "intent": "general", "entities": []},
+    {"text": "rất cảm ơn", "intent": "general", "entities": []},
+    {"text": "tốt quá, cảm ơn", "intent": "general", "entities": []},
+    {"text": "cảm ơn cậu", "intent": "general", "entities": []},
+    {"text": "ok rõ rồi nha", "intent": "general", "entities": []},
+    {"text": "bạn giải thích dễ hiểu lắm", "intent": "general", "entities": []},
+    {"text": "quá đã", "intent": "general", "entities": []},
+    {"text": "10 điểm cho bot", "intent": "general", "entities": []},
+    {"text": "bot nhiệt tình ghê", "intent": "general", "entities": []},
+    {"text": "cảm ơn nhiều nhé ❤️", "intent": "general", "entities": []},
+    {"text": "tks u so much", "intent": "general", "entities": []},
+    {"text": "cảm ơn ad", "intent": "general", "entities": []},
+    {"text": "thanks ad", "intent": "general", "entities": []},
+    {"text": "cảm ơn bạn nha", "intent": "general", "entities": []},
+    {"text": "cam on ban nha", "intent": "general", "entities": []},
+    {"text": "thank b", "intent": "general", "entities": []},
+    {"text": "ok da hieu cam on", "intent": "general", "entities": []},
+    {"text": "tot lam", "intent": "general", "entities": []},
+    {"text": "tuyet voi", "intent": "general", "entities": []},
+    {"text": "10 diem", "intent": "general", "entities": []},
+    {"text": "bot xin ghe", "intent": "general", "entities": []},
+    {"text": "thank", "intent": "general", "entities": []},
+    {"text": "thks", "intent": "general", "entities": []},
+    {"text": "cảm ơn sự nhiệt tình", "intent": "general", "entities": []},
+    {"text": "cảm ơn vì đã rep", "intent": "general", "entities": []},
+    {"text": "bot ngoan quá", "intent": "general", "entities": []},
+    {"text": "cảm ơn nhìu", "intent": "general", "entities": []},
+    {"text": "thanks nhiều", "intent": "general", "entities": []},
+    {"text": "quá ok cảm ơn", "intent": "general", "entities": []},
+    {"text": "cám ơn bạn nhe", "intent": "general", "entities": []},
+    {"text": "rất tốt cảm ơn", "intent": "general", "entities": []},
+    {"text": "thanks cậu", "intent": "general", "entities": []},
+    {"text": "đã nhận được, cảm ơn", "intent": "general", "entities": []},
+    {"text": "bạn hiểu mình nói gì không?", "intent": "general", "entities": []},
+    {"text": "câu trả lời chưa đúng ý mình lắm", "intent": "general", "entities": []},
+    {"text": "để mình hỏi lại nha", "intent": "general", "entities": []},
+    {"text": "ủa sao bot không hiểu vậy?", "intent": "general", "entities": []},
+    {"text": "mình hỏi khác đi, bạn chờ chút", "intent": "general", "entities": []},
+    {"text": "trả lời kỳ quá, thử lại đi", "intent": "general", "entities": []},
+    {"text": "bạn có chắc thông tin đó đúng không?", "intent": "general", "entities": []},
+    {"text": "sai rồi", "intent": "general", "entities": []},
+    {"text": "không phải như vậy", "intent": "general", "entities": []},
+    {"text": "bot không hiểu à", "intent": "general", "entities": []},
+    {"text": "mình đang hỏi cái khác mà", "intent": "general", "entities": []},
+    {"text": "bạn trả lời lạc đề rồi", "intent": "general", "entities": []},
+    {"text": "bot chán ghê", "intent": "general", "entities": []},
+    {"text": "không giúp được gì cả", "intent": "general", "entities": []},
+    {"text": "bạn trả lời sai rồi", "intent": "general", "entities": []},
+    {"text": "hỏi một đằng trả lời một nẻo", "intent": "general", "entities": []},
+    {"text": "giải thích lại đi", "intent": "general", "entities": []},
+    {"text": "chưa rõ lắm", "intent": "general", "entities": []},
+    {"text": "bạn nói lại được không", "intent": "general", "entities": []},
+    {"text": "hình như bot lỗi rồi", "intent": "general", "entities": []},
+    {"text": "bot ngốc quá", "intent": "general", "entities": []},
+    {"text": "trả lời mơ hồ thế", "intent": "general", "entities": []},
+    {"text": "mình chưa hiểu", "intent": "general", "entities": []},
+    {"text": "ủa là sao", "intent": "general", "entities": []},
+    {"text": "gì vậy trời", "intent": "general", "entities": []},
+    {"text": "bạn nói gì mình không hiểu", "intent": "general", "entities": []},
+    {"text": "không đúng", "intent": "general", "entities": []},
+    {"text": "chẳng hiểu bot nói gì", "intent": "general", "entities": []},
+    {"text": "bạn bị sao vậy", "intent": "general", "entities": []},
+    {"text": "thử lại lần nữa xem", "intent": "general", "entities": []},
+    {"text": "ban hieu minh noi gi khong", "intent": "general", "entities": []},
+    {"text": "ban tra loi gi vay khong hieu", "intent": "general", "entities": []},
+    {"text": "sai roi nha", "intent": "general", "entities": []},
+    {"text": "khong dung roi", "intent": "general", "entities": []},
+    {"text": "bot k hieu y", "intent": "general", "entities": []},
+    {"text": "lac de roi", "intent": "general", "entities": []},
+    {"text": "de minh hoi lai", "intent": "general", "entities": []},
+    {"text": "tra loi xam the", "intent": "general", "entities": []},
+    {"text": "chua ro", "intent": "general", "entities": []},
+    {"text": "noi lai di", "intent": "general", "entities": []},
+    {"text": "trả lời lủng củng quá", "intent": "general", "entities": []},
+    {"text": "bạn không biết à", "intent": "general", "entities": []},
+    {"text": "bot kém thế", "intent": "general", "entities": []},
+    {"text": "trả lời cho đàng hoàng", "intent": "general", "entities": []},
+    {"text": "không đúng trọng tâm", "intent": "general", "entities": []},
+    {"text": "chưa đúng ý nha", "intent": "general", "entities": []},
+    {"text": "mình không đồng ý", "intent": "general", "entities": []},
+    {"text": "bot học lại đi", "intent": "general", "entities": []},
+    {"text": "bot dở tệ", "intent": "general", "entities": []},
+    {"text": "tại sao lại như vậy", "intent": "general", "entities": []},
+    {"text": "hơi khó hiểu nha", "intent": "general", "entities": []},
+    {"text": "bot ơi sai cmnr", "intent": "general", "entities": []},
+    {"text": "trả lời lôm côm", "intent": "general", "entities": []},
+    {"text": "sao bạn không hiểu", "intent": "general", "entities": []},
+    {"text": "cái này sai bét", "intent": "general", "entities": []},
+    {"text": "gì kỳ vậy bot", "intent": "general", "entities": []},
+    {"text": "mình hỏi khác cơ", "intent": "general", "entities": []},
+    {"text": "chưa chuẩn lắm", "intent": "general", "entities": []},
+    {"text": "làm lại đi", "intent": "general", "entities": []},
+    {"text": "sửa lại câu trả lời đi", "intent": "general", "entities": []},
+    {"text": "k dung nhe", "intent": "general", "entities": []},
+    {"text": "bot tra loi k dung", "intent": "general", "entities": []},
+    {"text": "thay chua on lam", "intent": "general", "entities": []},
+    {"text": "tra loi ro rang hon di", "intent": "general", "entities": []},
+    {"text": "ban hieu sai y toi", "intent": "general", "entities": []},
+    {"text": "bot lom qua", "intent": "general", "entities": []},
+    {"text": "hoi mot dang dap mot neo", "intent": "general", "entities": []},
+    {"text": "hinh nhu sai r", "intent": "general", "entities": []},
+    {"text": "khong phai roi", "intent": "general", "entities": []},
+    {"text": "cha hieu gi", "intent": "general", "entities": []},
+    {"text": "trả lời cụ thể hơn xíu được không", "intent": "general", "entities": []},
+    {"text": "đừng trả lời như máy thế", "intent": "general", "entities": []},
+    {"text": "bạn đọc kỹ lại câu hỏi đi", "intent": "general", "entities": []},
+    {"text": "chán bot", "intent": "general", "entities": []},
+    {"text": "sai lầm rồi", "intent": "general", "entities": []},
+    {"text": "ko phải ý này", "intent": "general", "entities": []},
+    {"text": "trả lời quái lạ", "intent": "general", "entities": []},
+    {"text": "bạn đang nói linh tinh à", "intent": "general", "entities": []},
+    {"text": "vớ vẩn", "intent": "general", "entities": []},
+    {"text": "cứ sao sao ấy", "intent": "general", "entities": []},
+    {"text": "ok", "intent": "general", "entities": []},
+    {"text": "ừ", "intent": "general", "entities": []},
+    {"text": "ừ rồi", "intent": "general", "entities": []},
+    {"text": "được, mình hiểu rồi", "intent": "general", "entities": []},
+    {"text": "vâng ạ", "intent": "general", "entities": []},
+    {"text": "hmm vậy hả", "intent": "general", "entities": []},
+    {"text": "rồi sao nữa bạn?", "intent": "general", "entities": []},
+    {"text": "ờ thì được", "intent": "general", "entities": []},
+    {"text": "ah vậy à", "intent": "general", "entities": []},
+    {"text": "uhm", "intent": "general", "entities": []},
+    {"text": "thế à", "intent": "general", "entities": []},
+    {"text": "dạ", "intent": "general", "entities": []},
+    {"text": "rồi sao nữa", "intent": "general", "entities": []},
+    {"text": "tiếp đi", "intent": "general", "entities": []},
+    {"text": "tiếp tục đi", "intent": "general", "entities": []},
+    {"text": "kể tiếp đi", "intent": "general", "entities": []},
+    {"text": "ồ", "intent": "general", "entities": []},
+    {"text": "thế ư", "intent": "general", "entities": []},
+    {"text": "ờ", "intent": "general", "entities": []},
+    {"text": "ra vậy", "intent": "general", "entities": []},
+    {"text": "thì ra là thế", "intent": "general", "entities": []},
+    {"text": "ok hiểu", "intent": "general", "entities": []},
+    {"text": "mình nghe đây", "intent": "general", "entities": []},
+    {"text": "đang nghe nè", "intent": "general", "entities": []},
+    {"text": "cứ nói đi", "intent": "general", "entities": []},
+    {"text": "vâng", "intent": "general", "entities": []},
+    {"text": "ừm", "intent": "general", "entities": []},
+    {"text": "à rứa hả", "intent": "general", "entities": []},
+    {"text": "vậy đó hả", "intent": "general", "entities": []},
+    {"text": "cũng được", "intent": "general", "entities": []},
+    {"text": "uk", "intent": "general", "entities": []},
+    {"text": "ukm", "intent": "general", "entities": []},
+    {"text": "vang", "intent": "general", "entities": []},
+    {"text": "uh", "intent": "general", "entities": []},
+    {"text": "u", "intent": "general", "entities": []},
+    {"text": "okie", "intent": "general", "entities": []},
+    {"text": "ok e", "intent": "general", "entities": []},
+    {"text": "roi sao nua", "intent": "general", "entities": []},
+    {"text": "tiep di", "intent": "general", "entities": []},
+    {"text": "a the a", "intent": "general", "entities": []},
+    {"text": "vay sao", "intent": "general", "entities": []},
+    {"text": "uh huh", "intent": "general", "entities": []},
+    {"text": "được", "intent": "general", "entities": []},
+    {"text": "được phết", "intent": "general", "entities": []},
+    {"text": "tuyệt", "intent": "general", "entities": []},
+    {"text": "hay á", "intent": "general", "entities": []},
+    {"text": "đỉnh", "intent": "general", "entities": []},
+    {"text": "thế nào cũng được", "intent": "general", "entities": []},
+    {"text": "sao cũng được", "intent": "general", "entities": []},
+    {"text": "vậy luôn", "intent": "general", "entities": []},
+    {"text": "chà", "intent": "general", "entities": []},
+    {"text": "hmmm", "intent": "general", "entities": []},
+    {"text": "ờm", "intent": "general", "entities": []},
+    {"text": "thú vị đấy", "intent": "general", "entities": []},
+    {"text": "ừ tiếp theo là gì", "intent": "general", "entities": []},
+    {"text": "rồi phần tiếp theo", "intent": "general", "entities": []},
+    {"text": "nói nữa đi", "intent": "general", "entities": []},
+    {"text": "rõ rồi", "intent": "general", "entities": []},
+    {"text": "đã ghi nhận", "intent": "general", "entities": []},
+    {"text": "chờ chút", "intent": "general", "entities": []},
+    {"text": "để xem đã", "intent": "general", "entities": []},
+    {"text": "để suy nghĩ", "intent": "general", "entities": []},
+    {"text": "ok nhe", "intent": "general", "entities": []},
+    {"text": "duoc roi", "intent": "general", "entities": []},
+    {"text": "a ha", "intent": "general", "entities": []},
+    {"text": "ok ban", "intent": "general", "entities": []},
+    {"text": "uk roi sao", "intent": "general", "entities": []},
+    {"text": "roi a", "intent": "general", "entities": []},
+    {"text": "the a", "intent": "general", "entities": []},
+    {"text": "ok la", "intent": "general", "entities": []},
+    {"text": "vang a", "intent": "general", "entities": []},
+    {"text": "da duoc", "intent": "general", "entities": []},
+    {"text": "ừ hứ", "intent": "general", "entities": []},
+    {"text": "xong rồi", "intent": "general", "entities": []},
+    {"text": "có lý", "intent": "general", "entities": []},
+    {"text": "được đấy", "intent": "general", "entities": []},
+    {"text": "kiểu vậy", "intent": "general", "entities": []},
+    {"text": "ừ há", "intent": "general", "entities": []},
+    {"text": "ok fine", "intent": "general", "entities": []},
+    {"text": "okay", "intent": "general", "entities": []},
+    {"text": "đọc rồi", "intent": "general", "entities": []},
+    {"text": "thấy rồi", "intent": "general", "entities": []},
+    {"text": "hôm nay bạn có khỏe không?", "intent": "general", "entities": []},
+    {"text": "mình đang buồn ngủ quá trời", "intent": "general", "entities": []},
+    {"text": "hôm nay trời nắng đẹp ghê", "intent": "general", "entities": []},
+    {"text": "bạn thích môn học nào nhất?", "intent": "general", "entities": []},
+    {"text": "bạn có biết hôm nay có sự kiện gì không?", "intent": "general", "entities": []},
+    {"text": "cuối tuần này trường có gì vui không nhỉ", "intent": "general", "entities": []},
+    {"text": "mình vừa thi xong mệt quá", "intent": "general", "entities": []},
+    {"text": "bạn ăn cơm chưa", "intent": "general", "entities": []},
+    {"text": "bot có người yêu chưa", "intent": "general", "entities": []},
+    {"text": "bot là nam hay nữ", "intent": "general", "entities": []},
+    {"text": "nay trời mưa buồn quá", "intent": "general", "entities": []},
+    {"text": "sáng nay lạnh ghê", "intent": "general", "entities": []},
+    {"text": "đang đói bụng đây", "intent": "general", "entities": []},
+    {"text": "bạn bao nhiêu tuổi rồi", "intent": "general", "entities": []},
+    {"text": "bot do ai tạo ra vậy", "intent": "general", "entities": []},
+    {"text": "bạn có cảm xúc không", "intent": "general", "entities": []},
+    {"text": "có thích màu hồng không", "intent": "general", "entities": []},
+    {"text": "tối nay ăn gì ngon nhỉ", "intent": "general", "entities": []},
+    {"text": "bạn có thích xem phim không", "intent": "general", "entities": []},
+    {"text": "mai là cuối tuần rồi", "intent": "general", "entities": []},
+    {"text": "học hành chán nản quá", "intent": "general", "entities": []},
+    {"text": "thời tiết hôm nay thế nào", "intent": "general", "entities": []},
+    {"text": "nay mình thi được điểm cao", "intent": "general", "entities": []},
+    {"text": "bạn có thể kể chuyện cười không", "intent": "general", "entities": []},
+    {"text": "bot hát một bài đi", "intent": "general", "entities": []},
+    {"text": "kể một câu chuyện vui đi", "intent": "general", "entities": []},
+    {"text": "trời tối rồi", "intent": "general", "entities": []},
+    {"text": "mình buồn ngủ rũ rượi", "intent": "general", "entities": []},
+    {"text": "thèm trà sữa quá", "intent": "general", "entities": []},
+    {"text": "bạn thích uống gì nhất", "intent": "general", "entities": []},
+    {"text": "minh dang rat doi bung", "intent": "general", "entities": []},
+    {"text": "nay troi dep ghe", "intent": "general", "entities": []},
+    {"text": "bot an com chua", "intent": "general", "entities": []},
+    {"text": "ban co met khong", "intent": "general", "entities": []},
+    {"text": "cuoi tuan di dau choi bay gio", "intent": "general", "entities": []},
+    {"text": "minh thi rot roi", "intent": "general", "entities": []},
+    {"text": "bot biet yeu khong", "intent": "general", "entities": []},
+    {"text": "hom nay minh buon qua", "intent": "general", "entities": []},
+    {"text": "troi mua roi kia", "intent": "general", "entities": []},
+    {"text": "ban thich an gi", "intent": "general", "entities": []},
+    {"text": "bạn có đang vui không", "intent": "general", "entities": []},
+    {"text": "bot ở nhà hay đi làm", "intent": "general", "entities": []},
+    {"text": "mình vừa xem xong bộ phim hay lắm", "intent": "general", "entities": []},
+    {"text": "có ai đang onl không", "intent": "general", "entities": []},
+    {"text": "đời sinh viên nghèo khổ", "intent": "general", "entities": []},
+    {"text": "bạn biết hát rap không", "intent": "general", "entities": []},
+    {"text": "ngủ ngon chưa bot", "intent": "general", "entities": []},
+    {"text": "sao khuya rồi chưa ngủ", "intent": "general", "entities": []},
+    {"text": "chủ nhật rảnh không", "intent": "general", "entities": []},
+    {"text": "mình đang stress nặng", "intent": "general", "entities": []},
+    {"text": "bạn tư vấn tình cảm được không", "intent": "general", "entities": []},
+    {"text": "mình mới chia tay người yêu", "intent": "general", "entities": []},
+    {"text": "chán đời quá", "intent": "general", "entities": []},
+    {"text": "cảm thấy lạc lõng", "intent": "general", "entities": []},
+    {"text": "chơi game cùng mình đi", "intent": "general", "entities": []},
+    {"text": "bot biết chơi liên minh không", "intent": "general", "entities": []},
+    {"text": "học phí dạo này tăng nhỉ", "intent": "general", "entities": []},
+    {"text": "bạn thích nghe nhạc gì", "intent": "general", "entities": []},
+    {"text": "mình thích nhạc lofi", "intent": "general", "entities": []},
+    {"text": "trời rét mướt", "intent": "general", "entities": []},
+    {"text": "minh stress qua bot oi", "intent": "general", "entities": []},
+    {"text": "thich choi the thao khong", "intent": "general", "entities": []},
+    {"text": "hom nay tam trang khong tot", "intent": "general", "entities": []},
+    {"text": "ban biet lam tho khong", "intent": "general", "entities": []},
+    {"text": "hoc hanh met moi", "intent": "general", "entities": []},
+    {"text": "nay thu may roi", "intent": "general", "entities": []},
+    {"text": "chan doi", "intent": "general", "entities": []},
+    {"text": "cuoc song kho khan qua", "intent": "general", "entities": []},
+    {"text": "mình vừa ngủ dậy", "intent": "general", "entities": []},
+    {"text": "bot có rảnh không tâm sự xíu", "intent": "general", "entities": []},
+    {"text": "bạn có thể là bạn của mình không", "intent": "general", "entities": []},
+    {"text": "dạo này bận quá không có thời gian", "intent": "general", "entities": []},
+    {"text": "vừa ăn cơm xong no quá", "intent": "general", "entities": []},
+    {"text": "tối nay mình đi quẩy", "intent": "general", "entities": []},
+    {"text": "bạn có thích du lịch không", "intent": "general", "entities": []},
+    {"text": "mình muốn đi đà lạt", "intent": "general", "entities": []},
+    {"text": "không khí hôm nay trong lành", "intent": "general", "entities": []},
+    {"text": "bạn có hay thức khuya không", "intent": "general", "entities": []},
+    {"text": "con trai thích quà gì nhỉ", "intent": "general", "entities": []},
+    {"text": "con gái sáng nắng chiều mưa", "intent": "general", "entities": []},
+    {"text": "giá xăng dạo này đắt đỏ", "intent": "general", "entities": []},
+    {"text": "thời gian trôi nhanh quá", "intent": "general", "entities": []},
+    {"text": "mới đó mà đã cuối năm", "intent": "general", "entities": []},
+    {"text": "bạn có tin vào cung hoàng đạo không", "intent": "general", "entities": []},
+    {"text": "mình là cung song tử", "intent": "general", "entities": []},
+    {"text": "tử vi hôm nay của mình thế nào", "intent": "general", "entities": []},
+    {"text": "đang nghe nhạc chill", "intent": "general", "entities": []},
+    {"text": "bạn thấy mình thế nào", "intent": "general", "entities": []},
+    {"text": "bot cung gi do", "intent": "general", "entities": []},
+    {"text": "minh thich mau xanh", "intent": "general", "entities": []},
+    {"text": "cuoi nam ban ron ghe", "intent": "general", "entities": []},
+    {"text": "co tin vao tam linh k", "intent": "general", "entities": []},
+    {"text": "ban hay di dau choi", "intent": "general", "entities": []},
+    {"text": "ngay xua minh ghet hoc mon toan", "intent": "general", "entities": []},
+    {"text": "nay co da banh k", "intent": "general", "entities": []},
+    {"text": "doi nhieu luc kho hieu", "intent": "general", "entities": []},
+    {"text": "ban co doc sach khong", "intent": "general", "entities": []},
+    {"text": "sach nao hay recom di", "intent": "general", "entities": []},
+    {"text": "làm sao để vui vẻ", "intent": "general", "entities": []},
+    {"text": "bạn biết nấu ăn không", "intent": "general", "entities": []},
+    {"text": "mình hay nấu mì gói", "intent": "general", "entities": []},
+    {"text": "sinh viên xa nhà nhớ bố mẹ", "intent": "general", "entities": []},
+    {"text": "bạn ở hành tinh nào tới", "intent": "general", "entities": []},
+    {"text": "có sợ ma không", "intent": "general", "entities": []},
+    {"text": "đêm nay mình trực ca", "intent": "general", "entities": []},
+    {"text": "hôm nay có sao băng đấy", "intent": "general", "entities": []},
+    {"text": "mình thích ngắm trăng", "intent": "general", "entities": []},
+    {"text": "có ai đang xem phim cùng mình không", "intent": "general", "entities": []},
+    {"text": "thích chó hay thích mèo", "intent": "general", "entities": []},
+    {"text": "nhà mình có một con mèo", "intent": "general", "entities": []},
+    {"text": "mèo lười lắm", "intent": "general", "entities": []},
+    {"text": "chó nhà mình ngoan cực", "intent": "general", "entities": []},
+    {"text": "bot có thú cưng không", "intent": "general", "entities": []},
+    {"text": "vừa lướt tiktok xong", "intent": "general", "entities": []},
+    {"text": "mạng xã hội giờ toàn thứ độc hại", "intent": "general", "entities": []},
+    {"text": "dạo này hay bị đau đầu", "intent": "general", "entities": []},
+    {"text": "cần một người an ủi", "intent": "general", "entities": []},
+    {"text": "nhớ nhà quá bot ạ", "intent": "general", "entities": []},
+    {"text": "bot thich con gi", "intent": "general", "entities": []},
+    {"text": "ban co luot fb khong", "intent": "general", "entities": []},
+    {"text": "nay an pho ngon ghe", "intent": "general", "entities": []},
+    {"text": "muon di bien qua", "intent": "general", "entities": []},
+    {"text": "ngay nghi le o nha thoi", "intent": "general", "entities": []},
+    {"text": "dao nay bot map len a", "intent": "general", "entities": []},
+    {"text": "bot co thay the k", "intent": "general", "entities": []},
+    {"text": "xem xiec k bot", "intent": "general", "entities": []},
+    {"text": "thich ngam mua", "intent": "general", "entities": []},
+    {"text": "mua he oi buc qua", "intent": "general", "entities": []},
+    {"text": "bạn biết chơi guitar không", "intent": "general", "entities": []},
+    {"text": "mình đang học tiếng anh", "intent": "general", "entities": []},
+    {"text": "tiếng anh khó quá", "intent": "general", "entities": []},
+    {"text": "cách học từ vựng nhanh nhớ", "intent": "general", "entities": []},
+    {"text": "bạn nói được mấy thứ tiếng", "intent": "general", "entities": []},
+    {"text": "muốn đi du học nhưng nghèo", "intent": "general", "entities": []},
+    {"text": "mình phải cố gắng nhiều hơn", "intent": "general", "entities": []},
+    {"text": "làm sao để có động lực", "intent": "general", "entities": []},
+    {"text": "bạn truyền cảm hứng cho mình đi", "intent": "general", "entities": []},
+    {"text": "mình muốn trở thành lập trình viên", "intent": "general", "entities": []},
+    {"text": "làm AI có khó không", "intent": "general", "entities": []},
+    {"text": "công nghệ giờ phát triển nhanh thật", "intent": "general", "entities": []},
+    {"text": "bạn có nghĩ robot sẽ thay thế con người", "intent": "general", "entities": []},
+    {"text": "tương lai sẽ ra sao nhỉ", "intent": "general", "entities": []},
+    {"text": "thích xe máy hay ô tô", "intent": "general", "entities": []},
+    {"text": "mình muốn mua xe sh", "intent": "general", "entities": []},
+    {"text": "đang để dành tiền đi du lịch", "intent": "general", "entities": []},
+    {"text": "sống chậm lại một chút", "intent": "general", "entities": []},
+    {"text": "thanh xuân ngắn ngủi", "intent": "general", "entities": []},
+    {"text": "có ai hiểu được lòng tôi", "intent": "general", "entities": []},
+    {"text": "lam sao de bot luoi", "intent": "general", "entities": []},
+    {"text": "ban co the hat tieng anh k", "intent": "general", "entities": []},
+    {"text": "nganh nay hot qua", "intent": "general", "entities": []},
+    {"text": "hoc mai khong vo", "intent": "general", "entities": []},
+    {"text": "minh sap tot nghiep roi", "intent": "general", "entities": []},
+    {"text": "bot chuc mung minh di", "intent": "general", "entities": []},
+    {"text": "sap sinh nhat minh", "intent": "general", "entities": []},
+    {"text": "qua tang sinh nhat nen mua gi", "intent": "general", "entities": []},
+    {"text": "thich su lang le", "intent": "general", "entities": []},
+    {"text": "nhieu khi muon bo tat ca", "intent": "general", "entities": []},
+    {"text": "tết năm nay không về nhà", "intent": "general", "entities": []},
+    {"text": "sắp đến tết rồi", "intent": "general", "entities": []},
+    {"text": "năm mới bình an", "intent": "general", "entities": []},
+    {"text": "cảm thấy bồi hồi", "intent": "general", "entities": []},
+    {"text": "nhớ bánh chưng ngày tết", "intent": "general", "entities": []},
+    {"text": "bạn có nhận lì xì không", "intent": "general", "entities": []},
+    {"text": "bot lì xì mình đi", "intent": "general", "entities": []},
+    {"text": "tiền tiêu vặt tháng này hết rồi", "intent": "general", "entities": []},
+    {"text": "vừa ăn mì tôm cả tuần", "intent": "general", "entities": []},
+    {"text": "cuộc sống sinh viên thiếu thốn", "intent": "general", "entities": []},
+    {"text": "bạn có biết quán nào ngon không", "intent": "general", "entities": []},
+    {"text": "thèm lẩu thái", "intent": "general", "entities": []},
+    {"text": "mình thích uống cà phê đen", "intent": "general", "entities": []},
+    {"text": "cà phê làm mình mất ngủ", "intent": "general", "entities": []},
+    {"text": "cày phim tới sáng", "intent": "general", "entities": []},
+    {"text": "mắt thâm quầng rồi", "intent": "general", "entities": []},
+    {"text": "cần phải chăm sóc sức khỏe", "intent": "general", "entities": []},
+    {"text": "bạn có hay tập thể dục", "intent": "general", "entities": []},
+    {"text": "sáng sớm chạy bộ rất mát", "intent": "general", "entities": []},
+    {"text": "thích đá bóng cuối tuần", "intent": "general", "entities": []},
+    {"text": "bot li xi di", "intent": "general", "entities": []},
+    {"text": "het tien r", "intent": "general", "entities": []},
+    {"text": "an mi goi chan qua", "intent": "general", "entities": []},
+    {"text": "di tap gym k", "intent": "general", "entities": []},
+    {"text": "ngu som di bot", "intent": "general", "entities": []},
+    {"text": "thuc khuya k tot dau", "intent": "general", "entities": []},
+    {"text": "nhin thay tuong lai mo mit", "intent": "general", "entities": []},
+    {"text": "can mot vong tay", "intent": "general", "entities": []},
+    {"text": "nay k co chuyen gi vui", "intent": "general", "entities": []},
+    {"text": "the gioi nay thu vi qua", "intent": "general", "entities": []},
+    {"text": "mình có một ước mơ lớn", "intent": "general", "entities": []},
+    {"text": "bạn có ước mơ không", "intent": "general", "entities": []},
+    {"text": "muốn trở thành tỷ phú", "intent": "general", "entities": []},
+    {"text": "làm giàu không khó nhưng cũng chẳng dễ", "intent": "general", "entities": []},
+    {"text": "mình vừa trúng số", "intent": "general", "entities": []},
+    {"text": "đùa tí thôi", "intent": "general", "entities": []},
+    {"text": "nay cá tháng tư", "intent": "general", "entities": []},
+    {"text": "bạn có bao giờ bị lừa chưa", "intent": "general", "entities": []},
+    {"text": "bot có biết nói dối không", "intent": "general", "entities": []},
+    {"text": "hãy kể cho mình một sự thật", "intent": "general", "entities": []},
+    {"text": "trái đất hình cầu", "intent": "general", "entities": []},
+    {"text": "mình thích học thiên văn học", "intent": "general", "entities": []},
+    {"text": "có người ngoài hành tinh không", "intent": "general", "entities": []},
+    {"text": "chắc chắn là có người ngoài hành tinh", "intent": "general", "entities": []},
+    {"text": "vũ trụ rộng lớn quá", "intent": "general", "entities": []},
+    {"text": "cảm thấy bản thân nhỏ bé", "intent": "general", "entities": []},
+    {"text": "mỗi ngày là một món quà", "intent": "general", "entities": []},
+    {"text": "trân trọng những gì đang có", "intent": "general", "entities": []},
+    {"text": "sống là phải vui", "intent": "general", "entities": []},
+    {"text": "bạn làm mình cười rồi đấy", "intent": "general", "entities": []},
+    {"text": "bot co uoc mo k", "intent": "general", "entities": []},
+    {"text": "minh muon giau co", "intent": "general", "entities": []},
+    {"text": "nay 1/4", "intent": "general", "entities": []},
+    {"text": "bot that tha nhi", "intent": "general", "entities": []},
+    {"text": "vu tru la gi", "intent": "general", "entities": []},
+    {"text": "sao hom nay buon the", "intent": "general", "entities": []},
+    {"text": "cam thay lac long giua dong nguoi", "intent": "general", "entities": []},
+    {"text": "hay vui len", "intent": "general", "entities": []},
+    {"text": "minh vui qua", "intent": "general", "entities": []},
+    {"text": "bot lam tro di", "intent": "general", "entities": []},
+    {"text": "thích chơi ma sói không", "intent": "general", "entities": []},
+    {"text": "đám bạn mình lầy lội lắm", "intent": "general", "entities": []},
+    {"text": "có một người bạn thân là đủ", "intent": "general", "entities": []},
+    {"text": "hôm nay bị sếp la", "intent": "general", "entities": []},
+    {"text": "đi làm part time vất vả", "intent": "general", "entities": []},
+    {"text": "khách hàng khó tính ghê", "intent": "general", "entities": []},
+    {"text": "kiếm tiền đâu có dễ", "intent": "general", "entities": []},
+    {"text": "mai mốt ra trường không biết làm gì", "intent": "general", "entities": []},
+    {"text": "áp lực đồng trang lứa", "intent": "general", "entities": []},
+    {"text": "thấy bạn bè giỏi quá", "intent": "general", "entities": []},
+    {"text": "mình tự ti về bản thân", "intent": "general", "entities": []},
+    {"text": "bot khuyên mình câu gì đi", "intent": "general", "entities": []},
+    {"text": "hãy luôn tự tin", "intent": "general", "entities": []},
+    {"text": "cảm ơn lời động viên", "intent": "general", "entities": []},
+    {"text": "mình sẽ cố gắng", "intent": "general", "entities": []},
+    {"text": "never give up", "intent": "general", "entities": []},
+    {"text": "chúc bot một ngày tốt lành", "intent": "general", "entities": []},
+    {"text": "bạn có thấy hôm nay may mắn không", "intent": "general", "entities": []},
+    {"text": "vừa nhặt được tiền", "intent": "general", "entities": []},
+    {"text": "nay xui xẻo quá trời", "intent": "general", "entities": []},
+    {"text": "di lam them cuc qua", "intent": "general", "entities": []},
+    {"text": "khach khong chiu tra tien", "intent": "general", "entities": []},
+    {"text": "ap luc qua", "intent": "general", "entities": []},
+    {"text": "peer pressure la gi", "intent": "general", "entities": []},
+    {"text": "bot co thay minh kem coi k", "intent": "general", "entities": []},
+    {"text": "se co gang het minh", "intent": "general", "entities": []},
+    {"text": "chuc ngay moi vui ve nhe", "intent": "general", "entities": []},
+    {"text": "nay xui the k biet", "intent": "general", "entities": []},
+    {"text": "dung bo cuoc nha", "intent": "general", "entities": []},
+    {"text": "bot thong minh day", "intent": "general", "entities": []},
+    {"text": "bạn học lớp mấy rồi", "intent": "general", "entities": []},
+    {"text": "bot không cần đi học", "intent": "general", "entities": []},
+    {"text": "thích làm con nít", "intent": "general", "entities": []},
+    {"text": "lớn lên nhiều trách nhiệm", "intent": "general", "entities": []},
+    {"text": "giá như thời gian quay lại", "intent": "general", "entities": []},
+    {"text": "mình nhớ hồi cấp 3", "intent": "general", "entities": []},
+    {"text": "cấp 3 vui nhất", "intent": "general", "entities": []},
+    {"text": "bạn có kỷ niệm nào vui không", "intent": "general", "entities": []},
+    {"text": "để mình kể bạn nghe", "intent": "general", "entities": []},
+    {"text": "chuyện là thế này", "intent": "general", "entities": []},
+    {"text": "bạn có đang lắng nghe không", "intent": "general", "entities": []},
+    {"text": "mình nói nhiều quá nhỉ", "intent": "general", "entities": []},
+    {"text": "bot có bao giờ chán không", "intent": "general", "entities": []},
+    {"text": "cuộc sống là một cuộc hành trình", "intent": "general", "entities": []},
+    {"text": "bạn thích núi hay biển", "intent": "general", "entities": []},
+    {"text": "mình thích đi phượt", "intent": "general", "entities": []},
+    {"text": "đi xe máy ngắm cảnh", "intent": "general", "entities": []},
+    {"text": "tuổi trẻ tài cao", "intent": "general", "entities": []},
+    {"text": "hãy làm những gì mình thích", "intent": "general", "entities": []},
+    {"text": "đừng để hối tiếc", "intent": "general", "entities": []},
+    {"text": "uoc gi quay lai cap 3", "intent": "general", "entities": []},
+    {"text": "nho que qua", "intent": "general", "entities": []},
+    {"text": "lan dau len tp ngo ngang", "intent": "general", "entities": []},
+    {"text": "bot nghe k", "intent": "general", "entities": []},
+    {"text": "minh noi hoi nhieu", "intent": "general", "entities": []},
+    {"text": "thich di nui hon", "intent": "general", "entities": []},
+    {"text": "di phuot xa khong", "intent": "general", "entities": []},
+    {"text": "hay song het minh", "intent": "general", "entities": []},
+    {"text": "bot co uoc gi khong", "intent": "general", "entities": []},
+    {"text": "cuoc doi nay ngan lam", "intent": "general", "entities": []},
+    {"text": "bạn thích đọc truyện tranh không", "intent": "general", "entities": []},
+    {"text": "mình fan naruto", "intent": "general", "entities": []},
+    {"text": "anime hay lắm", "intent": "general", "entities": []},
+    {"text": "cosplay đẹp ghê", "intent": "general", "entities": []},
+    {"text": "bạn có biết siêu anh hùng nào không", "intent": "general", "entities": []},
+    {"text": "người nhện là idol của mình", "intent": "general", "entities": []},
+    {"text": "đang luyện thi ielts", "intent": "general", "entities": []},
+    {"text": "toeic 800 dễ hay khó", "intent": "general", "entities": []},
+    {"text": "bạn học tiếng việt mất bao lâu", "intent": "general", "entities": []},
+    {"text": "tiếng việt phong phú thật", "intent": "general", "entities": []},
+    {"text": "bạn có hiểu ca dao tục ngữ không", "intent": "general", "entities": []},
+    {"text": "có chí thì nên", "intent": "general", "entities": []},
+    {"text": "lá lành đùm lá rách", "intent": "general", "entities": []},
+    {"text": "từ đồng nghĩa rắc rối quá", "intent": "general", "entities": []},
+    {"text": "bot học nhanh nhỉ", "intent": "general", "entities": []},
+    {"text": "công nghệ tiên tiến", "intent": "general", "entities": []},
+    {"text": "sợ chatgpt chiếm việc làm", "intent": "general", "entities": []},
+    {"text": "bạn có phải chatgpt không", "intent": "general", "entities": []},
+    {"text": "bạn thông minh hơn siri không", "intent": "general", "entities": []},
+    {"text": "so sánh bot và google assistant", "intent": "general", "entities": []},
+    {"text": "doc conan k bot", "intent": "general", "entities": []},
+    {"text": "thich xem hoat hinh k", "intent": "general", "entities": []},
+    {"text": "hoc ielts o dau day", "intent": "general", "entities": []},
+    {"text": "toeic kho vai", "intent": "general", "entities": []},
+    {"text": "tieng viet kho nhat", "intent": "general", "entities": []},
+    {"text": "bot kute vay", "intent": "general", "entities": []},
+    {"text": "co tuc ngu nao hay k", "intent": "general", "entities": []},
+    {"text": "bot the cho con nguoi", "intent": "general", "entities": []},
+    {"text": "ban hieu tieng long k", "intent": "general", "entities": []},
+    {"text": "gen z nay khac bot a", "intent": "general", "entities": []}
+    ]

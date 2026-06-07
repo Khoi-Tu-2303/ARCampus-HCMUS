@@ -1,0 +1,2002 @@
+[
+    {
+    "text": "toà a dùng để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "B là toà gì vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "B"
+    }
+    ]
+    },
+    {
+    "text": "nhà c có mục đích gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà c"
+    }
+    ]
+    },
+    {
+    "text": "D chức năng chính là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "TOÀ E để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "TOÀ E"
+    }
+    ]
+    },
+    {
+    "text": "F có chức năng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "F"
+    }
+    ]
+    },
+    {
+    "text": "khu g dùng làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "toà h có chức năng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "a chức năng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "Tòa B để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa B"
+    }
+    ]
+    },
+    {
+    "text": "c phục vụ cho việc gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "khu d dùng để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "e có tác dụng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "Tòa F là toà gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa F"
+    }
+    ]
+    },
+    {
+    "text": "G chuyên để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "G"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành dùng để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành có chức năng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành phục vụ mục đích gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành của trường dùng làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành là toà gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH dùng để làm gì bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "ndh có chức năng gì vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NDH chủ yếu dùng để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "nđh phục vụ việc gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nđh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh dung de lam gi?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "h gồm những phòng nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "toà a có những phòng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "b bên trong có gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "Tòa C có phòng ban nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa C"
+    }
+    ]
+    },
+    {
+    "text": "khu d có phòng thực hành không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "e có những gì bên trong?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "toà f có những phòng học nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà f"
+    }
+    ]
+    },
+    {
+    "text": "G bên trong chứa gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "G"
+    }
+    ]
+    },
+    {
+    "text": "khu h có phòng tự học không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "A bên trong có gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "A"
+    }
+    ]
+    },
+    {
+    "text": "toà b có những phòng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "C chứa các khoa nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "C"
+    }
+    ]
+    },
+    {
+    "text": "nhà d có phòng hội thảo không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "khu E có phòng thực hành không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu E"
+    }
+    ]
+    },
+    {
+    "text": "f gồm các bộ phận nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành gồm những phòng ban nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "bên trong toà nhà điều hành có gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành có phòng họp không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành của trường có phòng ban nào làm việc?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành bao gồm những đơn vị nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NDH bên trong có những gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "n.đ.h có các phòng ban nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "NĐH chứa phòng công tác sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "ndh gồm đơn vị nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh co nhung phong nao?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "g mở cửa mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "toà h mở cửa khi nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "a đóng cửa lúc nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "Tòa B hoạt động giờ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa B"
+    }
+    ]
+    },
+    {
+    "text": "nhà c có mở ban đêm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà c"
+    }
+    ]
+    },
+    {
+    "text": "D khi nào thì đóng cửa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "toà e làm việc từ mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "f mấy giờ bắt đầu làm việc?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "khu g có mở chủ nhật không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "H đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "H"
+    }
+    ]
+    },
+    {
+    "text": "toà a mở cửa mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "b làm việc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "c mở đến mấy giờ tối?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "khu d hoạt động ra sao?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "e cuối tuần có mở không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành hoạt động giờ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành mở cửa mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành của trường làm việc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành khi nào mở cửa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ndh làm việc từ mấy giờ đến mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NĐH hoạt động những giờ nào trong ngày?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "n.d.h mở lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.d.h"
+    }
+    ]
+    },
+    {
+    "text": "NDH có làm việc thứ 7 không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "NDh dong cua luc may gio?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDh"
+    }
+    ]
+    },
+    {
+    "text": "Tòa F rộng bao nhiêu mét vuông?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa F"
+    }
+    ]
+    },
+    {
+    "text": "g có diện tích bao lớn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "toà h có bao nhiêu phòng học?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "a cao mấy tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "Tòa B sức chứa bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa B"
+    }
+    ]
+    },
+    {
+    "text": "nhà c có bao nhiêu phòng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà c"
+    }
+    ]
+    },
+    {
+    "text": "D quy mô thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "toà e cao bao nhiêu tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "f sức chứa khoảng bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "khu g có mấy tầng bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "H có rộng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "H"
+    }
+    ]
+    },
+    {
+    "text": "toà a có bao nhiêu tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "b có diện tích bao lớn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "c có sức chứa lớn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "khu d chứa được bao nhiêu sinh viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành có bao nhiêu phòng ban?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành cao mấy tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành có bao nhiêu tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành của trường rộng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành mấy tầng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH cao mấy tầng vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "ndh có diện tích bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NDH chứa được bao nhiêu nhân viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "nđh có quy mô thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nđh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh co may tang?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "toà e người ngoài có được vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "f có kiểm tra giấy tờ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "khu g có bắt buộc mặc đồng phục khi vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "toà h quy định ra vào sao bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "a ai được phép vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "Tòa B cần xuất trình thẻ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa B"
+    }
+    ]
+    },
+    {
+    "text": "nhà c có hạn chế giờ vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà c"
+    }
+    ]
+    },
+    {
+    "text": "D có xét thẻ sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "e quy định vào cổng thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "Tòa F sinh viên các khoa khác vào được không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Tòa F"
+    }
+    ]
+    },
+    {
+    "text": "G điều kiện ra vào là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "G"
+    }
+    ]
+    },
+    {
+    "text": "H ai được vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "H"
+    }
+    ]
+    },
+    {
+    "text": "toà a sinh viên có được vào tự do không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "b có quy định ra vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "c cần điều kiện gì để vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "vào nhà điều hành cần xuất trình gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành sinh viên có được vào tự do không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành có quy định gì khi vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành của trường cho sinh viên vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành cần thẻ sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NDH có quy định ra vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "nđh sinh viên có được phép lên các phòng ban không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nđh"
+    }
+    ]
+    },
+    {
+    "text": "ndh ai được phép ra vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NĐH có bắt mặc đồng phục không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "vao nha dieu hanh can the khong?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nha d may tang",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha d"
+    }
+    ]
+    },
+    {
+    "text": "e rong khong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "khu f suc chua ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu f"
+    }
+    ]
+    },
+    {
+    "text": "g de lam gi vay",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "khu h co bao nhieu phong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "toa a co may tang",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa a"
+    }
+    ]
+    },
+    {
+    "text": "b quy dinh vao sao",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "khu c co phong hop ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "d mo den may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "d"
+    }
+    ]
+    },
+    {
+    "text": "toa e co phong lap ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa e"
+    }
+    ]
+    },
+    {
+    "text": "f mo cua luc may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "toa g co xet the ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa g"
+    }
+    ]
+    },
+    {
+    "text": "h de lam gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "toa a co gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa a"
+    }
+    ]
+    },
+    {
+    "text": "b chuc nang gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh mo may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh lam gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh co may tang",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh gom nhung gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "quy dinh nha dieu hanh",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "NDH lam gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "ndh co phong nao",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NĐH mo cua khong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "n.đ.h bao nhieu tang",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "NDh co may tang",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDh"
+    }
+    ]
+    },
+    {
+    "text": "nhà c chuc nang la gi z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà c"
+    }
+    ]
+    },
+    {
+    "text": "khu d lam viec toi may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "e mo may h z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "toa f co nhieu sv ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa f"
+    }
+    ]
+    },
+    {
+    "text": "g dong cua luc may h",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "toa h co the vao hoc bai khong nha",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa h"
+    }
+    ]
+    },
+    {
+    "text": "a co phong hoc nhóm ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "b dc vao tu do hok",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "c rong bao nhieu mét vuong v",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "d co ctv khong a",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "d"
+    }
+    ]
+    },
+    {
+    "text": "khu e co phong hoc nhom hok z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu e"
+    }
+    ]
+    },
+    {
+    "text": "f chuc nang la gi nho",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "khu g h do co sv dc vao ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "h rong k ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "toa a mo cua may gio z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa a"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh co may tang nha",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh lam gi z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh cua truong gom nhung phong nao ban biet ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh cua truong"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh mo den h nao vay",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh co rong hok",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "ndh lam viec tu may gio ban biet ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "NĐH sv vao do lam thu tuc z dc ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "ndh co may tang v mn",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "nđh ben trong rong ko ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nđh"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh nay lam gi ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "nhóm mình muốn đặt phòng họp, toà b có phòng hội thảo không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn ôn thi, toà c có phòng tự học không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà c"
+    }
+    ]
+    },
+    {
+    "text": "mình đang làm nghiên cứu, khu d có phòng lab cho sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "đi ngang qua thấy đẹp, e để làm gì vậy bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "nghe nói khu f vừa cải tạo, bây giờ có thêm những phòng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu f"
+    }
+    ]
+    },
+    {
+    "text": "cần mượn sách chuyên ngành, khu g có thư viện nhỏ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "đang tìm chỗ nghỉ trưa, toà h có sảnh chờ cho sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "mình cần tìm chỗ học yên tĩnh, toà a có phòng tự học không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "thấy bự quá mà chưa vào bao giờ, b có bao nhiêu tầng vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "sắp tới có môn thực hành ở c, cho hỏi c gồm những phòng máy nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình quên đồ, D đóng cửa lúc mấy giờ thế?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "mình có hẹn với clb, toà e sinh viên vào có cần thẻ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "nay thứ 7, F có làm việc để mình lên nộp giấy tờ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "F"
+    }
+    ]
+    },
+    {
+    "text": "mai mình có sự kiện, G sức chứa khoảng bao nhiêu sinh viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "G"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu học tại trường, h có phòng thực hành không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "mình cần gặp phòng đào tạo, nhà điều hành có phòng đó không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu nộp hồ sơ, không biết toà nhà điều hành đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn xin giấy xác nhận, Nhà Điều Hành có làm việc thứ 7 không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có việc gấp, nhà điều hành của trường sinh viên tự do lên các tầng được không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành của trường"
+    }
+    ]
+    },
+    {
+    "text": "thấy bên đó nhiều phòng ban quá, Nhà điều hành cao mấy tầng vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên NĐH, không biết bên trong có những phòng ban nào",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "mình chuẩn bị bảo lưu, ndh có phòng công tác sinh viên để xử lý không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "sắp tới giờ nghỉ trưa rồi, NĐH làm việc tới mấy giờ buổi sáng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "muốn gặp thầy trưởng khoa, ndh ai được phép ra vào vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "mat the sinh vien roi, nha dieu hanh co cho len lam lai ma k can the chua",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    }
+    ]

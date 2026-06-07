@@ -1,0 +1,2002 @@
+[
+    {
+    "text": "toà a ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "khu b chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu b"
+    }
+    ]
+    },
+    {
+    "text": "toà c nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà c"
+    }
+    ]
+    },
+    {
+    "text": "nhà d ở vị trí nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "E ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "E"
+    }
+    ]
+    },
+    {
+    "text": "Toà F chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà F"
+    }
+    ]
+    },
+    {
+    "text": "g nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "toà H ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà H"
+    }
+    ]
+    },
+    {
+    "text": "khu a ở đâu bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu a"
+    }
+    ]
+    },
+    {
+    "text": "Toà B nằm ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà B"
+    }
+    ]
+    },
+    {
+    "text": "c ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "c"
+    }
+    ]
+    },
+    {
+    "text": "khu d ở đâu dạ?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "nhà e chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà e"
+    }
+    ]
+    },
+    {
+    "text": "f nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "toà g chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ndh nằm ở vị trí nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "n.đ.h ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "NDH ở chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "đi đến toà h như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới nhà a?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà a"
+    }
+    ]
+    },
+    {
+    "text": "từ cổng chính đến toà b đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "đường đến khu c đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "đi thế nào để tới D?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "D"
+    }
+    ]
+    },
+    {
+    "text": "làm sao để đi đến toà e?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "khu f đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu f"
+    }
+    ]
+    },
+    {
+    "text": "đường tới nhà g đi như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà g"
+    }
+    ]
+    },
+    {
+    "text": "đi tới Toà H bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà H"
+    }
+    ]
+    },
+    {
+    "text": "a đi thế nào bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "cách đi đến toà b ra sao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "khu c đi bằng đường nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "lối đi tới nhà d ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "đi lối nào để tới Toà E?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà E"
+    }
+    ]
+    },
+    {
+    "text": "f đi như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới nhà điều hành?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NDH đi thế nào bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "đường đến toà nhà điều hành đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ndh đi như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "cách đi đến Nhà Điều Hành ra sao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "làm sao để tới NĐH?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "từ đây qua nhà điều hành đi đường nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "n.d.h đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.d.h"
+    }
+    ]
+    },
+    {
+    "text": "đường đến Nhà Điều Hành đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh di the nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "toà g ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "khu h nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "toà a ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "nhà b thuộc dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà b"
+    }
+    ]
+    },
+    {
+    "text": "C gần toà nào nhất?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "C"
+    }
+    ]
+    },
+    {
+    "text": "Toà D nằm ở khu vực nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà D"
+    }
+    ]
+    },
+    {
+    "text": "e nằm phía nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "e"
+    }
+    ]
+    },
+    {
+    "text": "toà f thuộc khu nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà f"
+    }
+    ]
+    },
+    {
+    "text": "khu g ở block nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "nhà h nằm hướng nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà h"
+    }
+    ]
+    },
+    {
+    "text": "Toà A gần đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà A"
+    }
+    ]
+    },
+    {
+    "text": "b thuộc dãy nhà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "khu c nằm ở phía nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "nhà d ở khu nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "toà e gần khu nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành gần toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH thuộc khu nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành nằm ở phía nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ndh ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành nằm hướng nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH gần cổng nào nhất?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành thuộc dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "n.đ.h ở khu vực nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành gần đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NDH nam o khu nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình toà f với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà f"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến toà g giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến khu h không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm nhà a với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà a"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới B đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "B"
+    }
+    ]
+    },
+    {
+    "text": "dẫn mình đến toà c nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà c"
+    }
+    ]
+    },
+    {
+    "text": "chỉ giúp mình đường qua khu d",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "bạn hướng dẫn mình tới Toà E được không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà E"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình lối vào nhà f",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà f"
+    }
+    ]
+    },
+    {
+    "text": "đưa mình tới g với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình đường đi toà h",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà h"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn mình qua khu a",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu a"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình đến toà b nhé",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "bạn dẫn mình tới C được không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "C"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường qua nhà d giùm mình",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới nhà điều hành đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến ndh không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến toà nhà điều hành giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình NĐH với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn mình tới Nhà Điều Hành nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm NDH",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "dẫn mình đến nhà điều hành được không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường tới n.đ.h giúp mình",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình lối vào toà nhà điều hành",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "chi duong toi nha dieu hanh voi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi toà e ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi khu f ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu f"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi toà g đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "giúp mình tìm nhà h nha bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà h"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi A đi lối nào thế?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "A"
+    }
+    ]
+    },
+    {
+    "text": "cho mình hỏi toà b nằm đâu nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi hướng dẫn mình tới khu c với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "bạn giúp mình tìm đường qua nhà d nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi Toà E ở phía nào dạ?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà E"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi f đi sao vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi toà g ở đâu nhen?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "giúp mình chỉ đường đến khu h với bạn ơi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi cho hỏi nhà a chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà a"
+    }
+    ]
+    },
+    {
+    "text": "cho mình hỏi thăm toà b nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi C ở khu nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "C"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi nhà điều hành ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình đang tìm NĐH mà không biết ở đâu, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "cho mình hỏi thăm toà nhà điều hành đi lối nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi ndh nằm chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi Nhà Điều Hành ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "giúp mình tìm NDH với bạn ơi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi hướng dẫn mình qua nhà điều hành nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi n.d.h nằm ở đâu nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.d.h"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi chỉ đường tới toà nhà điều hành giùm mình",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ban oi chi minh NDh o dau nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDh"
+    }
+    ]
+    },
+    {
+    "text": "toà d đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà d"
+    }
+    ]
+    },
+    {
+    "text": "khu e chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu e"
+    }
+    ]
+    },
+    {
+    "text": "f đâu bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "nhà g ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà g"
+    }
+    ]
+    },
+    {
+    "text": "Toà H lối nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà H"
+    }
+    ]
+    },
+    {
+    "text": "a đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "a"
+    }
+    ]
+    },
+    {
+    "text": "đường đến toà b",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "khu c đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "tìm nhà d",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "toà e chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà e"
+    }
+    ]
+    },
+    {
+    "text": "F nằm đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "F"
+    }
+    ]
+    },
+    {
+    "text": "khu g lối nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "nhà h ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà h"
+    }
+    ]
+    },
+    {
+    "text": "đi toà a",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà a"
+    }
+    ]
+    },
+    {
+    "text": "b chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "b"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "ndh ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "toà nhà điều hành chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "NĐH đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "Nhà Điều Hành lối nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "tìm ndh",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "nhà điều hành đi sao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "n.đ.h đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "đi toà nhà điều hành",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh dau",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "toa c o dau vay ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa c"
+    }
+    ]
+    },
+    {
+    "text": "khu d o dau nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "toa e dau ban oi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa e"
+    }
+    ]
+    },
+    {
+    "text": "nha f tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha f"
+    }
+    ]
+    },
+    {
+    "text": "g o cho nao z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "g"
+    }
+    ]
+    },
+    {
+    "text": "toa h di sao ta",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa h"
+    }
+    ]
+    },
+    {
+    "text": "khu a nam dau zay",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu a"
+    }
+    ]
+    },
+    {
+    "text": "nha b o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha b"
+    }
+    ]
+    },
+    {
+    "text": "Toa C di huong nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toa C"
+    }
+    ]
+    },
+    {
+    "text": "d o khu nao z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "d"
+    }
+    ]
+    },
+    {
+    "text": "toa e di duong nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa e"
+    }
+    ]
+    },
+    {
+    "text": "khu f o dau ta",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu f"
+    }
+    ]
+    },
+    {
+    "text": "nha g nam dau",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha g"
+    }
+    ]
+    },
+    {
+    "text": "h di loi nao z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "toa a o dau zay b",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa a"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh o khu nao z?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "ndh tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh dau ban oi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "NDH o cho nao z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh di sao ta",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "n.d.h nam dau zay",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.d.h"
+    }
+    ]
+    },
+    {
+    "text": "toa nha dieu hanh o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toa nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "ndh di huong nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh o khu nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    },
+    {
+    "text": "NĐH di loi nao z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, toà b ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà b"
+    }
+    ]
+    },
+    {
+    "text": "đang đứng ở căn tin, muốn tới khu c thì đi sao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu c"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ rồi, nhà d ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà d"
+    }
+    ]
+    },
+    {
+    "text": "đi lạc nãy giờ, chỉ mình Toà E với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Toà E"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu đến trường, f nằm ở khu nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "f"
+    }
+    ]
+    },
+    {
+    "text": "mình có hẹn ở toà g mà không biết đường",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà g"
+    }
+    ]
+    },
+    {
+    "text": "xe hỏng phải đi bộ, đường đến khu h xa không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu h"
+    }
+    ]
+    },
+    {
+    "text": "đang gấp quá, chỉ lẹ mình nhà a ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà a"
+    }
+    ]
+    },
+    {
+    "text": "mới chuyển cơ sở nên không rành, B đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "B"
+    }
+    ]
+    },
+    {
+    "text": "đang kẹt ở bãi xe, tới toà c đi sao bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà c"
+    }
+    ]
+    },
+    {
+    "text": "đi vòng vòng nãy giờ chưa thấy khu d, giúp với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu d"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu học môn này, nhà e nằm chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà e"
+    }
+    ]
+    },
+    {
+    "text": "bị lạc trong trường rồi, toà f ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà f"
+    }
+    ]
+    },
+    {
+    "text": "sắp thi rồi mà không thấy khu g, chỉ mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "khu g"
+    }
+    ]
+    },
+    {
+    "text": "bạn bè đang đợi ở h, chỉ đường cho mình nhanh nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "h"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học ở nhà điều hành nhưng không biết ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên NĐH nên không biết đường, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NĐH"
+    }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến toà nhà điều hành thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "có giấy triệu tập lên ndh mà mình bị lạc rồi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "ndh"
+    }
+    ]
+    },
+    {
+    "text": "mới nhập học chưa rành, Nhà Điều Hành ở đâu bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "Nhà Điều Hành"
+    }
+    ]
+    },
+    {
+    "text": "cần nộp hồ sơ gấp, NDH đi lối nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "NDH"
+    }
+    ]
+    },
+    {
+    "text": "mưa quá mình đang trú, cho hỏi nhà điều hành gần đây không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "lên n.đ.h đóng tiền mà mù đường quá, cứu với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "n.đ.h"
+    }
+    ]
+    },
+    {
+    "text": "bạn bè nhờ lấy giấy ở toà nhà điều hành, đi đường nào tới đó?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "toà nhà điều hành"
+    }
+    ]
+    },
+    {
+    "text": "xe hu nen phai hoi duong, nha dieu hanh nam dau zay",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "building",
+    "value": "nha dieu hanh"
+    }
+    ]
+    }
+    ]

@@ -1,0 +1,922 @@
+[
+    {
+    "text": "mình cần hỏi thông tin thì bắt đầu từ đâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho mình hỏi một chút được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình có thắc mắc muốn hỏi, bạn có thể giúp không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần tìm hiểu thêm thì hỏi thế nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể cho mình biết thêm thông tin không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho hỏi mình muốn biết chi tiết thì đọc ở đâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn cung cấp thêm thông tin giúp mình với nha",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình có câu hỏi này muốn nhờ bạn giải đáp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "làm sao để cập nhật thông tin mới nhất vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần làm rõ một vài điều, hỏi ai được ạ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần được hỗ trợ, giúp mình với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể giúp mình không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình đang cần giúp đỡ",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nhờ bạn hỗ trợ mình một chút nha",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giúp mình với bạn ơi",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình đang gặp rắc rối, hỗ trợ mình nhé",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn giải quyết giúp mình trường hợp này với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "có ai hỗ trợ mình bây giờ không ạ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nhờ bạn kiểm tra và giải quyết hộ mình",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình mong nhận được sự trợ giúp từ bạn",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần gặp ai để được giải đáp?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "liên hệ thế nào để được hỗ trợ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi ai bây giờ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình nên gặp ai vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "có ai có thể giúp mình không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho mình xin số điện thoại hoặc email liên hệ với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận nào sẽ giải đáp thắc mắc này ạ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình muốn nhắn tin trực tiếp cho người phụ trách thì làm sao?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "ai chịu trách nhiệm giải quyết vấn đề này thế?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gặp người quản lý ở đâu được bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình mới vào trường chưa biết gì, giúp mình với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình đang rất bối rối, không biết phải làm gì",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần giúp đỡ vì chưa quen với mọi thứ ở đây",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "lần đầu gặp tình huống này nên không biết hỏi ai",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình không biết phải bắt đầu từ đâu, bạn hỗ trợ được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "tình hình của mình đang khá rắc rối và cần thông tin gấp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình loay hoay mãi từ sáng tới giờ vẫn chưa biết cách giải quyết",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình sợ làm sai quy trình nên muốn hỏi trước cho chắc",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "có nhiều luồng ý kiến quá khiến mình hoang mang, cần bạn giải đáp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình gặp sự cố ngoài ý muốn nên cần được tư vấn ngay",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho hỏi chút",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần hỏi thông tin",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "biết không bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "muốn biết thông tin",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho xin thông tin",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "thông tin ở đâu",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần làm rõ",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giải đáp hộ",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cho hỏi tí",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "thắc mắc quá",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần tra cứu",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "kiểm tra thông tin",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi tí bạn",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần câu trả lời",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giúp mình với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỗ trợ được không",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình cần giúp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cứu mình với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỗ trợ tí",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giúp hộ cái",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần trợ giúp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỗ trợ khẩn cấp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giúp xíu nha",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần người giúp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gỡ rối giúp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỗ trợ mình",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giúp tớ với",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cần giải quyết gấp",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỗ trợ nhanh",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "liên hệ ai vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "làm thế nào bây giờ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gặp ai được?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi ai thế",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "làm sao đây",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gặp ai bây giờ",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "liên hệ cách nào",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gửi đơn cho ai",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gọi số nào",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "tìm ai giải quyết",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận nào làm",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "gặp ai xin",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "liên hệ ở đâu",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "làm cách nào",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "ai xử lý vậy",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này hoạt động như thế nào vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này mình cần làm gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này áp dụng cho mình không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này dành cho ai vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này mất bao lâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này có bắt buộc không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này nộp trực tuyến được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này có tốn phí không bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này tính điểm thế nào vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này có mẫu sẵn không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này ai phê duyệt thế?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này có hiệu lực khi nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này áp dụng cho khóa nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này giải quyết ở đâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này có thay đổi gì không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này cần giấy tờ kèm theo không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này có giới hạn thời gian không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều này ảnh hưởng gì không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái này do ai quản lý vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc này cần mấy chữ ký?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó có đúng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó cần điều kiện gì không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó mình có được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó áp dụng cho tất cả không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó như thế nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó mất mấy ngày làm việc?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó có thông báo chính thức chưa?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó gửi qua bưu điện được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó cần đem theo căn cước không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó có gây rắc rối gì không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó kiểm tra kết quả ở đâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó do ai phụ trách thế?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó áp dụng từ năm nhất đúng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó có cần đóng mộc không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó tiến hành ra sao?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó có hoãn lại được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó yêu cầu những gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "việc đó có quan trọng không bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "điều đó tính theo học kỳ hay cả năm?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "cái đó có quy định văn bản không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "chỗ này phụ trách gì vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nơi này làm việc ra sao?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận này giải quyết gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "đây là dịch vụ gì vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "chỗ này hỗ trợ những gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nơi này có tiếp sinh viên cuối tuần không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận này có hotline riêng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "đây có phải nơi giải đáp thắc mắc không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "chỗ này nhận hồ sơ đến mấy giờ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nơi này trả kết quả vào ngày nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận này phản hồi có nhanh không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "đây là nơi xử lý khiếu nại đúng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "chỗ này có cần xếp hàng bấm số không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nơi này do thầy hay cô quản lý vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận này có làm việc giờ hành chính không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "đây có cấp giấy xác nhận liền không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "chỗ này giải quyết hồ sơ trong bao lâu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "nơi này có quy định gì khi vào không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bộ phận này hỗ trợ những đối tượng nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "đây là kênh hỗ trợ chính thức phải không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bot này có thể giúp mình được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn hỗ trợ những loại thông tin gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình hỏi bạn được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có chức năng gì vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "tôi có thể hỏi bạn những gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có biết không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi bạn có được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn giúp được gì cho mình?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "phạm vi hỗ trợ của bạn là gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có giới hạn gì không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bot trả lời tự động hay có người trực thế?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có dữ liệu về các quy trình không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hỏi bạn có chính xác không vậy?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn giải đáp được những thắc mắc nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "năng lực của bot đến đâu vậy ta?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình có thể tin cậy câu trả lời của bạn không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có cập nhật thông tin thường xuyên không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "những câu hỏi dạng nào thì bạn trả lời được?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể tư vấn cho mình được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "hệ thống của bạn hỗ trợ những mảng nào?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có công cụ tra cứu thông tin không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình nhắn tin thế này bạn có hiểu không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có câu trả lời cho mọi tình huống không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "làm sao để tận dụng tốt nhất sự hỗ trợ từ bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có biết xử lý các trường hợp đặc biệt không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "phạm vi giải đáp của bạn có rộng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có giới hạn số câu hỏi trong ngày không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bot hỗ trợ được tiếng nước ngoài không bạn?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình hỏi sâu hơn thì bạn có đáp ứng được không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn chỉ biết thông tin chung hay biết cả chi tiết?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bot có thể kết nối mình với người thật không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn hoạt động 24/7 luôn đúng không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình có thể nhờ bạn kiểm tra hộ trạng thái không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có chức năng nhắc lịch hay thông báo không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "phần mềm này giúp mình giải quyết những khúc mắc gì?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có hiểu ngữ cảnh câu hỏi phức tạp không?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "mình nên đặt câu hỏi thế nào để bạn dễ hiểu?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể hướng dẫn từng bước cho mình được chứ?",
+    "intent": "inform",
+    "entities": []
+    },
+    {
+    "text": "giới hạn lớn nhất của chatbot này là gì vậy?",
+    "intent": "inform",
+    "entities": []
+    }
+    ]

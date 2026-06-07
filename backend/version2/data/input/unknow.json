@@ -1,0 +1,2587 @@
+[
+    {"text": "toà A á", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "toà B hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà B"}]},
+    {"text": "toà D ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "toà E đúng k", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "toà F nha", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "toà G nè", "intent": "unknown", "entities": [{"label": "building", "value": "toà G"}]},
+    {"text": "toà H hả m", "intent": "unknown", "entities": [{"label": "building", "value": "toà H"}]},
+    {"text": "toà T á", "intent": "unknown", "entities": [{"label": "building", "value": "toà T"}]},
+    {"text": "tòa A", "intent": "unknown", "entities": [{"label": "building", "value": "tòa A"}]},
+    {"text": "toa B a", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "toa C ha", "intent": "unknown", "entities": [{"label": "building", "value": "toa C"}]},
+    {"text": "toa D y", "intent": "unknown", "entities": [{"label": "building", "value": "toa D"}]},
+    {"text": "toà trung tâm hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà trung tâm"}]},
+    {"text": "toà nhà trung tâm á", "intent": "unknown", "entities": [{"label": "building", "value": "toà nhà trung tâm"}]},
+    {"text": "toà nhà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà nhà A"}]},
+    {"text": "toà nhà B ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà nhà B"}]},
+    {"text": "ủa toà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "là toà B", "intent": "unknown", "entities": [{"label": "building", "value": "toà B"}]},
+    {"text": "ra toà C", "intent": "unknown", "entities": [{"label": "building", "value": "toà C"}]},
+    {"text": "ở toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "bên toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "tòa A chứ gì", "intent": "unknown", "entities": [{"label": "building", "value": "tòa A"}]},
+    {"text": "tòa B đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "tòa B"}]},
+    {"text": "tòa C ah", "intent": "unknown", "entities": [{"label": "building", "value": "tòa C"}]},
+    {"text": "tòa D nè", "intent": "unknown", "entities": [{"label": "building", "value": "tòa D"}]},
+    {"text": "tòa E nha b", "intent": "unknown", "entities": [{"label": "building", "value": "tòa E"}]},
+    {"text": "khu A á", "intent": "unknown", "entities": [{"label": "building", "value": "khu A"}]},
+    {"text": "khu B hả", "intent": "unknown", "entities": [{"label": "building", "value": "khu B"}]},
+    {"text": "khu D ý", "intent": "unknown", "entities": [{"label": "building", "value": "khu D"}]},
+    {"text": "khu E nha", "intent": "unknown", "entities": [{"label": "building", "value": "khu E"}]},
+    {"text": "khu a", "intent": "unknown", "entities": [{"label": "building", "value": "khu a"}]},
+    {"text": "khu b a", "intent": "unknown", "entities": [{"label": "building", "value": "khu b"}]},
+    {"text": "khu c ha", "intent": "unknown", "entities": [{"label": "building", "value": "khu c"}]},
+    {"text": "nhà hiệu bộ á", "intent": "unknown", "entities": [{"label": "building", "value": "nhà hiệu bộ"}]},
+    {"text": "nhà hiệu bộ hả", "intent": "unknown", "entities": [{"label": "building", "value": "nhà hiệu bộ"}]},
+    {"text": "nhà điều hành ý", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nhà điều hành nha", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nha hieu bo", "intent": "unknown", "entities": [{"label": "building", "value": "nha hieu bo"}]},
+    {"text": "nha dieu hanh a", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "nhà A1 á", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A1"}]},
+    {"text": "nhà A2 hả", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A2"}]},
+    {"text": "nhà B1 ý", "intent": "unknown", "entities": [{"label": "building", "value": "nhà B1"}]},
+    {"text": "nhà B2 nè", "intent": "unknown", "entities": [{"label": "building", "value": "nhà B2"}]},
+    {"text": "e101 á", "intent": "unknown", "entities": [{"label": "room", "value": "e101"}]},
+    {"text": "e102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "e201 ý", "intent": "unknown", "entities": [{"label": "room", "value": "e201"}]},
+    {"text": "e202 nha", "intent": "unknown", "entities": [{"label": "room", "value": "e202"}]},
+    {"text": "e301 nè", "intent": "unknown", "entities": [{"label": "room", "value": "e301"}]},
+    {"text": "phòng e101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "phòng e102 á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e102"}]},
+    {"text": "phòng e103 hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e103"}]},
+    {"text": "phong e202", "intent": "unknown", "entities": [{"label": "room", "value": "phong e202"}]},
+    {"text": "phong e301 a", "intent": "unknown", "entities": [{"label": "room", "value": "phong e301"}]},
+    {"text": "a101 á", "intent": "unknown", "entities": [{"label": "room", "value": "a101"}]},
+    {"text": "a102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "a102"}]},
+    {"text": "phòng a101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng a101"}]},
+    {"text": "phòng a102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng a102"}]},
+    {"text": "phòng a201 nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng a201"}]},
+    {"text": "phong a101", "intent": "unknown", "entities": [{"label": "room", "value": "phong a101"}]},
+    {"text": "phong a102 ha", "intent": "unknown", "entities": [{"label": "room", "value": "phong a102"}]},
+    {"text": "b101 á", "intent": "unknown", "entities": [{"label": "room", "value": "b101"}]},
+    {"text": "b102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "phòng b101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng b101"}]},
+    {"text": "phòng b102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng b102"}]},
+    {"text": "phòng b201 nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng b201"}]},
+    {"text": "c101 á", "intent": "unknown", "entities": [{"label": "room", "value": "c101"}]},
+    {"text": "c102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "c102"}]},
+    {"text": "phòng c101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c101"}]},
+    {"text": "phòng c102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c102"}]},
+    {"text": "phòng c201 nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c201"}]},
+    {"text": "d101 á", "intent": "unknown", "entities": [{"label": "room", "value": "d101"}]},
+    {"text": "d102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "d102"}]},
+    {"text": "phòng d101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng d101"}]},
+    {"text": "phòng d102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng d102"}]},
+    {"text": "phòng d201 nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng d201"}]},
+    {"text": "phòng đào tạo á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "phòng đào tạo hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "phòng đào tạo ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "phòng đào tạo nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "p.đào tạo á", "intent": "unknown", "entities": [{"label": "room", "value": "p.đào tạo"}]},
+    {"text": "p đào tạo hả", "intent": "unknown", "entities": [{"label": "room", "value": "p đào tạo"}]},
+    {"text": "phong dao tao", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "phong dao tao a", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "phòng công tác sinh viên á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng công tác sinh viên hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng ctsv ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "phòng ctsv nha", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "p.ctsv á", "intent": "unknown", "entities": [{"label": "room", "value": "p.ctsv"}]},
+    {"text": "p ctsv hả", "intent": "unknown", "entities": [{"label": "room", "value": "p ctsv"}]},
+    {"text": "phong ctsv a", "intent": "unknown", "entities": [{"label": "room", "value": "phong ctsv"}]},
+    {"text": "phong cong tac sinh vien", "intent": "unknown", "entities": [{"label": "room", "value": "phong cong tac sinh vien"}]},
+    {"text": "phòng y tế á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng y tế"}]},
+    {"text": "phòng y tế hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng y tế"}]},
+    {"text": "p.y tế ý", "intent": "unknown", "entities": [{"label": "room", "value": "p.y tế"}]},
+    {"text": "phong y te", "intent": "unknown", "entities": [{"label": "room", "value": "phong y te"}]},
+    {"text": "phòng bảo vệ á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng bảo vệ"}]},
+    {"text": "phòng bảo vệ hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng bảo vệ"}]},
+    {"text": "p.bảo vệ ý", "intent": "unknown", "entities": [{"label": "room", "value": "p.bảo vệ"}]},
+    {"text": "phong bao ve", "intent": "unknown", "entities": [{"label": "room", "value": "phong bao ve"}]},
+    {"text": "phòng tài vụ á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng tài vụ"}]},
+    {"text": "phòng tài vụ hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng tài vụ"}]},
+    {"text": "phong tai vu", "intent": "unknown", "entities": [{"label": "room", "value": "phong tai vu"}]},
+    {"text": "phòng khảo thí á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng khảo thí"}]},
+    {"text": "phòng khảo thí hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng khảo thí"}]},
+    {"text": "phong khao thi", "intent": "unknown", "entities": [{"label": "room", "value": "phong khao thi"}]},
+    {"text": "hội trường á", "intent": "unknown", "entities": [{"label": "room", "value": "hội trường"}]},
+    {"text": "hội trường hả", "intent": "unknown", "entities": [{"label": "room", "value": "hội trường"}]},
+    {"text": "hội trường A", "intent": "unknown", "entities": [{"label": "room", "value": "hội trường A"}]},
+    {"text": "hội trường B", "intent": "unknown", "entities": [{"label": "room", "value": "hội trường B"}]},
+    {"text": "hoi truong", "intent": "unknown", "entities": [{"label": "room", "value": "hoi truong"}]},
+    {"text": "phòng máy á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy"}]},
+    {"text": "phòng máy tính hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "phong may tinh", "intent": "unknown", "entities": [{"label": "room", "value": "phong may tinh"}]},
+    {"text": "phong lab a", "intent": "unknown", "entities": [{"label": "room", "value": "phong lab"}]},
+    {"text": "thư viện á", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện hả", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện ý", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện nha", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thu vien a", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thu vien ha", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thưn viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thưn viện"}]},
+    {"text": "căng tin á", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin hả", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin ý", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin nha", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căn tin á", "intent": "unknown", "entities": [{"label": "facility", "value": "căn tin"}]},
+    {"text": "căn tin hả", "intent": "unknown", "entities": [{"label": "facility", "value": "căn tin"}]},
+    {"text": "căngtin", "intent": "unknown", "entities": [{"label": "facility", "value": "căngtin"}]},
+    {"text": "cantin a", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "can tin", "intent": "unknown", "entities": [{"label": "facility", "value": "can tin"}]},
+    {"text": "sân bóng á", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng hả", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng ý", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng nha", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "san bong a", "intent": "unknown", "entities": [{"label": "facility", "value": "san bong"}]},
+    {"text": "san bong ha", "intent": "unknown", "entities": [{"label": "facility", "value": "san bong"}]},
+    {"text": "san bong", "intent": "unknown", "entities": [{"label": "facility", "value": "san bong"}]},
+    {"text": "sân vận động á", "intent": "unknown", "entities": [{"label": "facility", "value": "sân vận động"}]},
+    {"text": "sân vận động hả", "intent": "unknown", "entities": [{"label": "facility", "value": "sân vận động"}]},
+    {"text": "san van dong", "intent": "unknown", "entities": [{"label": "facility", "value": "san van dong"}]},
+    {"text": "phòng gym á", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "phòng gym hả", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "phong gym a", "intent": "unknown", "entities": [{"label": "facility", "value": "phong gym"}]},
+    {"text": "phong gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phong gym"}]},
+    {"text": "nhà thể chất á", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thể chất"}]},
+    {"text": "nhà thể chất hả", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thể chất"}]},
+    {"text": "nha the chat", "intent": "unknown", "entities": [{"label": "facility", "value": "nha {the chat}"}]},
+    {"text": "nhà đa năng á", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà đa năng"}]},
+    {"text": "nhà đa năng hả", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà đa năng"}]},
+    {"text": "nha da nang", "intent": "unknown", "entities": [{"label": "facility", "value": "nha da nang"}]},
+    {"text": "nhà thi đấu á", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "nhà thi đấu hả", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "nha thi dau", "intent": "unknown", "entities": [{"label": "facility", "value": "nha thi dau"}]},
+    {"text": "bãi gửi xe á", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi gửi xe"}]},
+    {"text": "bãi gửi xe hả", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi gửi xe"}]},
+    {"text": "bai gui xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bai gui xe"}]},
+    {"text": "bãi xe á", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bãi xe hả", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bai xe a", "intent": "unknown", "entities": [{"label": "facility", "value": "bai xe"}]},
+    {"text": "hầm gửi xe á", "intent": "unknown", "entities": [{"label": "facility", "value": "hầm gửi xe"}]},
+    {"text": "hầm gửi xe hả", "intent": "unknown", "entities": [{"label": "facility", "value": "hầm gửi xe"}]},
+    {"text": "ham gui xe", "intent": "unknown", "entities": [{"label": "facility", "value": "ham gui xe"}]},
+    {"text": "ký túc xá á", "intent": "unknown", "entities": [{"label": "facility", "value": "ký túc xá"}]},
+    {"text": "ký túc xá hả", "intent": "unknown", "entities": [{"label": "facility", "value": "ký túc xá"}]},
+    {"text": "ky tuc xa", "intent": "unknown", "entities": [{"label": "facility", "value": "ky tuc xa"}]},
+    {"text": "ktx á", "intent": "unknown", "entities": [{"label": "facility", "value": "ktx"}]},
+    {"text": "ktx hả", "intent": "unknown", "entities": [{"label": "facility", "value": "ktx"}]},
+    {"text": "khu ktx", "intent": "unknown", "entities": [{"label": "facility", "value": "khu ktx"}]},
+    {"text": "sảnh toà nhà á", "intent": "unknown", "entities": [{"label": "facility", "value": "sảnh toà nhà"}]},
+    {"text": "sảnh toà nhà hả", "intent": "unknown", "entities": [{"label": "facility", "value": "sảnh toà nhà"}]},
+    {"text": "sanh toa nha", "intent": "unknown", "entities": [{"label": "facility", "value": "sanh toa nha"}]},
+    {"text": "ủa toà B", "intent": "unknown", "entities": [{"label": "building", "value": "toà B"}]},
+    {"text": "ủa khu B", "intent": "unknown", "entities": [{"label": "building", "value": "khu B"}]},
+    {"text": "ủa nhà điều hành", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "ủa phòng ctsv", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "ủa e102", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "ủa thư viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "ủa sân bóng", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "là toà C", "intent": "unknown", "entities": [{"label": "building", "value": "toà C"}]},
+    {"text": "là khu C", "intent": "unknown", "entities": [{"label": "building", "value": "khu C"}]},
+    {"text": "là phòng y tế", "intent": "unknown", "entities": [{"label": "room", "value": "phòng y tế"}]},
+    {"text": "là e201", "intent": "unknown", "entities": [{"label": "room", "value": "e201"}]},
+    {"text": "là nhà đa năng", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà đa năng"}]},
+    {"text": "là ktx", "intent": "unknown", "entities": [{"label": "facility", "value": "ktx"}]},
+    {"text": "bên toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "bên khu D", "intent": "unknown", "entities": [{"label": "building", "value": "khu D"}]},
+    {"text": "bên phòng tài vụ", "intent": "unknown", "entities": [{"label": "room", "value": "phòng tài vụ"}]},
+    {"text": "bên d101", "intent": "unknown", "entities": [{"label": "room", "value": "d101"}]},
+    {"text": "bên phòng gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "bên nhà thể chất", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thể chất"}]},
+    {"text": "ở toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "ở nhà trung tâm", "intent": "unknown", "entities": [{"label": "building", "value": "nhà trung tâm"}]},
+    {"text": "ở hội trường", "intent": "unknown", "entities": [{"label": "room", "value": "hội trường"}]},
+    {"text": "ở e305", "intent": "unknown", "entities": [{"label": "room", "value": "e305"}]},
+    {"text": "ở hầm gửi xe", "intent": "unknown", "entities": [{"label": "facility", "value": "hầm gửi xe"}]},
+    {"text": "ở căn tin", "intent": "unknown", "entities": [{"label": "facility", "value": "căn tin"}]},
+    {"text": "tòa E á bạn", "intent": "unknown", "entities": [{"label": "building", "value": "tòa E"}]},
+    {"text": "khu E á bạn", "intent": "unknown", "entities": [{"label": "building", "value": "khu E"}]},
+    {"text": "phòng bảo vệ á bạn", "intent": "unknown", "entities": [{"label": "room", "value": "phòng bảo vệ"}]},
+    {"text": "a202 á bạn", "intent": "unknown", "entities": [{"label": "room", "value": "a202"}]},
+    {"text": "sân vận động á bạn", "intent": "unknown", "entities": [{"label": "facility", "value": "sân vận động"}]},
+    {"text": "ký túc xá á bạn", "intent": "unknown", "entities": [{"label": "facility", "value": "ký túc xá"}]},
+    {"text": "toà F hả m", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "nhà A1 hả m", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A1"}]},
+    {"text": "phòng lab hả m", "intent": "unknown", "entities": [{"label": "room", "value": "phòng lab"}]},
+    {"text": "b304 hả m", "intent": "unknown", "entities": [{"label": "room", "value": "b304"}]},
+    {"text": "bãi xe hả m", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "nhà thi đấu hả m", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "toa T", "intent": "unknown", "entities": [{"label": "building", "value": "toa T"}]},
+    {"text": "khu b", "intent": "unknown", "entities": [{"label": "building", "value": "khu b"}]},
+    {"text": "nha hieu bo", "intent": "unknown", "entities": [{"label": "building", "value": "nha hieu bo"}]},
+    {"text": "phong khao thi", "intent": "unknown", "entities": [{"label": "room", "value": "phong khao thi"}]},
+    {"text": "c405", "intent": "unknown", "entities": [{"label": "room", "value": "c405"}]},
+    {"text": "thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "can tin", "intent": "unknown", "entities": [{"label": "facility", "value": "can tin"}]},
+    {"text": "san bong", "intent": "unknown", "entities": [{"label": "facility", "value": "san bong"}]},
+    {"text": "toa A a", "intent": "unknown", "entities": [{"label": "building", "value": "toa A"}]},
+    {"text": "khu A a", "intent": "unknown", "entities": [{"label": "building", "value": "khu A"}]},
+    {"text": "phong dao tao a", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "e101 a", "intent": "unknown", "entities": [{"label": "room", "value": "e101"}]},
+    {"text": "thu vien a", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "cang tin a", "intent": "unknown", "entities": [{"label": "facility", "value": "cang tin"}]},
+    {"text": "toa B ha", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "khu B ha", "intent": "unknown", "entities": [{"label": "building", "value": "khu B"}]},
+    {"text": "phong ctsv ha", "intent": "unknown", "entities": [{"label": "room", "value": "phong ctsv"}]},
+    {"text": "e102 ha", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "bai xe ha", "intent": "unknown", "entities": [{"label": "facility", "value": "bai xe"}]},
+    {"text": "ktx ha", "intent": "unknown", "entities": [{"label": "facility", "value": "ktx"}]},
+    {"text": "toa C y", "intent": "unknown", "entities": [{"label": "building", "value": "toa C"}]},
+    {"text": "khu C y", "intent": "unknown", "entities": [{"label": "building", "value": "khu C"}]},
+    {"text": "phong y te y", "intent": "unknown", "entities": [{"label": "room", "value": "phong y te"}]},
+    {"text": "a203 y", "intent": "unknown", "entities": [{"label": "room", "value": "a203"}]},
+    {"text": "nha da nang y", "intent": "unknown", "entities": [{"label": "facility", "value": "nha da nang"}]},
+    {"text": "sanh y", "intent": "unknown", "entities": [{"label": "facility", "value": "sanh"}]},
+    {"text": "toa D nhe", "intent": "unknown", "entities": [{"label": "building", "value": "toa D"}]},
+    {"text": "khu D nhe", "intent": "unknown", "entities": [{"label": "building", "value": "khu D"}]},
+    {"text": "phong tai vu nhe", "intent": "unknown", "entities": [{"label": "room", "value": "phong tai vu"}]},
+    {"text": "d301 nhe", "intent": "unknown", "entities": [{"label": "room", "value": "d301"}]},
+    {"text": "phong gym nhe", "intent": "unknown", "entities": [{"label": "facility", "value": "phong gym"}]},
+    {"text": "ky tuc xa nhe", "intent": "unknown", "entities": [{"label": "facility", "value": "ky tuc xa"}]},
+    {"text": "toà A đúng k", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "khu A đúng k", "intent": "unknown", "entities": [{"label": "building", "value": "khu A"}]},
+    {"text": "phòng đào tạo đúng k", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "e101 đúng k", "intent": "unknown", "entities": [{"label": "room", "value": "e101"}]},
+    {"text": "thư viện đúng k", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "căng tin đúng k", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "toà B phải hong", "intent": "unknown", "entities": [{"label": "building", "value": "toà B"}]},
+    {"text": "khu B phải hong", "intent": "unknown", "entities": [{"label": "building", "value": "khu B"}]},
+    {"text": "phòng ctsv phải hong", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "e102 phải hong", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "bãi xe phải hong", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "ktx phải hong", "intent": "unknown", "entities": [{"label": "facility", "value": "ktx"}]},
+    {
+    "text": "asd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwe",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vbn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rty",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uio",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "jkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mko",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "pql",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zmx",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ncb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qpzm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "wosk",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "eidj",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ruf",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ygh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tjl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdfg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwert",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxcvb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lkjhg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnbvc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "poiuy",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "trewq",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yuiop",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "hjkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vbnm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "xdfg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cvhj",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rtfg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tygh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yuij",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uiko",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "iopkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qaz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "wsx",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "edc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rfv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tgb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yhn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ujm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ikl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "olp",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "pmo",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "okn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ijb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uhv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ygc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tfx",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rdz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "esz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "waq",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qaws",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zse",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "xdr",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cft",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vgy",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "bhu",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "nji",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "kmp",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lpn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "opl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ikm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ujn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yhb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tgv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rfc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "edx",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "wsz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qax",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "azq",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "sxw",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "dce",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fvr",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdfghjkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwertyuiop",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxcvbnmasdf",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lkjhgfdsaqw",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnbvcxzpoi",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "poiuytrewqas",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdfqwerzxcv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qazwsxedcrfv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tgbyhnujmikol",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "plmkoijnbhuy",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "gvtfcrdxeszwa",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qawsedrftgyh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ujikolpmznxb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cvqwerasdfzxc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxcvbnmasdfgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwertyuioplkj",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "hgfdsazxcvbnm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnbvcxzlkjhg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fdsaqwertyui",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "oplkjhgfdsaz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "xcvbnmpoiuyt",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rewqasdfghjk",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lmnbvcxzqwer",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tyuiopasdfgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "jklzxcvbnmqw",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ertyuioplkjh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "gfdsazxcvbnm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qazwsxedcrfvv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tgbyhnujmikoo",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lpqazwsxedcr",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fvtgbyhnujmi",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "kolpmnbvcxz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdfghjklqwe",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rtyuiopzxcv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "bnmlkjhgfdsa",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwertyuiopas",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "dfghjklzxcvb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "nmqazwsxedcr",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fvtgbyhnujm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ikolpasdfgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "jklzxcvbnmq",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "wertyuiopas",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "dfghjklzxcv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "bnmqwertyui",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "opasdfghjkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxcvbnmqazw",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "sxedcrfvtgb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yhnujmikolp",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnbvcxzlkjh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "gfdsaqwerty",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uiopzxcvbnm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lkjhgfdsaqw",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ertyuiopasd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fghjklzxcvb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "nmqazwsxedc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "rfvtgbyhnuj",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mikolpasdfg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "hjklzxcvbnm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwertyuiopa",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "sdfghjklzxc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vbnmqazwsxe",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "dcrfvtgbyhn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ujmikolpmnb",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vcxzlkjhgfd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "saqwertyuio",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "pzxcvbnmasd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fghjklqwerty",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uiopzxcvbnml",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "kjhgfdsaqwer",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tyuiopasdfgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "jklzxcvbnmqa",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zwsxedcrfvtg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "byhnujmikolp",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdfghjklzxc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vbnmqwertyui",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "5678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "9012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "3456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "7890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "2345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "4567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "8901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "12345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "67890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "23456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "78901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "34567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "89012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "45678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "90123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "56789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "01234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "123456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "789012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "345678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "567890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1234567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "8901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "5678901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "2345678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "9012345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6789012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "3456789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0123456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "7890123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "4567890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "2222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "3333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "4444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "5555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "7777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "8888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "9999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "11111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "22222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "33333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "44444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "55555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "66666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "77777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "88888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "99999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "00000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "12345678901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "23456789012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "34567890123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "45678901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "56789012345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "67890123456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "78901234567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "89012345678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "90123456789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "01234567890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "11111111111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "22222222222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "33333333333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "44444444444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "55555555555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "66666666666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "77777777777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "88888888888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "99999999999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "00000000000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "12312312312",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "45645645645",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "78978978978",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "09809809809",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "87687687687",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "65465465465",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "43243243243",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "21021021021",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "13513513513",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "24624624624",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "123456789012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "234567890123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "345678901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "456789012345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "567890123456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "678901234567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "789012345678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "890123456789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "901234567890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "012345678901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "111111111111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "222222222222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "333333333333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "444444444444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "555555555555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "666666666666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "777777777777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "888888888888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "999999999999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "000000000000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1234567890123",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "2345678901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "3456789012345",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "4567890123456",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "5678901234567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6789012345678",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "7890123456789",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "8901234567890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "9012345678901",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0123456789012",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1111111111111",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "2222222222222",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "3333333333333",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "4444444444444",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "5555555555555",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6666666666666",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "7777777777777",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "8888888888888",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "9999999999999",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0000000000000",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "12345678901234",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "98765432109876",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "13579246801357",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "24680135792468",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "90909090909090",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "a1b2c3d4e5f",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxcv1234567",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qwer0987poi",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asdf4321lkj",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnbv6543cxz",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1q2w3e4r5t",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "0p9o8i7u6y",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "a1s2d3f4g5",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "z1x2c3v4b5",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "m1n2b3v4c5",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "p0o9i8u7y6",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "l0k9j8h7g6",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qaz123wsx45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "edc678rfv90",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "tgb123yhn45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ujm678ikl90",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "okn123plm45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zaq123xsw45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cde678vfr90",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "bgt123nhy45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mju678ki890",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "lo9123p0o45",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "asd123qwe",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "zxc456ert",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "fgh789yui",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vbn012iop",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "jkl345asd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mno678zxc",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "pqr901fgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "stu234vbn",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "vwx567jkl",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yzab89mno",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cdef12pqr",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ghij45stu",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "klmn78vwx",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "opqr01yza",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "stuv34bcd",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "wxyz67efg",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "abcd90hij",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "efgh23klm",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ijkl56nop",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "mnop89qrs",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "qrst12tuv",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "uvwx45wxy",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "yzab78zab",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "cdef01cde",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "ghij34fgh",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "11aa22bb33",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "44cc55dd66",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "77ee88ff99",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "00gg11hh22",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "33ii44jj55",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "66kk77ll88",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "99mm00nn11",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "22oo33pp44",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "55qq66rr77",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "88ss99tt00",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "11uu22vv33",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "44ww55xx66",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "77yy88zz99",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "00ab11cd22",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "33ef44gh55",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "66ij77kl88",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "99mn00op11",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "22qr33st44",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "55uv66wx77",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "88yz99ab00",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1a2s3d4f5g",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6h7j8k9l0z",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1x2c3v4b5n",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6m7q8w9e0r",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1t2y3u4i5o",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6p7a8s9d0f",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1g2h3j4k5l",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "6z7x8c9v0b",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "1n2m3q4w5e",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "!!!???",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "@@@###",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "$$$%%%",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "^^^&&&",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "***(((",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": ")))___",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "+++===",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "{{{}}}",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "[[[]]]",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "<<<>>>",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": ",,,...",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "///???",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "~~~```",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "!@#$%",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "^&*()",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "_+-=",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": ">,./?",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "@#$%^",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "&*()_",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "+-={}",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "#$%^&",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "*()*+",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "-={}|",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "%^&*()",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "*+-={}",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "!@#$%^&",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "*()_+-=",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "{}|[]\\:",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": ";\"'<>,.",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "/?~`!@#",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "$%^&*()",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "_+-={}|",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "[]\\:;\"'",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "<>,./?~",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "`!@#$%^",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "&*()_+-",
+    "intent": "unknown",
+    "entities": []
+    },
+    {
+    "text": "={}|[]\/",
+    "intent": "unknown",
+    "entities": []
+    },
+    {"text": "phòng e101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "phòng e101 á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "phòng e101 hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "chỗ phòng e101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "bên phòng e101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "cái phòng e101 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "là phòng e101 à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "phòng e101 đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "ngay phòng e101", "intent": "unknown", "entities": [{"label": "room", "value": "phòng e101"}]},
+    {"text": "e102", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "e102 á", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "e102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "chỗ e102", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "bên e102", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "cái e102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "là e102 à", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "e102 đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "ngay e102", "intent": "unknown", "entities": [{"label": "room", "value": "e102"}]},
+    {"text": "phòng công tác sinh viên", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng công tác sinh viên á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng công tác sinh viên hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "chỗ phòng công tác sinh viên", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "bên phòng công tác sinh viên", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "cái phòng công tác sinh viên ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "là phòng công tác sinh viên à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng công tác sinh viên đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "ngay phòng công tác sinh viên", "intent": "unknown", "entities": [{"label": "room", "value": "phòng công tác sinh viên"}]},
+    {"text": "phòng ctsv", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "phòng ctsv á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "phòng ctsv hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "chỗ phòng ctsv", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "bên phòng ctsv", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "cái phòng ctsv ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "là phòng ctsv à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "phòng ctsv đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "ngay phòng ctsv", "intent": "unknown", "entities": [{"label": "room", "value": "phòng ctsv"}]},
+    {"text": "phòng đào tạo hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "chỗ phòng đào tạo", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "bên phòng đào tạo", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "cái phòng đào tạo ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "là phòng đào tạo à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "phòng đào tạo đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "ngay phòng đào tạo", "intent": "unknown", "entities": [{"label": "room", "value": "phòng đào tạo"}]},
+    {"text": "phong dao tao", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "phong dao tao hả", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "chỗ phong dao tao", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "bên phong dao tao", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "cái phong dao tao ý", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "là phong dao tao à", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "phong dao tao đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "ngay phong dao tao", "intent": "unknown", "entities": [{"label": "room", "value": "phong dao tao"}]},
+    {"text": "phòng thí nghiệm hoá", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "phòng thí nghiệm hoá á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "phòng thí nghiệm hoá hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "chỗ phòng thí nghiệm hoá", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "bên phòng thí nghiệm hoá", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "cái phòng thí nghiệm hoá ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "là phòng thí nghiệm hoá à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "phòng thí nghiệm hoá đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "ngay phòng thí nghiệm hoá", "intent": "unknown", "entities": [{"label": "room", "value": "phòng thí nghiệm hoá"}]},
+    {"text": "phòng máy tính", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "phòng máy tính á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "phòng máy tính hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "chỗ phòng máy tính", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "bên phòng máy tính", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "cái phòng máy tính ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "là phòng máy tính à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "phòng máy tính đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "ngay phòng máy tính", "intent": "unknown", "entities": [{"label": "room", "value": "phòng máy tính"}]},
+    {"text": "b102", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "b102 á", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "b102 hả", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "chỗ b102", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "bên b102", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "cái b102 ý", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "là b102 à", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "b102 đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "ngay b102", "intent": "unknown", "entities": [{"label": "room", "value": "b102"}]},
+    {"text": "phòng c301", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "phòng c301 á", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "phòng c301 hả", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "chỗ phòng c301", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "bên phòng c301", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "cái phòng c301 ý", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "là phòng c301 à", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "phòng c301 đúng ko", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "ngay phòng c301", "intent": "unknown", "entities": [{"label": "room", "value": "phòng c301"}]},
+    {"text": "toà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "toà A á", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "toà A hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "chỗ toà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "bên toà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "cái toà A ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "là toà A à", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "toà A đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "ngay toà A", "intent": "unknown", "entities": [{"label": "building", "value": "toà A"}]},
+    {"text": "toa B", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "toa B á", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "toa B hả", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "chỗ toa B", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "bên toa B", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "cái toa B ý", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "là toa B à", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "toa B đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "ngay toa B", "intent": "unknown", "entities": [{"label": "building", "value": "toa B"}]},
+    {"text": "hội trường B", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "hội trường B á", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "hội trường B hả", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "chỗ hội trường B", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "bên hội trường B", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "cái hội trường B ý", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "là hội trường B à", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "hội trường B đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "ngay hội trường B", "intent": "unknown", "entities": [{"label": "building", "value": "hội trường B"}]},
+    {"text": "toà khu C", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "toà khu C á", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "toà khu C hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "chỗ toà khu C", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "bên toà khu C", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "cái toà khu C ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "là toà khu C à", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "toà khu C đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "ngay toà khu C", "intent": "unknown", "entities": [{"label": "building", "value": "toà khu C"}]},
+    {"text": "toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "toà D á", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "toà D hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "chỗ toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "bên toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "cái toà D ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "là toà D à", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "toà D đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "ngay toà D", "intent": "unknown", "entities": [{"label": "building", "value": "toà D"}]},
+    {"text": "toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "toà E á", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "toà E hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "chỗ toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "bên toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "cái toà E ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "là toà E à", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "toà E đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "ngay toà E", "intent": "unknown", "entities": [{"label": "building", "value": "toà E"}]},
+    {"text": "nhà điều hành", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nhà điều hành á", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nhà điều hành hả", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "chỗ nhà điều hành", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "bên nhà điều hành", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "cái nhà điều hành ý", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "là nhà điều hành à", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nhà điều hành đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "ngay nhà điều hành", "intent": "unknown", "entities": [{"label": "building", "value": "nhà điều hành"}]},
+    {"text": "nha dieu hanh", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "nha dieu hanh á", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "nha dieu hanh hả", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "chỗ nha dieu hanh", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "bên nha dieu hanh", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "cái nha dieu hanh ý", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "là nha dieu hanh à", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "nha dieu hanh đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "ngay nha dieu hanh", "intent": "unknown", "entities": [{"label": "building", "value": "nha dieu hanh"}]},
+    {"text": "nhà A", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "nhà A á", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "nhà A hả", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "chỗ nhà A", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "bên nhà A", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "cái nhà A ý", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "là nhà A à", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "nhà A đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "ngay nhà A", "intent": "unknown", "entities": [{"label": "building", "value": "nhà A"}]},
+    {"text": "toà F", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "toà F á", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "toà F hả", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "chỗ toà F", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "bên toà F", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "cái toà F ý", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "là toà F à", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "toà F đúng ko", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "ngay toà F", "intent": "unknown", "entities": [{"label": "building", "value": "toà F"}]},
+    {"text": "thư viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện á", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện hả", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "chỗ thư viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "bên thư viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "cái thư viện ý", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "là thư viện à", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thư viện đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "ngay thư viện", "intent": "unknown", "entities": [{"label": "facility", "value": "thư viện"}]},
+    {"text": "thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thu vien á", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thu vien hả", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "chỗ thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "bên thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "cái thu vien ý", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "là thu vien à", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "thu vien đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "ngay thu vien", "intent": "unknown", "entities": [{"label": "facility", "value": "thu vien"}]},
+    {"text": "căng tin", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin á", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin hả", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "chỗ căng tin", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "bên căng tin", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "cái căng tin ý", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "là căng tin à", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "căng tin đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "ngay căng tin", "intent": "unknown", "entities": [{"label": "facility", "value": "căng tin"}]},
+    {"text": "cantin", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "cantin á", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "cantin hả", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "chỗ cantin", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "bên cantin", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "cái cantin ý", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "là cantin à", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "cantin đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "ngay cantin", "intent": "unknown", "entities": [{"label": "facility", "value": "cantin"}]},
+    {"text": "sân bóng", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng á", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng hả", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "chỗ sân bóng", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "bên sân bóng", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "cái sân bóng ý", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "là sân bóng à", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "sân bóng đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "ngay sân bóng", "intent": "unknown", "entities": [{"label": "facility", "value": "sân bóng"}]},
+    {"text": "phòng gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "phòng gym á", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "phòng gym hả", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "chỗ phòng gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "bên phòng gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "cái phòng gym ý", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "là phòng gym à", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "phòng gym đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "ngay phòng gym", "intent": "unknown", "entities": [{"label": "facility", "value": "phòng gym"}]},
+    {"text": "bãi giữ xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "bãi giữ xe á", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "bãi giữ xe hả", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "chỗ bãi giữ xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "bên bãi giữ xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "cái bãi giữ xe ý", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "là bãi giữ xe à", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "bãi giữ xe đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "ngay bãi giữ xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi giữ xe"}]},
+    {"text": "bãi xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bãi xe á", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bãi xe hả", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "chỗ bãi xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bên bãi xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "cái bãi xe ý", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "là bãi xe à", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "bãi xe đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "ngay bãi xe", "intent": "unknown", "entities": [{"label": "facility", "value": "bãi xe"}]},
+    {"text": "sân thể dục", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "sân thể dục á", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "sân thể dục hả", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "chỗ sân thể dục", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "bên sân thể dục", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "cái sân thể dục ý", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "là sân thể dục à", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "sân thể dục đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "ngay sân thể dục", "intent": "unknown", "entities": [{"label": "facility", "value": "sân thể dục"}]},
+    {"text": "nhà thi đấu", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "nhà thi đấu á", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "nhà thi đấu hả", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "chỗ nhà thi đấu", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "bên nhà thi đấu", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "cái nhà thi đấu ý", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "là nhà thi đấu à", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "nhà thi đấu đúng ko", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]},
+    {"text": "ngay nhà thi đấu", "intent": "unknown", "entities": [{"label": "facility", "value": "nhà thi đấu"}]}
+    ]

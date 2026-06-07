@@ -1,0 +1,1402 @@
+[
+    {
+    "text": "thư viện ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "thư viện trường nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "thư viện của trường chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện của trường" }
+    ]
+    },
+    {
+    "text": "tv ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "thu vien o dau?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "đi đến thư viện như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "làm sao tới thư viện trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "đường đến thư viện của trường đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện của trường" }
+    ]
+    },
+    {
+    "text": "đi thế nào để đến TV?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "lam sao di toi thu vien",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "thư viện ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "thư viện trường nằm cạnh đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "t.v gần tòa nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "thuviện nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuviện" }
+    ]
+    },
+    {
+    "text": "thu viện o goc nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu viện" }
+    ]
+    },
+    {
+    "text": "chỉ cho mình thư viện với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới thư viện trường đi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "chỉ đường đến thư viện của trường giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện của trường" }
+    ]
+    },
+    {
+    "text": "dẫn đến tv được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "chỉ mình tới TV với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "bạn ơi thư viện ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi thư viện trường ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "cho hỏi thư viện của trường ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện của trường" }
+    ]
+    },
+    {
+    "text": "mình ơi t.v đâu vậy bạn",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "giup minh tim thuvien nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuvien" }
+    ]
+    },
+    {
+    "text": "thư viện đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "thư viện trường chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "tv ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "TV đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "thu vien o dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "thư viện o dau z ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "tv đi dg nào v",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "thuviện nam cho nao z",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuviện" }
+    ]
+    },
+    {
+    "text": "thu vien o dau z",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "thuvien o khu nao vay",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuvien" }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, thư viện ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "muốn mượn sách mà không biết thư viện trường ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện trường" }
+    ]
+    },
+    {
+    "text": "lần đầu đi học nên không biết thư viện của trường ở chỗ nào, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện của trường" }
+    ]
+    },
+    {
+    "text": "đang cần học bài gấp, tv đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "nay can doc sach, thu vien di huong nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "nhà thi đấu ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "nhà thể dục nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" }
+    ]
+    },
+    {
+    "text": "sân thể dục ở chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "sân thể dục" }
+    ]
+    },
+    {
+    "text": "NTD ở đâu bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "nha thi dau cho nao vay",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha thi dau" }
+    ]
+    },
+    {
+    "text": "đi đến nhà thi đấu như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "làm sao tới nhà thi đấu đa năng?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu đa năng" }
+    ]
+    },
+    {
+    "text": "đường đến khu thể dục đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu thể dục" }
+    ]
+    },
+    {
+    "text": "đi thế nào để qua ntd?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntd" }
+    ]
+    },
+    {
+    "text": "lam sao di toi nha the duc",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha the duc" }
+    ]
+    },
+    {
+    "text": "nhà thể dục ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" }
+    ]
+    },
+    {
+    "text": "nhà thi đấu gần toà nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "NTĐ nằm cạnh đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTĐ" }
+    ]
+    },
+    {
+    "text": "ntd đa năng nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntd đa năng" }
+    ]
+    },
+    {
+    "text": "nha td nam o goc nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha td" }
+    ]
+    },
+    {
+    "text": "chỉ cho mình nhà thi đấu với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới nhà thi đấu đa năng đi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu đa năng" }
+    ]
+    },
+    {
+    "text": "chỉ đường đến sân thể dục giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "sân thể dục" }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến n.t.d không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "n.t.d" }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm nhà td với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà td" }
+    ]
+    },
+    {
+    "text": "bạn ơi nhà thi đấu ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi khu thể dục ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu thể dục" }
+    ]
+    },
+    {
+    "text": "cho hỏi nhà thể dục ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" }
+    ]
+    },
+    {
+    "text": "bạn ơi mình tìm NTD mà không biết đường, giúp với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "giup minh tim ntd da nang voi nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntd da nang" }
+    ]
+    },
+    {
+    "text": "nhà thi đấu đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "nhà thi đấu đa năng đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu đa năng" }
+    ]
+    },
+    {
+    "text": "ntđ ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntđ" }
+    ]
+    },
+    {
+    "text": "nhà tđ chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà tđ" }
+    ]
+    },
+    {
+    "text": "nha thi dau dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha thi dau" }
+    ]
+    },
+    {
+    "text": "sân thể dục o khu nao z",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "sân thể dục" }
+    ]
+    },
+    {
+    "text": "NTD o dau z ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "ntd đa năng nam cho nao ta",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntd đa năng" }
+    ]
+    },
+    {
+    "text": "nha the duc o dau v",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha the duc" }
+    ]
+    },
+    {
+    "text": "nha td tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha td" }
+    ]
+    },
+    {
+    "text": "hôm nay muốn tập thể dục nhưng không biết nhà thi đấu ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "chiều nay có lịch học gdqp, nhà thể dục nằm chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" }
+    ]
+    },
+    {
+    "text": "mình đang tìm chỗ đánh cầu lông, khu thể dục đi đường nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu thể dục" }
+    ]
+    },
+    {
+    "text": "đang vội đi cổ vũ bóng rổ, ntđ đi hướng nào bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntđ" }
+    ]
+    },
+    {
+    "text": "nay co mon the chat, nha thi dau nam o dau vay",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha thi dau" }
+    ]
+    },
+    {
+    "text": "nhà xe trước ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "bãi xe trước nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe trước" }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe trước ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe trước" }
+    ]
+    },
+    {
+    "text": "NXT ở đâu bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXT" }
+    ]
+    },
+    {
+    "text": "nha xe truoc cho nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe truoc" }
+    ]
+    },
+    {
+    "text": "đi đến nhà xe trước như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "làm sao tới bãi xe trước?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe trước" }
+    ]
+    },
+    {
+    "text": "đường đến khu gửi xe trước đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe trước" }
+    ]
+    },
+    {
+    "text": "nx trước đi thế nào bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx trước" }
+    ]
+    },
+    {
+    "text": "lam sao di toi bai xe truoc",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "nhà giữ xe trước ở khu nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà giữ xe trước" }
+    ]
+    },
+    {
+    "text": "nhà xe trước gần đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "bãi trước nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi trước" }
+    ]
+    },
+    {
+    "text": "nxt nằm cạnh cổng nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxt" }
+    ]
+    },
+    {
+    "text": "cho gui xe truoc o goc nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cho gui xe truoc" }
+    ]
+    },
+    {
+    "text": "chỉ cho mình nhà xe trước với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới bãi xe trước đi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe trước" }
+    ]
+    },
+    {
+    "text": "chỉ đường đến chỗ gửi xe trước giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe trước" }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến gửi xe trước không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "gửi xe trước" }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm NXT với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXT" }
+    ]
+    },
+    {
+    "text": "bạn ơi nhà xe trước ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi bãi xe trước ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe trước" }
+    ]
+    },
+    {
+    "text": "cho hỏi khu gửi xe trước ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe trước" }
+    ]
+    },
+    {
+    "text": "mình ơi nx trước đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx trước" }
+    ]
+    },
+    {
+    "text": "giup minh tim nha xe truoc voi nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe truoc" }
+    ]
+    },
+    {
+    "text": "nhà xe trước đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "nhà giữ xe trước chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà giữ xe trước" }
+    ]
+    },
+    {
+    "text": "nxt ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxt" }
+    ]
+    },
+    {
+    "text": "bãi trước đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi trước" }
+    ]
+    },
+    {
+    "text": "bai xe truoc dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe trước o dau z",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe trước" }
+    ]
+    },
+    {
+    "text": "NXT di duong nao v ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXT" }
+    ]
+    },
+    {
+    "text": "gửi xe trước nam cho nao ta",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "gửi xe trước" }
+    ]
+    },
+    {
+    "text": "bai xe truoc dau ban oi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "cho gui xe truoc o dau z ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cho gui xe truoc" }
+    ]
+    },
+    {
+    "text": "lần đầu gửi xe nên không biết nhà xe trước ở chỗ nào, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "mình lỡ đi cổng chính mà không rành, bãi xe trước nằm đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe trước" }
+    ]
+    },
+    {
+    "text": "đang cần lấy xe ra về, khu gửi xe trước đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe trước" }
+    ]
+    },
+    {
+    "text": "muộn giờ học rồi, nxt chỉ đường đi nhanh nhất với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxt" }
+    ]
+    },
+    {
+    "text": "toi moi den, nha xe truoc o huong nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe truoc" }
+    ]
+    },
+    {
+    "text": "nhà xe sau ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "bãi xe sau nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe sau" }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe sau ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe sau" }
+    ]
+    },
+    {
+    "text": "NXS ở đâu bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXS" }
+    ]
+    },
+    {
+    "text": "nha xe sau cho nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe sau" }
+    ]
+    },
+    {
+    "text": "đi đến nhà xe sau như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "làm sao tới bãi xe sau?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe sau" }
+    ]
+    },
+    {
+    "text": "từ cổng chính đến khu gửi xe sau đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe sau" }
+    ]
+    },
+    {
+    "text": "nx sau đi thế nào bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx sau" }
+    ]
+    },
+    {
+    "text": "lam sao di toi bai xe sau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe sau" }
+    ]
+    },
+    {
+    "text": "nhà giữ xe sau ở khu nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà giữ xe sau" }
+    ]
+    },
+    {
+    "text": "nhà xe sau gần đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "bãi sau nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi sau" }
+    ]
+    },
+    {
+    "text": "nxs nằm cạnh cổng nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "cho gui xe sau o goc nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cho gui xe sau" }
+    ]
+    },
+    {
+    "text": "chỉ cho mình nhà xe sau với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới bãi xe sau đi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe sau" }
+    ]
+    },
+    {
+    "text": "chỉ đường đến chỗ gửi xe sau giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe sau" }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến gửi xe sau không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "gửi xe sau" }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm NXS với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXS" }
+    ]
+    },
+    {
+    "text": "bạn ơi nhà xe sau ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi bãi xe sau ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe sau" }
+    ]
+    },
+    {
+    "text": "cho hỏi khu gửi xe sau ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe sau" }
+    ]
+    },
+    {
+    "text": "mình ơi nx sau đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx sau" }
+    ]
+    },
+    {
+    "text": "giup minh tim nha xe sau voi nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe sau" }
+    ]
+    },
+    {
+    "text": "nhà xe sau đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "nhà giữ xe sau chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà giữ xe sau" }
+    ]
+    },
+    {
+    "text": "nxs ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "bãi sau đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi sau" }
+    ]
+    },
+    {
+    "text": "bai xe sau dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe sau" }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe sau o dau z",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "chỗ gửi xe sau" }
+    ]
+    },
+    {
+    "text": "NXS di duong nao v ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXS" }
+    ]
+    },
+    {
+    "text": "gửi xe sau nam cho nao ta",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "gửi xe sau" }
+    ]
+    },
+    {
+    "text": "nha xe sau o dau nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha xe sau" }
+    ]
+    },
+    {
+    "text": "cho gui xe sau biet chi minh ko",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cho gui xe sau" }
+    ]
+    },
+    {
+    "text": "mình đậu xe sai chỗ bị nhắc, nhà xe sau ở chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "cổng trước kẹt quá, bãi xe sau đi hướng nào thế?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bãi xe sau" }
+    ]
+    },
+    {
+    "text": "mình tìm chỗ đậu trống, khu gửi xe sau đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu gửi xe sau" }
+    ]
+    },
+    {
+    "text": "sắp vào học rồi, nxs chỉ lẹ giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "quyen duong roi, bai xe sau di loi nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe sau" }
+    ]
+    },
+    {
+    "text": "căn tin ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "canteen nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "căng tin ở chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căng tin" }
+    ]
+    },
+    {
+    "text": "canteen trường chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen trường" }
+    ]
+    },
+    {
+    "text": "can tin nam cho nao vay",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "can tin" }
+    ]
+    },
+    {
+    "text": "đi đến căn tin như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "làm sao tới nhà ăn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà ăn" }
+    ]
+    },
+    {
+    "text": "đường đến khu ăn uống đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu ăn uống" }
+    ]
+    },
+    {
+    "text": "căn tin trường đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin trường" }
+    ]
+    },
+    {
+    "text": "lam sao de toi cantin",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cantin" }
+    ]
+    },
+    {
+    "text": "căn tin ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "canteen ở góc nào của khuôn viên?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "c.t nằm phía nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "CT gần toà nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "CT" }
+    ]
+    },
+    {
+    "text": "nha an nam canh dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha an" }
+    ]
+    },
+    {
+    "text": "chỉ cho mình căn tin với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới canteen đi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "chỉ đường đến căng tin giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căng tin" }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến ct không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ct" }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm căn tin trường với",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin trường" }
+    ]
+    },
+    {
+    "text": "bạn ơi căn tin ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi canteen ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "cho hỏi nhà ăn ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà ăn" }
+    ]
+    },
+    {
+    "text": "mình ơi c.t đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "giup minh tim khu an uong voi",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu an uong" }
+    ]
+    },
+    {
+    "text": "căn tin đâu?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "khu ăn uống chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu ăn uống" }
+    ]
+    },
+    {
+    "text": "ct ở đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ct" }
+    ]
+    },
+    {
+    "text": "canteen trường đâu",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen trường" }
+    ]
+    },
+    {
+    "text": "cantin o dau",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cantin" }
+    ]
+    },
+    {
+    "text": "căng tin o dau z ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căng tin" }
+    ]
+    },
+    {
+    "text": "CT di dg nao v",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "CT" }
+    ]
+    },
+    {
+    "text": "c.t nam cho nao ta",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "can tin dau vay?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "can tin" }
+    ]
+    },
+    {
+    "text": "nha an o dau z ban",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha an" }
+    ]
+    },
+    {
+    "text": "đói quá rồi, căn tin ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến canteen thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "tới giờ nghỉ trưa rồi, nhà ăn đi hướng nào để mua cơm?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà ăn" }
+    ]
+    },
+    {
+    "text": "khát nước quá, ct gần nhất nằm chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ct" }
+    ]
+    },
+    {
+    "text": "chua kip an sang, khu an uong di duong nao",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "khu an uong" }
+    ]
+    }
+    ]

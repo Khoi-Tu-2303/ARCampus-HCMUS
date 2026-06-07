@@ -1,0 +1,3377 @@
+[
+  {
+    "text": "thấy rồi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "đi đến q-404 thế nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 7,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "tam biet",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "thu vien truong co sach tieng anh k",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "rfvtgbyhnuj",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "222",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "bên khu d",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 4,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "nhà hiệu bộ hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "e101 đúng k",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "hướng dẫn tới b đi",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 14,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "out đây",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "cái cantin ý",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 4,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "khu e á bạn",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "a101 á",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "b304 trang thiết bị có mới không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "nha d may tang",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "do học ca tối về muộn, bãi xe trước có cho lấy xe sau 10h không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 23,
+        "end": 35
+      }
+    ]
+  },
+  {
+    "text": "toa t",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "nha dieu hanh 1.1 lam j truyen thong ko?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "phòng ctsv nha",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "phòng f 1.1 đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "san bong a",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "sân thể dục hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "h có rộng không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 1
+      }
+    ]
+  },
+  {
+    "text": "tv ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "ban co met khong",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "chỗ bãi giữ xe",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 4,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "bạn có thể dẫn mình đến gửi xe sau không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 24,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "cái nha dieu hanh ý",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 4,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "ntd đa năng đóng cửa lúc nào?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "chỉ cho mình căn tin với",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 13,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "phòng m304 có quy định gì không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "sân bóng đúng ko",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "làm thế nào đến đó",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "zxcvbnmqazw",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "toa a, phong ctsv va nha thi dau mo cua may gio vay ban?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "label": "room",
+        "start": 7,
+        "end": 17
+      },
+      {
+        "label": "facility",
+        "start": 21,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "toà a và toà b cái nào nhiều tầng hơn?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "label": "building",
+        "start": 9,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "phòng thí nghiệm sinh học toà e và bai xe truoc nối nhau qua cổng nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 25
+      },
+      {
+        "label": "building",
+        "start": 26,
+        "end": 31
+      },
+      {
+        "label": "facility",
+        "start": 35,
+        "end": 47
+      }
+    ]
+  },
+  {
+    "text": "gặp ai bây giờ",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "nhà điều hành bao gồm những đơn vị nào?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "thế à",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "c phục vụ cho việc gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 1
+      }
+    ]
+  },
+  {
+    "text": "bạn không biết à",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phong y te",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "p. y tế và phòng đọc sách có nhân viên trực vào thứ 7 không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "label": "room",
+        "start": 11,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "chỉ đường cho mình với",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "nhà điều hành của trường có phòng ban nào làm việc?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "khu gửi xe trước có trang bị camera an ninh không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "toà h ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "bạn ở hành tinh nào tới",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bạn thích đọc truyện tranh không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "ngay nhà điều hành",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 5,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "cảm ơn bạn nha",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "p. e12 ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "bot ơi có nhà không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "hỏi bạn có chính xác không vậy?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "ai chịu trách nhiệm giải quyết vấn đề này thế?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "the a",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng d102 ý",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "phong dao tao hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "nha dieu hanh co may tang nha",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "@#$%^",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "toà b nằm ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "chỗ mình cần đến ở đâu nhỉ",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "bot li xi di",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "quy định của phòng f102 và toà f có gì khác nhau về giờ giấc không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 13,
+        "end": 23
+      },
+      {
+        "label": "building",
+        "start": 27,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "p. ctsv có bao nhiêu quầy phục vụ?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "hội trường b",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "khu g dùng làm gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "chao cau",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "p. th hoá làm việc từ mấy giờ sáng?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "làm sao để sang đó",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "chỉ mình cách tìm p105 với",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 18,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "mua xuan hoa no that dep",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bot chán quá",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "roi a",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "hãy kể cho mình một sự thật",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "m 102 cho nao nha",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "mnbvcxzlkjhg",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "điều này có hiệu lực khi nào?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "nhà điều hành nha",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "thu vien o dau z",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "chỉ đường",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "7890123",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "nđh, phòng y tế và nhà xe sau cái nào gần cổng chính nhất?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "room",
+        "start": 5,
+        "end": 15
+      },
+      {
+        "label": "facility",
+        "start": 19,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "cd 405 cho ai dung",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "giúp hộ cái",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "phí gửi xe máy ở khu gửi xe trước là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 17,
+        "end": 33
+      }
+    ]
+  },
+  {
+    "text": "khu d nhe",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "mai mốt nói chuyện tiếp nha",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "mình gặp sự cố ngoài ý muốn nên cần được tư vấn ngay",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "bạn có hay thức khuya không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toa nha dieu hanh o dau z",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "tòa b sức chứa bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "ntd da nang dk vao ntn z",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "mình bị lạc rồi, chỉ giúp mình với",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "điều đó áp dụng cho tất cả không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "là sân bóng à",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 3,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "từ nhà xe sau muốn tạt qua canteen mua đồ thì đi lối cầu thang số mấy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 3,
+        "end": 13
+      },
+      {
+        "label": "facility",
+        "start": 27,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "ndh bên trong có những gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "pzxcvbnmasd",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "hỏi ai bây giờ?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "lối nào qua đó",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "phong y te o toa b co thuoc nhieu k ban?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "label": "building",
+        "start": 13,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "canteen và nhà xe trước nằm cùng một mặt bằng khu trệt đúng không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "label": "facility",
+        "start": 11,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "từ phòng đọc sách đi qua canteen bằng hành lang cầu được không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 3,
+        "end": 17
+      },
+      {
+        "label": "facility",
+        "start": 25,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "phòng ctsv phải hong",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "yhb",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "chào bot, mình cần hỏi chút",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "ct có món gì",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "b102 hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "qaws",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "canteen và nhà xe trước có nghỉ vào các ngày lễ tết không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "label": "facility",
+        "start": 11,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "phòng thực hành hoá có điều kiện gì để vào không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "nay co da banh k",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "ơi cho mình hỏi thư viện trường ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 16,
+        "end": 31
+      }
+    ]
+  },
+  {
+    "text": "cái đó kiểm tra kết quả ở đâu?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "cho mình hỏi đường đi như thế nào",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "cần người giúp",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "toà d đúng ko",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "cuộc sống sinh viên thiếu thốn",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bot lom qua",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "h11 và k201 cái nào mượn dễ hơn cho câu lạc bộ?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "room",
+        "start": 7,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "yuij",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "nhà e chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "cái phòng thí nghiệm hoá ý",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 4,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "234",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "phòng c301 hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "ntd và nhà xe trước cái nào gần cổng sau hơn?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "facility",
+        "start": 7,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "ujikolpmznxb",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "ntđ sinh viên ngoại trú có được dùng không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "esz",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "cho mình hỏi toà b nằm đâu nhen",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 13,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "cái này sai bét",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phong y te va nha xe truoc cai nao gan cong chinh hon?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "label": "facility",
+        "start": 14,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "kolpmnbvcxz",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "số điện thoại phòng thí nghiệm sinh học là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 14,
+        "end": 39
+      }
+    ]
+  },
+  {
+    "text": "78901",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "cần trợ giúp",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "chào ad",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "là toà f à",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 3,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "qaz123wsx45",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "bạn có ước mơ không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "điều này áp dụng cho mình không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "mình mới vào trường chưa quen đường, toà b ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 37,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "mưa quá mình đang trú, cho hỏi nhà điều hành gần đây không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 31,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "giúp mình tìm nhà h nha bạn",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 14,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "bạn có giới hạn gì không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "tv trường mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "nhà giữ xe trước dky vé tháng s v?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "hey, mình mới vào trường không biết gì hết",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "ngay thu vien",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 5,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "toà a gần đâu?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "co choi game ko bot",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "thư viện nha",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "năm mới bình an",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "h11 có giờ đóng cửa giống với giờ khoá cổng toà h không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "building",
+        "start": 44,
+        "end": 49
+      }
+    ]
+  },
+  {
+    "text": "-={}|",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "chưa rõ lắm",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "mình muốn tập bóng rổ, nhà thi đấu có sân bóng rổ không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 23,
+        "end": 34
+      }
+    ]
+  },
+  {
+    "text": "phong y te kham duoc benh gi",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "căng tin",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "nhờ bạn chỉ lối giúp mình với",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "bạn có thể dẫn mình đến ct không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 24,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "ndh ở đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "22222222222",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "thu vien á",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "sinh viên học ở ndh101 thuộc nđh thì có được gửi xe ở nhà xe sau không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 16,
+        "end": 22
+      },
+      {
+        "label": "building",
+        "start": 29,
+        "end": 32
+      },
+      {
+        "label": "facility",
+        "start": 54,
+        "end": 64
+      }
+    ]
+  },
+  {
+    "text": "thank",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "cuối tuần này có gì vui không nhỉ",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "nhà thể dục nằm kề sát toà c phải không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "label": "building",
+        "start": 23,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "pth và toà d cái nào đóng cửa trễ hơn?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "building",
+        "start": 7,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "bạn có thể giúp mình tìm đường không",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "phong gym a",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "từ phòng tự học đến thư viện đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 3,
+        "end": 15
+      },
+      {
+        "label": "facility",
+        "start": 20,
+        "end": 28
+      }
+    ]
+  },
+  {
+    "text": "bot bi hong r",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "90123",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "đường đi",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "cái đó có quy định văn bản không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "chỗ phong dao tao",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 4,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "phí thuê nhà td",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 9,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "phòng thực hành vật lý máy móc xịn hk mng",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "text": "567890123456",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "toa a a",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "nha xe sau cho nao",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "ơi cho mình hỏi pctsv ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 16,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "text": "can tin",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "2345",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "là phòng đào tạo à",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 3,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "mắt thâm quầng rồi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "muốn biết thông tin",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "trả lời kỳ quá, thử lại đi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bạn có phải chatgpt không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toà h hả m",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "phòng tự học với pđt có thông nhau qua ban công không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "label": "room",
+        "start": 17,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "azq",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "13513513513",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "toà a có những phòng gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "mình thích học thiên văn học",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "công nghệ tiên tiến",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "nhà điều hành của trường làm việc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "bot biet hat khong",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "///???",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "10 diem",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "p.đs o dau z",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "cho hỏi nhà ăn ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 8,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "cuoi tuan di dau choi bay gio",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "h 1.1 chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "phong cong tac sinh vien",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "toa nha dieu hanh dau ban oi",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "nha an o duoi tang tret toa g ha ad?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "label": "building",
+        "start": 24,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "toà a đúng ko",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "canteen nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "789012",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "hôm nay có lịch học nhưng không biết phòng thực hành tin học ở đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 37,
+        "end": 60
+      }
+    ]
+  },
+  {
+    "text": "cần một người an ủi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "ko dung cai minh can tim",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toa b",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "có ai đang xem phim cùng mình không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "a và b đi bộ qua lại mất khoảng mấy phút?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 1
+      },
+      {
+        "label": "building",
+        "start": 5,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "sao khuya rồi chưa ngủ",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "e101 á",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "bạn có cảm xúc không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "thư viện trường chỗ nào",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "d 3-02 xin mở cửa sớm thì gọi cho ai?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "trường lớn quá đi nãy giờ lạc mất tiêu rồi",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "ndh và toà f giờ đóng cửa có khác nhau không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "building",
+        "start": 7,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "gửi xe sau nam cho nao ta",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "555555555555",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "hữu ích lắm",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "gặp ai được?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "phòng bảo vệ hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "nơi này trả kết quả vào ngày nào?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "bot co thay minh kem coi k",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "2222222222222",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "hnay di hoc k co gi vui",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "p tn sh và p th đt nằm cạnh nhau phải không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "label": "room",
+        "start": 11,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "text": "tgb123yhn45",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "tgbyhnujmikol",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "bot ban trai hay ban gai the",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "hoi mot dang dap mot neo",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toà f",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "vang a",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phong y te va phong tu hoc mo may gio vay?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "label": "room",
+        "start": 14,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "b304 và thư viện có máy lạnh để sinh viên nghỉ trưa không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "label": "facility",
+        "start": 8,
+        "end": 16
+      }
+    ]
+  },
+  {
+    "text": "ghij45stu",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "the thoi ak",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "căng tin có nhận thanh toán bằng mã qr không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 8
+      }
+    ]
+  },
+  {
+    "text": "có lý",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bạn có giới hạn số câu hỏi trong ngày không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "rẽ đâu",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "có cách nào xem map không",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "hen gap lai sau",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "e và g có khu vực nghỉ ngơi cho sinh viên không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 1
+      },
+      {
+        "label": "building",
+        "start": 5,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "nhà a",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "n.d.h đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "phòng y tế và phòng đào tạo mở cửa cùng giờ không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "label": "room",
+        "start": 14,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "bên sân bóng",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 4,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "có giấy triệu tập lên ndh mà mình bị lạc rồi",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 22,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "sắp tới chưa vậy bạn ơi",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "nhà thể chất hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "g-12 co dc mag do an vao k z?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "cứ sao sao ấy",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "lần đầu gửi xe nên không biết nhà xe trước ở chỗ nào, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 30,
+        "end": 42
+      }
+    ]
+  },
+  {
+    "text": "5678901",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "s'up bot",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "chan nan doi sinh vien",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "bãi xe hả m",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "tới bằng gì",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "phòng đọc sách đóng lúc nào",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "cảm ơn bạn nhiều",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "xin chào bot",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng khảo thí á",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "xin link bản đồ nha",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "khu thể dục tính phí thuê sân thế nào?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "bãi gửi xe hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "phòng tự học quy định gì",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "bạn có dữ liệu về các quy trình không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "hay vui len",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "12345678901",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "dẫn mình đến nhà điều hành được không?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 13,
+        "end": 26
+      }
+    ]
+  },
+  {
+    "text": "chuc ngay moi vui ve nhe",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng công tác sinh viên xử lý những giấy tờ nào?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "ktx ha",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 3
+      }
+    ]
+  },
+  {
+    "text": "bên phòng gym",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 4,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "p. c230 di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "phòng thực hành hoá nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "text": "lên n.đ.h đóng tiền mà mù đường quá, cứu với",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 4,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "thank b",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "giải thích lại đi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng thực hành điện tử ở đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "tiếp tục đi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "rất cảm ơn",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "cứu mình với",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "uhv",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "m102 và d242 phòng nào rộng hơn để tổ chức hội thảo?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "label": "room",
+        "start": 8,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "d242 ở khu d nằm gần nhà vệ sinh nam hay nữ?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "label": "building",
+        "start": 7,
+        "end": 12
+      }
+    ]
+  },
+  {
+    "text": "liên hệ cách nào",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "thôi mình đi rồi, hẹn gặp lại",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "gửi xe sau nhận xe gì",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "mình mong nhận được sự trợ giúp từ bạn",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "phòng thực hành tin học đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "p yt có trực đêm không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      }
+    ]
+  },
+  {
+    "text": "kmp",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "đi lối nào để tới toà e?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 18,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "khu ăn uống đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "dắt tay mình đi với",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "thèm trà sữa quá",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toà a đúng k",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "klmn78vwx",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "phòng d201 nha",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "chao",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "65465465465",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "rồi sao nữa bạn?",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "quẹo hướng nào vậy ạ",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "thuê sân n.t.d giá bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 9,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "bạn có kỷ niệm nào vui không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "tv có wifi mạnh không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 2
+      }
+    ]
+  },
+  {
+    "text": "tạm biệt",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "thanks ban",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toà a với h có bị cấm mang thú cưng vào không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "label": "building",
+        "start": 10,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "phòng đào tạo ai phụ trách vậy?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "nhà điều hành của trường dùng làm gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "goodbye",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "alo cậu",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "muốn mượn sách mà không biết thư viện trường ở đâu",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 29,
+        "end": 44
+      }
+    ]
+  },
+  {
+    "text": "nha thi dau và toà a đi qua lại mất khoảng mấy bước chân?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      },
+      {
+        "label": "building",
+        "start": 15,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "text": "tòa f là toà gì?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "tfx",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "phải nộp bài gấp, nđh 3.4 mở lúc nào vậy?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 18,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "text": "mình muốn tới chỗ đó",
+    "intent": "navigation",
+    "entities": []
+  },
+  {
+    "text": "ok",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng ctsv hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "hầm gửi xe hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "phong e202",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 10
+      }
+    ]
+  },
+  {
+    "text": "asdfghjklqwe",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "hướng dẫn tới nhà điều hành đi",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 14,
+        "end": 27
+      }
+    ]
+  },
+  {
+    "text": "ai xử lý vậy",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "thích chơi ma sói không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng gym hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 9
+      }
+    ]
+  },
+  {
+    "text": "wertyuiopas",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "chỗ gửi xe sau có dịch vụ bơm xe không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "f và b có cho phép sinh viên tụ tập đàn hát không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 1
+      },
+      {
+        "label": "building",
+        "start": 5,
+        "end": 6
+      }
+    ]
+  },
+  {
+    "text": "đường đến phòng đào tạo đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "room",
+        "start": 10,
+        "end": 23
+      }
+    ]
+  },
+  {
+    "text": "lần đầu gặp tình huống này nên không biết hỏi ai",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "toà d hả",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "thoi minh di",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "m-202 có số điện thoại quản lý không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "dạo này học hành áp lực quá bạn ạ",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "nhà điều hành có phòng đào tạo không, và gần đó có căn tin không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 13
+      },
+      {
+        "label": "room",
+        "start": 17,
+        "end": 30
+      },
+      {
+        "label": "facility",
+        "start": 51,
+        "end": 58
+      }
+    ]
+  },
+  {
+    "text": "phòng thực hành điện tử và toà f có ai trực đêm để giữ đồ không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 23
+      },
+      {
+        "label": "building",
+        "start": 27,
+        "end": 32
+      }
+    ]
+  },
+  {
+    "text": "phong dao tao a",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "nx sau và ntđ bên nào mở cửa trễ hơn vào buổi tối?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "label": "facility",
+        "start": 10,
+        "end": 13
+      }
+    ]
+  },
+  {
+    "text": "lac de roi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "phòng máy tính á",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 14
+      }
+    ]
+  },
+  {
+    "text": "nha hieu bo",
+    "intent": "unknown",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "cái đó cần điều kiện gì không?",
+    "intent": "inform",
+    "entities": []
+  },
+  {
+    "text": "hi, bot làm việc chưa",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "nđh, phòng y tế và nhà xe sau đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "label": "room",
+        "start": 5,
+        "end": 15
+      },
+      {
+        "label": "facility",
+        "start": 19,
+        "end": 29
+      }
+    ]
+  },
+  {
+    "text": "chào",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "mình muốn mua xe sh",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "tạm biệt hẹn mai gặp",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "nhà thể dục có trang bị máy lạnh không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "chao buoi sang",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "trời tối rồi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "hôm nay mình có tiết muộn, bãi xe sau có người trực đêm không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 27,
+        "end": 37
+      }
+    ]
+  },
+  {
+    "text": "nhà thi đấu có những môn thể thao nào?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "text": "nhà điều hành của trường rộng không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "c230 với thư viện cái nào yêu cầu thẻ sinh viên mới được vô?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "label": "facility",
+        "start": 9,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "text": "chào buổi sáng",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "e bot",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "fvtgbyhnujmi",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "bạn ơi thư viện ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 7,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "text": "hi bot, mình cần hỏi chút",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "canteen có bán đồ ăn sáng không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "facility",
+        "start": 0,
+        "end": 7
+      }
+    ]
+  },
+  {
+    "text": "n.d.h nam dau zay",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "p.yt trong nhà điều hành khám tổng quát có tốn phí không?",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "room",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "label": "building",
+        "start": 11,
+        "end": 24
+      }
+    ]
+  },
+  {
+    "text": "chao buoi trua nha",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "thich di nui hon",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "wsx",
+    "intent": "unknown",
+    "entities": []
+  },
+  {
+    "text": "sắp đến tết rồi",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "có thích màu hồng không",
+    "intent": "general",
+    "entities": []
+  },
+  {
+    "text": "toa e co phong lap ko",
+    "intent": "inform",
+    "entities": [
+      {
+        "label": "building",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "text": "chi duong toi nha dieu hanh voi",
+    "intent": "navigation",
+    "entities": [
+      {
+        "label": "building",
+        "start": 14,
+        "end": 27
+      }
+    ]
+  }
+]

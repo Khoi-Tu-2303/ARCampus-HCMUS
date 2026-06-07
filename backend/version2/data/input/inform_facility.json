@@ -1,0 +1,2002 @@
+[
+    {
+    "text": "nhà thi đấu có những môn thể thao nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "khu thể dục có cung cấp vợt cầu lông không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu thể dục"
+    }
+    ]
+    },
+    {
+    "text": "nhà thi đấu đa năng có dịch vụ cho thuê trọng tài không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu đa năng"
+    }
+    ]
+    },
+    {
+    "text": "NTD có những dịch vụ gì cho sinh viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NTD"
+    }
+    ]
+    },
+    {
+    "text": "nha the duc co san bong chuyen khong?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha the duc"
+    }
+    ]
+    },
+    {
+    "text": "nhà thể dục mở cửa mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thể dục"
+    }
+    ]
+    },
+    {
+    "text": "sân thể dục có mở cuối tuần không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "sân thể dục"
+    }
+    ]
+    },
+    {
+    "text": "nhà thi đấu hoạt động đến mấy giờ tối?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "ntd đa năng đóng cửa lúc nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntd đa năng"
+    }
+    ]
+    },
+    {
+    "text": "nha thi dau lam viec den may gio?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha thi dau"
+    }
+    ]
+    },
+    {
+    "text": "vào nhà thi đấu có mất phí không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "khu thể dục tính phí thuê sân thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu thể dục"
+    }
+    ]
+    },
+    {
+    "text": "nhà thể dục có miễn phí cho sinh viên trường không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thể dục"
+    }
+    ]
+    },
+    {
+    "text": "thuê sân n.t.d giá bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "n.t.d"
+    }
+    ]
+    },
+    {
+    "text": "nha td co thu tien k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha td"
+    }
+    ]
+    },
+    {
+    "text": "nhà thi đấu có điều kiện gì để vào tập không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "sinh viên năm nhất có được dùng nhà thi đấu đa năng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu đa năng"
+    }
+    ]
+    },
+    {
+    "text": "vào sân thể dục cần xuất trình thẻ sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "sân thể dục"
+    }
+    ]
+    },
+    {
+    "text": "NTĐ sinh viên ngoại trú có được dùng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NTĐ"
+    }
+    ]
+    },
+    {
+    "text": "nhà tđ quy định mặc đồ thể thao mới được vào đúng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà tđ"
+    }
+    ]
+    },
+    {
+    "text": "nhà thi đấu sức chứa bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "nhà thể dục có trang bị máy lạnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thể dục"
+    }
+    ]
+    },
+    {
+    "text": "khu thể dục có phòng thay đồ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu thể dục"
+    }
+    ]
+    },
+    {
+    "text": "ntd có bao nhiêu sân cầu lông?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntd"
+    }
+    ]
+    },
+    {
+    "text": "ntd da nang co cho de xe rieng k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntd da nang"
+    }
+    ]
+    },
+    {
+    "text": "NTD có những gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NTD"
+    }
+    ]
+    },
+    {
+    "text": "ntđ mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntđ"
+    }
+    ]
+    },
+    {
+    "text": "phí thuê nhà td",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà td"
+    }
+    ]
+    },
+    {
+    "text": "nha thi dau co may lanh ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha thi dau"
+    }
+    ]
+    },
+    {
+    "text": "quy dinh nha the duc",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha the duc"
+    }
+    ]
+    },
+    {
+    "text": "nhà thi đấu đa năng có cho thuê sân hok z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu đa năng"
+    }
+    ]
+    },
+    {
+    "text": "NTĐ sinh vien ngoai tru vao dc ko z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NTĐ"
+    }
+    ]
+    },
+    {
+    "text": "ntd mo cua may gio ban biet ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntd"
+    }
+    ]
+    },
+    {
+    "text": "nha td co tốn phí hong ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha td"
+    }
+    ]
+    },
+    {
+    "text": "ntd da nang dk vao ntn z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ntd da nang"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn tập bóng rổ, nhà thi đấu có sân bóng rổ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thi đấu"
+    }
+    ]
+    },
+    {
+    "text": "nhóm mình muốn đặt sân, nhà thể dục có cho thuê theo giờ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà thể dục"
+    }
+    ]
+    },
+    {
+    "text": "chiều nay trời mưa, khu thể dục có mái che ở tất cả các sân chứ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu thể dục"
+    }
+    ]
+    },
+    {
+    "text": "mình định tổ chức giải, sân thể dục có sức chứa khán đài bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "sân thể dục"
+    }
+    ]
+    },
+    {
+    "text": "mình mới mua vợt, n.t.d có sân cầu lông cho thuê không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "n.t.d"
+    }
+    ]
+    },
+    {
+    "text": "nhà xe trước cho gửi những loại xe nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe trước có nhận giữ xe qua đêm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "khu gửi xe trước có dịch vụ rửa xe luôn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi trước có chỗ sạc xe điện không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi trước"
+    }
+    ]
+    },
+    {
+    "text": "cho gui xe truoc co cho gui xe dap k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cho gui xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "nhà giữ xe trước mở cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi giữ xe trước hoạt động đến mấy giờ đêm?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe trước có đóng cửa dịp lễ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "nxt đóng cửa lúc nào bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxt"
+    }
+    ]
+    },
+    {
+    "text": "nha xe truoc co mo cuoi tuan ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "gửi xe ở nhà xe trước mất bao nhiêu một tháng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe trước có tính tiền theo giờ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "phí gửi xe máy ở khu gửi xe trước là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "NXT gửi xe mất phí bao nhiêu một lần?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NXT"
+    }
+    ]
+    },
+    {
+    "text": "bai xe truoc gia the nao?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bai xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "nhà giữ xe trước có cần đăng ký vé tháng mới được vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi giữ xe trước yêu cầu xuất trình thẻ sinh viên đúng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "mất thẻ từ thì chỗ gửi xe trước giải quyết như thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "gửi xe trước cần làm thủ tục gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "nx trước cho phép người ngoài gửi xe không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx trước"
+    }
+    ]
+    },
+    {
+    "text": "nhà xe trước có mái che không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe trước"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe trước sức chứa bao nhiêu chiếc xe?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "khu gửi xe trước có trang bị camera an ninh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "NXT có bao nhiêu tầng để xe?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NXT"
+    }
+    ]
+    },
+    {
+    "text": "nx truoc co the tu k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx truoc"
+    }
+    ]
+    },
+    {
+    "text": "nxt phí bao nhiêu",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxt"
+    }
+    ]
+    },
+    {
+    "text": "bãi trước nhận xe gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi trước"
+    }
+    ]
+    },
+    {
+    "text": "nx trước mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx trước"
+    }
+    ]
+    },
+    {
+    "text": "nha xe truoc gia nhieu",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "bai xe truoc co cam ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bai xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "nhà giữ xe trước dky vé tháng s v?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "nxt dong cua luc may h z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxt"
+    }
+    ]
+    },
+    {
+    "text": "bãi trước mat the tinh sao ban oi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi trước"
+    }
+    ]
+    },
+    {
+    "text": "cho gui xe truoc co gui qua dem hok",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cho gui xe truoc"
+    }
+    ]
+    },
+    {
+    "text": "nx truoc co giu xdap dien ko ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx truoc"
+    }
+    ]
+    },
+    {
+    "text": "mình mới mua xe, đăng ký gửi xe ở nhà xe trước cần những giấy tờ gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe trước"
+    }
+    ]
+    },
+    {
+    "text": "do học ca tối về muộn, bãi xe trước có cho lấy xe sau 10h không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "mình dùng xe điện, khu gửi xe trước có bố trí khu vực sạc không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe trước"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay quên mang ví, bãi giữ xe trước có nhận chuyển khoản không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe trước"
+    }
+    ]
+    },
+    {
+    "text": "xe mình bị hư chìa khóa, nxt có hỗ trợ dắt ra ngoài không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxt"
+    }
+    ]
+    },
+    {
+    "text": "nhà xe sau cho gửi những loại phương tiện nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe sau có nhận giữ nón bảo hiểm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe sau có dịch vụ bơm xe không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "NXS có chỗ để xe đạp điện riêng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NXS"
+    }
+    ]
+    },
+    {
+    "text": "bai xe sau co nhan giu xe o to khong?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bai xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nhà giữ xe sau mở cửa từ mấy giờ sáng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà giữ xe sau"
+    }
+    ]
+    },
+    {
+    "text": "khu gửi xe sau đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi giữ xe sau làm việc đến mấy giờ tối?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nxs hoạt động giờ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxs"
+    }
+    ]
+    },
+    {
+    "text": "nha xe sau co mo cua thu 7 ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nhà xe sau tính phí một ngày là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe sau vé tháng có rẻ hơn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "gửi xe ở chỗ gửi xe sau có được miễn phí không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "giá gửi ở bãi sau là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi sau"
+    }
+    ]
+    },
+    {
+    "text": "cho gui xe sau mat bnhieu tien vay?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cho gui xe sau"
+    }
+    ]
+    },
+    {
+    "text": "khu gửi xe sau quy định làm vé tháng như thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "vào nhà giữ xe sau cần quẹt thẻ sinh viên à?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà giữ xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi giữ xe sau có cho phép khách bên ngoài gửi không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nxs điều kiện đăng ký thẻ gửi xe là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxs"
+    }
+    ]
+    },
+    {
+    "text": "gửi xe sau mất vé thì phạt bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nhà xe sau sức chứa có rộng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi xe sau có trang bị hệ thống phòng cháy chữa cháy không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "chỗ gửi xe sau có bãi để xe riêng cho giảng viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi sau có camera giám sát không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi sau"
+    }
+    ]
+    },
+    {
+    "text": "nx sau co mai che hok?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx sau"
+    }
+    ]
+    },
+    {
+    "text": "NXS phí bao nhiêu",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "NXS"
+    }
+    ]
+    },
+    {
+    "text": "nx sau mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx sau"
+    }
+    ]
+    },
+    {
+    "text": "gửi xe sau nhận xe gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bai xe sau gui xe may ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bai xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nha xe sau dong cua may h",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha xe sau"
+    }
+    ]
+    },
+    {
+    "text": "bãi giữ xe sau dky the thang sao z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi giữ xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nxs co mo den 10h toi ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nxs"
+    }
+    ]
+    },
+    {
+    "text": "nx sau xe dap de dau vay",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx sau"
+    }
+    ]
+    },
+    {
+    "text": "cho gui xe sau co camera khong nha",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cho gui xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nx sau phi 1 lan may ngan z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nx sau"
+    }
+    ]
+    },
+    {
+    "text": "thẻ xe của mình bị mờ mã vạch, nhà xe sau có cách nào hỗ trợ lấy xe không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà xe sau"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay mình có tiết muộn, bãi xe sau có người trực đêm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "xe mình hết điện giữa chừng, chỗ gửi xe sau có ổ cắm điện cho sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "chỗ gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "mình tính để xe ở trường dịp tết, khu gửi xe sau có nhận trông xe ngày lễ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu gửi xe sau"
+    }
+    ]
+    },
+    {
+    "text": "nhóm mình đi chung xe máy tới, bãi sau có giới hạn phân khối xe không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "bãi sau"
+    }
+    ]
+    },
+    {
+    "text": "thư viện có những dịch vụ gì cho sinh viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện"
+    }
+    ]
+    },
+    {
+    "text": "thư viện trường có tài liệu chuyên ngành y khoa không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện trường"
+    }
+    ]
+    },
+    {
+    "text": "thư viện của trường có phòng học nhóm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện của trường"
+    }
+    ]
+    },
+    {
+    "text": "tv có cho mượn laptop không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "tv"
+    }
+    ]
+    },
+    {
+    "text": "thu vien truong co may in khong?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu vien truong"
+    }
+    ]
+    },
+    {
+    "text": "thư viện đại học đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện đại học"
+    }
+    ]
+    },
+    {
+    "text": "thư viện mở cửa mấy giờ vào buổi sáng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện"
+    }
+    ]
+    },
+    {
+    "text": "thư viện trường có hoạt động thứ 7 không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện trường"
+    }
+    ]
+    },
+    {
+    "text": "TV mở đến mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "TV"
+    }
+    ]
+    },
+    {
+    "text": "thuvien lam viec toi may h?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thuvien"
+    }
+    ]
+    },
+    {
+    "text": "thư viện của trường làm thẻ hết bao nhiêu tiền?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện của trường"
+    }
+    ]
+    },
+    {
+    "text": "thư viện đại học mượn sách có tính phí không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện đại học"
+    }
+    ]
+    },
+    {
+    "text": "in tài liệu ở thư viện giá bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện"
+    }
+    ]
+    },
+    {
+    "text": "t.v đóng phạt trễ hạn sách bao nhiêu tiền 1 ngày?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "t.v"
+    }
+    ]
+    },
+    {
+    "text": "thu vien phi bao nhieu vay?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu vien"
+    }
+    ]
+    },
+    {
+    "text": "sinh viên năm nhất có được vào thư viện trường không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện trường"
+    }
+    ]
+    },
+    {
+    "text": "mượn sách ở thư viện của trường cần xuất trình gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện của trường"
+    }
+    ]
+    },
+    {
+    "text": "thư viện đại học có quy định mang đồ ăn vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện đại học"
+    }
+    ]
+    },
+    {
+    "text": "vào T.V cần mang theo thẻ sinh viên hay CCCD?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "T.V"
+    }
+    ]
+    },
+    {
+    "text": "tv trường quy định mặc quần đùi có được vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "tv trường"
+    }
+    ]
+    },
+    {
+    "text": "thư viện có phòng đọc yên tĩnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện"
+    }
+    ]
+    },
+    {
+    "text": "thư viện trường có bao nhiêu máy tính kết nối mạng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện trường"
+    }
+    ]
+    },
+    {
+    "text": "thư viện của trường sức chứa khoảng bao nhiêu sinh viên?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện của trường"
+    }
+    ]
+    },
+    {
+    "text": "tv có wifi mạnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "tv"
+    }
+    ]
+    },
+    {
+    "text": "thu viện co may lanh ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu viện"
+    }
+    ]
+    },
+    {
+    "text": "TV có gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "TV"
+    }
+    ]
+    },
+    {
+    "text": "tv trường mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "tv trường"
+    }
+    ]
+    },
+    {
+    "text": "phí thẻ t.v",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "t.v"
+    }
+    ]
+    },
+    {
+    "text": "thu vien co wifi ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu vien"
+    }
+    ]
+    },
+    {
+    "text": "quy dinh thuvien",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thuvien"
+    }
+    ]
+    },
+    {
+    "text": "thư viện đại học mượn sách đc bao lâu z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện đại học"
+    }
+    ]
+    },
+    {
+    "text": "T.V mo cua the nao ban",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "T.V"
+    }
+    ]
+    },
+    {
+    "text": "tv mượn lap về nhà dc hok",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "tv"
+    }
+    ]
+    },
+    {
+    "text": "thu vien truong co sach tieng anh k",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu vien truong"
+    }
+    ]
+    },
+    {
+    "text": "thu viện có phòng tu hoc k ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thu viện"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay quên thẻ sinh viên, vào thư viện đọc sách tại chỗ có được không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện"
+    }
+    ]
+    },
+    {
+    "text": "mình đang làm luận văn, thư viện trường có khoá luận các khoá trước không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện trường"
+    }
+    ]
+    },
+    {
+    "text": "sắp tới kì thi, thư viện của trường có mở cửa qua đêm cho sinh viên ôn tập không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện của trường"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn thảo luận dự án, thư viện đại học có cho đặt phòng kính trước không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "thư viện đại học"
+    }
+    ]
+    },
+    {
+    "text": "đồ đạc lỉnh kỉnh quá, TV có tủ đồ gửi bên ngoài không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "TV"
+    }
+    ]
+    },
+    {
+    "text": "căn tin phục vụ những món gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin"
+    }
+    ]
+    },
+    {
+    "text": "canteen có bán đồ ăn sáng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen"
+    }
+    ]
+    },
+    {
+    "text": "căng tin có bán đồ chay vào ngày rằm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căng tin"
+    }
+    ]
+    },
+    {
+    "text": "CT có bán nước đóng chai không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "CT"
+    }
+    ]
+    },
+    {
+    "text": "nha an co ban com phan ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha an"
+    }
+    ]
+    },
+    {
+    "text": "nhà ăn mở cửa từ mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà ăn"
+    }
+    ]
+    },
+    {
+    "text": "khu ăn uống đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu ăn uống"
+    }
+    ]
+    },
+    {
+    "text": "canteen trường bán từ mấy giờ đến mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen trường"
+    }
+    ]
+    },
+    {
+    "text": "c.t có bán buổi tối không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "c.t"
+    }
+    ]
+    },
+    {
+    "text": "can tin ban den may gio v?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "can tin"
+    }
+    ]
+    },
+    {
+    "text": "căn tin trường giá cơm khoảng bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin trường"
+    }
+    ]
+    },
+    {
+    "text": "căn tin có các suất ăn đồng giá không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin"
+    }
+    ]
+    },
+    {
+    "text": "canteen bán nước sinh tố giá sao?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen"
+    }
+    ]
+    },
+    {
+    "text": "căn tin sv trung bình một bữa bao nhiêu tiền?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin sv"
+    }
+    ]
+    },
+    {
+    "text": "cantin gia thuc an co dat ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cantin"
+    }
+    ]
+    },
+    {
+    "text": "căng tin có nhận thanh toán bằng mã QR không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căng tin"
+    }
+    ]
+    },
+    {
+    "text": "nhà ăn quy định sinh viên tự dọn mâm hay có nhân viên dọn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà ăn"
+    }
+    ]
+    },
+    {
+    "text": "khu ăn uống có cho phép mang đồ ăn từ ngoài vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu ăn uống"
+    }
+    ]
+    },
+    {
+    "text": "canteen sv thanh toán thẻ tín dụng được không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen sv"
+    }
+    ]
+    },
+    {
+    "text": "ct có bắt xếp hàng mua phiếu trước không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ct"
+    }
+    ]
+    },
+    {
+    "text": "canteen trường có máy lạnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen trường"
+    }
+    ]
+    },
+    {
+    "text": "căn tin trường sức chứa có lớn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin trường"
+    }
+    ]
+    },
+    {
+    "text": "căn tin có trang bị lò vi sóng cho sinh viên hâm đồ ăn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin"
+    }
+    ]
+    },
+    {
+    "text": "CT có wifi miễn phí không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "CT"
+    }
+    ]
+    },
+    {
+    "text": "can teen co nhieu cho ngoi ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "can teen"
+    }
+    ]
+    },
+    {
+    "text": "ct có món gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ct"
+    }
+    ]
+    },
+    {
+    "text": "c.t bán đến mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "c.t"
+    }
+    ]
+    },
+    {
+    "text": "giá cơm căn tin sv",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căn tin sv"
+    }
+    ]
+    },
+    {
+    "text": "khu an uong co wifi ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu an uong"
+    }
+    ]
+    },
+    {
+    "text": "nha an thanh toan ra sao",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nha an"
+    }
+    ]
+    },
+    {
+    "text": "canteen trường menu có đa dạng hok z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen trường"
+    }
+    ]
+    },
+    {
+    "text": "ct ban do an sang tu may h",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "ct"
+    }
+    ]
+    },
+    {
+    "text": "canteen sv ck qua momo dc ko nha",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen sv"
+    }
+    ]
+    },
+    {
+    "text": "cantin co tra da mien phi hok ban",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "cantin"
+    }
+    ]
+    },
+    {
+    "text": "can tin co ban do an vat ko ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "can tin"
+    }
+    ]
+    },
+    {
+    "text": "mình ăn chay trường, căng tin có quầy bán đồ chay riêng biệt không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "căng tin"
+    }
+    ]
+    },
+    {
+    "text": "đi học nhóm nguyên ngày, nhà ăn có cho sinh viên ngồi lại học bài không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "nhà ăn"
+    }
+    ]
+    },
+    {
+    "text": "mình dị ứng đậu phộng, thức ăn ở khu ăn uống có ghi chú thành phần không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "khu ăn uống"
+    }
+    ]
+    },
+    {
+    "text": "do đang hết tiền mặt, canteen trường có hỗ trợ quẹt thẻ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen trường"
+    }
+    ]
+    },
+    {
+    "text": "trời đang nắng nóng, canteen sv có bán nước ép trái cây giải nhiệt không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "facility",
+    "value": "canteen sv"
+    }
+    ]
+    }
+    ]
