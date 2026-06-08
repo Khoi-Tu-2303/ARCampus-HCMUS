@@ -1,9 +1,13 @@
-// Core/GeoMath.cs — PATCHED
+// Core/GeoMath.cs — PATCHED v2
 // FIXES:
-// [CRITICAL] _cachedNorthAngle locked forever — now refreshes every COMPASS_CACHE_DURATION seconds
-// [CRITICAL] Added InvalidateCompassCache() called by GPSService on recovery
-// [HIGH]     Added HaversineDouble() preserving double precision for checkpoint detection
-// [LOW]      LatLngToMeterOffset uses correct MetersPerDegreeLat coefficient for Z axis
+// [CRITICAL] Arrow 3D in AR world rotated incorrectly because ARNavigationView had no access
+//            to the cached north-offset angle. Added GetCachedNorthAngle() public accessor so
+//            ARNavigationView can convert geographic bearing → AR world-space Y rotation.
+// (All fixes from v1 retained:
+//   [CRITICAL] _cachedNorthAngle refreshes every COMPASS_CACHE_DURATION seconds
+//   [CRITICAL] InvalidateCompassCache() called by GPSService on recovery
+//   [HIGH]     HaversineDouble() for full double-precision checkpoint detection
+//   [LOW]      LatLngToMeterOffset uses correct MetersPerDegreeLat for Z axis)
 
 using UnityEngine;
 using System;
@@ -36,7 +40,6 @@ public static class GeoMath
 
     public static float HaversineDouble(double lat1, double lng1, double lat2, double lng2)
     {
-        // Identical math, but all intermediate values stay as double
         const double R = 6371000.0;
         double dLat = (lat2 - lat1) * Math.PI / 180.0;
         double dLng = (lng2 - lng1) * Math.PI / 180.0;
@@ -49,8 +52,7 @@ public static class GeoMath
 
     // ──────────────────────────────────────────────────────────
     // GPS → AR WORLD POSITION
-    // FIX: Compass cache now expires every COMPASS_CACHE_DURATION seconds
-    //      instead of being locked forever after first call.
+    // Compass cache refreshes every COMPASS_CACHE_DURATION seconds.
     // ──────────────────────────────────────────────────────────
 
     private static float _cachedNorthAngle = 0f;
@@ -60,13 +62,40 @@ public static class GeoMath
 
     /// <summary>
     /// Force-clear the compass cache. Called by GPSService when GPS recovers,
-    /// ensuring AR labels re-align to the new heading.
+    /// ensuring AR labels and arrow re-align to the new heading.
     /// </summary>
     public static void InvalidateCompassCache()
     {
         _hasCachedAngle = false;
         _cachedNorthAngle = 0f;
         _cacheTimestamp = -9999f;
+    }
+
+    /// <summary>
+    /// Returns the cached AR-world north offset angle (degrees).
+    /// northOffset = cameraYaw − compassHeading.
+    ///
+    /// Interpretation: world +Z is (northOffset) degrees east of geographic North.
+    /// To rotate an object to face geographic bearing B in AR world space:
+    ///   worldYaw = B + northOffset
+    ///
+    /// Used by ARNavigationView to correctly orient the 3D navigation arrow.
+    /// Returns 0 in the Editor (no compass available; world +Z is treated as North).
+    /// </summary>
+    public static float GetCachedNorthAngle()
+    {
+        // If cache is valid, return immediately without recomputing
+        bool cacheExpired = (Time.realtimeSinceStartup - _cacheTimestamp) > COMPASS_CACHE_DURATION;
+        if (_hasCachedAngle && !cacheExpired)
+            return _cachedNorthAngle;
+
+#if UNITY_EDITOR
+        return 0f; // North = world +Z in editor simulation
+#else
+        // Cache not ready yet — return last known value (or 0 if never set).
+        // GpsToARWorldPosition will refresh it on the next label position update.
+        return _cachedNorthAngle;
+#endif
     }
 
     public static Vector3 GpsToARWorldPosition(
@@ -92,6 +121,7 @@ public static class GeoMath
         {
             if (Input.compass.enabled)
             {
+                // northOffset: how many degrees world +Z is rotated relative to geographic North
                 _cachedNorthAngle = cameraTransform.eulerAngles.y - Input.compass.trueHeading;
                 _cacheTimestamp = Time.realtimeSinceStartup;
                 _hasCachedAngle = true;
@@ -105,7 +135,7 @@ public static class GeoMath
 
     // ──────────────────────────────────────────────────────────
     // LATLNG → METER OFFSET
-    // FIX: Z axis now correctly uses MetersPerDegreeLat (110540) not 111320
+    // Z axis correctly uses MetersPerDegreeLat (110540) not 111320
     // ──────────────────────────────────────────────────────────
 
     public static Vector3 LatLngToMeterOffset(

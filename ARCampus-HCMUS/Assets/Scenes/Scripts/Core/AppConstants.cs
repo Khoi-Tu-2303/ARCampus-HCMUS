@@ -12,7 +12,7 @@ public static class GeoConstants
 
 public static class NavigationConstants
 {
-    public const float ArrivalThresholdMeters = 8f;
+    public const float ArrivalThresholdMeters = 10f;
     public const float ArrowDistance = 2f;
     public const float ArrowHeightOffset = -0.3f;
     public const float LineYOffset = -0.5f;
