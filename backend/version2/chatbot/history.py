@@ -90,7 +90,7 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
     """
     rows = fetch_all(
         """
-        SELECT intents, entities
+        SELECT intents, entities, has_intents, has_entities, is_complete
         FROM   messages
         WHERE  conversation_id = ?
           AND  role = 'user'
@@ -98,21 +98,24 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
         """,
         (conversation_id,),
     )
-
+    print(1)
     for row in rows:
         intents_json = row["intents"]
         entities_json = row["entities"]
-
-        has_intent = _has_valid_intent(intents_json)
-        has_entity = _has_matched_entities(entities_json)
+        has_intent = row["has_intents"]
+        has_entities = row["has_entities"]
+        is_complete = row["is_complete"]
+        
 
         # Gặp completed turn → dừng tìm kiếm
-        if has_intent and has_entity:
+        if is_complete:
             return []
 
         # Tìm thấy message có intent nhưng chưa đủ entity
-        if has_intent and not has_entity:
-            intents = json.loads(intents_json)
+        if has_intent and not has_entities:
+            print(intents_json)
+            intents = [json.loads(intents_json)]
+            print(type(intents[0]), repr(intents[0]))
             return [
                 Intent(IntentType(intent.get("type")), float(intent.get("confidence")))
                 for intent in intents
@@ -122,21 +125,9 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
     return []
 
 def find_entities_in_history(conversation_id: str) -> list[MatchResult]:
-    """
-    Tìm message gần nhất có entities matched nhưng không có intent.
-
-    Điều kiện:
-      - Nếu phía sau nó đã có completed turn
-        (intent hợp lệ + entity matched)
-        => entities cũ không còn hiệu lực.
-      - Chỉ lấy entities của message có entity nhưng không có intent.
-
-    Trả về:
-      list[MatchResult]
-    """
     rows = fetch_all(
         """
-        SELECT intents, entities
+        SELECT entities, has_intents, has_entities, is_complete
         FROM   messages
         WHERE  conversation_id = ?
           AND  role = 'user'
@@ -146,19 +137,15 @@ def find_entities_in_history(conversation_id: str) -> list[MatchResult]:
     )
 
     for row in rows:
-        intents_json = row["intents"]
-        entities_json = row["entities"]
+        has_intent = row["has_intents"]
+        has_entity = row["has_entities"]
+        is_complete = row["is_complete"]
 
-        has_intent = _has_valid_intent(intents_json)
-        has_entity = _has_matched_entities(entities_json)
-
-        # completed turn -> stop
-        if has_intent and has_entity:
+        if is_complete:
             return []
 
-        # entity nhưng không có intent
         if not has_intent and has_entity:
-            return _parse_matched_entities(entities_json)
+            return _parse_matched_entities(row["entities"])
 
     return []
 

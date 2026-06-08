@@ -70,10 +70,6 @@ tunnel = CloudflareTunnel(
 async def lifespan(app: FastAPI):
     logger.info("Loading AI resources...")
 
-    embedder = TextEmbedder()
-
-    vector_store = VectorStore()
-
     logger.info("AI resources loaded successfully.")
 
     logger.info("Starting Cloudflare Tunnel...")

@@ -97,6 +97,82 @@ def get_messages(conversation_id):
         ]
     }, None
     
+# def send_message(conversation_id: str, content: str):
+#     if not _conversation_exists(conversation_id):
+#         return None, (404, {'error': 'Conversation not found'})
+
+#     try:
+#         conn = get_connection()
+#         try:
+#             cursor = conn.cursor()
+
+#             cursor.execute(
+#                 '''
+#                 INSERT INTO messages (conversation_id, role, content)
+#                 VALUES (?, ?, ?)
+#                 ''',
+#                 (conversation_id, 'user', content),
+#             )
+#             user_id = cursor.lastrowid
+
+#             assistant_content, metadata = get_answer(conversation_id, content)
+
+#             cursor.execute(
+#                 '''
+#                 INSERT INTO messages (conversation_id, role, content, metadata)
+#                 VALUES (?, ?, ?, ?)
+#                 ''',
+#                 (conversation_id, 'assistant', assistant_content, json.dumps(metadata)),
+#             )
+#             assistant_id = cursor.lastrowid
+
+#             conn.commit()
+
+#             user_row = cursor.execute(
+#                 '''
+#                 SELECT created_at, metadata
+#                 FROM messages
+#                 WHERE id = ?
+#                 ''',
+#                 (user_id,)
+#             ).fetchone()
+
+#             assistant_row = cursor.execute(
+#                 '''
+#                 SELECT created_at
+#                 FROM messages
+#                 WHERE id = ?
+#                 ''',
+#                 (assistant_id,)
+#             ).fetchone()
+
+#         finally:
+#             conn.close()
+
+#         return {
+#             'user_message': {
+#                 'id': str(user_id),
+#                 'conversation_id': conversation_id,
+#                 'role': 'user',
+#                 'content': content,
+#                 'created_at': user_row['created_at'],
+#                 'metadata' : user_row['metadata']
+#             },
+
+#             'assistant_message': {
+#                 'id': str(assistant_id),
+#                 'conversation_id': conversation_id,
+#                 'role': 'assistant',
+#                 'content': assistant_content,
+#                 'created_at': assistant_row['created_at'],
+#                 'metadata' : metadata
+#             }
+#         }, None
+
+#     except Exception as e:
+#         print(e)
+#         return None, (500, {'error': 'Internal server error'})  
+
 def send_message(conversation_id: str, content: str):
     if not _conversation_exists(conversation_id):
         return None, (404, {'error': 'Conversation not found'})
@@ -115,7 +191,26 @@ def send_message(conversation_id: str, content: str):
             )
             user_id = cursor.lastrowid
 
-            assistant_content, metadata = get_answer(conversation_id, content)
+            answer = get_answer(conversation_id, content)
+            assistant_content = answer['response']
+            intent           = answer['intent']        # {"type": ..., "confidence": ...}
+            entities         = answer['entities']      # list[dict]
+            metadata         = answer['metadata']
+
+            # Lưu intent + entities vào message user
+            cursor.execute(
+                '''
+                UPDATE messages
+                SET intents  = ?,
+                    entities = ?
+                WHERE id = ?
+                ''',
+                (
+                    json.dumps(intent, ensure_ascii=False),
+                    json.dumps(entities, ensure_ascii=False),
+                    user_id,
+                ),
+            )
 
             cursor.execute(
                 '''
@@ -156,19 +251,17 @@ def send_message(conversation_id: str, content: str):
                 'role': 'user',
                 'content': content,
                 'created_at': user_row['created_at'],
-                'metadata' : user_row['metadata']
+                'metadata': user_row['metadata'],
             },
-
             'assistant_message': {
                 'id': str(assistant_id),
                 'conversation_id': conversation_id,
                 'role': 'assistant',
                 'content': assistant_content,
                 'created_at': assistant_row['created_at'],
-                'metadata' : metadata
+                'metadata': metadata,
             }
         }, None
-
     except Exception as e:
         print(e)
         return None, (500, {'error': 'Internal server error'})  
@@ -206,3 +299,8 @@ def delete_guest_data(guest_id: str):
         (f'%"guest_id":"{guest_id}"%',),
     )
     return {'status': 'success'}, None
+
+if __name__ == "__main__":
+    while True:
+        q = input("input = ")
+        send_message("conv_aa45dc57", q)

@@ -3,6 +3,8 @@
 #################################
 backend/venv/
 backend/key/
+backend/version2/enity_linking/best_model.pt
+backend/checkpoints/
 backend/campus.db
 __pycache__/
 *.pyc

@@ -17,9 +17,7 @@ from version2.chatbot.history import find_entities_in_history, find_intent_in_hi
 # Navigation
 # ------------------------------------------------------------------
 
-def handle_navigation(conversation_id : str,
-    turn: ConversationTurn
-) -> str:
+def handle_navigation(turn: ConversationTurn) -> str:
     """
     Xử lý intent NAVIGATION.
 
@@ -27,10 +25,14 @@ def handle_navigation(conversation_id : str,
         turn:             Turn hiện tại (đã có entities sau entity linking).
         history_entities: Fallback entities lấy từ lịch sử nếu turn hiện tại rỗng.
     """
+    unknown = [e for e in turn.entities if e.status == "unknown"]
+    if len(unknown) > 0:
+        return _handle_navigation_unknown(unknown)
+    
     matched = [e for e in turn.entities if e.status == "matched"]
 
     if not matched:
-        history_entities = find_entities_in_history(conversation_id)
+        history_entities = find_entities_in_history(turn.conversation_id)
         if not history_entities:
             return _reply_ask_destination()
         matched = history_entities
@@ -40,14 +42,16 @@ def handle_navigation(conversation_id : str,
 
     return _reply_navigate_to(matched[0])
 
+def _handle_navigation_unknown(unknown: list[MatchResult]) -> str:
+    names = [enity.entity_text for enity in unknown]
+    return f"Hiện tại tôi không có thông tin về {",".join(names)}"
+
 
 # ------------------------------------------------------------------
 # Inform
 # ------------------------------------------------------------------
 
-def handle_inform(conversation_id : str,
-    turn: ConversationTurn
-) -> str:
+def handle_inform(turn: ConversationTurn) -> str:
     """
     Xử lý intent INFORM.
 
@@ -56,9 +60,8 @@ def handle_inform(conversation_id : str,
     """
 
     matched = [e for e in turn.entities if e.status == "matched"]
-
-    if not matched:
-        history_entities = find_entities_in_history(conversation_id)
+    if len(turn.entities) == 0:
+        history_entities = find_entities_in_history(turn.conversation_id)
         if not history_entities:
             return _reply_ask_enity_inform()
         matched = history_entities
@@ -75,48 +78,36 @@ def handle_inform(conversation_id : str,
 # Unknown / General
 # ------------------------------------------------------------------
 
-def handle_unknown_or_general(conversation_id : str,
-    turn: ConversationTurn
-) -> str:
+def handle_unknown(turn: ConversationTurn) -> str:
     """
-    Xử lý trường hợp không có NAVIGATION lẫn INFORM.
-
-    Args:
-        turn:            Turn hiện tại.
-        history_intent:  Intent gần nhất tìm được trong lịch sử (hoặc None).
-        history_entities: Entities gần nhất tìm được trong lịch sử.
+    Xử lý intent UNKNOWN.
     """
-    top_intent = _get_top_intent(turn)
 
-    if top_intent.type == IntentType.UNKNOWN:
-        
-        # unknown + không có entities
-        if not turn.entities:
-            return _reply_not_support()
-
-        history_intent = find_intent_in_history(conversation_id)
-        # unknown + có entities nhưng không có intent history
-        if len(history_intent) == 0:
-            return _reply_ask_navigation_or_inform()
-
-        # Có entity + biết intent từ history → dispatch lại
-        
-        if len(history_intent) > 1:
-            return _reply_ask_navigation_or_inform()
-        
-        if history_intent[0].type.value == IntentType.NAVIGATION:
-            return handle_navigation(conversation_id, turn)
-        
-        if history_intent[0].type.value == IntentType.INFORM:
-            return handle_inform(conversation_id, turn)
-        
+    # UNKNOWN + không có entity
+    if not turn.entities:
         return _reply_not_support()
 
-    if top_intent.type.value == IntentType.GENERAL:
-        return _reply_general_chitchat()
+    history_intent = find_intent_in_history(turn.conversation_id)
+
+    # Có entity nhưng không biết intent trước đó
+    if len(history_intent) == 0:
+        return _reply_ask_navigation_or_inform()
+
+    last_intent = history_intent[0].type
+
+    if last_intent == IntentType.NAVIGATION:
+        return handle_navigation(turn)
+
+    if last_intent == IntentType.INFORM:
+        return handle_inform(turn)
 
     return _reply_not_support()
 
+def handle_general(turn: ConversationTurn) -> str:
+    """
+    Xử lý intent GENERAL.
+    """
+    return _reply_general_chitchat(turn)
 
 # ------------------------------------------------------------------
 # Reply builders (private helpers)
@@ -125,14 +116,9 @@ def handle_unknown_or_general(conversation_id : str,
 def _reply_ask_enity_inform() -> str:
     return "Bạn cần thông tin về địa điểm nào?"
 
-def _get_top_intent(turn: ConversationTurn)-> Intent | None:
-    if not turn.intents:
-        return None
-    return max(turn.intents, key=lambda i: i.confidence)
-
 
 def _reply_not_support() -> str:
-    return "Xin lỗi, tôi chỉ hỗ trợ tìm kiếm thông tin hoặc chỉ đường đến các địa điểm trong trường."
+    return "Xin lỗi, tôi chỉ hỗ trợ tìm kiếm thông tin hoặc chỉ đường đến các địa điểm trong khuôn viên trường."
 
 
 def _reply_ask_navigation_or_inform() -> str:

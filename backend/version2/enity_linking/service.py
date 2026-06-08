@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModel
 import time
 from rapidfuzz import fuzz
 import re
-from version2.schemas import MatchResult
+from version2.schemas import MatchResult, Entity
 import json
 
 class PhoBERTClassifier(nn.Module):
@@ -33,7 +33,7 @@ class EntityLinking:
 
     def __init__(
         self,
-        checkpoint_path: str,
+        checkpoint_path="./version2/enity_linking/best_model.pt",
         threshold: float = 0.6,
         device: Optional[str] = None,
     ):
@@ -195,7 +195,9 @@ class EntityLinking:
         )
 
     # ── Pipeline chính ─────────────────────────────────────────────────────
-    def predict(self, text: str, label: str) -> MatchResult:
+    def predict(self, entity : Entity) -> MatchResult:
+        text = entity.text
+        label = entity.label
         result = self._match_anchor_fuzzy(text, label)
         if result is not None:
             return result
@@ -205,8 +207,8 @@ class EntityLinking:
             return result
         return self._match_phobert(text, label)
 
-    def predict_batch(self, texts: List[str]) -> List[MatchResult]:
-        return [self.predict(text) for text in texts]
+    def predict_batch(self, entities: List[Entity]) -> List[MatchResult]:
+        return [self.predict(entity) for entity in entities]
 if __name__ == "__main__":
     m = EntityLinking(checkpoint_path="./version2/enity_linking/best_model.pt")
     while True:

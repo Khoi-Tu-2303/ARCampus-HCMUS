@@ -1,7 +1,5 @@
-from ai.agents.chatbot_pipeline import chat
+from version2.chatbot.chatbot_pipeline import chat
+from version2.schemas import ChatbotResponse
 from typing import Tuple
-def get_answer(conversation_id : str, query: str) -> Tuple[str, dict]:
-    try:
-        return chat(conversation_id, query)
-    except:
-        return 'Đã xảy ra lỗi vui lòng thử lại sau !'
+def get_answer(conversation_id : str, query: str) -> ChatbotResponse:
+    return chat(conversation_id, query)

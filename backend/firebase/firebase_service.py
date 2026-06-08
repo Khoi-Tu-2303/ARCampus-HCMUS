@@ -62,38 +62,47 @@ class FirebaseService:
             print(f"[Firebase Error] get_multiple_descriptions: {e}")
             return []
         
-    def get_multiple_descriptions_v2(self, keys: List[str]) -> str:
+    def get_multiple_descriptions_v2(self, collection : str, keys: List[str], sub_keys: List[str]) -> str:
+            try:
+                if not keys:
+                    return ""
+
+                result_text = []
+
+                for key in keys:
+                    doc = self.db.collection(collection).document(key).get()
+
+                    if not doc.exists:
+                        continue
+
+                    data = doc.to_dict()
+
+                    # duyệt các key nhỏ bên trong document
+                    for sub_key in sub_keys:
+                        value = data[sub_key]
+                        result_text.append(value.strip() + "\n")
+
+                return result_text
+
+            except Exception as e:
+                print(f"[Firebase Error] get_multiple_descriptions_text: {e}")
+                return ""
+            
+    def get_description(self, collection: str, key: str, sub_key: str) -> str:
         try:
-            if not keys:
+            doc = self.db.collection(collection).document(key).get()
+
+            if not doc.exists:
                 return ""
 
-            result_text = []
-
-            for key in keys:
-                doc = self.db.collection("description").document(key).get()
-
-                if not doc.exists:
-                    continue
-
-                data = doc.to_dict()
-
-                # duyệt các key nhỏ bên trong document
-                for sub_key, value in data.items():
-                    # print(sub_key, value)
-                    result_text.append(value.strip() + "\n")
-
-            return result_text
+            data = doc.to_dict()
+            return data.get(sub_key, "").strip()
 
         except Exception as e:
-            print(f"[Firebase Error] get_multiple_descriptions_text: {e}")
+            print(f"[Firebase Error] get_description: {e}")
             return ""
-    
+
 if __name__ == "__main__":
     firebase = FirebaseService()
-
-    keys = [
-        "library"
-    ]
-
-    result = firebase.get_multiple_descriptions_v2(keys)
+    result = firebase.get_description(collection="description", key="A001", sub_key='recommend_building')
     print(result)

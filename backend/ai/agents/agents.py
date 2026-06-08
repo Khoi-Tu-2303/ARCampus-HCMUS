@@ -17,19 +17,18 @@ def _get_llm() -> OllamaClient:
 # ══════════════════════════════════════════════════════════════════════════════
 # FacilityAgent
 # ══════════════════════════════════════════════════════════════════════════════
-class FacilityAgent(BaseAgent):
+class InformAgent(BaseAgent):
     """
     Xử lý các câu hỏi về cơ sở vật chất:
     thư viện, căn tin, sân vận động, tòa nhà, phòng ban, v.v.
     """
 
     name = "facility_agent"
-    prompt = """Bạn là trợ lý chatbot của trường đại học Đại học Khoa học Tự nhiên - Thành phố Hồ Chí Minh, chuyên trả lời các câu hỏi 
-về cơ sở vật chất như thư viện, căn tin, sân vận động, bãi xe, tòa nhà, các phòng ban.
+    prompt = """Bạn là trợ lý chatbot của trường đại học Đại học Khoa học Tự nhiên - Thành phố Hồ Chí Minh (HCMUS), chuyên trả lời các câu hỏi 
+về cơ sở vật chất như thư viện, căn tin, sân vận động, bãi xe, tòa nhà, các phòng học.
 
 Quy tắc:
-- Trả lời chính xác câu hỏi, không hỏi thêm, không trả lời dư thừa (ví dụ: câu trả hỏi về thư viện. Câu trả lời chỉ có thông tin của thư viện).
-- Trả lời ngắn gọn, chính xác, thân thiện.
+- Trả lời chính xác câu hỏi, không hỏi thêm, không trả lời dư thừa.
 - Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
 - Không bịa đặt thông tin không có trong context.
 - Chỉ trả lời bằng tiếng Việt. Không dùng bất kỳ ngôn ngữ nào khác."""
@@ -38,85 +37,6 @@ Quy tắc:
         messages = self.build_messages(input_data)
         metadata = {}
         return _get_llm().chat(messages), metadata
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# AcademicAgent
-# ══════════════════════════════════════════════════════════════════════════════
-class AcademicAgent(BaseAgent):
-    """
-    Xử lý câu hỏi học thuật: thời khóa biểu, lịch thi,
-    đăng ký học phần, thông tin môn học, giờ học.
-    """
-
-    name = "academic_agent"
-    prompt = """Bạn là trợ lý chatbot của trường Đại học Khoa học Tự nhiên - Thành phố Hồ Chí Minh, chuyên hỗ trợ các vấn đề học thuật:
-thời khóa biểu, lịch thi, đăng ký học phần, thông tin môn học, ca học, tiết học.
-
-Quy tắc:
-- Hướng dẫn sinh viên tra cứu thông tin trên hệ thống nhà trường khi cần.
-- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Trả lời ngắn gọn, rõ ràng.
-- Chỉ trả lời bằng tiếng Việt. Không dùng bất kỳ ngôn ngữ nào khác."""
-
-    def _handle(self, input_data: dict) -> Tuple[str, dict]:
-        messages = self.build_messages(input_data)
-        metadata = {}
-        return _get_llm().chat(messages), metadata
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# ScheduleAgent
-# ══════════════════════════════════════════════════════════════════════════════
-class ScheduleAgent(BaseAgent):
-    """
-    Xử lý câu hỏi về lịch trình: lịch học, lịch thi,
-    lịch sự kiện trường, ngày nghỉ lễ.
-    """
-
-    name = "schedule_agent"
-    prompt = """Bạn là trợ lý chatbot của trường Đại học Khoa học Tự nhiên - Thành phố Hồ Chí Minh, chuyên cung cấp thông tin lịch trình:
-lịch học theo tuần/kỳ, lịch thi cuối kỳ, lịch sự kiện, ngày nghỉ lễ.
-
-Quy tắc:
-- Cung cấp thông tin lịch chính xác và đầy đủ.
-- Nếu có thông tin do sinh viên cung cấp trong lịch sử trò chuyện, có thể dùng để trả lời nhưng phải nhắc nhở kiểm tra lại trên cổng thông tin chính thức.
-- Nhắc nhở sinh viên kiểm tra lại trên cổng thông tin chính thức.
-- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Chỉ trả lời bằng tiếng Việt. Không dùng bất kỳ ngôn ngữ nào khác."""
-
-    def _handle(self, input_data: dict) -> Tuple[str, dict]:
-        messages = self.build_messages(input_data)
-        metadata = {}
-        return _get_llm().chat(messages), metadata
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# DocumentServiceAgent
-# ══════════════════════════════════════════════════════════════════════════════
-class DocumentServiceAgent(BaseAgent):
-    """
-    Xử lý câu hỏi về giấy tờ, thủ tục hành chính:
-    giấy xác nhận sinh viên, bảng điểm, điểm rèn luyện, quy trình xin giấy.
-    """
-
-    name = "document_service_agent"
-    prompt = """Bạn là trợ lý chatbot của trường Đại học Khoa học Tự nhiên - Thành phố Hồ Chí Minh, chuyên hỗ trợ thủ tục giấy tờ hành chính:
-giấy xác nhận sinh viên, bảng điểm học tập, bảng điểm rèn luyện, các thủ tục xin giấy tờ.
-
-Quy tắc:
-- Hướng dẫn rõ ràng từng bước thủ tục.
-- Nêu rõ thời gian xử lý nếu biết.
-- Nếu thiếu thông tin cụ thể: trả lời "Thông tin đang cập nhật".
-- Hướng dẫn sinh viên liên hệ phòng ban phụ trách nếu cần.
-- Chỉ trả lời bằng tiếng Việt. Không dùng bất kỳ ngôn ngữ nào khác."""
-
-
-    def _handle(self, input_data: dict) -> Tuple[str, dict]:
-        messages = self.build_messages(input_data)
-        metadata = {}
-        return _get_llm().chat(messages), metadata
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # NavigationAgent
@@ -127,7 +47,7 @@ class NavigationAgent(BaseAgent):
     """
 
     name = "navigation_agent"
-    prompt = """Bạn là trợ lý chatbot của trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM, hỗ trợ sinh viên tìm vị trí phòng học, phòng ban và các địa điểm trong khuôn viên trường.
+    prompt = """Bạn là trợ lý chatbot của trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM, hỗ trợ sinh viên tìm vị trí phòng học, phòng ban và các địa điểm trong khuôn viên trường. Nhiệm vụ của bạn là mô tả vị trí của địa điểm sinh yêu cầu.
 
     ## Nguyên tắc:
     - Chỉ trả lời dựa trên thông tin trong context được cung cấp, không tự suy đoán.
@@ -140,7 +60,7 @@ class NavigationAgent(BaseAgent):
     def _handle(self, input_data: dict) -> Tuple[str, dict]:
         messages = self.build_messages(input_data)
         metadata = {}
-        metadata['recommend_target'] = input_data['keys'][0] if len(input_data['keys']) > 0 else ""
+        metadata['recommend_target'] = input_data['recommend_building'][0] if len(input_data['recommend_building']) > 0 else ""
         return _get_llm().chat(messages), metadata
 
 
