@@ -79,6 +79,7 @@ public class RouteRenderer2D : MonoBehaviour
             Vector2 posB = _pointsBuffer[i + 1];
             Vector2 dir = posB - posA;
             float segLen = dir.magnitude;
+            if (segLen < 0.001f) { accumulated -= segLen; continue; }
             Vector2 dirN = dir / segLen; // normalized without extra alloc
 
             while (accumulated < segLen)

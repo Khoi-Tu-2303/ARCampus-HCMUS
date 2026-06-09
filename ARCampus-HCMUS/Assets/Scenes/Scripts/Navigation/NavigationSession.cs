@@ -10,6 +10,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.XR.ARFoundation;
 
 public class NavigationSession : MonoBehaviour
 {
@@ -55,11 +56,13 @@ public class NavigationSession : MonoBehaviour
     {
         if (btnCancel != null) btnCancel.onClick.AddListener(CancelNavigation);
         hud?.ClearUI();
+        ARSession.stateChanged += OnARTrackingChanged;
     }
 
     void OnDisable()
     {
         if (btnCancel != null) btnCancel.onClick.RemoveListener(CancelNavigation);
+        ARSession.stateChanged -= OnARTrackingChanged;
     }
 
     // ──────────────────────────────────────────────────────────
@@ -68,6 +71,7 @@ public class NavigationSession : MonoBehaviour
 
     public void StartNavigation(string destinationNodeId)
     {
+        if (currentPath != null) CancelNavigation();
         ARLabelManager.Instance?.ToggleGrayLabels(true);
 
         if (!GraphService.Instance.IsLoaded) return;
@@ -140,9 +144,26 @@ public class NavigationSession : MonoBehaviour
 
         // Use double-precision Haversine to avoid ~1-2m float error
         distanceToTarget = GeoMath.HaversineDouble(lat, lng, target.lat, target.lng);
+        // TÍNH NĂNG AUTO-REROUTE (QUAY XE KHI ĐI LẠC)
+        if (waypointIndex > 0)
+        {
+            double prevLat = currentPath[waypointIndex - 1].lat;
+            double prevLng = currentPath[waypointIndex - 1].lng;
+            float distToPrev = GeoMath.HaversineDouble(lat, lng, prevLat, prevLng);
 
+            // Nếu cách xa ĐIỂM SẮP TỚI > 80m VÀ cách xa ĐIỂM VỪA ĐI QUA > 80m => Đi lạc
+            if (distanceToTarget > 80f && distToPrev > 80f)
+            {
+                Debug.LogWarning("⚠️ [Nav] Đi lạc hướng! Đang tái tính toán lộ trình...");
+                string finalDestId = currentPath[currentPath.Count - 1].id; // Nhớ cái đích đến
+
+                CampusUIManager.Instance?.StartNavigation(); // Giữ UI không bị chớp tắt
+                StartNavigation(finalDestId); // Nhờ cái Fix 1 ở Phase 1, hàm này sẽ tự dọn dẹp và vẽ lại từ đầu
+                return; // Dừng khung hình này lại
+            }
+        }
         bool isFinalNode = (waypointIndex == currentPath.Count - 1);
-        float activeThreshold = isFinalNode ? arrivalThreshold : 15f;
+        float activeThreshold = isFinalNode ? arrivalThreshold : 20f;
 
         if (distanceToTarget < activeThreshold)
         {
@@ -163,9 +184,7 @@ public class NavigationSession : MonoBehaviour
         }
 
         // Update arrow bearing
-        bearing = GeoMath.CalculateBearing(
-            (float)lat, (float)lng,
-            (float)target.lat, (float)target.lng);
+        bearing = GeoMath.CalculateBearing(lat, lng, target.lat, target.lng);
 
         hud?.SetArrowAngle(bearing - Input.compass.trueHeading);
         arView?.UpdateARArrow(bearing);
@@ -215,8 +234,8 @@ public class NavigationSession : MonoBehaviour
         if (waypointIndex < currentPath.Count)
         {
             bearing = GeoMath.CalculateBearing(
-                (float)GPSService.Instance.Latitude, (float)GPSService.Instance.Longitude,
-                (float)currentPath[waypointIndex].lat, (float)currentPath[waypointIndex].lng);
+                    GPSService.Instance.Latitude, GPSService.Instance.Longitude,
+                    currentPath[waypointIndex].lat, currentPath[waypointIndex].lng);
             hud?.SetArrowAngle(bearing - Input.compass.trueHeading);
         }
     }
@@ -322,5 +341,21 @@ public class NavigationSession : MonoBehaviour
         }
 
         return bestNode;
+    }
+    // THUẬT TOÁN ĐÓNG ĐINH AR KHI TỈNH DẬY
+    private void OnARTrackingChanged(ARSessionStateChangedEventArgs args)
+    {
+        // Khi Camera AR nhận diện lại được không gian (Hết bị Tracking Lost)
+        if (args.state == ARSessionState.SessionTracking && currentPath != null)
+        {
+            if (GPSService.Instance != null && GPSService.Instance.IsReady)
+            {
+                Debug.Log("🔄 [AR] Tái định vị lại Không gian AR...");
+                // Dời Tâm Vũ Trụ về lại dưới chân sếp
+                arView?.InitAnchor(GPSService.Instance.Latitude, GPSService.Instance.Longitude);
+                // Vẽ lại toàn bộ sợi dây
+                arView?.DrawARPath(currentPath);
+            }
+        }
     }
 }

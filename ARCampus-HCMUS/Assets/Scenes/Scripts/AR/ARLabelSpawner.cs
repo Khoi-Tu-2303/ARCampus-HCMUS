@@ -18,6 +18,7 @@ public class ARLabelSpawner : MonoBehaviour
     private float _visibilityTimer;
     private const float VISIBILITY_UPDATE_INTERVAL = 0.1f;
 
+    private readonly List<string> _outOfRangeBuffer = new List<string>(8);
     void Start()
     {
         _arCamera = Camera.main;
@@ -75,23 +76,23 @@ public class ARLabelSpawner : MonoBehaviour
         Vector3 camPos = _arCamera.transform.position;
         float radiusSq = spawnRadius * spawnRadius;
 
-        List<string> outOfRange = new List<string>(4);
+        _outOfRangeBuffer.Clear(); // Đổ rác cũ ra để xài lại túi
 
         foreach (var kvp in _active)
         {
-            if (kvp.Value == null) { outOfRange.Add(kvp.Key); continue; }
+            if (kvp.Value == null) { _outOfRangeBuffer.Add(kvp.Key); continue; }
 
             Vector3 diff = kvp.Value.transform.position - camPos;
-            diff.y = 0f; // ignore height when measuring distance
+            diff.y = 0f;
 
             if (diff.sqrMagnitude >= radiusSq)
             {
                 ReturnToPool(kvp.Value);
-                outOfRange.Add(kvp.Key);
+                _outOfRangeBuffer.Add(kvp.Key); // Xài buffer
             }
         }
 
-        foreach (var key in outOfRange)
+        foreach (var key in _outOfRangeBuffer) // Xài buffer
             _active.Remove(key);
     }
 

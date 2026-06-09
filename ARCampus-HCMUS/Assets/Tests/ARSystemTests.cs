@@ -44,20 +44,21 @@ public class ARSystemTests
     // MODULE 1.2: TOÁN HỌC KHÔNG GIAN (GEOMATH)
     // KIỂM THỬ GÓC PHƯƠNG VỊ (BEARING / AZIMUTH ANGLE)
     // ==========================================
-    [TestCase(10.875808955069743f, 106.79843986789899f, 10.876354541234988f, 106.79843265183723f, 360f - 359.25100989663025f, 0.5f, "Test góc")]
-    [TestCase(10.875947501222882f, 106.79806663657297f, 10.875942208979708f, 106.79827728965455f, 91.45597289807722f, 0.5f, "Test góc")]
-    [TestCase(10.876217015276083f, 106.7979763026944f, 10.876160814212653f, 106.79805878544056f, 124.58043678310361f, 0.5f, "Test góc")]
-    [TestCase(10.875282024798778f, 106.79894111395271f, 10.875368474237348f, 106.79897884129343f, 23.333285221611902f, 0.5f, "Test góc")]
+    [TestCase(10.875808955069743, 106.79843986789899, 10.876354541234988, 106.79843265183723, 360f - 359.25100989663025f, 0.5f, "Test góc")]
+    [TestCase(10.875947501222882, 106.79806663657297, 10.875942208979708, 106.79827728965455, 91.45597289807722f, 0.5f, "Test góc")]
+    [TestCase(10.876217015276083, 106.7979763026944, 10.876160814212653, 106.79805878544056, 124.58043678310361f, 0.5f, "Test góc")]
+    [TestCase(10.875282024798778, 106.79894111395271, 10.875368474237348, 106.79897884129343, 23.333285221611902f, 0.5f, "Test góc")]
 
+    // Đổi 4 tham số tọa độ đầu tiên thành double
     public void CalculateBearing_ReturnsCorrectAngle_AllDirections(
-            float lat1, float lng1,
-            float lat2, float lng2,
-            float expectedAngle, float tolerance, string testDescription)
+                double lat1, double lng1,
+                double lat2, double lng2,
+                float expectedAngle, float tolerance, string testDescription)
     {
+        // Hàm này giờ nhận double xịn
         float actualAngle = GeoMath.CalculateBearing(lat1, lng1, lat2, lng2);
 
-        // LOGIC LẬT GÓC THEO YÊU CẦU:
-        // Biến góc > 180 (VD: 359.2 độ) thành độ lệch tuyệt đối so với trục 0 (VD: 0.8 độ)
+        // Lật góc...
         if (actualAngle > 180f)
         {
             actualAngle = 360f - actualAngle;
@@ -98,7 +99,9 @@ public class ARSystemTests
     {
         // 1. Tự động đo khoảng cách và góc
         float distance = GeoMath.HaversineDouble(userLat, userLng, targetLat, targetLng);
-        float bearing = GeoMath.CalculateBearing((float)userLat, (float)userLng, (float)targetLat, (float)targetLng);
+
+        // SỬA DÒNG NÀY: XÓA ÉP KIỂU (float)
+        float bearing = GeoMath.CalculateBearing(userLat, userLng, targetLat, targetLng);
 
         // 2. Chạy hàm của hệ thống
         GameObject dummyCam = new GameObject("DummyCam");

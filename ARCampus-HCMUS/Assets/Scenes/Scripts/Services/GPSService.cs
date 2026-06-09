@@ -43,6 +43,9 @@ public class GPSService : MonoBehaviour
     public float maxAllowedAccuracy = 25f;
     public float staleLocationTimeout = 12f;   // seconds without timestamp change → stale
     public float gpsCheckInterval = 2f;         // monitor loop interval
+    private double _smoothLat = 0;
+    private double _smoothLng = 0;
+    private const float GPS_ALPHA = 0.4f;
 
     [Header("Simulate Error (Editor)")]
     public bool simulateGPSLost = false;
@@ -237,6 +240,8 @@ public class GPSService : MonoBehaviour
     void HandleGPSLost()
     {
         State = GPSState.Lost;
+        _smoothLat = 0;
+        _smoothLng = 0;
         OnGPSLost?.Invoke();
         Debug.LogWarning("❌ GPS Lost!");
         ShowGPSModal(BackActionTarget.GoToMain);
@@ -258,9 +263,25 @@ public class GPSService : MonoBehaviour
     void UpdateLocationData()
     {
         var data = Input.location.lastData;
-        Latitude = data.latitude;
-        Longitude = data.longitude;
         Accuracy = data.horizontalAccuracy;
+
+        // Nếu là lần đầu lấy tọa độ (hoặc mới mở lại app), gán cứng luôn không cần làm mượt
+        if (_smoothLat == 0 || _smoothLng == 0)
+        {
+            _smoothLat = data.latitude;
+            _smoothLng = data.longitude;
+        }
+        else if (Accuracy <= maxAllowedAccuracy)
+        {
+            // THUẬT TOÁN LÀM MƯỢT GPS (Kéo tọa độ đi từ từ, không cho nhảy cóc)
+            _smoothLat = _smoothLat + GPS_ALPHA * (data.latitude - _smoothLat);
+            _smoothLng = _smoothLng + GPS_ALPHA * (data.longitude - _smoothLng);
+        }
+
+        // Cập nhật tọa độ xịn cho toàn app xài
+        Latitude = _smoothLat;
+        Longitude = _smoothLng;
+
         _lastLocationTimestamp = data.timestamp;
         _lastTimestampChangeRealtime = Time.realtimeSinceStartup;
     }

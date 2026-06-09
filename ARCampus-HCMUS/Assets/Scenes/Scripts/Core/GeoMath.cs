@@ -58,8 +58,10 @@ public static class GeoMath
     private static float _cachedNorthAngle = 0f;
     private static bool _hasCachedAngle = false;
     private static float _cacheTimestamp = -9999f;
-    private const float COMPASS_CACHE_DURATION = 30f; // seconds
+    private const float COMPASS_CACHE_DURATION = 5f; // seconds
 
+    private static float _headingBuffer = -1f;
+    private const float HEADING_ALPHA = 0.15f;
     /// <summary>
     /// Force-clear the compass cache. Called by GPSService when GPS recovers,
     /// ensuring AR labels and arrow re-align to the new heading.
@@ -121,8 +123,24 @@ public static class GeoMath
         {
             if (Input.compass.enabled)
             {
-                // northOffset: how many degrees world +Z is rotated relative to geographic North
-                _cachedNorthAngle = cameraTransform.eulerAngles.y - Input.compass.trueHeading;
+                // Lấy góc La bàn thô
+                float rawHeading = Input.compass.trueHeading;
+
+                // THUẬT TOÁN LÀM MƯỢT (Low-Pass Filter)
+                if (_headingBuffer < 0f)
+                {
+                    _headingBuffer = rawHeading; // Lần đầu tiên chạy
+                }
+                else
+                {
+                    // Tính khoảng cách góc ngắn nhất (tránh lỗi quay từ 359 độ sang 1 độ)
+                    float delta = Mathf.DeltaAngle(_headingBuffer, rawHeading);
+                    _headingBuffer += delta * HEADING_ALPHA;
+                    _headingBuffer = (_headingBuffer + 360f) % 360f; // Luôn giữ trong khoảng 0-360
+                }
+
+                // Dùng cái góc ĐÃ LÀM MƯỢT để tính toán cho AR
+                _cachedNorthAngle = cameraTransform.eulerAngles.y - _headingBuffer;
                 _cacheTimestamp = Time.realtimeSinceStartup;
                 _hasCachedAngle = true;
             }
@@ -152,14 +170,15 @@ public static class GeoMath
     // BEARING
     // ──────────────────────────────────────────────────────────
 
-    public static float CalculateBearing(float lat1, float lng1, float lat2, float lng2)
+    public static float CalculateBearing(double lat1, double lng1, double lat2, double lng2)
     {
-        float dLng = Mathf.Deg2Rad * (lng2 - lng1);
-        float rlat1 = Mathf.Deg2Rad * lat1;
-        float rlat2 = Mathf.Deg2Rad * lat2;
-        float y = Mathf.Sin(dLng) * Mathf.Cos(rlat2);
-        float x = Mathf.Cos(rlat1) * Mathf.Sin(rlat2)
-                - Mathf.Sin(rlat1) * Mathf.Cos(rlat2) * Mathf.Cos(dLng);
-        return ((Mathf.Rad2Deg * Mathf.Atan2(y, x)) + 360f) % 360f;
+        double dLng = (lng2 - lng1) * Math.PI / 180.0;
+        double rlat1 = lat1 * Math.PI / 180.0;
+        double rlat2 = lat2 * Math.PI / 180.0;
+        double y = Math.Sin(dLng) * Math.Cos(rlat2);
+        double x = Math.Cos(rlat1) * Math.Sin(rlat2)
+                 - Math.Sin(rlat1) * Math.Cos(rlat2) * Math.Cos(dLng);
+
+        return (float)(((Math.Atan2(y, x) * 180.0 / Math.PI) + 360.0) % 360.0);
     }
 }

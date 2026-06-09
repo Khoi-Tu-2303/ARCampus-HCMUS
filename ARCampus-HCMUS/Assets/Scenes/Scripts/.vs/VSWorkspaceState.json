@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Navigation",
-    "\\UI"
+    ""
   ],
-  "SelectedNode": "\\Navigation\\NavigationSession.cs",
+  "SelectedNode": "\\Navigation",
   "PreviewInSolutionExplorer": false
 }

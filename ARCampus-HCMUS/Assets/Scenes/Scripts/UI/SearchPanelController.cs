@@ -52,6 +52,9 @@ public class SearchPanelController : MonoBehaviour
     void OnEnable()
     {
         searchInput.onValueChanged.AddListener(OnSearchChanged);
+        if (FirebaseService.Instance != null)
+            FirebaseService.Instance.OnLocationsLoaded -= ProcessAndShowData;
+
         if (FirebaseService.Instance != null && FirebaseService.Instance.IsReady && FirebaseService.Instance.AllLocations.Count > 0)
             ProcessAndShowData();
         else if (FirebaseService.Instance != null)
