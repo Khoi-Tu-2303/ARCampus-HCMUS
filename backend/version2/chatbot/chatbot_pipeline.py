@@ -108,8 +108,8 @@ class ChatbotPipeline:
     def _build_input(self, turn: ConversationTurn, matched: list[MatchResult]) -> dict:
         keys = [e.matched_id for e in matched if e.matched_id]
         history   = self.memory.get_history(turn.conversation_id, self.history_k)
-        context = self.firebase.get_multiple_descriptions_v2(collection="description", keys=keys, sub_keys=['content'])
-        recommend_building = self.firebase.get_description(collection="description", key=keys[0], sub_key='recommend_building')
+        context = self.firebase.get_multiple_descriptions_v2(collection="campusInfo", keys=keys, sub_keys=['GioiThieuChung', 'QuyDinh', 'ThoiGian', 'ThongBao', 'ThongTinLienLac', 'ViTri'])
+        recommend_building = self.firebase.get_description(collection="campusInfo", key=keys[0], sub_key='recommend_building')
         return {
             "query": turn.user_text,
             "contexts": context,
