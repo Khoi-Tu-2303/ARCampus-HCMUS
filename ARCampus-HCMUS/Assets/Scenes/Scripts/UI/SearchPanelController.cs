@@ -238,8 +238,8 @@ public class SearchPanelController : MonoBehaviour
         if (cleanKw.StartsWith("dh") || cleanKw.StartsWith("đh") || cleanKw.StartsWith("ndh") || cleanKw.StartsWith("nđh") || cleanKw.StartsWith("nd"))
         {
             // Bóc hết đống chữ cái rườm rà ra, chỉ chừa lại phần số
-            string nums = cleanKw.Replace("dh", "").Replace("đh", "").Replace("ndh", "").Replace("nđh", "").Replace("nd", "")
-                                 .Replace(".", "_").Replace("-", "_");
+            string nums = cleanKw.Replace("ndh", "").Replace("nđh", "").Replace("dh", "").Replace("đh", "").Replace("nd", "")
+                     .Replace(".", "_").Replace("-", "_");
 
             if (!string.IsNullOrEmpty(nums))
             {

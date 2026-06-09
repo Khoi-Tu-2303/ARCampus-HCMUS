@@ -130,48 +130,137 @@ public class ARSystemTests
     // MODULE 2: THUẬT TOÁN TÌM ĐƯỜNG (PATHFINDER)
     // ==========================================
 
-    [Test]
-    public void FindPath_AStarAlgorithm_ReturnsOptimalRoute()
+    [TestCase("S", "G", "S,B,C,D,G", "Vượt qua bẫy ngõ cụt E để đi vòng đến đích G")]
+    [TestCase("S", "C", "S,B,C", "Đường đi ngắn nhất bình thường đến điểm C")]
+    [TestCase("B", "G", "B,C,D,G", "Xuất phát từ một trạm giữa đồ thị đến đích")]
+    [TestCase("C", "C", "C", "Điểm xuất phát trùng với điểm kết thúc")]
+    [TestCase("S", "X", "", "Bắt lỗi: Đồ thị đứt gãy, đích đến X bị cô lập")]
+    public void FindPath_AStar_HandlesVariousScenarios(
+        string startNode, string goalNode, string expectedPathCsv, string testDescription)
     {
-        // BÀI TOÁN GỐC: PathFinder phụ thuộc vào GraphService (Singleton). 
-        // Trong Unit Test, ta phải tạo một GraphService "Giả" (Mock) trên RAM.
-
-        // 1. Arrange
+        // 1. Arrange: Khởi tạo môi trường ảo
         GameObject servicesObj = new GameObject("Services");
         var mockGraph = servicesObj.AddComponent<GraphService>();
         var mockPathFinder = servicesObj.AddComponent<PathFinder>();
 
         GraphService.Instance = mockGraph;
         PathFinder.Instance = mockPathFinder;
-        // Tạo 3 node: A -> B -> C. Đi thẳng từ A đến C là tối ưu nhất.
+
+        // XÂY DỰNG MA TRẬN ĐỒ THỊ 7 ĐIỂM
         mockGraph.Nodes = new Dictionary<string, GraphNode>
         {
-            { "A", new GraphNode { id = "A", lat = 10.0, lng = 106.0 } },
-            { "B", new GraphNode { id = "B", lat = 10.1, lng = 106.1 } }, // Điểm rẽ xa
-            { "C", new GraphNode { id = "C", lat = 10.2, lng = 106.2 } }
+            { "S", new GraphNode { id = "S", lat = 10.000, lng = 106.000, name = "Start" } },
+            { "E", new GraphNode { id = "E", lat = 10.000, lng = 106.001, name = "Dead End" } },
+            { "G", new GraphNode { id = "G", lat = 10.000, lng = 106.002, name = "Goal" } },
+            { "B", new GraphNode { id = "B", lat = 10.001, lng = 106.000, name = "Way 1" } },
+            { "C", new GraphNode { id = "C", lat = 10.001, lng = 106.001, name = "Way 2" } },
+            { "D", new GraphNode { id = "D", lat = 10.001, lng = 106.002, name = "Way 3" } },
+            { "X", new GraphNode { id = "X", lat = 10.005, lng = 106.005, name = "Isolated" } }
         };
+
+        // Kết nối các điểm
         mockGraph.Edges = new List<GraphEdge>
         {
-            new GraphEdge { from = "A", to = "B", distance_m = 100f },
-            new GraphEdge { from = "B", to = "C", distance_m = 100f },
-            new GraphEdge { from = "A", to = "C", distance_m = 150f } // Đường chim bay ngắn hơn
+            new GraphEdge { from = "S", to = "E", distance_m = 111f }, // Đường chim bay dụ dỗ nhưng cụt
+            new GraphEdge { from = "S", to = "B", distance_m = 111f }, // Đường vòng
+            new GraphEdge { from = "B", to = "C", distance_m = 111f },
+            new GraphEdge { from = "C", to = "D", distance_m = 111f },
+            new GraphEdge { from = "D", to = "G", distance_m = 111f }
+            // Node X hoàn toàn không có Edge nối vào
         };
         mockGraph.IsLoaded = true;
 
-        // Gọi hàm khởi tạo Cache (giả lập Awake)
         mockPathFinder.BuildNeighborCache();
 
         // 2. Act
-        List<GraphNode> path = mockPathFinder.FindPath("A", "C");
+        List<GraphNode> path = mockPathFinder.FindPath(startNode, goalNode);
 
-        // 3. Assert
-        Assert.IsNotNull(path, "Thuật toán trả về Null, không tìm thấy đường!");
-        Assert.AreEqual(2, path.Count, "Lộ trình sai! Phải đi thẳng A -> C (2 nodes)");
-        Assert.AreEqual("A", path[0].id);
-        Assert.AreEqual("C", path[1].id);
+        // 3. Log
+        Debug.Log($"--- BÁO CÁO A*: {testDescription} ---");
 
+        // 4. Assert logic linh hoạt cho chuỗi CSV (Comma-Separated Values)
+        if (string.IsNullOrEmpty(expectedPathCsv))
+        {
+            // Case đứt gãy: Buộc thuật toán phải trả về Null
+            Assert.IsNull(path, "Lỗi: Đích đến không thể tới được nhưng thuật toán vẫn trả về lộ trình ảo!");
+            Debug.Log($"=> KẾT LUẬN: ĐẠT (PASS) - Đã chặn thành công việc tìm đường tới đảo hoang {goalNode}.\n");
+        }
+        else
+        {
+            Assert.IsNotNull(path, "Lỗi: Không tìm thấy đường đi!");
+
+            // Tách chuỗi CSV "S,B,C" thành mảng ["S", "B", "C"]
+            string[] expectedNodes = expectedPathCsv.Split(',');
+
+            Assert.AreEqual(expectedNodes.Length, path.Count, "Lỗi: Số lượng trạm trên đường đi bị sai!");
+
+            string pathLog = "Lộ trình thực tế: ";
+            for (int i = 0; i < expectedNodes.Length; i++)
+            {
+                Assert.AreEqual(expectedNodes[i], path[i].id, $"Lỗi: Sai trạm ở bước thứ {i}!");
+                pathLog += path[i].id + (i < expectedNodes.Length - 1 ? " -> " : "");
+            }
+            Debug.Log(pathLog);
+            Debug.Log("=> KẾT LUẬN: ĐẠT (PASS) - Thuật toán A* giải quyết ma trận chính xác.\n");
+        }
+
+        // Dọn dẹp RAM
         GraphService.Instance = null;
         PathFinder.Instance = null;
-        Object.DestroyImmediate(servicesObj); // Dọn dẹp
+        Object.DestroyImmediate(servicesObj);
+    }
+    // ==========================================
+    // MODULE 3: BỘ NÃO PHÂN TÍCH TÌM KIẾM (SEARCH PARSER)
+    // ==========================================
+
+    [TestCase("f102", "Tòa F", "F102", "Phòng thường: Tòa F")]
+    [TestCase("a205", "Tòa A", "A205", "Phòng thường: Tòa A")]
+    [TestCase("dh2.3", "Nhà điều hành", "DH_2_3", "Nhà điều hành: Viết tắt có chấm")]
+    [TestCase("ndh23", "Nhà điều hành", "DH_2_3", "Nhà điều hành: Viết liền không chấm")]
+    [TestCase("thư viện", "Tòa C", "library", "Bí danh (Alias): Tìm theo tiện ích")]
+    public void ParseIndoorSearch_ExtractsCorrectRoomInfo(
+        string inputKeyword, string expectedBuilding, string expectedRoomId, string testDescription)
+    {
+        // 1. Arrange: Tạo Môi trường Giả lập (Mock Environment)
+        GameObject testObj = new GameObject("TestEnvironment");
+
+        // GIẢ LẬP FIREBASE: Đánh lừa bức tường lửa rằng các phòng này có tồn tại trên Đám mây
+        var mockFirebase = testObj.AddComponent<FirebaseService>();
+        FirebaseService.Instance = mockFirebase;
+        FirebaseService.Instance.ValidIndoorIds = new HashSet<string> { "F102", "A205", "DH_2_3", "library" };
+
+        var searchController = testObj.AddComponent<SearchPanelController>();
+
+        // 2. Act: DÙNG C# REFLECTION ĐỂ GỌI HÀM PRIVATE
+        // Chiêu này giúp gọi hàm ParseIndoorSearch mà không cần đổi nó thành public
+        System.Reflection.MethodInfo parseMethod = typeof(SearchPanelController).GetMethod(
+            "ParseIndoorSearch",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+        Assert.IsNotNull(parseMethod, "Lỗi Reflection: Không tìm thấy hàm ParseIndoorSearch trong script!");
+
+        // Gọi hàm thông qua Reflection và ép kiểu trả về List<SearchResultItem>
+        List<SearchResultItem> results = (List<SearchResultItem>)parseMethod.Invoke(searchController, new object[] { inputKeyword });
+
+        // 3. XUẤT LOG BÁO CÁO (Dành cho Đồ án)
+        Debug.Log($"--- BÁO CÁO KIỂM THỬ: {testDescription} ---");
+        Debug.Log($"[Đầu vào] User gõ      : '{inputKeyword}'");
+
+        // 4. Assert: Kiểm chứng hệ thống
+        Assert.IsNotNull(results, "Lỗi: Hàm trả về danh sách Null!");
+        Assert.IsTrue(results.Count > 0, "Lỗi: Không bóc tách được kết quả nào (Bị Tường lửa Firebase chặn?)");
+
+        SearchResultItem firstResult = results[0];
+        Debug.Log($"[Bóc tách] Tòa nhà đích : {firstResult.TargetBuildingName}");
+        Debug.Log($"[Bóc tách] Mã phòng ảo  : {firstResult.IndoorDocId}");
+
+        Assert.AreEqual(expectedBuilding, firstResult.TargetBuildingName, "Bộ phân tích nhận diện sai Tòa nhà!");
+        Assert.AreEqual(expectedRoomId, firstResult.IndoorDocId, "Bộ phân tích bóc tách sai Mã phòng!");
+
+        Debug.Log("=> KẾT LUẬN: ĐẠT (PASS) - Thuật toán nội suy String hoạt động chính xác.\n");
+
+        // 5. Dọn dẹp RAM
+        Object.DestroyImmediate(testObj);
+        FirebaseService.Instance = null;
     }
 }
