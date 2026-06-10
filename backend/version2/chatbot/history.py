@@ -11,7 +11,6 @@ Logic find_intent_in_history:
 
 from __future__ import annotations
 import json
-from dataclasses import dataclass
 
 from database.db import fetch_all, execute_query
 from version2.schemas import IntentType, MatchResult, Intent
@@ -29,13 +28,7 @@ def _has_valid_intent(intents_json: str | None) -> bool:
     """Kiểm tra JSON intents có chứa NAVIGATION hoặc INFORM không.
     [{type : str, confidence : float}]
     """
-    if not intents_json:
-        return False
-    try:
-        intents = json.loads(intents_json)
-        return any(i.get("type") in _VALID_INTENT_TYPES for i in intents)
-    except (json.JSONDecodeError, AttributeError):
-        return False
+    return bool(_parse_intents(intents_json))
 
 
 def _has_matched_entities(entities_json: str | None) -> bool:
@@ -63,6 +56,36 @@ def _parse_matched_entities(entities_json: str | None) -> list[MatchResult]:
         ]
     except (json.JSONDecodeError, TypeError):
         return []
+
+
+def _parse_intents(intents_json: str | None) -> list[Intent]:
+    if not intents_json:
+        return []
+
+    try:
+        raw_intents = json.loads(intents_json)
+    except json.JSONDecodeError:
+        return []
+
+    if isinstance(raw_intents, dict):
+        raw_intents = [raw_intents]
+    if not isinstance(raw_intents, list):
+        return []
+
+    intents: list[Intent] = []
+    for intent in raw_intents:
+        if not isinstance(intent, dict):
+            continue
+        intent_type = intent.get("type")
+        if intent_type not in _VALID_INTENT_TYPES:
+            continue
+        try:
+            confidence = float(intent.get("confidence", 0.0))
+        except (TypeError, ValueError):
+            confidence = 0.0
+        intents.append(Intent(IntentType(intent_type), confidence))
+
+    return intents
 
 
 # ---------------------------------------------------------------------------
@@ -94,14 +117,12 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
         FROM   messages
         WHERE  conversation_id = ?
           AND  role = 'user'
-        ORDER BY created_at DESC
+        ORDER BY created_at DESC, id DESC
         """,
         (conversation_id,),
     )
-    print(1)
     for row in rows:
         intents_json = row["intents"]
-        entities_json = row["entities"]
         has_intent = row["has_intents"]
         has_entities = row["has_entities"]
         is_complete = row["is_complete"]
@@ -113,39 +134,46 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
 
         # Tìm thấy message có intent nhưng chưa đủ entity
         if has_intent and not has_entities:
-            print(intents_json)
-            intents = [json.loads(intents_json)]
-            print(type(intents[0]), repr(intents[0]))
-            return [
-                Intent(IntentType(intent.get("type")), float(intent.get("confidence")))
-                for intent in intents
-                if intent.get("type") in _VALID_INTENT_TYPES
-            ]
+            return _parse_intents(intents_json)
 
     return []
 
-def find_entities_in_history(conversation_id: str) -> list[MatchResult]:
+def find_entities_in_history(
+    conversation_id: str,
+    include_completed: bool = True,
+) -> list[MatchResult]:
+    """
+    Find the latest matched entity in the conversation history.
+
+    The current user message is inserted before the chatbot runs, so the newest
+    row often has no NLU data yet. Rows without matched entities are skipped.
+    include_completed=True allows follow-up questions to reuse the entity from
+    the latest completed turn.
+    """
     rows = fetch_all(
         """
-        SELECT entities, has_intents, has_entities, is_complete
+        SELECT entities, is_complete
         FROM   messages
         WHERE  conversation_id = ?
           AND  role = 'user'
-        ORDER BY created_at DESC
+        ORDER BY created_at DESC, id DESC
         """,
         (conversation_id,),
     )
 
     for row in rows:
-        has_intent = row["has_intents"]
-        has_entity = row["has_entities"]
         is_complete = row["is_complete"]
+        matched_entities = _parse_matched_entities(row["entities"])
 
-        if is_complete:
+        if matched_entities:
+            if include_completed or not is_complete:
+                return matched_entities
             return []
 
-        if not has_intent and has_entity:
-            return _parse_matched_entities(row["entities"])
+        # A completed turn without a matched entity, such as general chat,
+        # closes the previous topic and prevents stale entity carry-over.
+        if is_complete:
+            return []
 
     return []
 

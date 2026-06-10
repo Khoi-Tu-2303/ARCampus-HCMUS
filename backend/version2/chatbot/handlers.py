@@ -60,7 +60,7 @@ def handle_inform(turn: ConversationTurn) -> str:
     """
 
     matched = [e for e in turn.entities if e.status == "matched"]
-    if len(turn.entities) == 0:
+    if not matched:
         history_entities = find_entities_in_history(turn.conversation_id)
         if not history_entities:
             return _reply_ask_enity_inform()
