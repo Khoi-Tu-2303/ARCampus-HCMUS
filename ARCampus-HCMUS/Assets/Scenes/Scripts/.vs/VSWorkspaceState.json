@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Indoor",
-    "\\UI"
+    "\\Core"
   ],
-  "SelectedNode": "\\UI\\SearchPanelController.cs",
+  "SelectedNode": "\\Core\\GeoMath.cs",
   "PreviewInSolutionExplorer": false
 }

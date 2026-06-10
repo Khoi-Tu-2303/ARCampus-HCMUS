@@ -48,7 +48,9 @@ public class NavigationSession : MonoBehaviour
     // ── HYSTERESIS: checkpoint triggers only after N consecutive in-range samples ──
     private int _arrivalConfirmCount = 0;
     private const int ARRIVAL_CONFIRM_REQUIRED = 3; // require 3 consecutive readings
-
+    // THÊM 2 BIẾN NÀY ĐỂ BẢO VỆ GPS JITTER KHI ĐI LẠC:
+    private int _rerouteConfirmCount = 0;
+    private const int REROUTE_CONFIRM_REQUIRED = 3;
     // ── MAX DISTANCE FOR NODE SNAP ──
     private const float MAX_SNAP_DISTANCE = 200f; // metres
 
@@ -151,15 +153,24 @@ public class NavigationSession : MonoBehaviour
             double prevLng = currentPath[waypointIndex - 1].lng;
             float distToPrev = GeoMath.HaversineDouble(lat, lng, prevLat, prevLng);
 
-            // Nếu cách xa ĐIỂM SẮP TỚI > 80m VÀ cách xa ĐIỂM VỪA ĐI QUA > 80m => Đi lạc
+            // Đi lạc quá 80m
             if (distanceToTarget > 80f && distToPrev > 80f)
             {
-                Debug.LogWarning("⚠️ [Nav] Đi lạc hướng! Đang tái tính toán lộ trình...");
-                string finalDestId = currentPath[currentPath.Count - 1].id; // Nhớ cái đích đến
+                _rerouteConfirmCount++;
+                if (_rerouteConfirmCount >= REROUTE_CONFIRM_REQUIRED)
+                {
+                    _rerouteConfirmCount = 0;
+                    Debug.LogWarning("⚠️ [Nav] Xác nhận đi lạc sau 3 lần đo! Đang tính toán lộ trình mới...");
+                    string finalDestId = currentPath[currentPath.Count - 1].id;
 
-                CampusUIManager.Instance?.StartNavigation(); // Giữ UI không bị chớp tắt
-                StartNavigation(finalDestId); // Nhờ cái Fix 1 ở Phase 1, hàm này sẽ tự dọn dẹp và vẽ lại từ đầu
-                return; // Dừng khung hình này lại
+                    CampusUIManager.Instance?.StartNavigation();
+                    StartNavigation(finalDestId);
+                }
+                return; // Dừng khung hình này lại, đợi check tiếp
+            }
+            else
+            {
+                _rerouteConfirmCount = 0; // Nếu nhiễu sóng giật về lại đường cũ thì reset bộ đếm đi lạc
             }
         }
         bool isFinalNode = (waypointIndex == currentPath.Count - 1);

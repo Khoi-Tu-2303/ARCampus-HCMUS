@@ -44,7 +44,7 @@ public class LocationDetailController : MonoBehaviour
 
     private Coroutine _imageLoadCoroutine;
     private string _currentBuildingIdForMap = "";
-
+    private int _openVersion = 0;
     void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -65,29 +65,29 @@ public class LocationDetailController : MonoBehaviour
     public void OpenDetailPanel(LocationData locData, string indoorDocId = "", string customTitle = "")
     {
         if (locData == null) return;
+
+        // Tăng mã vé lên 1 mỗi lần mở bảng mới
+        int myVersion = ++_openVersion;
         _currentData = locData;
 
-        if (txtName != null)
-            txtName.text = string.IsNullOrEmpty(customTitle) ? locData.display_name : customTitle;
-
-        if (txtCategory != null)
-            txtCategory.text = string.IsNullOrEmpty(indoorDocId) ? locData.category : "Phòng / Khu vực";
+        if (txtName != null) txtName.text = string.IsNullOrEmpty(customTitle) ? locData.display_name : customTitle;
+        if (txtCategory != null) txtCategory.text = string.IsNullOrEmpty(indoorDocId) ? locData.category : "Phòng / Khu vực";
 
         if (!string.IsNullOrEmpty(indoorDocId))
         {
             if (txtDescription != null) txtDescription.text = "Đang tải thông tin chi tiết...";
             FirebaseService.Instance.GetIndoorDescription(indoorDocId, (desc) => {
+                // CHỈ IN CHỮ RA NẾU MÃ VÉ CÒN KHỚP (Bảng chưa bị đóng hoặc chuyển qua bảng khác)
+                if (myVersion != _openVersion) return;
                 if (txtDescription != null) txtDescription.text = desc;
             });
         }
         else
         {
-            if (txtDescription != null)
-                txtDescription.text = string.IsNullOrEmpty(locData.description)
-                    ? "Chưa có thông tin mô tả cho địa điểm này."
-                    : locData.description;
+            if (txtDescription != null) txtDescription.text = string.IsNullOrEmpty(locData.description) ? "Chưa có thông tin mô tả." : locData.description;
         }
 
+        // ... Đoạn load hình ảnh bên dưới giữ nguyên ...
         if (imgCover != null)
         {
             if (defaultPlaceholder != null) imgCover.sprite = defaultPlaceholder;
@@ -97,9 +97,7 @@ public class LocationDetailController : MonoBehaviour
         }
 
         _currentBuildingIdForMap = GetBuildingImageName(locData.location_id);
-        if (btnIndoorMap != null)
-            btnIndoorMap.gameObject.SetActive(!string.IsNullOrEmpty(_currentBuildingIdForMap));
-
+        if (btnIndoorMap != null) btnIndoorMap.gameObject.SetActive(!string.IsNullOrEmpty(_currentBuildingIdForMap));
         if (dimmedOverlay != null) dimmedOverlay.SetActive(true);
         if (detailPanel != null) detailPanel.SetActive(true);
     }
@@ -107,6 +105,7 @@ public class LocationDetailController : MonoBehaviour
     // ── CLOSE ────────────────────────────────────────────────────
     public void ClosePanel()
     {
+        _openVersion++; // Hủy vé cũ, vô hiệu hóa các dữ liệu Firebase đang tải dở dang
         if (detailPanel != null) detailPanel.SetActive(false);
         if (dimmedOverlay != null) dimmedOverlay.SetActive(false);
     }

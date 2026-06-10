@@ -83,7 +83,7 @@ public static class GeoMath
         Transform cameraTransform,
         float heightOffset = 1.5f)
     {
-        float offsetX = (float)((targetLng - userLng) * 111320.0 * Math.Cos(userLat * Math.PI / 180.0));
+        float offsetX = (float)((targetLng - userLng) * GeoConstants.MetersPerDegreeLng * Math.Cos(userLat * Math.PI / 180.0));
         float offsetZ = (float)((targetLat - userLat) * GeoConstants.MetersPerDegreeLat);
         Vector3 rawOffset = new Vector3(offsetX, 0f, offsetZ);
 
