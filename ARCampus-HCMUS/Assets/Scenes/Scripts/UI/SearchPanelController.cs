@@ -112,7 +112,8 @@ public class SearchPanelController : MonoBehaviour
         if (id.StartsWith("DRINK_")) return string.IsNullOrEmpty(loc.display_name) ? "Quán nước" : loc.display_name;
         if (id.StartsWith("NĐH")) return "Nhà điều hành";
         if (id.StartsWith("NTD")) return "Nhà thể dục";
-        if (id.StartsWith("NXT") || id.StartsWith("NXS")) return "Nhà xe";
+        if (id.StartsWith("NXT")) return "Nhà xe trước";
+        if (id.StartsWith("NXS")) return "Nhà xe sau";
 
         if (id.StartsWith("CT") || id.StartsWith("Căn")) return "Căn tin";
 

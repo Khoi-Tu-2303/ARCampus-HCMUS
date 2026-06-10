@@ -186,7 +186,8 @@ public class LocationDetailController : MonoBehaviour
         if (string.IsNullOrEmpty(nodeId)) return "";
         if (nodeId.StartsWith("NĐH")) return "NĐH";
         if (nodeId.StartsWith("NTD")) return "NTD";
-        if (nodeId.StartsWith("NXS") || nodeId.StartsWith("NXT")) return "NX";
+        if (nodeId.StartsWith("NXT")) return "NXT";
+        if (nodeId.StartsWith("NXS")) return "NXS";
 
         // ✅ THÊM DÒNG NÀY: Bảo vệ Căn tin, Quán ăn, Nước uống không bị bắt nhầm
         if (nodeId.StartsWith("CT") || nodeId.StartsWith("Căn") || nodeId.StartsWith("FOOD") || nodeId.StartsWith("DRINK"))

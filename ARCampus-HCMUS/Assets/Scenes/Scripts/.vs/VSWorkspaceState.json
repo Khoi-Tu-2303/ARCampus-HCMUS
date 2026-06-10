@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\UI"
   ],
-  "SelectedNode": "\\AR",
+  "SelectedNode": "\\UI\\LocationDetailController.cs",
   "PreviewInSolutionExplorer": false
 }
