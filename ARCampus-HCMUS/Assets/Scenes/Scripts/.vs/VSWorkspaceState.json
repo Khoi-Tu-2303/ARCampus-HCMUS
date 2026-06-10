@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Indoor",
+    "\\UI"
   ],
-  "SelectedNode": "\\Navigation",
+  "SelectedNode": "\\UI\\SearchPanelController.cs",
   "PreviewInSolutionExplorer": false
 }

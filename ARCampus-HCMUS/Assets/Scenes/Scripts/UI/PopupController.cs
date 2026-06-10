@@ -117,8 +117,13 @@ public class PopupController : MonoBehaviour
         if (nodeId.StartsWith("NĐH")) return "NĐH";
         if (nodeId.StartsWith("NTD")) return "NTD";
         if (nodeId.StartsWith("NXS") || nodeId.StartsWith("NXT")) return "NX";
+
+        // ✅ THÊM DÒNG NÀY: Căn tin không có map Indoor, trả về rỗng để nút Indoor Map ẩn đi
+        if (nodeId.StartsWith("CT") || nodeId.StartsWith("Căn") || nodeId.StartsWith("FOOD") || nodeId.StartsWith("DRINK")) return "";
+
         char c = nodeId[0];
         if (c >= 'A' && c <= 'G') return c.ToString();
+
         return nodeId;
     }
 

@@ -361,4 +361,27 @@ public class GPSService : MonoBehaviour
                 _monitorCoroutine = StartCoroutine(MonitorGPSLoop());
         }
     }
+    [Header("Sensor Fusion AR")]
+    public float ARNorthOffset { get; private set; }
+    private bool _offsetInitialized = false;
+
+    // THÊM HÀM UPDATE NÀY VÀO TRONG CLASS GPSService
+    void Update()
+    {
+        if (Input.compass.enabled && Camera.main != null)
+        {
+            float instantOffset = Camera.main.transform.eulerAngles.y - Input.compass.trueHeading;
+
+            if (!_offsetInitialized)
+            {
+                ARNorthOffset = instantOffset;
+                _offsetInitialized = true;
+            }
+            else
+            {
+                // LerpAngle khử hoàn toàn nhiễu giật cục của từ trường
+                ARNorthOffset = Mathf.LerpAngle(ARNorthOffset, instantOffset, Time.deltaTime * 1.0f);
+            }
+        }
+    }
 }

@@ -33,6 +33,22 @@ public class ARLabelSpawner : MonoBehaviour
         StartCoroutine(SpawnLoop());
     }
 
+    void OnEnable() { ARSession.stateChanged += OnARStateChanged; }
+    void OnDisable() { ARSession.stateChanged -= OnARStateChanged; }
+
+    private void OnARStateChanged(ARSessionStateChangedEventArgs args)
+    {
+        if (args.state == ARSessionState.SessionTracking)
+        {
+            Debug.Log("🔄 [ARLabelSpawner] Relocalized! Dọn dẹp nhãn cũ...");
+            foreach (var kvp in _active)
+            {
+                if (kvp.Value != null) ReturnToPool(kvp.Value);
+            }
+            _active.Clear();
+            // Nó sẽ tự động spawn lại ở vị trí ĐÚNG trong Update
+        }
+    }
     // ──────────────────────────────────────────────────────────
     // POOL HELPERS
     // ──────────────────────────────────────────────────────────

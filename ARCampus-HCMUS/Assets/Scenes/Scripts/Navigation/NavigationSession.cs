@@ -186,7 +186,8 @@ public class NavigationSession : MonoBehaviour
         // Update arrow bearing
         bearing = GeoMath.CalculateBearing(lat, lng, target.lat, target.lng);
 
-        hud?.SetArrowAngle(bearing - Input.compass.trueHeading);
+        float smoothedHeading = Camera.main.transform.eulerAngles.y - GPSService.Instance.ARNorthOffset;
+        hud?.SetArrowAngle(bearing - smoothedHeading);
         arView?.UpdateARArrow(bearing);
         arView?.UpdateARPathLine(waypointIndex);
         arView?.UpdateNextNodeLabel(target, distanceToTarget);

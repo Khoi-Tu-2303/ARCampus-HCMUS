@@ -3,48 +3,28 @@
   "WorkspaceRootPath": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\NavigationSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Map\\RouteRenderer2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Map\\RouteRenderer2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\AppConstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\AppConstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\SearchPanelController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AR\\ARLabelSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\NavigationSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\GeoMath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\GeoMath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\PathFinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\PathFinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationHUD.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\NavigationHUD.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\FloatingMarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\FloatingMarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\ARNavigationView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Navigation\\ARNavigationView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\PopupController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\PopupController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\BillboardLabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AR\\BillboardLabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AR\\ARLabelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AR\\ARLabelBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\GPSService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\GPSService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,148 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppConstants.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\AppConstants.cs",
-              "RelativeDocumentMoniker": "Core\\AppConstants.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\AppConstants.cs",
-              "RelativeToolTip": "Core\\AppConstants.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "GPSService.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\GPSService.cs",
+              "RelativeDocumentMoniker": "Services\\GPSService.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Services\\GPSService.cs",
+              "RelativeToolTip": "Services\\GPSService.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:14:03.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PathFinder.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\PathFinder.cs",
-              "RelativeDocumentMoniker": "Navigation\\PathFinder.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\PathFinder.cs",
-              "RelativeToolTip": "Navigation\\PathFinder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:13:50.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NavigationSession.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs",
-              "RelativeDocumentMoniker": "Navigation\\NavigationSession.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs",
-              "RelativeToolTip": "Navigation\\NavigationSession.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAJAAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:13:48.088Z",
+              "WhenOpened": "2026-06-09T05:21:27.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NavigationHUD.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationHUD.cs",
-              "RelativeDocumentMoniker": "Navigation\\NavigationHUD.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationHUD.cs",
-              "RelativeToolTip": "Navigation\\NavigationHUD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:13:45.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FloatingMarker.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\FloatingMarker.cs",
-              "RelativeDocumentMoniker": "Navigation\\FloatingMarker.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\FloatingMarker.cs",
-              "RelativeToolTip": "Navigation\\FloatingMarker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:13:40.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PopupController.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\PopupController.cs",
-              "RelativeDocumentMoniker": "UI\\PopupController.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\PopupController.cs",
-              "RelativeToolTip": "UI\\PopupController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAqwIsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:11:11.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "GeoMath.cs",
               "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\GeoMath.cs",
               "RelativeDocumentMoniker": "Core\\GeoMath.cs",
               "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Core\\GeoMath.cs",
               "RelativeToolTip": "Core\\GeoMath.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAKQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAgwLYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:09:19.67Z",
+              "WhenOpened": "2026-06-09T05:19:34.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ARNavigationView.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\ARNavigationView.cs",
-              "RelativeDocumentMoniker": "Navigation\\ARNavigationView.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\ARNavigationView.cs",
-              "RelativeToolTip": "Navigation\\ARNavigationView.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAAANsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "NavigationSession.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs",
+              "RelativeDocumentMoniker": "Navigation\\NavigationSession.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Navigation\\NavigationSession.cs",
+              "RelativeToolTip": "Navigation\\NavigationSession.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAgwKMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T18:05:20.781Z",
+              "WhenOpened": "2026-06-09T05:16:57.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BillboardLabel.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\BillboardLabel.cs",
-              "RelativeDocumentMoniker": "AR\\BillboardLabel.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\BillboardLabel.cs",
-              "RelativeToolTip": "AR\\BillboardLabel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ARLabelSpawner.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelSpawner.cs",
+              "RelativeDocumentMoniker": "AR\\ARLabelSpawner.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelSpawner.cs",
+              "RelativeToolTip": "AR\\ARLabelSpawner.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAF8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T05:35:08.855Z",
+              "WhenOpened": "2026-06-09T05:14:01.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ARLabelManager.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs",
-              "RelativeDocumentMoniker": "AR\\ARLabelManager.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelManager.cs",
-              "RelativeToolTip": "AR\\ARLabelManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SearchPanelController.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeDocumentMoniker": "UI\\SearchPanelController.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\UI\\SearchPanelController.cs",
+              "RelativeToolTip": "UI\\SearchPanelController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T05:34:53.218Z"
+              "WhenOpened": "2026-06-09T05:12:55.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ARLabelBehavior.cs",
-              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelBehavior.cs",
-              "RelativeDocumentMoniker": "AR\\ARLabelBehavior.cs",
-              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\AR\\ARLabelBehavior.cs",
-              "RelativeToolTip": "AR\\ARLabelBehavior.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RouteRenderer2D.cs",
+              "DocumentMoniker": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Map\\RouteRenderer2D.cs",
+              "RelativeDocumentMoniker": "Map\\RouteRenderer2D.cs",
+              "ToolTip": "D:\\VanKhoi\\ARCampus-HCMUS\\ARCampus-HCMUS\\Assets\\Scenes\\Scripts\\Map\\RouteRenderer2D.cs",
+              "RelativeToolTip": "Map\\RouteRenderer2D.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAQwFEAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T05:27:33.175Z"
+              "WhenOpened": "2026-06-09T05:11:57.421Z",
+              "EditorCaption": ""
             }
           ]
         }

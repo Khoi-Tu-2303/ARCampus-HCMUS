@@ -161,7 +161,7 @@ public class LocationDetailController : MonoBehaviour
             yield break;
         }
 
-        ResourceRequest request = Resources.LoadAsync<Sprite>($"LocationImages/{imageName}");
+        ResourceRequest request = Resources.LoadAsync<Sprite>($"LocationImage/{imageName}");
         yield return request;
 
         if (request.asset == null) yield break;
@@ -188,8 +188,16 @@ public class LocationDetailController : MonoBehaviour
         if (nodeId.StartsWith("NĐH")) return "NĐH";
         if (nodeId.StartsWith("NTD")) return "NTD";
         if (nodeId.StartsWith("NXS") || nodeId.StartsWith("NXT")) return "NX";
+
+        // ✅ THÊM DÒNG NÀY: Bảo vệ Căn tin, Quán ăn, Nước uống không bị bắt nhầm
+        if (nodeId.StartsWith("CT") || nodeId.StartsWith("Căn") || nodeId.StartsWith("FOOD") || nodeId.StartsWith("DRINK"))
+        {
+            return "Canteen";
+        }
         char c = nodeId[0];
+        // Tới đây thì chữ C của Căn tin không còn lọt xuống đây được nữa
         if (c >= 'A' && c <= 'G') return c.ToString();
+
         return nodeId;
     }
 }

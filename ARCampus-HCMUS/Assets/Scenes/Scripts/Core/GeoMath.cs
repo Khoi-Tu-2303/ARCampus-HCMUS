@@ -49,29 +49,11 @@ public static class GeoMath
                    Math.Sin(dLng / 2) * Math.Sin(dLng / 2);
         return (float)(R * 2.0 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1.0 - a)));
     }
-
-    // ──────────────────────────────────────────────────────────
-    // GPS → AR WORLD POSITION
-    // Compass cache refreshes every COMPASS_CACHE_DURATION seconds.
-    // ──────────────────────────────────────────────────────────
-
-    private static float _cachedNorthAngle = 0f;
-    private static bool _hasCachedAngle = false;
-    private static float _cacheTimestamp = -9999f;
-    private const float COMPASS_CACHE_DURATION = 5f; // seconds
-
-    private static float _headingBuffer = -1f;
-    private const float HEADING_ALPHA = 0.15f;
     /// <summary>
     /// Force-clear the compass cache. Called by GPSService when GPS recovers,
     /// ensuring AR labels and arrow re-align to the new heading.
     /// </summary>
-    public static void InvalidateCompassCache()
-    {
-        _hasCachedAngle = false;
-        _cachedNorthAngle = 0f;
-        _cacheTimestamp = -9999f;
-    }
+    public static void InvalidateCompassCache() { /* Bỏ trống, GPSService đã tự lo */ }
 
     /// <summary>
     /// Returns the cached AR-world north offset angle (degrees).
@@ -86,17 +68,12 @@ public static class GeoMath
     /// </summary>
     public static float GetCachedNorthAngle()
     {
-        // If cache is valid, return immediately without recomputing
-        bool cacheExpired = (Time.realtimeSinceStartup - _cacheTimestamp) > COMPASS_CACHE_DURATION;
-        if (_hasCachedAngle && !cacheExpired)
-            return _cachedNorthAngle;
-
 #if UNITY_EDITOR
-        return 0f; // North = world +Z in editor simulation
+        return 0f;
 #else
-        // Cache not ready yet — return last known value (or 0 if never set).
-        // GpsToARWorldPosition will refresh it on the next label position update.
-        return _cachedNorthAngle;
+        // Lấy trực tiếp thông số đã làm mượt từ GPSService
+        if (GPSService.Instance != null) return GPSService.Instance.ARNorthOffset;
+        return 0f;
 #endif
     }
 
@@ -106,48 +83,14 @@ public static class GeoMath
         Transform cameraTransform,
         float heightOffset = 1.5f)
     {
-        float offsetX = (float)((targetLng - userLng) * 111320.0
-                                * Math.Cos(userLat * Math.PI / 180.0));
+        float offsetX = (float)((targetLng - userLng) * 111320.0 * Math.Cos(userLat * Math.PI / 180.0));
         float offsetZ = (float)((targetLat - userLat) * GeoConstants.MetersPerDegreeLat);
         Vector3 rawOffset = new Vector3(offsetX, 0f, offsetZ);
 
-#if UNITY_EDITOR
-        // No compass in editor — North = world +Z
-        _cachedNorthAngle = 0f;
-        _hasCachedAngle   = true;
-        _cacheTimestamp   = Time.realtimeSinceStartup;
-#else
-        bool cacheExpired = (Time.realtimeSinceStartup - _cacheTimestamp) > COMPASS_CACHE_DURATION;
+        // Không còn IF/ELSE rườm rà, lấy luôn độ lệch siêu mượt xoay trục
+        float northOffset = GetCachedNorthAngle();
+        Vector3 rotatedOffset = Quaternion.Euler(0f, northOffset, 0f) * rawOffset;
 
-        if (!_hasCachedAngle || cacheExpired)
-        {
-            if (Input.compass.enabled)
-            {
-                // Lấy góc La bàn thô
-                float rawHeading = Input.compass.trueHeading;
-
-                // THUẬT TOÁN LÀM MƯỢT (Low-Pass Filter)
-                if (_headingBuffer < 0f)
-                {
-                    _headingBuffer = rawHeading; // Lần đầu tiên chạy
-                }
-                else
-                {
-                    // Tính khoảng cách góc ngắn nhất (tránh lỗi quay từ 359 độ sang 1 độ)
-                    float delta = Mathf.DeltaAngle(_headingBuffer, rawHeading);
-                    _headingBuffer += delta * HEADING_ALPHA;
-                    _headingBuffer = (_headingBuffer + 360f) % 360f; // Luôn giữ trong khoảng 0-360
-                }
-
-                // Dùng cái góc ĐÃ LÀM MƯỢT để tính toán cho AR
-                _cachedNorthAngle = cameraTransform.eulerAngles.y - _headingBuffer;
-                _cacheTimestamp = Time.realtimeSinceStartup;
-                _hasCachedAngle = true;
-            }
-        }
-#endif
-
-        Vector3 rotatedOffset = Quaternion.Euler(0f, _cachedNorthAngle, 0f) * rawOffset;
         return cameraTransform.position + rotatedOffset + new Vector3(0f, heightOffset, 0f);
     }
 
