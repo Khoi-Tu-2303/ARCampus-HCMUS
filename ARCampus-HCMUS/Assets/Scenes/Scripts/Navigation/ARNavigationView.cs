@@ -1,22 +1,4 @@
-// Navigation/ARNavigationView.cs — PATCHED v3
-// FIXES:
-// [CRITICAL] Arrow 3D rotation ignored AR-world north offset.
-//            Quaternion.Euler(0, bearing, 0) treats world +Z as geographic North.
-//            In ARFoundation the world origin is wherever the AR session started;
-//            +Z is NOT geographic north. The arrow must be rotated by the same
-//            northOffset (cameraYaw - compassHeading) that GeoMath uses for label placement.
-//            Fix: expose GeoMath.GetCachedNorthAngle() and add it to the target bearing.
-// [HIGH]     UpdateARPathLine: condition was (waypointIndex > 1) — when waypointIndex == 1
-//            the first segment (index 0 → index 1) was never collapsed to the user's feet,
-//            leaving a stale line dangling behind them for an entire waypoint segment.
-//            Fix: change to (waypointIndex >= 1).
-// [MEDIUM]   DrawARPath: _linePointsBuffer[0] correctly maps to navStartFeetPos (user pos).
-//            Indices 1..count-1 map to path[1]..path[count-1], skipping path[0] (the snap
-//            start node which is behind/at user). Correct, but the positionCount was set to
-//            `count` while valid points filled are [0..count-1], which is consistent.
-//            Added explicit guard: if count < 2, disable the line (nothing to draw).
-// (All fixes from v2 retained: 2× buffer growth, SetActive pool instead of Destroy.)
-
+// Navigation/ARNavigationView.cs
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -40,42 +22,23 @@ public class ARNavigationView : MonoBehaviour
     private GameObject currentNextNodeLabel;
     private TMP_Text nextNodeText;
 
-    // Navigation anchor — set at StartNavigation time
-    private double navStartLat;
-    private double navStartLng;
-    private Vector3 navStartFeetPos;
-
-    // FIX v2: Buffer starts at 64, grows by 2× — O(log n) allocs over session
+    // ✅ MẢNG LƯU TRỮ TỌA ĐỘ ĐÃ ĐƯỢC "ĐỔ BÊ TÔNG" XUỐNG ĐƯỜNG
+    private List<GraphNode> _currentPath;
     private Vector3[] _linePointsBuffer = new Vector3[64];
+    private Vector3[] _nodeWorldPositions;
+    private int _currentWaypointIndex = 0;
 
-    // FIX v3 [CRITICAL]: target bearing in GEOGRAPHIC space (0 = north, CW).
-    //                     Applied to world space only after adding northOffset.
-    private float _targetBearing;
-
-    // Cached camera — never call Camera.main in a hot path
     private Camera _cachedCamera;
-    private Camera GetCamera() =>
-        _cachedCamera != null ? _cachedCamera : (_cachedCamera = Camera.main);
+    private Camera GetCamera() => _cachedCamera != null ? _cachedCamera : (_cachedCamera = Camera.main);
 
-    // ── ANCHOR ───────────────────────────────────────────────────
-    public void InitAnchor(double startLat, double startLng)
-    {
-        navStartLat = startLat;
-        navStartLng = startLng;
-        Camera cam = GetCamera();
-        if (cam != null)
-            navStartFeetPos = cam.transform.position + new Vector3(0, lineYOffset, 0);
-    }
+    // Không cần dùng anchor gốc nữa vì đã có NodeWorldPositions
+    public void InitAnchor(double startLat, double startLng) { }
 
-    // ── SPAWN ────────────────────────────────────────────────────
-    // FIX v2: Re-use existing GameObjects via SetActive instead of Instantiate/Destroy
     public void SpawnArrow()
     {
         if (arrow3DPrefab == null) return;
-        if (currentArrow3D == null)
-            currentArrow3D = Instantiate(arrow3DPrefab);
-        else
-            currentArrow3D.SetActive(true);
+        if (currentArrow3D == null) currentArrow3D = Instantiate(arrow3DPrefab);
+        else currentArrow3D.SetActive(true);
     }
 
     public void SpawnNodeLabel()
@@ -84,33 +47,25 @@ public class ARNavigationView : MonoBehaviour
         if (currentNextNodeLabel == null)
         {
             currentNextNodeLabel = Instantiate(nextNodeLabelPrefab);
-            nextNodeText = currentNextNodeLabel.GetComponent<TMP_Text>()
-                           ?? currentNextNodeLabel.GetComponentInChildren<TMP_Text>();
+            nextNodeText = currentNextNodeLabel.GetComponent<TMP_Text>() ?? currentNextNodeLabel.GetComponentInChildren<TMP_Text>();
         }
-        else
-        {
-            currentNextNodeLabel.SetActive(true);
-        }
+        else currentNextNodeLabel.SetActive(true);
     }
 
-    // ── DRAW PATH ────────────────────────────────────────────────
+    // ──────────────────────────────────────────────────────────
+    // 1. TÍNH TOÁN VÀ ĐÓNG BĂNG TỌA ĐỘ TOÀN BỘ LỘ TRÌNH (CHỈ CHẠY 1 LẦN)
+    // ──────────────────────────────────────────────────────────
     public void DrawARPath(List<GraphNode> path)
     {
+        _currentPath = path;
         Camera cam = GetCamera();
         if (pathLine == null || path == null || cam == null) return;
 
-        // FIX v3: need at least 2 points to draw a line
-        if (path.Count < 2)
-        {
-            pathLine.positionCount = 0;
-            return;
-        }
+        int count = path.Count;
+        if (count < 2) { pathLine.positionCount = 0; return; }
 
         pathLine.useWorldSpace = true;
 
-        int count = path.Count;
-
-        // FIX v2: Grow by 2× instead of +16
         if (_linePointsBuffer.Length < count)
         {
             int newSize = _linePointsBuffer.Length;
@@ -118,114 +73,122 @@ public class ARNavigationView : MonoBehaviour
             _linePointsBuffer = new Vector3[newSize];
         }
 
-        // Index 0 = user's current feet position (navStartFeetPos)
-        // Index i = path[i] offset from anchor, for i in [1 .. count-1]
-        // (path[0] is the snap-start node; user is already there or past it)
-        _linePointsBuffer[0] = navStartFeetPos;
-        for (int i = 1; i < count; i++)
+        _nodeWorldPositions = new Vector3[count];
+
+        double uLat = GPSService.Instance.Latitude;
+        double uLng = GPSService.Instance.Longitude;
+
+        // Tính tọa độ 3D cho toàn bộ các trạm dựa trên GPS và La bàn HIỆN TẠI, sau đó khóa chặt!
+        for (int i = 0; i < count; i++)
         {
-            Vector3 offset = GeoMath.LatLngToMeterOffset(
-                navStartLat, navStartLng,
-                path[i].lat, path[i].lng);
-            _linePointsBuffer[i] = navStartFeetPos + offset;
+            _nodeWorldPositions[i] = GeoMath.GpsToARWorldPosition(
+                path[i].lat, path[i].lng,
+                uLat, uLng,
+                cam.transform,
+                lineYOffset
+            );
         }
 
         pathLine.positionCount = count;
-        pathLine.SetPositions(_linePointsBuffer); // only reads [0..positionCount-1]
+        UpdateARPathLine(0); // Gọi ngay để cập nhật dây
     }
 
-    // ── ARROW (60Hz smooth) ──────────────────────────────────────
-    // Called by NavigationSession at 2Hz — stores target in GEOGRAPHIC bearing space.
-    public void UpdateARArrow(float bearing)
-    {
-        _targetBearing = bearing;
-    }
+    // Giữ lại hàm này để tương thích với NavigationSession nhưng bỏ qua bearing địa lý
+    public void UpdateARArrow(float bearing) { }
 
+    // ──────────────────────────────────────────────────────────
+    // 2. MŨI TÊN CHỈ CẦN XOAY VỀ HƯỚNG CÁC TRẠM ĐÃ ĐƯỢC ĐÓNG BĂNG
+    // ──────────────────────────────────────────────────────────
     void Update()
     {
         if (currentArrow3D == null || !currentArrow3D.activeSelf) return;
-
         Camera cam = GetCamera();
-        if (cam == null) return;
 
-        // ── Position: float in front of camera ──
+        // Nếu chưa có mảng tọa độ đóng băng thì không xoay
+        if (cam == null || _nodeWorldPositions == null || _currentWaypointIndex >= _nodeWorldPositions.Length) return;
+
+        // Mũi tên luôn bay lơ lửng trước mặt Camera
         Vector3 targetPos = cam.transform.position + cam.transform.forward * arrowDistance;
         targetPos.y = cam.transform.position.y + arrowHeightOffset;
 
         currentArrow3D.transform.position = Vector3.Lerp(
             currentArrow3D.transform.position, targetPos, Time.deltaTime * 5f);
 
-        // ── Rotation: FIX v3 [CRITICAL] ─────────────────────────
-        // Geographic bearing (0° = north, clockwise) must be converted to
-        // AR world-space Y rotation.  World +Z ≠ geographic north; we must
-        // add the northOffset = (camera.eulerAngles.y – compass.trueHeading)
-        // which is the same correction GeoMath.GpsToARWorldPosition applies.
-        //
-        // northOffset tells us: "world +Z is northOffset degrees east of
-        // geographic north", so to face geographic bearing B in world space:
-        //   worldYaw = B + northOffset
-        //
-        // In editor (no compass) northOffset = 0 so the arrow faces world +Z
-        // which is defined as north for simulation purposes.
-        float northOffset = GeoMath.GetCachedNorthAngle();
-        float worldYaw = _targetBearing + northOffset;
+        // MŨI TÊN CHỈ THẲNG VÀO TRẠM TIẾP THEO TRONG KHÔNG GIAN 3D
+        Vector3 dirToNode = _nodeWorldPositions[_currentWaypointIndex] - cam.transform.position;
+        dirToNode.y = 0; // Khóa trục Y để mũi tên không bị chúi xuống đất hay chĩa lên trời
 
-        currentArrow3D.transform.rotation = Quaternion.Slerp(
-            currentArrow3D.transform.rotation,
-            Quaternion.Euler(0f, worldYaw, 0f),
-            Time.deltaTime * 5f);
-    }
-
-    // ── PATH LINE UPDATE ─────────────────────────────────────────
-    public void UpdateARPathLine(int waypointIndex)
-    {
-        Camera cam = GetCamera();
-        if (pathLine == null || cam == null) return;
-        if (waypointIndex >= pathLine.positionCount) return;
-
-        Vector3 feetPos = cam.transform.position + new Vector3(0, lineYOffset, 0);
-
-        // Always update point 0 to current feet position
-        pathLine.SetPosition(0, feetPos);
-
-        // FIX v3 [HIGH]: was (waypointIndex > 1) — missed collapsing segment 0→1.
-        // Correct condition: >= 1, i.e. once we have advanced past the first waypoint
-        // collapse all already-visited line points to current feet position.
-        if (waypointIndex >= 1)
+        if (dirToNode.sqrMagnitude > 0.01f)
         {
-            for (int i = 1; i < waypointIndex; i++)
-                pathLine.SetPosition(i, feetPos);
+            Quaternion targetRot = Quaternion.LookRotation(dirToNode);
+            currentArrow3D.transform.rotation = Quaternion.Slerp(
+                currentArrow3D.transform.rotation,
+                targetRot,
+                Time.deltaTime * 5f);
         }
     }
 
-    // ── NODE LABEL UPDATE ────────────────────────────────────────
+    // ──────────────────────────────────────────────────────────
+    // 3. VẼ DÂY DỰA TRÊN CÁC TRẠM ĐÃ ĐÓNG BĂNG (KHÔNG DÙNG LẠI GPS NỮA)
+    // ──────────────────────────────────────────────────────────
+    public void UpdateARPathLine(int waypointIndex)
+    {
+        _currentWaypointIndex = waypointIndex;
+        Camera cam = GetCamera();
+        if (pathLine == null || cam == null || _currentPath == null || _nodeWorldPositions == null) return;
+        if (waypointIndex >= pathLine.positionCount) return;
+
+        // Điểm đầu tiên luôn dính vào gót chân Camera
+        Vector3 feetPos = cam.transform.position + new Vector3(0, lineYOffset, 0);
+        _linePointsBuffer[0] = feetPos;
+
+        // Các trạm ĐÃ ĐI QUA -> Gom hết về gót chân để giấu đi
+        for (int i = 1; i < waypointIndex; i++)
+        {
+            _linePointsBuffer[i] = feetPos;
+        }
+
+        // Các trạm CHƯA ĐI QUA -> Lấy thẳng tọa độ từ mảng đã đóng băng!
+        for (int i = waypointIndex; i < _currentPath.Count; i++)
+        {
+            _linePointsBuffer[i] = _nodeWorldPositions[i];
+        }
+
+        pathLine.SetPositions(_linePointsBuffer);
+    }
+
+    // ──────────────────────────────────────────────────────────
+    // 4. ĐẶT NHÃN VÀO ĐÚNG TỌA ĐỘ ĐÓNG BĂNG CỦA TRẠM (Đứng im như tượng)
+    // ──────────────────────────────────────────────────────────
     public void UpdateNextNodeLabel(GraphNode target, float distanceToTarget)
     {
-        if (currentNextNodeLabel == null) return;
+        if (currentNextNodeLabel == null || _nodeWorldPositions == null || _currentWaypointIndex >= _nodeWorldPositions.Length) return;
 
-        Vector3 offset = GeoMath.LatLngToMeterOffset(
-            navStartLat, navStartLng, target.lat, target.lng);
-        currentNextNodeLabel.transform.position = navStartFeetPos + offset;
+        Camera cam = GetCamera();
+        if (cam == null) return;
+
+        Vector3 fixedNodePos = _nodeWorldPositions[_currentWaypointIndex];
+
+        // Kéo Nhãn bay bổng lên so với gót chân Camera
+        fixedNodePos.y = cam.transform.position.y + NavigationConstants.LabelFloatHeight;
+
+        currentNextNodeLabel.transform.position = fixedNodePos;
 
         if (nextNodeText != null)
         {
             string name = target.name;
-            if (string.IsNullOrEmpty(name) ||
-                target.id.StartsWith("W_") ||
-                target.id.StartsWith("CP_"))
-            {
+            if (string.IsNullOrEmpty(name) || target.id.StartsWith("W_") || target.id.StartsWith("CP_"))
                 name = "Điểm tiếp theo";
-            }
             nextNodeText.text = $"{name}\n{distanceToTarget:F0} m";
         }
     }
 
-    // ── CLEAR ────────────────────────────────────────────────────
-    // FIX v2: SetActive(false) instead of Destroy — objects pooled for next navigation
     public void ClearAll()
     {
         if (currentArrow3D != null) currentArrow3D.SetActive(false);
         if (currentNextNodeLabel != null) currentNextNodeLabel.SetActive(false);
         if (pathLine != null) pathLine.positionCount = 0;
+        _currentPath = null;
+        _nodeWorldPositions = null;
     }
 }

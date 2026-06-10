@@ -1,8 +1,10 @@
-// AR/ARLabelBehavior.cs — PATCHED
+// AR/ARLabelBehavior.cs — PATCHED (BẢN KHÓA TỌA ĐỘ)
 // FIXES:
 // [CRITICAL] Race condition: Setup() called AFTER SetActive(true) → OnEnable fired with lat=0, lng=0
 //            Solution: SetupBeforeEnable() injects data BEFORE SetActive, OnEnable guards on _lat!=0
 // [HIGH]     DistanceUpdateLoop now guards against GPS not ready to avoid bad positions
+// [🔥 NEW FIX] Removed GPS drift correction in UpdateDistance. 
+//            Label X/Z positions are now baked upon spawn to let ARFoundation handle spatial tracking, preventing jitter.
 
 using UnityEngine;
 using TMPro;
@@ -13,7 +15,7 @@ public class ARLabelBehavior : MonoBehaviour
     [Header("Label Config")]
     public float maxHeight = 15f;
     public float minHeight = 2f;
-    public float farDistance = 100f;
+    public float farDistance = 200f;
     public float nearDistance = 10f;
     public string buildingName;
 
@@ -27,26 +29,16 @@ public class ARLabelBehavior : MonoBehaviour
 
     // ──────────────────────────────────────────────────────────
     // SETUP — MUST be called BEFORE SetActive(true)
-    // ARLabelSpawner.SpawnLabels() calls this via GetFromPoolInactive()
     // ──────────────────────────────────────────────────────────
 
-    /// <summary>
-    /// Inject position data before the GameObject is activated.
-    /// This prevents OnEnable from running with lat=0, lng=0.
-    /// </summary>
     public void SetupBeforeEnable(string name, double lat, double lng)
     {
         buildingName = name;
         _lat = lat;
         _lng = lng;
         _dataReady = true;
-        // Do NOT call UpdateDistance here — camera may not be ready yet.
     }
 
-    /// <summary>
-    /// Legacy path — only use if caller activates the object before calling Setup.
-    /// Prefer SetupBeforeEnable() instead.
-    /// </summary>
     public void Setup(string name, double lat, double lng)
     {
         buildingName = name;
@@ -64,7 +56,6 @@ public class ARLabelBehavior : MonoBehaviour
     {
         ARLabelManager.Register(transform, minHeight, maxHeight, nearDistance, farDistance);
 
-        // Guard: only start coroutine when data has been injected
         if (_dataReady && (_lat != 0.0 || _lng != 0.0))
         {
             if (_distanceRoutine != null) StopCoroutine(_distanceRoutine);
@@ -88,7 +79,6 @@ public class ARLabelBehavior : MonoBehaviour
 
     IEnumerator DistanceUpdateLoop()
     {
-        // Small initial delay — let the camera settle after activation
         yield return new WaitForSeconds(0.1f);
 
         while (true)
@@ -107,23 +97,15 @@ public class ARLabelBehavior : MonoBehaviour
         double userLat = GPSService.Instance.Latitude;
         double userLng = GPSService.Instance.Longitude;
 
-        // 1. Distance text
+        // 1. CHỈ CẬP NHẬT CHỮ TEXT KHOẢNG CÁCH (10m, 15m...)
         if (txtDistance != null)
         {
             float dist = GeoMath.HaversineDouble(userLat, userLng, _lat, _lng);
             txtDistance.text = $"{dist:F0}m";
         }
 
-        // 2. AR drift correction — recompute world position from latest GPS
-        if (Camera.main != null)
-        {
-            Vector3 correctPos = GeoMath.GpsToARWorldPosition(
-                _lat, _lng,
-                userLat, userLng,
-                Camera.main.transform);
-
-            // Only correct X/Z — leave Y to ARLabelManager (height management)
-            transform.position = new Vector3(correctPos.x, transform.position.y, correctPos.z);
-        }
+        // 2. ❌ ĐÃ XÓA HOÀN TOÀN ĐOẠN CẬP NHẬT TỌA ĐỘ THEO GPS (DRIFT CORRECTION)
+        // Hành động này giúp nhãn bị "đổ bê tông" xuống đường. 
+        // Khi sếp di chuyển, ARFoundation (SLAM) sẽ tự động quản lý vị trí của nó, không bị sóng GPS làm giật/nhảy nữa!
     }
 }
