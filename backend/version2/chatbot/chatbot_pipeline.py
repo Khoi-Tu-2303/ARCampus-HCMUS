@@ -7,6 +7,89 @@ from firebase.firebase_service import FirebaseService
 from ai.agents.conversation_memory import ConversationMemoryManager
 
 HISTORY_K = 3
+CONTEXT_PREVIEW_CHARS = 180
+CONTEXT_COLLECTION = "campusInfo"
+CONTEXT_FIELDS = [
+    "GioiThieuChung",
+    "QuyDinh",
+    "ThoiGian",
+    "ThongBao",
+    "ThongTinLienLac",
+    "ViTri",
+]
+FIELD_KEYWORDS = [
+    (
+        "ThoiGian",
+        [
+            "mo cua",
+            "mở cửa",
+            "may gio",
+            "mấy giờ",
+            "thoi gian",
+            "thời gian",
+            "luc nao",
+            "lúc nào",
+            "gio",
+            "giờ",
+        ],
+    ),
+    (
+        "ViTri",
+        [
+            "o dau",
+            "ở đâu",
+            "vi tri",
+            "vị trí",
+            "nam dau",
+            "nằm đâu",
+            "cho nao",
+            "chỗ nào",
+            "duong",
+            "đường",
+            "di toi",
+            "đi tới",
+        ],
+    ),
+    (
+        "QuyDinh",
+        [
+            "quy dinh",
+            "quy định",
+            "can gi",
+            "cần gì",
+            "duoc khong",
+            "được không",
+            "co duoc",
+            "có được",
+            "thu tuc",
+            "thủ tục",
+        ],
+    ),
+    (
+        "ThongTinLienLac",
+        [
+            "lien he",
+            "liên hệ",
+            "email",
+            "sdt",
+            "sđt",
+            "so dien thoai",
+            "số điện thoại",
+            "website",
+        ],
+    ),
+    (
+        "ThongBao",
+        [
+            "thong bao",
+            "thông báo",
+            "tin moi",
+            "tin mới",
+            "cap nhat",
+            "cập nhật",
+        ],
+    ),
+]
 
 
 class ChatbotPipeline:
@@ -66,7 +149,9 @@ class ChatbotPipeline:
         if len(matched) > 1:
             names = ", ".join(e.entity_text for e in matched)
             return f"Bạn muốn đến địa điểm nào trong số: {names}?", [], {}, turn.intents[0]
-        message, metadata = self.navigation_agent.run(self._build_input(turn, matched))
+        input_data = self._build_input(turn, matched)
+        message, metadata = self.navigation_agent.run(input_data)
+        metadata = self._with_rag_metadata(metadata, input_data)
         return message, matched, metadata, turn.intents[0]
 
     def _handle_inform(self, turn: ConversationTurn) -> tuple:
@@ -75,7 +160,9 @@ class ChatbotPipeline:
             matched = find_entities_in_history(turn.conversation_id)
         if not matched:
             return "Bạn cần thông tin về địa điểm nào?", [], {}, turn.intents[0]
-        message, metadata = self.inform_agent.run(self._build_input(turn, matched))
+        input_data = self._build_input(turn, matched)
+        message, metadata = self.inform_agent.run(input_data)
+        metadata = self._with_rag_metadata(metadata, input_data)
         return message, matched, metadata, turn.intents[0]
 
     def _handle_unknown(self, turn: ConversationTurn) -> tuple:
@@ -108,15 +195,114 @@ class ChatbotPipeline:
     def _build_input(self, turn: ConversationTurn, matched: list[MatchResult]) -> dict:
         keys = [e.matched_id for e in matched if e.matched_id]
         history   = self.memory.get_history(turn.conversation_id, self.history_k)
-        context = self.firebase.get_multiple_descriptions_v2(collection="campusInfo", keys=keys, sub_keys=['GioiThieuChung', 'QuyDinh', 'ThoiGian', 'ThongBao', 'ThongTinLienLac', 'ViTri'])
-        recommend_building = self.firebase.get_description(collection="campusInfo", key=keys[0], sub_key='recommend_building')
+        context_fields, preferred_fields = self._rank_context_fields(turn.user_text)
+        context = self.firebase.get_multiple_descriptions_v2(
+            collection=CONTEXT_COLLECTION,
+            keys=keys,
+            sub_keys=context_fields,
+        )
+        self._log_retrieved_context(keys, context_fields, context)
+        recommend_building = (
+            self.firebase.get_description(
+                collection=CONTEXT_COLLECTION,
+                key=keys[0],
+                sub_key='recommend_building',
+            )
+            if keys
+            else ""
+        )
         return {
             "query": turn.user_text,
             "contexts": context,
             "history": history,
             "recommend_building" : recommend_building,
+            "sources": self._context_sources(context),
+            "preferred_context_fields": preferred_fields,
             "user_info": None,
         }
+
+    def _log_retrieved_context(
+        self,
+        keys: list[str],
+        fields: list[str],
+        contexts: list,
+    ) -> None:
+        print("[DEBUG] [RAG] Retrieve collection =", CONTEXT_COLLECTION)
+        print("[DEBUG] [RAG] Keys =", keys)
+        print("[DEBUG] [RAG] Field order =", fields)
+        print("[DEBUG] [RAG] Context count =", len(contexts or []))
+
+        for index, item in enumerate(contexts or [], start=1):
+            if isinstance(item, dict):
+                source = item.get("source", "")
+                content = str(item.get("content", "")).replace("\n", " ").strip()
+            else:
+                source = f"context#{index}"
+                content = str(item).replace("\n", " ").strip()
+
+            if len(content) > CONTEXT_PREVIEW_CHARS:
+                content = content[:CONTEXT_PREVIEW_CHARS] + "..."
+
+            print(f"[DEBUG] [RAG] Context {index} [{source}] = {content}")
+
+    def _rank_context_fields(self, query: str) -> tuple[list[str], list[str]]:
+        normalized = query.lower()
+        preferred_fields: list[str] = []
+
+        for field, keywords in FIELD_KEYWORDS:
+            if any(keyword in normalized for keyword in keywords):
+                preferred_fields.append(field)
+
+        ordered_fields = preferred_fields + [
+            field for field in CONTEXT_FIELDS if field not in preferred_fields
+        ]
+        return ordered_fields, preferred_fields
+
+    def _context_sources(self, contexts: list) -> list[dict]:
+        sources = []
+        seen = set()
+
+        for item in contexts or []:
+            if not isinstance(item, dict):
+                continue
+
+            source = item.get("source")
+            if not source or source in seen:
+                continue
+
+            seen.add(source)
+            sources.append({
+                "collection": item.get("collection"),
+                "document": item.get("document"),
+                "field": item.get("field"),
+                "source": source,
+            })
+
+        return sources
+
+    def _with_rag_metadata(self, metadata: dict | None, input_data: dict) -> dict:
+        metadata = dict(metadata or {})
+        contexts = input_data.get("contexts", []) or []
+        preferred_fields = input_data.get("preferred_context_fields", []) or []
+
+        warning = None
+        if not contexts:
+            warning = "empty_context"
+        elif preferred_fields:
+            context_fields = {
+                item.get("field")
+                for item in contexts
+                if isinstance(item, dict)
+            }
+            if not any(field in context_fields for field in preferred_fields):
+                warning = "weak_context"
+
+        metadata["sources"] = input_data.get("sources", [])
+        metadata["grounding"] = {
+            "context_available": bool(contexts),
+            "warning": warning,
+        }
+        return metadata
 _pipeline: ChatbotPipeline | None = None
 
 

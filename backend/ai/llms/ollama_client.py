@@ -53,6 +53,31 @@ class OllamaClient:
             print(f"[OllamaClient] Lỗi: {e}")
             return "Đã xảy ra lỗi khi xử lý yêu cầu."
 
+    def warmup(self) -> None:
+        """
+        Validate that Ollama is reachable and the configured model can answer.
+        This method raises on failure so backend startup can fail fast.
+        """
+        show_response = requests.post(
+            f"{self.base_url}/api/show",
+            json={"model": self.model},
+            timeout=min(self.timeout, 15),
+        )
+        show_response.raise_for_status()
+
+        chat_response = requests.post(
+            f"{self.base_url}/api/chat",
+            json={
+                "model": self.model,
+                "messages": [{"role": "user", "content": "ping"}],
+                "stream": False,
+                "options": {"num_predict": 1},
+            },
+            timeout=self.timeout,
+        )
+        chat_response.raise_for_status()
+
+
 # class QueryRewriter:
 
 #     def __init__(self, llm_client: OllamaClient):

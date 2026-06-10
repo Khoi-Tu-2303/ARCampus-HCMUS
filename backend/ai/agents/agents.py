@@ -14,6 +14,10 @@ def _get_llm() -> OllamaClient:
     return _llm
 
 
+def warmup_llm() -> None:
+    _get_llm().warmup()
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 # FacilityAgent
 # ══════════════════════════════════════════════════════════════════════════════
@@ -60,7 +64,14 @@ class NavigationAgent(BaseAgent):
     def _handle(self, input_data: dict) -> Tuple[str, dict]:
         messages = self.build_messages(input_data)
         metadata = {}
-        metadata['recommend_target'] = input_data['recommend_building'][0] if len(input_data['recommend_building']) > 0 else ""
+        recommend_building = input_data.get("recommend_building")
+        if isinstance(recommend_building, list):
+            recommend_target = recommend_building[0] if recommend_building else ""
+        elif isinstance(recommend_building, str):
+            recommend_target = recommend_building
+        else:
+            recommend_target = ""
+        metadata['recommend_target'] = recommend_target
         return _get_llm().chat(messages), metadata
 
 

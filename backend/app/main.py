@@ -28,8 +28,6 @@ load_dotenv(ENV_PATH)
 from app.routes.auth import router as auth_router
 from app.routes.conversations import router as conv_router
 from app.tunnel import CloudflareTunnel, publish_url
-from ai.intent.core.vector_store import VectorStore
-from ai.intent.core.embedder import TextEmbedder
 
 logging.basicConfig(
     level=logging.INFO,
@@ -69,7 +67,11 @@ tunnel = CloudflareTunnel(
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Loading AI resources...")
+    from version2.chatbot.chatbot_pipeline import get_pipeline
+    from ai.agents.agents import warmup_llm
 
+    get_pipeline()
+    warmup_llm()
     logger.info("AI resources loaded successfully.")
 
     logger.info("Starting Cloudflare Tunnel...")

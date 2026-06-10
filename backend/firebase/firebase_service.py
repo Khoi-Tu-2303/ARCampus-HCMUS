@@ -1,6 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-from typing import List, Dict
+from typing import List, Dict, Any
 from google.cloud.firestore_v1 import FieldFilter
 
 
@@ -62,12 +62,17 @@ class FirebaseService:
             print(f"[Firebase Error] get_multiple_descriptions: {e}")
             return []
         
-    def get_multiple_descriptions_v2(self, collection : str, keys: List[str], sub_keys: List[str]) -> str:
+    def get_multiple_descriptions_v2(
+        self,
+        collection: str,
+        keys: List[str],
+        sub_keys: List[str],
+    ) -> List[Dict[str, str]]:
             try:
                 if not keys:
-                    return ""
+                    return []
 
-                result_text = []
+                result_items: List[Dict[str, str]] = []
 
                 for key in keys:
                     doc = self.db.collection(collection).document(key).get()
@@ -75,18 +80,31 @@ class FirebaseService:
                     if not doc.exists:
                         continue
 
-                    data = doc.to_dict()
+                    data: Dict[str, Any] = doc.to_dict() or {}
 
                     # duyệt các key nhỏ bên trong document
                     for sub_key in sub_keys:
-                        value = data[sub_key]
-                        result_text.append(value.strip() + "\n")
+                        value = data.get(sub_key)
+                        if value is None:
+                            continue
 
-                return result_text
+                        content = str(value).strip()
+                        if not content:
+                            continue
+
+                        result_items.append({
+                            "collection": collection,
+                            "document": key,
+                            "field": sub_key,
+                            "content": content,
+                            "source": f"{collection}/{key}#{sub_key}",
+                        })
+
+                return result_items
 
             except Exception as e:
                 print(f"[Firebase Error] get_multiple_descriptions_text: {e}")
-                return ""
+                return []
             
     def get_description(self, collection: str, key: str, sub_key: str) -> str:
         try:
