@@ -13,7 +13,6 @@
 ![Chatbot](https://img.shields.io/badge/AI-Chatbot-purple)
 ![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-Ứng dụng hỗ trợ điều hướng thông minh trong khuôn viên Trường Đại học Khoa học Tự nhiên – ĐHQG TP.HCM bằng công nghệ Thực tế tăng cường (AR), kết hợp hệ thống Chatbot AI hỗ trợ tra cứu thông tin và tương tác với người dùng.
 ---
 
 # Giới thiệu
