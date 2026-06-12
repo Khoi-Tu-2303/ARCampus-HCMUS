@@ -10,10 +10,10 @@ HISTORY_K = 3
 CONTEXT_PREVIEW_CHARS = 180
 CONTEXT_COLLECTION = "campusInfo"
 CONTEXT_FIELDS = [
+    "ThongBao",
     "GioiThieuChung",
     "QuyDinh",
     "ThoiGian",
-    "ThongBao",
     "ThongTinLienLac",
     "ViTri",
 ]
@@ -253,9 +253,9 @@ class ChatbotPipeline:
             if any(keyword in normalized for keyword in keywords):
                 preferred_fields.append(field)
 
-        ordered_fields = preferred_fields + [
+        ordered_fields = list(dict.fromkeys(["ThongBao"] + preferred_fields + [
             field for field in CONTEXT_FIELDS if field not in preferred_fields
-        ]
+        ]))
         return ordered_fields, preferred_fields
 
     def _context_sources(self, contexts: list) -> list[dict]:

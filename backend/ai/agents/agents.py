@@ -58,7 +58,7 @@ class NavigationAgent(BaseAgent):
     - Không bịa đặt tên phòng, tòa nhà, số tầng.
     - Nếu context không có thông tin → trả lời đúng một câu: "Thông tin hiện đang được cập nhật, bạn vui lòng liên hệ bảo vệ hoặc văn phòng khoa để được hỗ trợ."
     ## Cách trả lời khi có thông tin:
-    - Trả lời ngắn gọn cần đi đến toà nhà nào.
+    - Chỉ trả lời cần đi đến toà nhà nào. Không chỉ dẫn đường đi.
     - Chỉ trả lời bằng tiếng Việt. Không dùng bất kỳ ngôn ngữ nào khác.
     """
     def _handle(self, input_data: dict) -> Tuple[str, dict]:

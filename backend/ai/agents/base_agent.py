@@ -64,6 +64,7 @@ class BaseAgent(ABC):
             self.prompt,
             (
                 "\nRAG grounding rules:\n"
+                "- Luon kiem tra ThongBao truoc moi field khac. Neu ThongBao co thong tin dong cua, tam ngung, nghi, hoac thay doi lich hoat dong, thi ThongBao override ThoiGian va cac lich thong thuong.\n"
                 "- Chỉ dùng thông tin trong CONTEXT để trả lời các câu hỏi factual.\n"
                 "- History chỉ dùng để hiểu câu hỏi follow-up, không dùng history làm nguồn sự thật.\n"
                 "- Nếu CONTEXT không có thông tin cần thiết, trả lời \"Thông tin đang cập nhật\"."
