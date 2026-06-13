@@ -1,0 +1,2002 @@
+[
+    {
+    "text": "phòng ndh101 dùng để làm gì vậy bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng ndh101"
+    }
+    ]
+    },
+    {
+    "text": "a102 là phòng gì thế?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "a102"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi phòng b304 có chức năng gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b304"
+    }
+    ]
+    },
+    {
+    "text": "mục đích sử dụng của c230 là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c230"
+    }
+    ]
+    },
+    {
+    "text": "phòng e12 dùng cho việc gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng e12"
+    }
+    ]
+    },
+    {
+    "text": "f201 phục vụ cho môn học nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f201"
+    }
+    ]
+    },
+    {
+    "text": "phòng h11 có dùng để tự học không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h11"
+    }
+    ]
+    },
+    {
+    "text": "e202 chủ yếu dùng làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e202"
+    }
+    ]
+    },
+    {
+    "text": "phòng k 101 là phòng học lý thuyết phải không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng k 101"
+    }
+    ]
+    },
+    {
+    "text": "m-202 dùng cho hoạt động gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "m-202"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý chủ yếu dạy môn gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá có chức năng gì vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "mục đích của phòng thí nghiệm sinh học là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học dùng để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử có phục vụ sinh viên ngoài ngành không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách là nơi để làm gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "chức năng chính của phòng họp B là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng đào tạo giải quyết những vấn đề gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "phòng công tác sinh viên xử lý những giấy tờ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "p. y tế xử lý những trường hợp nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. y tế"
+    }
+    ]
+    },
+    {
+    "text": "p. th tin học có phải để học lập trình không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th tin học"
+    }
+    ]
+    },
+    {
+    "text": "p.đt có chức năng tư vấn học vụ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.đt"
+    }
+    ]
+    },
+    {
+    "text": "PCTSV hỗ trợ sinh viên những mảng nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PCTSV"
+    }
+    ]
+    },
+    {
+    "text": "p hop B thường được dùng cho mục đích gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p hop B"
+    }
+    ]
+    },
+    {
+    "text": "phong y te kham duoc benh gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "phòng nđh 3.4 mở cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng nđh 3.4"
+    }
+    ]
+    },
+    {
+    "text": "ab.201 đóng cửa lúc nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ab.201"
+    }
+    ]
+    },
+    {
+    "text": "lịch hoạt động của phòng cd 405 như thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng cd 405"
+    }
+    ]
+    },
+    {
+    "text": "ef102 làm việc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ef102"
+    }
+    ]
+    },
+    {
+    "text": "phòng g-12 hoạt động giờ nào trong tuần?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng g-12"
+    }
+    ]
+    },
+    {
+    "text": "d 3-02 có mở cuối tuần không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "d 3-02"
+    }
+    ]
+    },
+    {
+    "text": "phòng nhà điều hành 1.1 khi nào mở cửa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng nhà điều hành 1.1"
+    }
+    ]
+    },
+    {
+    "text": "c 3.01 trưa có đóng cửa không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c 3.01"
+    }
+    ]
+    },
+    {
+    "text": "phòng b 4.2 mở từ mấy giờ đến mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b 4.2"
+    }
+    ]
+    },
+    {
+    "text": "f.22 có làm việc buổi tối không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f.22"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học hoạt động những giờ nào trong ngày?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "phòng y tế mở cửa mấy giờ vậy bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng công tác sinh viên làm việc đến mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "lịch mở cửa của phòng đào tạo là khi nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "phòng họp B có cho mượn ngoài giờ hành chính không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách đóng cửa lúc mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử trưa có mở không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học khi nào thì sinh viên được vào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học có mở thứ bảy không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "p. th hoá làm việc từ mấy giờ sáng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th hoá"
+    }
+    ]
+    },
+    {
+    "text": "p. thvl có hoạt động buổi tối không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. thvl"
+    }
+    ]
+    },
+    {
+    "text": "p yt có trực đêm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p yt"
+    }
+    ]
+    },
+    {
+    "text": "p.ctsv thứ 7 có mở cửa không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.ctsv"
+    }
+    ]
+    },
+    {
+    "text": "p dt tiếp sinh viên giờ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p dt"
+    }
+    ]
+    },
+    {
+    "text": "phong dao tao may gio lam viec z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong dao tao"
+    }
+    ]
+    },
+    {
+    "text": "phòng m304 có quy định gì không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng m304"
+    }
+    ]
+    },
+    {
+    "text": "k 40 cần điều kiện gì để được dùng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k 40"
+    }
+    ]
+    },
+    {
+    "text": "phòng h-201 có cho sinh viên ở lại trưa không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h-201"
+    }
+    ]
+    },
+    {
+    "text": "ai được phép vào ndh101?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ndh101"
+    }
+    ]
+    },
+    {
+    "text": "p. a102 có bắt buộc mặc đồng phục không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. a102"
+    }
+    ]
+    },
+    {
+    "text": "sử dụng b304 cần phải đăng ký trước không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "b304"
+    }
+    ]
+    },
+    {
+    "text": "phòng c230 có cho mang đồ ăn vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng c230"
+    }
+    ]
+    },
+    {
+    "text": "e12 quy định về giữ trật tự thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e12"
+    }
+    ]
+    },
+    {
+    "text": "phòng f201 được phép sử dụng máy chiếu khi nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng f201"
+    }
+    ]
+    },
+    {
+    "text": "h11 có cấm nói chuyện ồn ào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "h11"
+    }
+    ]
+    },
+    {
+    "text": "sinh viên năm mấy được phép dùng phòng thực hành tin học?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "vào phòng thí nghiệm sinh học cần chuẩn bị gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá có điều kiện gì để vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "vào phòng thực hành vật lý có bắt buộc mặc áo blouse không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng y tế có yêu cầu xuất trình thẻ sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng công tác sinh viên yêu cầu giấy tờ gì để xin học bổng?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "điều kiện để mượn phòng họp B là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học có quy định cấm ăn uống không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "quy định mượn sách ở phòng đọc sách như thế nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "p.thdt có quy định gì về an toàn điện không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.thdt"
+    }
+    ]
+    },
+    {
+    "text": "p. th tin học có được mang laptop cá nhân vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th tin học"
+    }
+    ]
+    },
+    {
+    "text": "pctsv quy định nộp đơn vào ngày nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pctsv"
+    }
+    ]
+    },
+    {
+    "text": "pđt yêu cầu gì khi rút hồ sơ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pđt"
+    }
+    ]
+    },
+    {
+    "text": "phong tu hoc cần đăng ký thẻ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong tu hoc"
+    }
+    ]
+    },
+    {
+    "text": "phong hoc nhom co cho đem cafe vao k",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong hoc nhom"
+    }
+    ]
+    },
+    {
+    "text": "phòng e202 ai phụ trách vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng e202"
+    }
+    ]
+    },
+    {
+    "text": "k 101 muốn mượn chìa khoá thì liên hệ ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k 101"
+    }
+    ]
+    },
+    {
+    "text": "m-202 có số điện thoại quản lý không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "m-202"
+    }
+    ]
+    },
+    {
+    "text": "p. nđh 3.4 do ai quản lý?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. nđh 3.4"
+    }
+    ]
+    },
+    {
+    "text": "ab.201 quên đồ trong đó thì hỏi ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ab.201"
+    }
+    ]
+    },
+    {
+    "text": "p. cd 405 bị hỏng quạt cần báo cho ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. cd 405"
+    }
+    ]
+    },
+    {
+    "text": "ef102 gặp ai để đặt lịch bù?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ef102"
+    }
+    ]
+    },
+    {
+    "text": "p. g-12 có thông tin liên hệ của giáo vụ không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. g-12"
+    }
+    ]
+    },
+    {
+    "text": "d 3-02 xin mở cửa sớm thì gọi cho ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "d 3-02"
+    }
+    ]
+    },
+    {
+    "text": "p. nhà điều hành 1.1 có email bộ phận phụ trách không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. nhà điều hành 1.1"
+    }
+    ]
+    },
+    {
+    "text": "phòng đào tạo ai phụ trách vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "muốn liên hệ phòng công tác sinh viên thì gặp ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "phòng họp B muốn đặt lịch thì liên hệ ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách do thủ thư nào quản lý?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học bị hỏng đèn thì báo cho ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "xin giấy xác nhận bệnh ở phòng y tế thì gặp bác sĩ nào?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý có thông tin của kỹ thuật viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "email của phòng thực hành hoá là gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "số điện thoại phòng thí nghiệm sinh học là bao nhiêu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "p.thth liên hệ mượn thiết bị qua ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.thth"
+    }
+    ]
+    },
+    {
+    "text": "p.thdt ai là người chịu trách nhiệm chính?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.thdt"
+    }
+    ]
+    },
+    {
+    "text": "xin gặp thầy trưởng p.đt thì cần liên hệ qua đâu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.đt"
+    }
+    ]
+    },
+    {
+    "text": "PCTSV có số tổng đài không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PCTSV"
+    }
+    ]
+    },
+    {
+    "text": "pyt có số điện thoại không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pyt"
+    }
+    ]
+    },
+    {
+    "text": "phg y tế goi so may",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phg y tế"
+    }
+    ]
+    },
+    {
+    "text": "c 3.01 sức chứa bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c 3.01"
+    }
+    ]
+    },
+    {
+    "text": "p. b 4.2 có máy chiếu không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. b 4.2"
+    }
+    ]
+    },
+    {
+    "text": "f.22 có được trang bị điều hoà không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f.22"
+    }
+    ]
+    },
+    {
+    "text": "p. m304 có bao nhiêu dãy bàn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. m304"
+    }
+    ]
+    },
+    {
+    "text": "k 40 wifi trong đó có mạnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k 40"
+    }
+    ]
+    },
+    {
+    "text": "p. h-201 có bảng thông minh chưa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. h-201"
+    }
+    ]
+    },
+    {
+    "text": "ndh101 có dàn âm thanh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ndh101"
+    }
+    ]
+    },
+    {
+    "text": "phòng a102 có bao nhiêu chỗ ngồi?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng a102"
+    }
+    ]
+    },
+    {
+    "text": "b304 trang thiết bị có mới không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "b304"
+    }
+    ]
+    },
+    {
+    "text": "phòng c230 có mấy cái quạt trần?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng c230"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học có bao nhiêu máy tính?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học được trang bị những gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý có những thiết bị gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử có mỏ hàn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá có sẵn hóa chất cơ bản không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học có ổ cắm điện cho từng bàn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "phòng y tế có đủ thuốc cảm không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách có mấy dàn máy tra cứu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng họp B chứa được khoảng bao nhiêu người?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "p. đào tạo có máy bấm số thứ tự không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "p. ctsv có bao nhiêu quầy phục vụ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ctsv"
+    }
+    ]
+    },
+    {
+    "text": "p th sh có kính hiển vi điện tử không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p th sh"
+    }
+    ]
+    },
+    {
+    "text": "p th th máy cấu hình mạnh không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p th th"
+    }
+    ]
+    },
+    {
+    "text": "p. họp B có màn hình led không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. họp B"
+    }
+    ]
+    },
+    {
+    "text": "phong thuc hanh vat ly co may moc gi z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong thuc hanh vat ly"
+    }
+    ]
+    },
+    {
+    "text": "e12 mo may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e12"
+    }
+    ]
+    },
+    {
+    "text": "phong f201 co wifi ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong f201"
+    }
+    ]
+    },
+    {
+    "text": "h11 suc chua bao nhieu",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "h11"
+    }
+    ]
+    },
+    {
+    "text": "p. e202 ai quan ly",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e202"
+    }
+    ]
+    },
+    {
+    "text": "k 101 dung lam gi",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k 101"
+    }
+    ]
+    },
+    {
+    "text": "p. m-202 quy dinh sao",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. m-202"
+    }
+    ]
+    },
+    {
+    "text": "nđh 3.4 may gio dong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nđh 3.4"
+    }
+    ]
+    },
+    {
+    "text": "p. ab.201 co may chieu",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ab.201"
+    }
+    ]
+    },
+    {
+    "text": "cd 405 cho ai dung",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "cd 405"
+    }
+    ]
+    },
+    {
+    "text": "p. ef102 co ban ghe khong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ef102"
+    }
+    ]
+    },
+    {
+    "text": "phòng đào tạo làm gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "phòng y tế mở mấy giờ",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng công tác sinh viên sđt",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học quy định gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách đóng lúc nào",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng họp B liên hệ ai",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá mở chưa",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý có gì",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học sức chứa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "p.thdt co ai phu trach",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.thdt"
+    }
+    ]
+    },
+    {
+    "text": "p tn sh quy dinh",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p tn sh"
+    }
+    ]
+    },
+    {
+    "text": "p.yt mo may gio",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.yt"
+    }
+    ]
+    },
+    {
+    "text": "PDT lam viec chua",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PDT"
+    }
+    ]
+    },
+    {
+    "text": "p. ctsv xin giay to",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ctsv"
+    }
+    ]
+    },
+    {
+    "text": "phong suc khoe gio mo",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong suc khoe"
+    }
+    ]
+    },
+    {
+    "text": "g-12 co dc mag do an vao k z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "g-12"
+    }
+    ]
+    },
+    {
+    "text": "p. d 3-02 may h dong cua z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. d 3-02"
+    }
+    ]
+    },
+    {
+    "text": "nha dieu hanh 1.1 lam j truyen thong ko?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nha dieu hanh 1.1"
+    }
+    ]
+    },
+    {
+    "text": "p. c 3.01 ai phu trach zay",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. c 3.01"
+    }
+    ]
+    },
+    {
+    "text": "b 4.2 chua dc nhieu ng hok",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "b 4.2"
+    }
+    ]
+    },
+    {
+    "text": "p. f.22 chieu co mo cua hong",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. f.22"
+    }
+    ]
+    },
+    {
+    "text": "m304 co may lanh hong ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "m304"
+    }
+    ]
+    },
+    {
+    "text": "p. k 40 can de lai cmnd k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. k 40"
+    }
+    ]
+    },
+    {
+    "text": "h-201 xai tn v",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "h-201"
+    }
+    ]
+    },
+    {
+    "text": "p. ndh101 nay chua den h mo ha?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ndh101"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá hnay có mở ko z?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học mang theo j",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "xin số điện thoại phòng y tế đi b",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học hnay đông k v?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "muốn mượn phòng họp B thì l/hệ ai",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách chiều nghỉ hsao z",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng đào tạo h hnay có giải quyết ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "phòng công tác sinh viên xử lý giấy tờ nhanh k?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý máy móc xịn hk mng",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "p.thth co dc xai may ca nhan khong ta",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.thth"
+    }
+    ]
+    },
+    {
+    "text": "p. th điện tử cbi gi v bot",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th điện tử"
+    }
+    ]
+    },
+    {
+    "text": "p.yt co cho uong thuoc k zay",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.yt"
+    }
+    ]
+    },
+    {
+    "text": "PDT hnay nghi roi hsao",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PDT"
+    }
+    ]
+    },
+    {
+    "text": "PCTSV chieu nay mo cua may h k biet",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PCTSV"
+    }
+    ]
+    },
+    {
+    "text": "p ctsv lam viec tu may gio ban biet ko",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p ctsv"
+    }
+    ]
+    },
+    {
+    "text": "nhóm mình muốn thuyết trình, a102 có máy chiếu không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "a102"
+    }
+    ]
+    },
+    {
+    "text": "do quên đồ hồi sáng, phòng b304 xin lại đồ gặp ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b304"
+    }
+    ]
+    },
+    {
+    "text": "lớp mình học bù nên cần hỏi c230 mở tới mấy giờ?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c230"
+    }
+    ]
+    },
+    {
+    "text": "mình cần tìm không gian yên tĩnh, phòng e12 có ồn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng e12"
+    }
+    ]
+    },
+    {
+    "text": "thầy bảo lên f201 lấy bài, ai trực ở đó vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f201"
+    }
+    ]
+    },
+    {
+    "text": "chiều nay có hội thảo, phòng h11 sức chứa đủ 50 người không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h11"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn tổ chức clb, e202 có cho sinh viên mượn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e202"
+    }
+    ]
+    },
+    {
+    "text": "xe bị hỏng nên lên trễ, phòng k 101 còn mở không bot?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng k 101"
+    }
+    ]
+    },
+    {
+    "text": "nay nóng quá, m-202 có điều hòa không bạn?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "m-202"
+    }
+    ]
+    },
+    {
+    "text": "phải nộp bài gấp, nđh 3.4 mở lúc nào vậy?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nđh 3.4"
+    }
+    ]
+    },
+    {
+    "text": "mình bị đau bụng quá, phòng y tế có bác sĩ trực không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có bài thực hành, phòng thực hành hoá cần mang gì vào không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "mình muốn đặt phòng họp B cho nhóm họp, cần liên hệ ai?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên phòng đào tạo, không biết cần chuẩn bị giấy tờ gì?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "thẻ sinh viên bị mất, phòng công tác sinh viên có cấp lại không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "muốn mượn sách chuyên ngành, phòng đọc sách có tài liệu kinh tế không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "máy tính nhà bị hỏng, phòng tự học có cho mượn máy không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "cần đo đạc linh kiện, phòng thực hành điện tử có đồng hồ vạn năng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "làm đồ án vi sinh, phòng thí nghiệm sinh học có nồi hấp tiệt trùng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "để thực hành code, p. th tin học có cài sẵn python chưa?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th tin học"
+    }
+    ]
+    },
+    {
+    "text": "làm thí nghiệm cơ học, p. thvl có quả lắc đơn không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. thvl"
+    }
+    ]
+    },
+    {
+    "text": "bị sốt nhẹ, p yt có thuốc hạ sốt cho sinh viên không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p yt"
+    }
+    ]
+    },
+    {
+    "text": "muốn xin bảng điểm, pđt giải quyết trong bao lâu?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pđt"
+    }
+    ]
+    },
+    {
+    "text": "hoàn cảnh khó khăn, pctsv có hỗ trợ tư vấn học bổng không?",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pctsv"
+    }
+    ]
+    },
+    {
+    "text": "dang can nop don gap ma phong cong tac sinh vien ko biet ai truc",
+    "intent": "inform",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong cong tac sinh vien"
+    }
+    ]
+    }
+    ]

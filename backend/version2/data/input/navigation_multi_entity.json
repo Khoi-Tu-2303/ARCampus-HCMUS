@@ -1,0 +1,1611 @@
+[
+    {
+    "text": "từ phòng y tế đến phòng đào tạo đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng y tế" },
+    { "label": "room", "value": "phòng đào tạo" }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá và p.thvl có cùng tầng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành hoá" },
+    { "label": "room", "value": "p.thvl" }
+    ]
+    },
+    {
+    "text": "p.ctsv nằm gần PDT không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.ctsv" },
+    { "label": "room", "value": "PDT" }
+    ]
+    },
+    {
+    "text": "phong y te va phong tu hoc o cung toa khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong y te" },
+    { "label": "room", "value": "phong tu hoc" }
+    ]
+    },
+    {
+    "text": "NDH101 đi bộ qua phòng f102 mất bao lâu và đi đường nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "NDH101" },
+    { "label": "room", "value": "phòng f102" }
+    ]
+    },
+    {
+    "text": "a101 và c230 có nằm trên cùng một dãy hành lang không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "a101" },
+    { "label": "room", "value": "c230" }
+    ]
+    },
+    {
+    "text": "p th vl đi đến phòng thí nghiệm sinh học thì rẽ phải hay trái?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p th vl" },
+    { "label": "room", "value": "phòng thí nghiệm sinh học" }
+    ]
+    },
+    {
+    "text": "lối đi từ p.đt sang pctsv có bị chặn do thi công không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.đt" },
+    { "label": "room", "value": "pctsv" }
+    ]
+    },
+    {
+    "text": "phòng đọc sách và phòng họp B cách nhau mấy tầng thang bộ?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng đọc sách" },
+    { "label": "room", "value": "phòng họp B" }
+    ]
+    },
+    {
+    "text": "p. họp B nằm ở phía nào so với vị trí của p.yt?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. họp B" },
+    { "label": "room", "value": "p.yt" }
+    ]
+    },
+    {
+    "text": "m102 và d242 phòng nào nằm ở cuối dãy vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "m102" },
+    { "label": "room", "value": "d242" }
+    ]
+    },
+    {
+    "text": "đường từ p.thth sang phòng thực hành điện tử đi cầu thang giữa được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thth" },
+    { "label": "room", "value": "phòng thực hành điện tử" }
+    ]
+    },
+    {
+    "text": "từ phòng 1.3 bước ra thì phòng e202 nằm bên trái đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng 1.3" },
+    { "label": "room", "value": "phòng e202" }
+    ]
+    },
+    {
+    "text": "f102 nằm đối diện g401 à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "f102" },
+    { "label": "room", "value": "g401" }
+    ]
+    },
+    {
+    "text": "phòng tự học với pđt có thông nhau qua ban công không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng tự học" },
+    { "label": "room", "value": "pđt" }
+    ]
+    },
+    {
+    "text": "phong dao tao cách pth bao xa nếu đi bộ?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong dao tao" },
+    { "label": "room", "value": "pth" }
+    ]
+    },
+    {
+    "text": "phong hoc nhom va phong tu hoc o tang may vay?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong hoc nhom" },
+    { "label": "room", "value": "phong tu hoc" }
+    ]
+    },
+    {
+    "text": "p tn sh và p th đt nằm cạnh nhau phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p tn sh" },
+    { "label": "room", "value": "p th đt" }
+    ]
+    },
+    {
+    "text": "mình đang ở phòng công tác sinh viên, làm sao để qua phòng họp B nhanh nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng công tác sinh viên" },
+    { "label": "room", "value": "phòng họp B" }
+    ]
+    },
+    {
+    "text": "b304 với a101 phòng nào ở hướng tây của khu nhà?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "b304" },
+    { "label": "room", "value": "a101" }
+    ]
+    },
+    {
+    "text": "phòng e202 và phòng f102 ở cùng khu A đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng e202" },
+    { "label": "room", "value": "phòng f102" }
+    ]
+    },
+    {
+    "text": "p.ndh101 và m102 đi lối cầu thang số 2 lên được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.ndh101" },
+    { "label": "room", "value": "m102" }
+    ]
+    },
+    {
+    "text": "p. y tế và phòng đọc sách nằm ở tầng trệt hay lầu 1?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. y tế" },
+    { "label": "room", "value": "phòng đọc sách" }
+    ]
+    },
+    {
+    "text": "p.thh đi vòng qua sau lưng phòng thực hành vật lý là tới phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thh" },
+    { "label": "room", "value": "phòng thực hành vật lý" }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học nằm ngay trên đỉnh đầu p.thdt đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành tin học" },
+    { "label": "room", "value": "p.thdt" }
+    ]
+    },
+    {
+    "text": "c230 và d242 có phải đi qua dãy hành lang có mái che không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "c230" },
+    { "label": "room", "value": "d242" }
+    ]
+    },
+    {
+    "text": "k201 và g401 cái nào gần khu vực sảnh chính hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "k201" },
+    { "label": "room", "value": "g401" }
+    ]
+    },
+    {
+    "text": "phong y te va phong dao tao co nam canh nhau k?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong y te" },
+    { "label": "room", "value": "phong dao tao" }
+    ]
+    },
+    {
+    "text": "từ toà a sang toà b đi cổng nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà a" },
+    { "label": "building", "value": "toà b" }
+    ]
+    },
+    {
+    "text": "nhà điều hành và toà c có lối đi thông nhau không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà điều hành" },
+    { "label": "building", "value": "toà c" }
+    ]
+    },
+    {
+    "text": "NĐH nằm phía nào so với khu e?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "NĐH" },
+    { "label": "building", "value": "khu e" }
+    ]
+    },
+    {
+    "text": "toa b va toa d co gan nhau khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toa b" },
+    { "label": "building", "value": "toa d" }
+    ]
+    },
+    {
+    "text": "ndh và toà f cái nào gần cổng chính hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "ndh" },
+    { "label": "building", "value": "toà f" }
+    ]
+    },
+    {
+    "text": "a và B đi bộ qua lại mất khoảng mấy phút?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "a" },
+    { "label": "building", "value": "B" }
+    ]
+    },
+    {
+    "text": "nhà c và khu d có cầu vượt nối giữa hai khu không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà c" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "từ toà nhà điều hành nhìn sang toà a là hướng đông hay tây?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà nhà điều hành" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "e và g có chung khoảng sân ở giữa không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "e" },
+    { "label": "building", "value": "g" }
+    ]
+    },
+    {
+    "text": "h và a toà nào nằm sát mặt đường lớn hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "h" },
+    { "label": "building", "value": "a" }
+    ]
+    },
+    {
+    "text": "nha dieu hanh va toa b toa nao gan cong so 3 hon?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nha dieu hanh" },
+    { "label": "building", "value": "toa b" }
+    ]
+    },
+    {
+    "text": "NĐH nằm bên trái hay bên phải toà e khi đi từ cổng vào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "NĐH" },
+    { "label": "building", "value": "toà e" }
+    ]
+    },
+    {
+    "text": "từ toà c đi men theo hàng cây là tới toà g đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà c" },
+    { "label": "building", "value": "toà g" }
+    ]
+    },
+    {
+    "text": "khu d với toà f cái nào nằm tuốt phía sau trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "khu d" },
+    { "label": "building", "value": "toà f" }
+    ]
+    },
+    {
+    "text": "nhà c và B có chung lối đi cho xe máy không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà c" },
+    { "label": "building", "value": "B" }
+    ]
+    },
+    {
+    "text": "nđh và nhà c khoảng cách có xa lắm không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nđh" },
+    { "label": "building", "value": "nhà c" }
+    ]
+    },
+    {
+    "text": "từ toà b sang e thì nên đi cầu thang lộ thiên hay đi dưới sảnh?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà b" },
+    { "label": "building", "value": "e" }
+    ]
+    },
+    {
+    "text": "toà a với h có bị ngăn bởi cái hồ nước không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà a" },
+    { "label": "building", "value": "h" }
+    ]
+    },
+    {
+    "text": "toa c va toa f di cua sau hay cua truoc thi gan hon?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toa c" },
+    { "label": "building", "value": "toa f" }
+    ]
+    },
+    {
+    "text": "NDh va toa a nam o khu vuc trung tam hay ria ngoai cua truong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "NDh" },
+    { "label": "building", "value": "toa a" }
+    ]
+    },
+    {
+    "text": "khu e và toà d toà nào nằm chắn phía trước toà kia?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "khu e" },
+    { "label": "building", "value": "toà d" }
+    ]
+    },
+    {
+    "text": "toà f và toà g đi xe buýt điện trong trường thì xuống trạm nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà f" },
+    { "label": "building", "value": "toà g" }
+    ]
+    },
+    {
+    "text": "B và d nằm đối diện nhau qua bãi cỏ đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "B" },
+    { "label": "building", "value": "d" }
+    ]
+    },
+    {
+    "text": "từ nhà điều hành muốn đi bộ đến nhà c thì qua khoảng sân nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà điều hành" },
+    { "label": "building", "value": "nhà c" }
+    ]
+    },
+    {
+    "text": "a và toà nhà điều hành cách nhau bao nhiêu mét?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "a" },
+    { "label": "building", "value": "toà nhà điều hành" }
+    ]
+    },
+    {
+    "text": "đường từ toà c qua NĐH có chỗ nào đi tránh mưa được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà c" },
+    { "label": "building", "value": "NĐH" }
+    ]
+    },
+    {
+    "text": "f và b cái nào nằm khuất phía sau lưng khu trung tâm?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "f" },
+    { "label": "building", "value": "b" }
+    ]
+    },
+    {
+    "text": "g và h đứng ở sảnh toà này có nhìn thấy sảnh toà kia không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "g" },
+    { "label": "building", "value": "h" }
+    ]
+    },
+    {
+    "text": "khu d và toà a nằm ở 2 đầu đối diện của cơ sở phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "khu d" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "nha dieu hanh qua toa e di theo huong kim dong ho doc khuon vien dung ko?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nha dieu hanh" },
+    { "label": "building", "value": "toa e" }
+    ]
+    },
+    {
+    "text": "từ thư viện đến căn tin đi lối nào gần nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "NTD và nhà xe trước cái nào gần cổng sau hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTD" },
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "tv và canteen có gần nhau không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "nxt và nxs cái nào ở phía sau trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxt" },
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "nha thi dau va thu vien o khu nao vay?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha thi dau" },
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "từ nhà thể dục ra nx trước rẽ trái hay rẽ phải?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" },
+    { "label": "facility", "value": "nx trước" }
+    ]
+    },
+    {
+    "text": "TV và CT có nằm chung trên trục đường chính của trường không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "TV" },
+    { "label": "facility", "value": "CT" }
+    ]
+    },
+    {
+    "text": "c.t và t.v khoảng cách đi bộ là bao xa?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "c.t" },
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "bai xe truoc qua nha xe sau co loi di tat khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe truoc" },
+    { "label": "facility", "value": "nha xe sau" }
+    ]
+    },
+    {
+    "text": "can tin voi thuvien noi nao de tim thay hon tu cong vao?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "can tin" },
+    { "label": "facility", "value": "thuvien" }
+    ]
+    },
+    {
+    "text": "đứng ở nhà thi đấu có nhìn thấy lối vào nhà xe sau không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thi đấu" },
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "ntd và ct cái nào nằm sát vách nhà bảo vệ hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntd" },
+    { "label": "facility", "value": "ct" }
+    ]
+    },
+    {
+    "text": "canteen và nhà xe trước nằm cùng một mặt bằng khu trệt đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" },
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "từ thư viện chạy ra nxs có phải băng qua đường xe chạy không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" },
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "nx sau và ntđ cái nào nằm xa trung tâm học tập hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx sau" },
+    { "label": "facility", "value": "ntđ" }
+    ]
+    },
+    {
+    "text": "cantin va tv cho nao gan khu vuc ho da hon?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cantin" },
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "n.t.d và c.t cái nào đi bằng thang máy lên lầu 2?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "n.t.d" },
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "nha the duc nam ben canh nha an phai khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha the duc" },
+    { "label": "facility", "value": "nha an" }
+    ]
+    },
+    {
+    "text": "nhà td và thư viện cái nào đi vào từ cổng 2 tiện hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà td" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "từ nhà xe trước đi thẳng một mạch là tới căn tin đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "thuvien va cantin di duong chim bay co gan ko?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuvien" },
+    { "label": "facility", "value": "cantin" }
+    ]
+    },
+    {
+    "text": "NXT với NXS nằm cùng một phía hay 2 phía khác nhau của trường?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NXT" },
+    { "label": "facility", "value": "NXS" }
+    ]
+    },
+    {
+    "text": "TV và NTD được ngăn cách bởi con đường nhựa đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "TV" },
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "CT nằm tầng dưới còn nxt nằm tầng hầm phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "CT" },
+    { "label": "facility", "value": "nxt" }
+    ]
+    },
+    {
+    "text": "nxs với tv có thang bộ đi thẳng lên không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxs" },
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "tu nha an ra bai xe truoc di cong nao?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha an" },
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "đường nối giữa căn tin và nhà thi đấu có mái che mưa không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" },
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "ntđ và t.v cái nào ở khu vực cao hơn so với mặt bằng chung?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntđ" },
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "từ nhà xe sau muốn tạt qua canteen mua đồ thì đi lối cầu thang số mấy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "thư viện và NTD hai cái này ở cùng toà nhà đa năng phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" },
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "phòng y tế ở tầng mấy trong toà a?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng y tế" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "vào toà b rồi đi đến phòng thực hành tin học như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà b" },
+    { "label": "room", "value": "phòng thực hành tin học" }
+    ]
+    },
+    {
+    "text": "NDH101 nằm ở tầng mấy của nhà điều hành?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "NDH101" },
+    { "label": "building", "value": "nhà điều hành" }
+    ]
+    },
+    {
+    "text": "từ phòng công tác sinh viên ra khu e đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng công tác sinh viên" },
+    { "label": "building", "value": "khu e" }
+    ]
+    },
+    {
+    "text": "toa c co phong tu hoc khong va o tang may?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toa c" },
+    { "label": "room", "value": "phong tu hoc" }
+    ]
+    },
+    {
+    "text": "phòng họp B nằm ở góc nào của khu e?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng họp B" },
+    { "label": "building", "value": "khu e" }
+    ]
+    },
+    {
+    "text": "e202 nằm bên trái hay phải sảnh chính của toà b?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "e202" },
+    { "label": "building", "value": "toà b" }
+    ]
+    },
+    {
+    "text": "từ b304 đi thang bộ xuống tầng trệt khu d đi đường nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "b304" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "phòng f102 ở toà f có cửa thoát hiểm ngay cạnh không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng f102" },
+    { "label": "building", "value": "toà f" }
+    ]
+    },
+    {
+    "text": "p.ndh101 nằm ở cuối hành lang cánh phải của nhà điều hành à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.ndh101" },
+    { "label": "building", "value": "nhà điều hành" }
+    ]
+    },
+    {
+    "text": "đến toà a làm sao lên được a101?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà a" },
+    { "label": "room", "value": "a101" }
+    ]
+    },
+    {
+    "text": "g401 nằm trên lầu 4 của toà g phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "g401" },
+    { "label": "building", "value": "toà g" }
+    ]
+    },
+    {
+    "text": "từ toà h làm sao đi ngược về phòng h11?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà h" },
+    { "label": "room", "value": "phòng h11" }
+    ]
+    },
+    {
+    "text": "phòng đọc sách của nhà c nằm ngay sảnh trệt phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng đọc sách" },
+    { "label": "building", "value": "nhà c" }
+    ]
+    },
+    {
+    "text": "c230 thuộc dãy nhà trước hay dãy nhà sau của toà c?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "c230" },
+    { "label": "building", "value": "toà c" }
+    ]
+    },
+    {
+    "text": "d242 ở khu d nằm gần nhà vệ sinh nam hay nữ?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "d242" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "k201 vào từ cổng chính toà nhà điều hành thì rẽ trái hay phải?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "k201" },
+    { "label": "building", "value": "toà nhà điều hành" }
+    ]
+    },
+    {
+    "text": "m102 nằm trong khu vực tầng trệt toà a đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "m102" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "p.thvl có nằm trong toà b ở lầu 3 không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thvl" },
+    { "label": "building", "value": "toà b" }
+    ]
+    },
+    {
+    "text": "đường lên p.thh của toà c có đi thang máy được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thh" },
+    { "label": "building", "value": "toà c" }
+    ]
+    },
+    {
+    "text": "p tn sh o khu d di thang nao gan nhat?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p tn sh" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học ở lầu mấy trong toà e?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thí nghiệm sinh học" },
+    { "label": "building", "value": "toà e" }
+    ]
+    },
+    {
+    "text": "vào toà f đi lối nào để đến phòng thực hành điện tử?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toà f" },
+    { "label": "room", "value": "phòng thực hành điện tử" }
+    ]
+    },
+    {
+    "text": "p.yt của nhà điều hành nằm sâu bên trong hay ngoài mặt tiền?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.yt" },
+    { "label": "building", "value": "nhà điều hành" }
+    ]
+    },
+    {
+    "text": "từ p.ctsv đi ra cổng chính toà a đi đường nào nhanh nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.ctsv" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "PDT trong NĐH đi lên cầu thang giữa là tới đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "PDT" },
+    { "label": "building", "value": "NĐH" }
+    ]
+    },
+    {
+    "text": "phong y te nam o tang nao toa b vay b?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong y te" },
+    { "label": "building", "value": "toa b" }
+    ]
+    },
+    {
+    "text": "phong dao tao trong nha dieu hanh di cua chinh hay cua hong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong dao tao" },
+    { "label": "building", "value": "nha dieu hanh" }
+    ]
+    },
+    {
+    "text": "phong hoc nhom trong toa c nam o goc nao?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong hoc nhom" },
+    { "label": "building", "value": "toa c" }
+    ]
+    },
+    {
+    "text": "pth nằm gần lối thoát hiểm nào của toà d?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "pth" },
+    { "label": "building", "value": "toà d" }
+    ]
+    },
+    {
+    "text": "từ phòng tự học đến thư viện đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng tự học" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "p.yt gần nhà thi đấu không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.yt" },
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "từ căn tin vào phòng đào tạo đi hướng nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" },
+    { "label": "room", "value": "phòng đào tạo" }
+    ]
+    },
+    {
+    "text": "e202 nằm gần TV không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "e202" },
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "phong y te va nha xe truoc cai nao gan cong chinh hon?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong y te" },
+    { "label": "facility", "value": "nha xe truoc" }
+    ]
+    },
+    {
+    "text": "p.ctsv nằm ngay dưới tầng trệt của canteen à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.ctsv" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "b304 và thư viện cách nhau xa không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "b304" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "từ phòng f102 chạy ù ra căn tin mất mấy phút?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng f102" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "ndh101 có view nhìn thẳng ra nhà xe trước không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "ndh101" },
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "học xong a101 xuống thẳng nhà xe sau bằng cầu thang ngoài được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "a101" },
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "g401 nằm phía sau nhà thi đấu phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "g401" },
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "h11 và NTD có chung cổng phụ để ra vào không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "h11" },
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "từ phòng đọc sách đi qua canteen bằng hành lang cầu được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng đọc sách" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "c230 sát vách với thư viện đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "c230" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "từ d242 xuống căn tin đi thang máy nào vắng nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "d242" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "k201 và nx trước đi dọc theo sảnh chính là tới à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "k201" },
+    { "label": "facility", "value": "nx trước" }
+    ]
+    },
+    {
+    "text": "m102 xuống nxs có lối đi tắt qua vườn trường không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "m102" },
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "p.thvl cách t.v bao nhiêu bậc cầu thang?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thvl" },
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "p.thh đi đến c.t rẽ hướng nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thh" },
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "p tn sh va ntđ nam o 2 goc doi dien truong ha?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p tn sh" },
+    { "label": "facility", "value": "ntđ" }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học đi ra nhà xe sau bằng lối cổng số 4 được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thí nghiệm sinh học" },
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử gần khu vực thư viện không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành điện tử" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "p. y tế đối diện cửa hông nhà thi đấu à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. y tế" },
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "từ phòng công tác sinh viên đi dọc hành lang là tới căn tin đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng công tác sinh viên" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "pđt đi qua nhà xe trước bằng cổng A hay cổng B?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "pđt" },
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "tu phong dao tao ra thu vien di kieu gi?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "tu phong dao tao" },
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "phong hoc nhom gan can tin khong ban?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phong hoc nhom" },
+    { "label": "facility", "value": "can tin" }
+    ]
+    },
+    {
+    "text": "pth ra bai xe truoc mat bao lau?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "pth" },
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "p. họp B sát rạt canteen luôn đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. họp B" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "từ phòng thực hành tin học đi bộ qua TV có xa không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành tin học" },
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "thư viện nằm gần toà a hay toà b hơn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thư viện" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "từ nhà điều hành đến nhà thi đấu đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà điều hành" },
+    { "label": "facility", "value": "nhà thi đấu" }
+    ]
+    },
+    {
+    "text": "canteen nằm phía nào so với khu c?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" },
+    { "label": "building", "value": "khu c" }
+    ]
+    },
+    {
+    "text": "tu toa b di den TV thi di duong nao?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toa b" },
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "nxs nằm gần khu d không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxs" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "căn tin được bố trí ở tầng hầm toà e đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "căn tin" },
+    { "label": "building", "value": "toà e" }
+    ]
+    },
+    {
+    "text": "từ nhà xe trước bước vào toà f đi sảnh trước hay sảnh sau?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" },
+    { "label": "building", "value": "toà f" }
+    ]
+    },
+    {
+    "text": "nhà xe sau có lối đi thẳng vào thang máy toà g không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe sau" },
+    { "label": "building", "value": "toà g" }
+    ]
+    },
+    {
+    "text": "NTD nằm chếch về phía đông của toà h phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "NTD" },
+    { "label": "building", "value": "toà h" }
+    ]
+    },
+    {
+    "text": "tv chiếm toàn bộ lầu 1 của nhà c à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "tv" },
+    { "label": "building", "value": "nhà c" }
+    ]
+    },
+    {
+    "text": "nxt nằm bên phải toà nhà điều hành nếu nhìn từ cổng vào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nxt" },
+    { "label": "building", "value": "toà nhà điều hành" }
+    ]
+    },
+    {
+    "text": "c.t nằm chung trong khuôn viên NĐH phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "c.t" },
+    { "label": "building", "value": "NĐH" }
+    ]
+    },
+    {
+    "text": "ntđ nằm lọt thỏm giữa toà a và khu thể thao đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "ntđ" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "t.v nằm đối diện toà b qua con đường nhựa đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "t.v" },
+    { "label": "building", "value": "toà b" }
+    ]
+    },
+    {
+    "text": "nhà thể dục nằm kề sát toà c phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà thể dục" },
+    { "label": "building", "value": "toà c" }
+    ]
+    },
+    {
+    "text": "nx trước nằm ở mép ngoài khuôn viên khu d à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nx trước" },
+    { "label": "building", "value": "khu d" }
+    ]
+    },
+    {
+    "text": "cantin o toa e tang may vay?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "cantin" },
+    { "label": "building", "value": "toa e" }
+    ]
+    },
+    {
+    "text": "n.t.d nam cach toa f bao xa?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "n.t.d" },
+    { "label": "building", "value": "toa f" }
+    ]
+    },
+    {
+    "text": "nha an o duoi tang tret toa g ha ad?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha an" },
+    { "label": "building", "value": "toa g" }
+    ]
+    },
+    {
+    "text": "thu vien co ket noi voi toa h bang hanh lang tren khong khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thu vien" },
+    { "label": "building", "value": "toa h" }
+    ]
+    },
+    {
+    "text": "bai xe truoc roi di vao nhà điều hành bằng cổng nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "bai xe truoc" },
+    { "label": "building", "value": "nhà điều hành" }
+    ]
+    },
+    {
+    "text": "nha thi dau và toà a đi qua lại mất khoảng mấy bước chân?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nha thi dau" },
+    { "label": "building", "value": "toà a" }
+    ]
+    },
+    {
+    "text": "nhà td nằm khuất đằng sau toà b đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà td" },
+    { "label": "building", "value": "toà b" }
+    ]
+    },
+    {
+    "text": "thuvien o tren tang cao nhat cua toa c ha?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "thuvien" },
+    { "label": "building", "value": "toa c" }
+    ]
+    },
+    {
+    "text": "can tin cua khu e nam o goc nao vay?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "can tin" },
+    { "label": "building", "value": "khu e" }
+    ]
+    },
+    {
+    "text": "từ phòng thực hành tin học ở toà e đến thư viện đi lối nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành tin học" },
+    { "label": "building", "value": "toà e" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "mình cần đến nhà điều hành, phòng đào tạo rồi căn tin, nên đi theo thứ tự nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "nhà điều hành" },
+    { "label": "room", "value": "phòng đào tạo" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "p. tự học, toà b và nhà xe trước có nằm gần nhau không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. tự học" },
+    { "label": "building", "value": "toà b" },
+    { "label": "facility", "value": "nhà xe trước" }
+    ]
+    },
+    {
+    "text": "NĐH, phòng y tế và nhà xe sau cái nào gần cổng chính nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "NĐH" },
+    { "label": "room", "value": "phòng y tế" },
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "tu toa a di qua phong ctsv roi den nha thi dau thi di duong nao?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "building", "value": "toa a" },
+    { "label": "room", "value": "phong ctsv" },
+    { "label": "facility", "value": "nha thi dau" }
+    ]
+    },
+    {
+    "text": "canteen, phòng họp B và nhà điều hành cái nào gần nhau nhất?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "canteen" },
+    { "label": "room", "value": "phòng họp B" },
+    { "label": "building", "value": "nhà điều hành" }
+    ]
+    },
+    {
+    "text": "từ e202 của toà a xuống thư viện đi thang máy số mấy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "e202" },
+    { "label": "building", "value": "toà a" },
+    { "label": "facility", "value": "thư viện" }
+    ]
+    },
+    {
+    "text": "mình đang ở b304 toà b, muốn qua căn tin thì phải đi vòng ra sau à?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "b304" },
+    { "label": "building", "value": "toà b" },
+    { "label": "facility", "value": "căn tin" }
+    ]
+    },
+    {
+    "text": "gửi xe ở nhà xe trước rồi lên phòng f102 toà f đi cổng nào gần?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "facility", "value": "nhà xe trước" },
+    { "label": "room", "value": "phòng f102" },
+    { "label": "building", "value": "toà f" }
+    ]
+    },
+    {
+    "text": "từ ndh101 NĐH muốn ra nhà xe sau phải đi dọc hành lang nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "ndh101" },
+    { "label": "building", "value": "NĐH" },
+    { "label": "facility", "value": "nhà xe sau" }
+    ]
+    },
+    {
+    "text": "học a101 toà a xong qua NTD đánh cầu đi đường nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "a101" },
+    { "label": "building", "value": "toà a" },
+    { "label": "facility", "value": "NTD" }
+    ]
+    },
+    {
+    "text": "g401 toà g đối diện với tv đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "g401" },
+    { "label": "building", "value": "toà g" },
+    { "label": "facility", "value": "tv" }
+    ]
+    },
+    {
+    "text": "h11 toà h và canteen có nằm trên cùng 1 tầng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "h11" },
+    { "label": "building", "value": "toà h" },
+    { "label": "facility", "value": "canteen" }
+    ]
+    },
+    {
+    "text": "phòng đọc sách nhà c nhìn thẳng ra nxt được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng đọc sách" },
+    { "label": "building", "value": "nhà c" },
+    { "label": "facility", "value": "nxt" }
+    ]
+    },
+    {
+    "text": "từ c230 toà c nhìn xuống thấy nxs đúng không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "c230" },
+    { "label": "building", "value": "toà c" },
+    { "label": "facility", "value": "nxs" }
+    ]
+    },
+    {
+    "text": "d242 khu d nằm sát ngay cạnh nha thi dau phải không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "d242" },
+    { "label": "building", "value": "khu d" },
+    { "label": "facility", "value": "nha thi dau" }
+    ]
+    },
+    {
+    "text": "k201 toà nhà điều hành qua nhà thể dục xa bao nhiêu mét?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "k201" },
+    { "label": "building", "value": "toà nhà điều hành" },
+    { "label": "facility", "value": "nhà thể dục" }
+    ]
+    },
+    {
+    "text": "m102 khu e từ TV đi bộ sang mất mấy phút?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "m102" },
+    { "label": "building", "value": "khu e" },
+    { "label": "facility", "value": "TV" }
+    ]
+    },
+    {
+    "text": "p.thvl toà b đi cầu thang nào để xuống nhanh CT?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thvl" },
+    { "label": "building", "value": "toà b" },
+    { "label": "facility", "value": "CT" }
+    ]
+    },
+    {
+    "text": "từ p.thh toà c rẽ hướng nào để qua c.t?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p.thh" },
+    { "label": "building", "value": "toà c" },
+    { "label": "facility", "value": "c.t" }
+    ]
+    },
+    {
+    "text": "p tn sh o khu d va t.v di lai co gan khong?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p tn sh" },
+    { "label": "building", "value": "khu d" },
+    { "label": "facility", "value": "t.v" }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học toà e và bai xe truoc nối nhau qua cổng nào?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thí nghiệm sinh học" },
+    { "label": "building", "value": "toà e" },
+    { "label": "facility", "value": "bai xe truoc" }
+    ]
+    },
+    {
+    "text": "từ phòng thực hành điện tử toà f qua can tin đi tắt qua bãi cỏ được không?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng thực hành điện tử" },
+    { "label": "building", "value": "toà f" },
+    { "label": "facility", "value": "can tin" }
+    ]
+    },
+    {
+    "text": "p. y tế nhà điều hành từ thu vien qua đó đi cầu thang hay thang máy?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "p. y tế" },
+    { "label": "building", "value": "nhà điều hành" },
+    { "label": "facility", "value": "thu vien" }
+    ]
+    },
+    {
+    "text": "từ phòng công tác sinh viên toà a làm sao qua nha an mua đồ ăn?",
+    "intent": "navigation",
+    "entities": [
+    { "label": "room", "value": "phòng công tác sinh viên" },
+    { "label": "building", "value": "toà a" },
+    { "label": "facility", "value": "nha an" }
+    ]
+    }
+    ]

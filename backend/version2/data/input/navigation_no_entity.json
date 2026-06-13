@@ -1,0 +1,1002 @@
+[
+    {
+    "text": "chỉ đường cho mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể hướng dẫn đường cho mình không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nhờ bạn chỉ lối giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình cần được chỉ đường, bạn giúp được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng dẫn mình đi đến chỗ cần tới với nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho mình xin cách đi với ạ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bot ơi chỉ đường giúp mình",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn hướng dẫn cách di chuyển cho mình nhé",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "giúp mình tìm đường đi với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ dẫn cho mình cách đi đường nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình cần tìm một chỗ nhưng không biết ở đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn ơi cho hỏi ở đâu vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "không biết phải đi đâu luôn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ đó nằm ở đâu thế bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ mình cần đến ở đâu nhỉ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "vị trí ở chỗ nào vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho mình hỏi nằm ở đâu dạ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "rốt cuộc là nó nằm ở đâu vậy bot",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm chỗ đó ở đâu bây giờ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nó nằm chỗ nào vậy ạ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi lối nào bạn ơi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình nên đi hướng nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi thế nào bây giờ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lối đi ở đâu vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình không biết đi đường nào luôn, giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "quẹo hướng nào vậy ạ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi thẳng hay rẽ thế nào bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng đi ra sao vậy bot",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho mình hỏi đường đi như thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "phải đi bằng đường nào mới tới",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lần đầu đến trường nên không biết đi đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình bị lạc rồi, chỉ giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "trường rộng quá mình không biết phải đi thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn ơi mình mới nè, không biết đường gì hết, giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "sinh viên năm nhất chưa biết đường xá gì cả",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình đi lạc nãy giờ không ra, cứu với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mới nhập học nên mình không rành đường lắm",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "trường lớn quá đi nãy giờ lạc mất tiêu rồi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "không nhớ đường đi làm sao bây giờ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đường nào vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lối đi đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "ở đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi lối nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "rẽ đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lạc rồi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "ở chỗ nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi về đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm chỗ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ lối đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho hỏi đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đường đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cách đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xem đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "coi đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xin đường đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi đường nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm lối",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lạc đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xem hướng",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ mình",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi ra sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "rẽ hướng nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "ở vị trí nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm vị trí",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xem vị trí",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao tới",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tới bằng gì",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi tới đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng di chuyển",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xin lối đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cần tìm đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cần chỉ đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "help lạc rồi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bị lạc rồi cứu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm đường gấp",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "dẫn đường đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "dắt đi với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao qua",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua đó sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đường tới đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ đường đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xem map",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mở đường",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "dẫn lối",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ nào v",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "ở đâu á",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi đâu z",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lối nào á",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi hướng nào z",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đường nào z",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tôi muốn đi đến đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đến chỗ này như thế nào vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ đường tôi đến đó đi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi ra chỗ đó sao ta",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao tới chỗ đấy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nơi đó nằm ở đâu vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua bên đó đi lối nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "từ đây qua đó bao xa",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tới đó bằng cách nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ mình qua chỗ kia với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ ấy đi sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nơi này ở đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua kia đi đường nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tôi muốn đến nơi đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "điểm đó ở hướng nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho tôi cách đi đến đây",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tới chỗ này kiểu gì",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm cách nào qua đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "điểm ấy đi sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "muốn tới đó thì làm sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao để tới chỗ đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi lại nơi đó thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao đi ra nơi đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tới chỗ đó đi bộ được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua chỗ này đi hướng nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng đi đến nơi đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đường nào đi qua kia",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình muốn tới chỗ đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn biết đường qua đó không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao chạy qua đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm đường qua đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đến đó đi thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ mình đến đó nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cách đi sang bên đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm thế nào đến đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho hỏi nơi đó ở đâu",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm chỗ đó ra sao",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua bên đấy đường nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "lối nào qua đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao tìm được nơi đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi tới đó nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua nơi đó xa không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "muốn đi tới chỗ này",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "rẽ đường nào để qua đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao để sang đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm đường đến nơi kia",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có cách nào tới đó không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng nào qua đó vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tôi phải đi sao để đến đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xin đường đi đến đây",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "qua đó có gần không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tới đó bằng đường nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỉ đường sang kia",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi đâu để tới đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nơi đó đi sao bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "chỗ đó rẽ lối nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có đường qua đó không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đến chỗ đó đi sao vậy bot",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "làm sao qua được đó",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tôi cần qua đó ngay",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có bản đồ trường không bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho mình xin sơ đồ trường với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể gửi bản đồ cho mình không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "trường mình có sơ đồ chỉ đường không nhỉ",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình cần bản đồ để tìm đường, giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xem bản đồ ở đâu vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mở sơ đồ đường đi lên giúp mình",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có cách nào xem map không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "cho mình coi bản đồ toàn cảnh với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "xin link bản đồ nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình đang đi đúng hướng chưa",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "còn xa không bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình đi thế này có đúng không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "còn bao lâu nữa thì tới",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hướng mình đang đi có ổn không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi nãy giờ chưa thấy, có nhầm đường không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "sắp tới chưa vậy bạn ơi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đi đường này đúng không bot",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "đoạn tiếp theo rẽ thế nào",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình đi thẳng tiếp hả bạn",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể dẫn mình đi không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "ai có thể đưa mình đến chỗ cần không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "nhờ bạn dẫn giúp mình với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có ai dẫn đường cho mình không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình cần người chỉ đường tận nơi",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có ai dắt mình đi được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn đi cùng mình đến đó nha",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "dắt tay mình đi với",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "có đội hỗ trợ dẫn đường không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn cử người đưa mình đi được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có thể giúp mình tìm đường không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bot này hỗ trợ chỉ đường không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "mình hỏi đường được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có chức năng chỉ đường không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "tìm đường thì hỏi bạn được không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bot có biết dẫn đường không vậy",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "app này có map chỉ lối không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hệ thống có tính năng điều hướng không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "bạn có rành đường trong này không",
+    "intent": "navigation",
+    "entities": []
+    },
+    {
+    "text": "hỏi cách đi lại ở đây được chứ",
+    "intent": "navigation",
+    "entities": []
+    }
+    ]

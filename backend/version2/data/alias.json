@@ -1,0 +1,22 @@
+{
+    "thư viện" : "TV",
+    "nhà xe" : "NHA_XE",
+    "căn tin" : "CANTEEN",
+    "phòng công tác sinh viên" : "P_CTSV",
+    "phòng đào tạo" : "P_DT",
+    "toà a" : "TOA_A",
+    "khu a" : "TOA_A",
+    "hội trường b" : "TOA_B", 
+    "toà b" : "TOA B",
+    "khu b" : "TOA_B",
+    "toà c": "TOA_C",
+    "khu c": "TOA_C",
+    "toà d": "TOA_D",
+    "khu d": "TOA_D",
+    "toà e": "TOA_E",
+    "khu e": "TOA_E",
+    "toà f": "TOA_F",
+    "khu f": "TOA_F",
+    "toà g": "TOA_G",
+    "khu g": "TOA_G"
+}

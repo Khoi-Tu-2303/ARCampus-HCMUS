@@ -1,3 +1,60 @@
-ARCampusExplorer/Assets/Firebase/Plugins/x86_64/*.bundle 
-ARCampusExplorer/Assets/Firebase/Plugins/x86_64/*.so 
+#################################
+# 🔥 Python / Backend
+#################################
+backend/venv/
+backend/key/
+backend/version2/enity_linking/best_model.pt
+backend/checkpoints/
+backend/campus.db
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+.env
+
+#################################
+# 🔥 Unity
+#################################
 ARCampusExplorer/Library/
+ARCampusExplorer/Temp/
+ARCampusExplorer/Obj/
+ARCampusExplorer/Build/
+ARCampusExplorer/Builds/
+ARCampusExplorer/Logs/
+ARCampusExplorer/UserSettings/
+ARCampusExplorer/.utmp/
+# Unity generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+#################################
+# 🔥 Firebase (Unity Plugins)
+#################################
+ARCampusExplorer/Assets/Firebase/Plugins/x86_64/*.bundle
+ARCampusExplorer/Assets/Firebase/Plugins/x86_64/*.so
+
+#################################
+# 🔥 VS / JetBrains / IDE
+#################################
+.vs/
+.vscode/
+.idea/
+
+#################################
+# 🔥 OS junk
+#################################
+.DS_Store
+Thumbs.db
+
+#################################
+# Phuong's
+#################################
+backend/seed/
+backend/key/

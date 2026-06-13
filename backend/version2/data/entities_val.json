@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "A001",
+    "alias": [
+      "ptn cnsh tv",
+      "ptn cong nghe sinh hoc thuc vat",
+      "lab cnsh thực vật",
+      "phòng cnsh thực vật",
+      "công nghệ sinh học thực vật",
+      "phòng lab cnsh tv",
+      "ptn công nghê sinh hoc thực vật",
+      "ptn coong ngheej sinh hocj thucj vatj",
+      "lab plant biotech",
+      "phong thuc hanh cnsh tv"
+    ]
+  },
+  {
+    "id": "A002",
+    "alias": [
+      "ptn dgkh tv",
+      "ptn danh gia kieu hinh thuc vat",
+      "lab đánh giá kiểu hình",
+      "phòng dgkh thực vật",
+      "đánh giá kiểu hình thực vật",
+      "phòng lab dgkh tv",
+      "ptn đánh gía kiểu hình tv",
+      "ptn ddfanhs gias kieeuh hinhf",
+      "lab kieu hinh thuc vat",
+      "phong kieu hinh thuc vat"
+    ]
+  },
+  {
+    "id": "A003",
+    "alias": [
+      "tt nccnc trong nn",
+      "trung tam nghien cuu cong nghe cao trong nong nghiep",
+      "trung tâm cn cao nông nghiệp",
+      "tt cn cao nn",
+      "tt nghiên cứu cnc nông nghiệp",
+      "center for high tech agriculture",
+      "trung tam cong nghe cao nong nghiep",
+      "tt nghieen cuuws coong ngheej cao",
+      "trung tâm nông nghiệp công nghệ cao",
+      "tt cn cao nong nghiep"
+    ]
+  },
+  {
+    "id": "A004",
+    "alias": [
+      "ptn cskh vl",
+      "ptn co so khoa hoc vat lieu",
+      "lab cơ sở khvl",
+      "phòng cơ sở khoa học vật liệu",
+      "cơ sở khoa học vật liệu",
+      "phòng lab cskh vl",
+      "ptn co sở khoa hoc vât liêu",
+      "ptn coo sowr khoa hocj vaatj lieeju",
+      "lab material science",
+      "phong co so khvl"
+    ]
+  },
+  {
+    "id": "A101",
+    "alias": [
+      "ptn sk & nlx",
+      "ptn sinh khoi va nl xanh",
+      "lab sinh khối",
+      "phòng sinh khối năng lượng xanh",
+      "sinh khối và năng lượng xanh",
+      "phòng lab sk & nlx",
+      "ptn snh khối và năng lương xanh",
+      "ptn sinh khoois vaa nlx",
+      "lab green energy",
+      "phong sinh khoi va nl xanh"
+    ]
+  },
+  {
+    "id": "A102",
+    "alias": [
+      "tt kh&cn sh",
+      "tt khoa hoc & cong nghe sh",
+      "trung tâm khcn sinh học",
+      "tt khcn sh",
+      "khoa học công nghệ sinh học",
+      "tt khoa hoc cong nghe sinh hoc",
+      "tt khoa hoc va cong nghê sh",
+      "tt khoa hocj vaf coong ngheej sh",
+      "center for biotech",
+      "trung tam khcn sh"
+    ]
+  },
+  {
+    "id": "A103",
+    "alias": [
+      "ptn cnsh phan tu",
+      "phong len men",
+      "lab lên men",
+      "phòng cnsh phân tử",
+      "cnsh phân tử",
+      "ptn công nghê sinh hoc phân tử",
+      "ptn coong ngheej sinh hocj",
+      "lab molecular biotech",
+      "phong cnsh phan tu",
+      "phòng thực hành lên men"
+    ]
+  },
+  {
+    "id": "A104_105",
+    "alias": [
+      "ptn shđc",
+      "ptn sinh hoc dai cuong",
+      "lab sinh học đại cương",
+      "phòng sh đại cương",
+      "sinh học đại cương",
+      "phòng lab shđc",
+      "ptn sinh hoc đai cương",
+      "ptn sinh hocj ddaio cuoong",
+      "lab gen bio",
+      "phong thuc hanh sh dai cuong"
+    ]
+  },
+  {
+    "id": "A106",
+    "alias": [
+      "ptn cnsh đc",
+      "ptn cong nghe sinh hoc dai cuong",
+      "lab cnsh đại cương",
+      "phòng cnsh đại cương",
+      "công nghệ sinh học đại cương",
+      "phòng lab cnsh đc",
+      "ptn công nghê sinh hoc đai cương",
+      "ptn coong ngheej sinh hocj ddaio cuoong",
+      "lab gen biotech",
+      "phong cnsh dai cuong"
+    ]
+  },
+  {
+    "id": "A107_108_109_111_C001",
+    "alias": [
+      "ptn hóa đc",
+      "ptn hoa dai cuong",
+      "lab hóa đại cương",
+      "phòng hóa đc",
+      "hóa đại cương",
+      "phòng lab hóa đại cương",
+      "ptn hoá đai cương",
+      "ptn hoas ddaio cuoong",
+      "lab gen chem",
+      "phong thuc hanh hoa dai cuong"
+    ]
+  },
+  {
+    "id": "A110",
+    "alias": [
+      "phòng trực hóa đc",
+      "phong truc ptn hoa dai cuong",
+      "trực lab hóa đại cương",
+      "phòng trực lab",
+      "trực ptn hóa đại cương",
+      "phong truc hoa dai cuong",
+      "phòng trưc ptn hoá đại cương",
+      "phoong trucj hoas",
+      "duty room gen chem",
+      "phong truc ptn hoa"
+    ]
+  },
+  {
+    "id": "A201",
+    "alias": [
+      "ptn đccs",
+      "ptn dia chat co so",
+      "lab địa chất cơ sở",
+      "phòng địa chất cơ sở",
+      "địa chất cơ sở",
+      "phòng lab đccs",
+      "ptn đia chât cơ sở",
+      "ptn ddfiaj chaats",
+      "lab geology",
+      "phong thuc hanh dia chat"
+    ]
+  },
+  {
+    "id": "A202",
+    "alias": [
+      "ptn thạch học",
+      "ptn thach hoc",
+      "lab thạch học",
+      "phòng thạch học",
+      "thạch học",
+      "phòng lab thạch học",
+      "ptn thach hocj",
+      "ptn thachj hocj",
+      "lab petrology",
+      "phong thuc hanh thach hoc"
+    ]
+  },
+  {
+    "id": "A205",
+    "alias": [
+      "ptn ptmt",
+      "ptn phan tich moi truong",
+      "lab phân tích môi trường",
+      "phòng ptmt",
+      "phân tích môi trường",
+      "phòng lab ptmt",
+      "ptn phân tich môi trương",
+      "ptn phaan tichs",
+      "lab env analysis",
+      "phong thuc hanh ptmt"
+    ]
+  },
+  {
+    "id": "A206",
+    "alias": [
+      "ptn sinh môi",
+      "ptn sinh moi",
+      "lab sinh môi",
+      "phòng sinh môi",
+      "sinh môi",
+      "phòng lab sinh môi",
+      "ptn snh môi",
+      "ptn sinh mooii",
+      "lab env bio",
+      "phong sinh moi"
+    ]
+  },
+  {
+    "id": "A207",
+    "alias": [
+      "ptn hóa dược",
+      "ptn bm hoa duoc",
+      "lab hóa dược",
+      "phòng hóa dược",
+      "hóa dược",
+      "phòng lab bộ môn hóa dược",
+      "ptn hoá dươc",
+      "ptn hoas dduoocj",
+      "lab pharma chem",
+      "phong hoa duoc"
+    ]
+  },
+  {
+    "id": "A208",
+    "alias": [
+      "ptn cơ sở",
+      "ptn co so",
+      "lab cơ sở",
+      "phòng cơ sở",
+      "cơ sở",
+      "phòng lab cơ sở",
+      "ptn co sở",
+      "ptn coo sowr",
+      "lab basic",
+      "phong co so"
+    ]
+  },
+  {
+    "id": "A209",
+    "alias": [
+      "ptn chuẩn bị mẫu",
+      "ptn chuan bi mau va hoa chat",
+      "lab chuẩn bị mẫu",
+      "phòng chuẩn bị mẫu",
+      "chuẩn bị mẫu hóa chất",
+      "phòng lab mẫu hóa chất",
+      "ptn chuân bi mẫu",
+      "ptn chuaanr bij maux",
+      "prep lab",
+      "phong chuan bi mau va hoa chat"
+    ]
+  },
+  {
+    "id": "A210",
+    "alias": [
+      "phòng đệm",
+      "phong dem",
+      "lab đệm",
+      "phong dem a210",
+      "đệm",
+      "phòng lab đệm",
+      "phòng đêm",
+      "phoong ddeemj",
+      "buffer room",
+      "phong ddem"
+    ]
+  },
+  {
+    "id": "A211",
+    "alias": [
+      "phòng hấp rửa",
+      "phong hap rua",
+      "lab hấp rửa",
+      "phong hap rua a211",
+      "hấp rửa",
+      "phòng lab hấp rửa",
+      "phòng hâp rữa",
+      "phoong haaps rwuax",
+      "cleaning room",
+      "phong hap rua ptn"
+    ]
+  },
+  {
+    "id": "A212_213",
+    "alias": [
+      "ptn vật lý",
+      "ptn vat ly",
+      "lab vật lý",
+      "phòng vật lý",
+      "vật lý",
+      "phòng lab vật lý",
+      "ptn vât lý",
+      "ptn vaatj lys",
+      "lab physics",
+      "phong thuc hanh vat ly"
+    ]
+  },
+  {
+    "id": "A214_310",
+    "alias": [
+      "ptn vlđc",
+      "ptn vat ly dai cuong",
+      "lab vật lý đại cương",
+      "phòng vật lý đại cương",
+      "vật lý đại cương",
+      "phòng lab vlđc",
+      "ptn vât lý đai cương",
+      "ptn vaatj lys ddaio cuoong",
+      "lab gen physics",
+      "phong thuc hanh vat ly dai cuong"
+    ]
+  },
+  {
+    "id": "A304",
+    "alias": [
+      "ptn gen vi sinh",
+      "ptn gen va vi sinh",
+      "lab gen vi sinh",
+      "phòng gen",
+      "gen và vi sinh",
+      "phòng lab gen và vi sinh",
+      "ptn cnsh thực vật p1",
+      "ptn chuyen hoa sinh hoc",
+      "lab microbiology",
+      "phong thuc hanh gen va vi sinh"
+    ]
+  },
+  {
+    "id": "A305",
+    "alias": [
+      "tt nc hc hts",
+      "tt nghien cuu hop chat hoat tinh sinh hoc",
+      "trung tâm hch sinh học",
+      "tt hoạt tính sinh học",
+      "hợp chất hoạt tính sinh học",
+      "center for bioactive compounds",
+      "trung tam hop chat hoat tinh",
+      "tt nghieen cuuws howpj chaats",
+      "trung tâm nghiên cứu sinh học",
+      "tt nchchts"
+    ]
+  },
+  {
+    "id": "A306",
+    "alias": [
+      "ptn cnsh mt",
+      "ptn cong nghe sinh hoc moi truong",
+      "lab cnsh môi trường",
+      "phòng cnsh mt",
+      "công nghệ sinh học môi trường",
+      "phòng lab cnsh mt",
+      "ptn công nghê sinh hoc môi trương",
+      "ptn coong ngheej sinh hocj mooii truoongf",
+      "lab env biotech",
+      "phong cong nghe sinh hoc moi truong"
+    ]
+  },
+  {
+    "id": "A307",
+    "alias": [
+      "phòng sx tn protein",
+      "phong san xuat thu nghiem protein tai to hop",
+      "lab protein tái tổ hợp",
+      "phòng protein",
+      "sản xuất protein tái tổ hợp",
+      "phòng lab protein",
+      "phong san xuaat thu nghiem",
+      "phoong sanx xuaats",
+      "protein lab",
+      "phong san xuat protein"
+    ]
+  },
+  {
+    "id": "A308",
+    "alias": [
+      "bm sltv",
+      "bo mon sinh ly thuc vat",
+      "lab sinh lý thực vật",
+      "phòng sinh lý thực vật",
+      "sinh lý thực vật",
+      "bộ môn sltv",
+      "bô môn sinh ly thưc vật",
+      "booj moon sinh lys",
+      "plant physiology dept",
+      "bo mon sltv"
+    ]
+  },
+  {
+    "id": "A309",
+    "alias": [
+      "tt nc hchts a309",
+      "tt nghien cuu hop chat a309",
+      "trung tâm hch sinh học 309",
+      "tt hoạt tính sinh học 309",
+      "tt a309",
+      "center for bioactive compounds a309",
+      "trung tam hop chat a309",
+      "tt nghieen cuuws a309",
+      "trung tâm nghiên cứu sinh học a309",
+      "phong a309"
+    ]
+  },
+  {
+    "id": "C002",
+    "alias": [
+      "ptn khoa khcn vl",
+      "ptn khoa kh va cn vat lieu",
+      "lab khoa vật liệu",
+      "phòng cn vật liệu",
+      "khoa học công nghệ vật liệu",
+      "phòng lab cn vật liệu",
+      "ptn khoa cn vât liêu",
+      "ptn khoa hoocj vaa cn",
+      "material science lab",
+      "phong khoa khcn vl"
+    ]
+  },
+  {
+    "id": "C101",
+    "alias": [
+      "ptn deslab",
+      "deslab",
+      "lab deslab",
+      "phòng deslab",
+      "phòng lab deslab",
+      "ptn des lab",
+      "ptn ddeslab",
+      "des lab",
+      "phong thuc hanh deslab",
+      "phong deslab c101"
+    ]
+  },
+  {
+    "id": "C102_103",
+    "alias": [
+      "bm vldt",
+      "bo mon vat ly dien tu",
+      "lab vật lý điện tử",
+      "phòng vật lý điện tử",
+      "vật lý điện tử",
+      "bộ môn vlđt",
+      "bô môn vât lý điên tử",
+      "booj moon vaatj lys",
+      "electronics physics dept",
+      "bo mon vat ly dien tu c102"
+    ]
+  },
+  {
+    "id": "C104",
+    "alias": [
+      "ptn kt nhung",
+      "ptn kt nhung va nl tai tao",
+      "lab kỹ thuật nhúng",
+      "phòng nhúng năng lượng tái tạo",
+      "kỹ thuật nhúng và nltt",
+      "phòng lab kt nhúng",
+      "ptn ky thuât nhung",
+      "ptn kyx thuaatj nhungs",
+      "embedded systems lab",
+      "phong kt nhung va nl tai tao"
+    ]
+  },
+  {
+    "id": "C105_106_107_108",
+    "alias": [
+      "ptn đtvt",
+      "ptn dien tu vien thong",
+      "lab điện tử viễn thông",
+      "phòng đtvt",
+      "điện tử viễn thông",
+      "phòng lab đtvt",
+      "ptn điên tử viên thông",
+      "ptn ddieenj twr",
+      "telecom lab",
+      "phong dien tu vien thong"
+    ]
+  },
+  {
+    "id": "C208",
+    "alias": [
+      "ptn y sinh học tái tạo",
+      "ptn y sinh hoc tai tao",
+      "lab y sinh học tái tạo",
+      "phòng y sinh tái tạo",
+      "y sinh học tái tạo",
+      "phòng lab y sinh học",
+      "ptn y sinh hoc tai tao c208",
+      "ptn y sinh hocj tais taoh",
+      "regenerative biomedicine lab",
+      "phong y sinh hoc tai tao"
+    ]
+  },
+  {
+    "id": "C209",
+    "alias": [
+      "ptn thực vật",
+      "ptn thuc vat",
+      "lab thực vật",
+      "phòng thực vật",
+      "thực vật",
+      "phòng lab thực vật",
+      "ptn thưc vât",
+      "ptn thucj vatj",
+      "plant lab",
+      "phong thuc vat"
+    ]
+  },
+  {
+    "id": "D002",
+    "alias": [
+      "ptn cn môi trường",
+      "ptn cong nghe moi truong",
+      "lab cn môi trường",
+      "phòng cn môi trường",
+      "công nghệ môi trường",
+      "phòng lab cn mt",
+      "ptn công nghê môi trương",
+      "ptn coong ngheej mooii",
+      "env tech lab",
+      "phong cong nghe moi truong"
+    ]
+  },
+  {
+    "id": "D003",
+    "alias": [
+      "ptn đc công trình",
+      "ptn dia chat cong trinh",
+      "lab địa chất công trình",
+      "phòng địa chất công trình",
+      "địa chất công trình",
+      "phòng lab đc ct",
+      "ptn đia chât công trinh",
+      "ptn ddiaj chaats",
+      "engineering geology lab",
+      "phong dia chat cong trinh"
+    ]
+  },
+  {
+    "id": "D004",
+    "alias": [
+      "ptn vật liệu đcn",
+      "ptn vat lieu da chuc nang",
+      "lab vật liệu đa chức năng",
+      "phòng vl đa chức năng",
+      "vật liệu đa chức năng",
+      "phòng lab vl đcn",
+      "ptn vât liêu đa chưc năng",
+      "ptn vaatj lieeju dda",
+      "multifunctional materials lab",
+      "phong vat lieu da chuc nang"
+    ]
+  },
+  {
+    "id": "D106",
+    "alias": [
+      "phòng gv",
+      "phong giao vien",
+      "giáo viên",
+      "phòng nghỉ gv",
+      "phòng lab gv",
+      "phòng chờ giáo viên",
+      "phong giảo viên",
+      "phoong giaos vieen",
+      "teachers room",
+      "phong nghỉ gv d106"
+    ]
+  },
+  {
+    "id": "D102",
+    "alias": [
+      "ptn động vật",
+      "ptn dong vat",
+      "lab động vật",
+      "phòng động vật",
+      "động vật",
+      "phòng lab động vật",
+      "ptn đông vât",
+      "ptn ddoongj vatj",
+      "animal lab",
+      "phong dong vat"
+    ]
+  },
+  {
+    "id": "D103",
+    "alias": [
+      "tt usi",
+      "trung tam u-si",
+      "trung tâm usi",
+      "u-si center",
+      "usi",
+      "tt u si",
+      "trung tam usi",
+      "trung taam u-si",
+      "u si center",
+      "trung tam u si d103"
+    ]
+  },
+  {
+    "id": "D104",
+    "alias": [
+      "ptn di truyền người",
+      "ptn di truyen nguoi",
+      "lab di truyền người",
+      "phòng di truyền",
+      "di truyền người",
+      "phòng lab di truyền",
+      "ptn di truyên ngươi",
+      "ptn di truyeenv nguowif",
+      "human genetics lab",
+      "phong di truyen nguoi"
+    ]
+  },
+  {
+    "id": "D202_203_204",
+    "alias": [
+      "phòng máy",
+      "phong may tinh",
+      "lab máy tính",
+      "phòng vi tính",
+      "máy tính",
+      "phòng thực hành máy tính",
+      "phong may tịnh",
+      "phoong mays tinhs",
+      "computer room",
+      "phong thuc hanh may tinh"
+    ]
+  },
+  {
+    "id": "D205",
+    "alias": [
+      "phòng quản lý phòng máy",
+      "phong ql phong may",
+      "ql phòng máy",
+      "phòng qlpm",
+      "quản lý phòng máy",
+      "phòng lab qlpm",
+      "phòng quản lý may",
+      "phoong ql",
+      "admin computer room",
+      "phong quan ly phong may"
+    ]
+  },
+  {
+    "id": "E001",
+    "alias": [
+      "ptn hóa vật liệu",
+      "ptn hoa vat lieu",
+      "lab hóa vật liệu",
+      "phòng hóa vật liệu",
+      "hóa vật liệu",
+      "phòng lab hóa vl",
+      "ptn hoá vât liêu",
+      "ptn hoas vaatj lieeju",
+      "material chemistry lab",
+      "phong hoa vat lieu"
+    ]
+  },
+  {
+    "id": "E002",
+    "alias": [
+      "ptn y sinh",
+      "lab y sinh",
+      "phòng y sinh",
+      "y sinh",
+      "phòng lab y sinh",
+      "ptn y snh",
+      "ptn y sinhj",
+      "biomedical lab",
+      "phong thuc hanh y sinh",
+      "phong y sinh e002"
+    ]
+  },
+  {
+    "id": "E003",
+    "alias": [
+      "ptn năng lượng xanh",
+      "ptn nang luong xanh va tai tao",
+      "lab năng lượng tái tạo",
+      "phòng năng lượng xanh",
+      "năng lượng xanh và tái tạo",
+      "phòng lab nl xanh",
+      "ptn năng lương xanh",
+      "ptn nawng luwowngj",
+      "green energy lab",
+      "phong nang luong xanh va tai tao"
+    ]
+  },
+  {
+    "id": "E004",
+    "alias": [
+      "ptn vl y sinh & quang đt",
+      "ptn vl y sinh & quang dien tu",
+      "lab y sinh quang điện tử",
+      "phòng vl y sinh quang điện tử",
+      "vl y sinh và quang điện tử",
+      "phòng lab y sinh đt",
+      "ptn vl y sính",
+      "ptn vl y sinhj",
+      "biomed optics lab",
+      "phong vl y sinh va quang dien tu"
+    ]
+  },
+  {
+    "id": "E005",
+    "alias": [
+      "ptn vlkt cao",
+      "ptn vat lieu ky thuat cao",
+      "lab vật liệu kỹ thuật cao",
+      "phòng vlkt cao",
+      "vật liệu kỹ thuật cao",
+      "phòng lab vlkt cao",
+      "ptn vât liêu ky thuât",
+      "ptn vaatj lieeju kyx thuaatj",
+      "high tech materials lab",
+      "phong vat lieu ky thuat cao"
+    ]
+  },
+  {
+    "id": "E101",
+    "alias": [
+      "trung tâm dữ liệu",
+      "data center e101",
+      "lab data center",
+      "phòng data",
+      "data center",
+      "phòng lab data center",
+      "trung tam du lieu",
+      "datacenter",
+      "trung taam dwx lieeju",
+      "phong data center"
+    ]
+  },
+  {
+    "id": "E102",
+    "alias": [
+      "tt nn",
+      "trung tam ngoai ngu",
+      "trung tâm ngoại ngữ",
+      "ngoại ngữ",
+      "tt ngoại ngữ e102",
+      "phòng trung tâm ngoại ngữ",
+      "trung tam ngoai nqữ",
+      "trung taam nogoaij ngux",
+      "foreign language center",
+      "tt ngoai ngu"
+    ]
+  },
+  {
+    "id": "G001_002",
+    "alias": [
+      "ptn hóa polymer",
+      "ptn hoa polymer",
+      "lab hóa polymer",
+      "phòng hóa polymer",
+      "hóa polymer",
+      "phòng lab polymer",
+      "ptn hoá polymẻ",
+      "ptn hoas polymer",
+      "polymer chem lab",
+      "phong hoa polymer"
+    ]
+  },
+  {
+    "id": "G003",
+    "alias": [
+      "ptn hóa lý ud",
+      "ptn hoa ly ung dung",
+      "lab hóa lý ứng dụng",
+      "phòng hóa lý",
+      "hóa lý ứng dụng",
+      "phòng lab hóa lý",
+      "ptn hoá lý ưng dụng",
+      "ptn hoas lys",
+      "applied physical chem lab",
+      "phong hoa ly ung dung"
+    ]
+  },
+  {
+    "id": "G004",
+    "alias": [
+      "ptn hóa lý điện hóa",
+      "ptn hoa ly dien hoa",
+      "lab hóa lý điện hóa",
+      "phòng hóa lý điện hóa",
+      "hóa lý điện hóa",
+      "phòng lab hóa lý",
+      "ptn hoá lỳ điên hoá",
+      "ptn hoas lys ddieenj",
+      "electrochemistry lab",
+      "phong hoa ly dien hoa"
+    ]
+  },
+  {
+    "id": "G101_102",
+    "alias": [
+      "ptn pttt",
+      "ptn phan tich trung tam",
+      "lab phân tích trung tâm",
+      "phòng phân tích",
+      "phân tích trung tâm",
+      "phòng lab pt trung tâm",
+      "ptn phân tich trung tam",
+      "ptn phaan tichs",
+      "central analysis lab",
+      "phong phan tich trung tam"
+    ]
+  },
+  {
+    "id": "G103",
+    "alias": [
+      "ptn cskhvl",
+      "ptn co so khvl",
+      "lab cơ sở khoa học vật liệu",
+      "phòng cơ sở khvl",
+      "cơ sở khvl",
+      "phòng lab cs khvl",
+      "ptn co sỏ khvl",
+      "ptn coo sowr",
+      "basic material lab",
+      "phong co so khvl"
+    ]
+  },
+  {
+    "id": "G104",
+    "alias": [
+      "ptn vật liệu từ",
+      "ptn vat lieu tu va y sinh",
+      "lab vật liệu từ",
+      "phòng vật liệu y sinh",
+      "vật liệu từ và y sinh",
+      "phòng lab vl từ",
+      "ptn vât liêu tư",
+      "ptn vaatj lieeju twf",
+      "magnetic biomaterials lab",
+      "phong vat lieu tu va y sinh"
+    ]
+  },
+  {
+    "id": "G105",
+    "alias": [
+      "ptn vlct nano",
+      "ptn vat lieu cau truc nano",
+      "lab vật liệu nano",
+      "phòng vl nano",
+      "vật liệu cấu trúc nano",
+      "phòng lab nano",
+      "ptn vât liêu nano",
+      "ptn vaatj lieeju nano",
+      "nano materials lab",
+      "phong vat lieu cau truc nano"
+    ]
+  },
+  {
+    "id": "G106",
+    "alias": [
+      "bm vl polymer",
+      "bm vat lieu polymer va composite",
+      "lab polymer composite",
+      "phòng polymer",
+      "vật liệu polymer và composite",
+      "bộ môn polymer",
+      "bô môn vât liêu polymẻ",
+      "booj moon polymer",
+      "polymer composite dept",
+      "bo mon vat lieu polymer composite"
+    ]
+  },
+  {
+    "id": "G107_108",
+    "alias": [
+      "ptn phát triển thuốc",
+      "ptn phat trien thuoc",
+      "lab phát triển thuốc",
+      "phòng phát triển thuốc",
+      "phát triển thuốc",
+      "phòng lab thuốc",
+      "ptn phat triên thuôc",
+      "ptn phats trieenr",
+      "drug dev lab",
+      "phong phat trien thuoc"
+    ]
+  },
+  {
+    "id": "G303_304",
+    "alias": [
+      "ptn ksomt",
+      "ptn phan tich & kiem soat o nhiem moi truong",
+      "lab kiểm soát môi trường",
+      "phòng pt ks ô nhiễm",
+      "phân tích kiểm soát ô nhiễm môi trường",
+      "phòng lab pt & ks",
+      "ptn phân tich kiêm soat",
+      "ptn phaan tichs ksoat",
+      "pollution control lab",
+      "phong phan tich & ksomt"
+    ]
+  },
+  {
+    "id": "G305_306",
+    "alias": [
+      "ptn hóa phân tích",
+      "ptn hoa phan tich",
+      "lab hóa phân tích",
+      "phòng hóa phân tích",
+      "hóa phân tích",
+      "phòng lab hóa phân tích",
+      "ptn hoá phân tich",
+      "ptn hoas phaan tichs",
+      "analytical chem lab",
+      "phong hoa phan tich"
+    ]
+  },
+  {
+    "id": "G401",
+    "alias": [
+      "ptn ptt g401",
+      "ptn phat trien thuoc g401",
+      "lab phát triển thuốc g401",
+      "phòng phát triển thuốc g401",
+      "phát triển thuốc g401",
+      "phòng lab thuốc g401",
+      "ptn phat triên thuôc g401",
+      "ptn phats trieenr g401",
+      "drug dev lab g401",
+      "phong phat trien thuoc g401"
+    ]
+  },
+  {
+    "id": "G402",
+    "alias": [
+      "tt pt th",
+      "tt phat trien thuong hieu va ket noi cong dong",
+      "trung tâm thương hiệu",
+      "phòng phát triển thương hiệu",
+      "phát triển thương hiệu kết nối cộng đồng",
+      "center for branding",
+      "tt phat trien thuong hieu",
+      "trung taam phats trieenr",
+      "trung tâm ptth",
+      "tt pt thuong hieu"
+    ]
+  },
+  {
+    "id": "G405_406",
+    "alias": [
+      "ptn hóa vô cơ",
+      "ptn hoa vo co 1&2",
+      "lab hóa vô cơ",
+      "phòng hóa vô cơ",
+      "hóa vô cơ",
+      "phòng lab hóa vô cơ",
+      "ptn hoá vô cở",
+      "ptn hoas voo coo",
+      "inorganic chem lab",
+      "phong hoa vo co"
+    ]
+  },
+  {
+    "id": "G506",
+    "alias": [
+      "ptn hóa hữu cơ cn",
+      "ptn hoa huu co chuyen nganh",
+      "lab hóa hữu cơ",
+      "phòng hóa hữu cơ",
+      "hóa hữu cơ",
+      "phòng lab hóa hữu cơ",
+      "ptn hoá hưu cơ",
+      "ptn hoas huux coo",
+      "organic chem lab",
+      "phong hoa huu co"
+    ]
+  },
+  {
+    "id": "VPK_VL",
+    "alias": [
+      "vp khoa vl",
+      "vpk vat ly va vat ly ky thuat",
+      "văn phòng khoa vật lý",
+      "văn phòng khoa vật lý kỹ thuật",
+      "vpk vl",
+      "khoa vật lý",
+      "vp khoa vat ly",
+      "vpk vật lý",
+      "vp khoa vaatj lys",
+      "physics office"
+    ]
+  },
+  {
+    "id": "VPK_CNVL",
+    "alias": [
+      "vp khoa cn vật liệu",
+      "vpk khoa hoc va cong nghe vat lieu",
+      "văn phòng khoa vật liệu",
+      "vpk cn vl",
+      "vpk khcnvl",
+      "khoa vật liệu",
+      "vp khoa vat lieu",
+      "vpk khcn vl",
+      "vpk vâtj lieeju",
+      "van phong khoa cn vat lieu"
+    ]
+  },
+  {
+    "id": "VPK_MT",
+    "alias": [
+      "vp khoa môi trường",
+      "vpk moi truong",
+      "văn phòng khoa môi trường",
+      "vpk mt",
+      "khoa môi trường",
+      "vpk môi trương",
+      "vp khoa mooii truoongf",
+      "environment office",
+      "vp moi truong",
+      "van phong khoa moi truong"
+    ]
+  },
+  {
+    "id": "VPK_DC",
+    "alias": [
+      "vp khoa địa chất",
+      "vpk dia chat",
+      "văn phòng khoa địa chất",
+      "vpk dc",
+      "khoa địa chất",
+      "văn phòng khoa đia chất",
+      "vp khoa ddiaj chaats",
+      "geology office",
+      "vp dia chat",
+      "van phong khoa dia chat"
+    ]
+  },
+  {
+    "id": "VPK_TTH",
+    "alias": [
+      "vp khoa toán tin",
+      "vpk toan - tin hoc",
+      "văn phòng khoa toán tin",
+      "vpk toán",
+      "khoa toán tin học",
+      "vpk toan tin",
+      "vp khoa toans tin",
+      "math IT office",
+      "vp toan tin",
+      "van phong khoa toan tin"
+    ]
+  },
+  {
+    "id": "VPK_HOA",
+    "alias": [
+      "vp khoa hóa",
+      "vpk hoa",
+      "văn phòng khoa hóa",
+      "khoa hóa",
+      "vpk hóa",
+      "văn phòng khoa hoá",
+      "vp khoa hoas",
+      "chemistry office",
+      "vp hoa",
+      "van phong khoa hoa"
+    ]
+  },
+  {
+    "id": "VPK_SH_CNSH",
+    "alias": [
+      "vp khoa sinh",
+      "vpk sinh hoc - cong nghe sinh hoc",
+      "văn phòng khoa sinh học",
+      "khoa cnsh",
+      "vpk sh cnsh",
+      "vpk sinh học cnsh",
+      "vp khoa sinh hoocj",
+      "bio office",
+      "vp sinh cnsh",
+      "van phong khoa cnsh"
+    ]
+  },
+  {
+    "id": "VPK_CNTT",
+    "alias": [
+      "vp khoa cntt",
+      "vpk cong nghe thong tin",
+      "văn phòng khoa cntt",
+      "khoa cntt",
+      "vpk cntt",
+      "vpk công nghê thông tin",
+      "vp khoa coong ngheej",
+      "IT office",
+      "vp cntt",
+      "van phong khoa cntt"
+    ]
+  },
+  {
+    "id": "VPK_DTVT",
+    "alias": [
+      "vp khoa đtvt",
+      "vpk dien tu - vien thong",
+      "văn phòng khoa điện tử viễn thông",
+      "khoa điện tử",
+      "vpk đtvt",
+      "vpk điên tử viên thông",
+      "vp khoa ddieenj twr",
+      "telecom office",
+      "vp dtvt",
+      "van phong khoa dien tu vien thong"
+    ]
+  },
+  {
+    "id": "PTN_HTTT",
+    "alias": [
+      "ptn httt",
+      "ptn he thong thong minh",
+      "lab hệ thống thông minh",
+      "phòng hệ thống thông minh",
+      "hệ thống thông minh",
+      "phòng lab httt",
+      "ptn hê thong thông mịnh",
+      "ptn heej thoongs",
+      "smart systems lab",
+      "phong he thong thong minh"
+    ]
+  },
+  {
+    "id": "PTN_ATTH",
+    "alias": [
+      "ptn atth",
+      "ptn an toan thong tin",
+      "lab an toàn thông tin",
+      "phòng an toàn thông tin",
+      "an toàn thông tin",
+      "phòng lab atth",
+      "ptn an toan thông tin",
+      "ptn an toanf",
+      "info sec lab",
+      "phong an toan thong tin"
+    ]
+  },
+  {
+    "id": "P_CTSV",
+    "alias": [
+      "phòng ctsv",
+      "phong cong tac sinh vien",
+      "công tác sinh viên",
+      "phòng sinh viên",
+      "p ctsv",
+      "phòng công tạc sinh viên",
+      "phoong coong tacs",
+      "student affairs office",
+      "phong cong tac sv",
+      "phong ctsv dai hoc"
+    ]
+  },
+  {
+    "id": "P_KTCL",
+    "alias": [
+      "phòng khảo thí",
+      "phong khao thi dam bao chat luong",
+      "khảo thí",
+      "phòng đảm bảo chất lượng",
+      "đảm bảo chất lượng",
+      "phòng kt cl",
+      "phòng khao thị",
+      "phoong khao thi",
+      "quality assurance office",
+      "phong khao thi"
+    ]
+  },
+  {
+    "id": "P_DT",
+    "alias": [
+      "phòng đào tạo",
+      "phong dao tao",
+      "p đào tạo",
+      "đào tạo",
+      "phòng dt",
+      "phòng đao tạọ",
+      "phoong ddaof taoh",
+      "academic affairs office",
+      "phong pdt",
+      "phòng pđt"
+    ]
+  },
+  {
+    "id": "TV",
+    "alias": [
+      "thư viện",
+      "thu vien",
+      "library",
+      "nhà thư viện",
+      "phòng đọc sách",
+      "thu vien truong",
+      "thử viện",
+      "thuw vieenj",
+      "lib",
+      "thư viên"
+    ]
+  },
+  {
+    "id": "P_YTE",
+    "alias": [
+      "phòng y tế",
+      "phong y te",
+      "y tế",
+      "trạm y tế",
+      "phòng khám",
+      "phòng ý tể",
+      "phoong y tees",
+      "medical room",
+      "tram y te",
+      "trạm y te"
+    ]
+  },
+  {
+    "id": "TOA_A",
+    "alias": [
+      "nhà a",
+      "nha a",
+      "dãy a",
+      "day a",
+      "building a",
+      "toaf a",
+      "block a",
+      "khu nhà a",
+      "khu nha a",
+      "toà a đại học",
+      "toa a"
+    ]
+  },
+  {
+    "id": "TOA_B",
+    "alias": [
+      "nhà b",
+      "nha b",
+      "dãy b",
+      "day b",
+      "building b",
+      "toaf b",
+      "block b",
+      "khu nhà b",
+      "khu nha b",
+      "hội trường lớn b",
+      "hall b"
+    ]
+  },
+  {
+    "id": "TOA_C",
+    "alias": [
+      "nhà c",
+      "nha c",
+      "dãy c",
+      "day c",
+      "building c",
+      "toaf c",
+      "block c",
+      "khu nhà c",
+      "khu nha c",
+      "toà c đại học",
+      "toa c"
+    ]
+  },
+  {
+    "id": "TOA_D",
+    "alias": [
+      "nhà d",
+      "nha d",
+      "dãy d",
+      "day d",
+      "building d",
+      "toaf d",
+      "block d",
+      "khu nhà d",
+      "khu nha d",
+      "toà d đại học",
+      "toa d",
+      "khu d"
+    ]
+  },
+  {
+    "id": "TOA_E",
+    "alias": [
+      "nhà e",
+      "nha e",
+      "dãy e",
+      "day e",
+      "building e",
+      "toaf e",
+      "block e",
+      "khu nhà e",
+      "khu nha e",
+      "toà e đại học",
+      "toa e",
+      "khu e"
+    ]
+  },
+  {
+    "id": "TOA_F",
+    "alias": [
+      "nhà f",
+      "nha f",
+      "dãy f",
+      "day f",
+      "building f",
+      "toaf f",
+      "block f",
+      "khu nhà f",
+      "khu nha f",
+      "toà f đại học",
+      "toa f",
+      "khu f"
+    ]
+  },
+  {
+    "id": "TOA_G",
+    "alias": [
+      "nhà g",
+      "nha g",
+      "dãy g",
+      "day g",
+      "building g",
+      "toaf g",
+      "block g",
+      "khu nhà g",
+      "khu nha g",
+      "toà g đại học",
+      "toa g",
+      "khu g"
+    ]
+  },
+  {
+    "id": "NDH",
+    "alias": [
+      "nha dieu hanh",
+      "toa nha dieu hanh",
+      "khu điều hành",
+      "khu ndh",
+      "nhà đh",
+      "nha dh",
+      "toà ndh",
+      "tòa ndh",
+      "chỗ nhà điều hành",
+      "toà điều hành",
+      "nhaf ddieeu hanh",
+      "nhà điều hànhh",
+      "toà nhâ dièu hành"
+    ]
+  },
+  {
+    "id": "NHA_XE",
+    "alias": [
+      "bãi gửi xe",
+      "chỗ để xe",
+      "chỗ gửi xe sau",
+      "nhà giữ xe",
+      "bãi xe",
+      "khu để xe",
+      "bai giu xe trước",
+      "cho gui xe",
+      "bãi đỗ xe",
+      "bãi xe trước",
+      "bãi xe sau",
+      "parking",
+      "hầm gửi xe",
+      "nhaf xe",
+      "baix giux xe truoc"
+    ]
+  },
+  {
+    "id": "CANTEEN",
+    "alias": [
+      "căn tin",
+      "can tin",
+      "nhà ăn",
+      "nha an",
+      "cafeteria",
+      "quán ăn trường",
+      "căn-tin",
+      "caawn tin",
+      "chỗ ăn",
+      "khu ăn uống"
+    ]
+  },
+  {
+    "id": "NTD",
+    "alias": [
+      "nha thi dau",
+      "nha the duc",
+      "san the duc",
+      "san bong",
+      "san hoc the duc",
+      "gymnasium",
+      "phòng thể chất",
+      "sân thể chất",
+      "nhà thể chất",
+      "khu thể dục thể thao",
+      "khu tdtt",
+      "nhà thi đấu đa năng"
+    ]
+  }
+]

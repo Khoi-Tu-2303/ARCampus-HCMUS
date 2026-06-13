@@ -1,0 +1,2002 @@
+[
+    {
+    "text": "ndh101 ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ndh101"
+    }
+    ]
+    },
+    {
+    "text": "phòng a102 nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng a102"
+    }
+    ]
+    },
+    {
+    "text": "B-304 chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "B-304"
+    }
+    ]
+    },
+    {
+    "text": "p. c230 ở chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. c230"
+    }
+    ]
+    },
+    {
+    "text": "e202 ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e202"
+    }
+    ]
+    },
+    {
+    "text": "phòng f102 nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng f102"
+    }
+    ]
+    },
+    {
+    "text": "H 1.1 chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "H 1.1"
+    }
+    ]
+    },
+    {
+    "text": "p. e12 ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e12"
+    }
+    ]
+    },
+    {
+    "text": "g401 ở đâu thế?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "g401"
+    }
+    ]
+    },
+    {
+    "text": "phòng d242 nằm ở đâu hở bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng d242"
+    }
+    ]
+    },
+    {
+    "text": "K 201 chỗ nào trường mình nhỉ?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "K 201"
+    }
+    ]
+    },
+    {
+    "text": "p. k3.2 ở chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. k3.2"
+    }
+    ]
+    },
+    {
+    "text": "m102 ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "m102"
+    }
+    ]
+    },
+    {
+    "text": "phòng m-04 nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng m-04"
+    }
+    ]
+    },
+    {
+    "text": "AB 301 chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "AB 301"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá nằm ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học ở chỗ nào trong trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "p. y tế nằm ở đâu?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. y tế"
+    }
+    ]
+    },
+    {
+    "text": "p. th vật lý chỗ nào vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phong y te o dau ban?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "phong dao tao nam o dau?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong dao tao"
+    }
+    ]
+    },
+    {
+    "text": "phòng học nhóm chỗ nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng học nhóm"
+    }
+    ]
+    },
+    {
+    "text": "đi đến p. cd 4.2 như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. cd 4.2"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới ef 2.1?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ef 2.1"
+    }
+    ]
+    },
+    {
+    "text": "đường đến phòng nhà điều hành 5.6 đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng nhà điều hành 5.6"
+    }
+    ]
+    },
+    {
+    "text": "từ cổng chính đi đến nhà điều hành 3.1 thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nhà điều hành 3.1"
+    }
+    ]
+    },
+    {
+    "text": "đi lối nào đến p. e-301?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e-301"
+    }
+    ]
+    },
+    {
+    "text": "đi đến f 1.1 như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f 1.1"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới phòng g204?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng g204"
+    }
+    ]
+    },
+    {
+    "text": "đường đến H2.3 đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "H2.3"
+    }
+    ]
+    },
+    {
+    "text": "từ đây đi đến p. b 1-2 thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. b 1-2"
+    }
+    ]
+    },
+    {
+    "text": "đi lối nào đến c.401?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c.401"
+    }
+    ]
+    },
+    {
+    "text": "đi đến phòng x101 như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng x101"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới Y 202?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "Y 202"
+    }
+    ]
+    },
+    {
+    "text": "đường đến p. z 3.3 đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. z 3.3"
+    }
+    ]
+    },
+    {
+    "text": "đi đến q-404 thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "q-404"
+    }
+    ]
+    },
+    {
+    "text": "đi lối nào đến phòng p105?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng p105"
+    }
+    ]
+    },
+    {
+    "text": "đi đến phòng đọc sách như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới phòng họp B?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "đường đến phòng đào tạo đi bằng cách nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "từ cổng chính đi đến phòng công tác sinh viên thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "đi lối nào đến phòng y tế?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "đi đến p. th hoá như thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th hoá"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới p. tn sinh học?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. tn sinh học"
+    }
+    ]
+    },
+    {
+    "text": "duong den phong thuc hanh vat ly di bang cach nao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong thuc hanh vat ly"
+    }
+    ]
+    },
+    {
+    "text": "di loi nao den p.ctSV?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.ctSV"
+    }
+    ]
+    },
+    {
+    "text": "làm sao tới phòng sức khoẻ vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng sức khoẻ"
+    }
+    ]
+    },
+    {
+    "text": "phòng ndh101 ở tầng mấy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng ndh101"
+    }
+    ]
+    },
+    {
+    "text": "a102 thuộc toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "a102"
+    }
+    ]
+    },
+    {
+    "text": "phòng b304 ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b304"
+    }
+    ]
+    },
+    {
+    "text": "C.230 nằm ở dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "C.230"
+    }
+    ]
+    },
+    {
+    "text": "p. e202 ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e202"
+    }
+    ]
+    },
+    {
+    "text": "f102 ở tầng mấy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f102"
+    }
+    ]
+    },
+    {
+    "text": "phòng h11 thuộc toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h11"
+    }
+    ]
+    },
+    {
+    "text": "E 12 ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "E 12"
+    }
+    ]
+    },
+    {
+    "text": "p. g401 nằm ở dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. g401"
+    }
+    ]
+    },
+    {
+    "text": "d242 ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "d242"
+    }
+    ]
+    },
+    {
+    "text": "phòng k201 ở tầng mấy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng k201"
+    }
+    ]
+    },
+    {
+    "text": "k3.2 thuộc toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k3.2"
+    }
+    ]
+    },
+    {
+    "text": "M 102 ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "M 102"
+    }
+    ]
+    },
+    {
+    "text": "p. m-04 nằm ở dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. m-04"
+    }
+    ]
+    },
+    {
+    "text": "ab301 ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "ab301"
+    }
+    ]
+    },
+    {
+    "text": "phòng tự học ở tầng mấy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành vật lý thuộc toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành hoá ở khu nào của trường?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "phòng thí nghiệm sinh học nằm ở dãy nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học ở block nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "p. th tin học ở tầng mấy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th tin học"
+    }
+    ]
+    },
+    {
+    "text": "p. th điện tử thuộc toà nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. th điện tử"
+    }
+    ]
+    },
+    {
+    "text": "p ctsv o khu nao cua truong?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p ctsv"
+    }
+    ]
+    },
+    {
+    "text": "phg y tế nam o day nao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phg y tế"
+    }
+    ]
+    },
+    {
+    "text": "phong y te tang may ban biet ko?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình phòng cd 4.2 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng cd 4.2"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới EF2.1 đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "EF2.1"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến p. nhà điều hành 5.6 giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. nhà điều hành 5.6"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến nhà điều hành 3.1 không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nhà điều hành 3.1"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm phòng e-301 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng e-301"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình F1.1 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "F1.1"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới p. g204 đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. g204"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến phòng h 2.3 giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h 2.3"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến B1.2 không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "B1.2"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm p. c.401 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. c.401"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình x101 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "x101"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới phòng y202 đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y202"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến Z3.3 giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "Z3.3"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến p. q-404 không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. q-404"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm p105 với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p105"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình phòng thực hành điện tử với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới phòng đọc sách đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến phòng họp B giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "bạn có thể dẫn mình đến phòng đào tạo không?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "chỉ mình cách tìm phòng công tác sinh viên với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng công tác sinh viên"
+    }
+    ]
+    },
+    {
+    "text": "chỉ cho mình pđt với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pđt"
+    }
+    ]
+    },
+    {
+    "text": "hướng dẫn tới PDT đi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PDT"
+    }
+    ]
+    },
+    {
+    "text": "chi cho minh phong thuc hanh vat ly voi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong thuc hanh vat ly"
+    }
+    ]
+    },
+    {
+    "text": "huong dan toi p ctsv di",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p ctsv"
+    }
+    ]
+    },
+    {
+    "text": "chỉ đường đến phg y tế giúp mình",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phg y tế"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi NDH 101 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "NDH 101"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi p. a102 ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. a102"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi phòng b304 ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b304"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình đang tìm c230 mà không biết ở đâu, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "c230"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi E 202 đâu vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "E 202"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi p. f102 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. f102"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi phòng h11 ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng h11"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi e12 ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e12"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình đang tìm G.401 mà không biết ở đâu, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "G.401"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi p. d242 đâu vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. d242"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi K 201 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "K 201"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi phòng k3.2 ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng k3.2"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi p. m102 ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. m102"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình đang tìm M 04 mà không biết ở đâu, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "M 04"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi phòng ab301 đâu vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng ab301"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi phòng y tế ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng y tế"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi phòng tự học ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng tự học"
+    }
+    ]
+    },
+    {
+    "text": "cho hỏi phòng thực hành vật lý ở chỗ nào nhen",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành vật lý"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi mình đang tìm phòng thực hành hoá mà không biết ở đâu, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành hoá"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi phòng thí nghiệm sinh học đâu vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "bạn ơi p. ctsv ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ctsv"
+    }
+    ]
+    },
+    {
+    "text": "ơi cho mình hỏi pctsv ở đâu nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "pctsv"
+    }
+    ]
+    },
+    {
+    "text": "ban oi phong y te o dau vay",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "cho hoi phong tu hoc o dau nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong tu hoc"
+    }
+    ]
+    },
+    {
+    "text": "mình ơi phòng học nhóm đâu vậy bạn?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng học nhóm"
+    }
+    ]
+    },
+    {
+    "text": "CD4.2 đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "CD4.2"
+    }
+    ]
+    },
+    {
+    "text": "p. ef 2.1 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ef 2.1"
+    }
+    ]
+    },
+    {
+    "text": "phòng nhà điều hành 5.6 chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng nhà điều hành 5.6"
+    }
+    ]
+    },
+    {
+    "text": "Nhà điều hành 3.1 tầng mấy",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "Nhà điều hành 3.1"
+    }
+    ]
+    },
+    {
+    "text": "p. e-301 đâu bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e-301"
+    }
+    ]
+    },
+    {
+    "text": "phòng f 1.1 đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng f 1.1"
+    }
+    ]
+    },
+    {
+    "text": "G-204 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "G-204"
+    }
+    ]
+    },
+    {
+    "text": "p. h 2.3 chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. h 2.3"
+    }
+    ]
+    },
+    {
+    "text": "phòng b 1-2 tầng mấy",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng b 1-2"
+    }
+    ]
+    },
+    {
+    "text": "C 401 đâu bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "C 401"
+    }
+    ]
+    },
+    {
+    "text": "X-101 đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "X-101"
+    }
+    ]
+    },
+    {
+    "text": "p. y202 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. y202"
+    }
+    ]
+    },
+    {
+    "text": "phòng z 3.3 chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng z 3.3"
+    }
+    ]
+    },
+    {
+    "text": "Q 404 tầng mấy",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "Q 404"
+    }
+    ]
+    },
+    {
+    "text": "P-105 đâu bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "P-105"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành tin học đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "phòng thực hành điện tử ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "phòng đọc sách chỗ nào",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phòng họp B tầng mấy",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "phòng đào tạo đâu bạn",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đào tạo"
+    }
+    ]
+    },
+    {
+    "text": "PCTSV đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "PCTSV"
+    }
+    ]
+    },
+    {
+    "text": "p. đọc sách ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "phong y te dau",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "phong dao tao o dau",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong dao tao"
+    }
+    ]
+    },
+    {
+    "text": "p ctsv cho nao",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p ctsv"
+    }
+    ]
+    },
+    {
+    "text": "p. ndh101 o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ndh101"
+    }
+    ]
+    },
+    {
+    "text": "a102 tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "a102"
+    }
+    ]
+    },
+    {
+    "text": "phong b304 cho nao nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong b304"
+    }
+    ]
+    },
+    {
+    "text": "p. c230 di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. c230"
+    }
+    ]
+    },
+    {
+    "text": "e202 o khu nao vay hok biet",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "e202"
+    }
+    ]
+    },
+    {
+    "text": "F-102 o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "F-102"
+    }
+    ]
+    },
+    {
+    "text": "phong h11 tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong h11"
+    }
+    ]
+    },
+    {
+    "text": "p. e12 cho nao nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e12"
+    }
+    ]
+    },
+    {
+    "text": "g401 di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "g401"
+    }
+    ]
+    },
+    {
+    "text": "phong d242 o khu nao vay hok biet",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong d242"
+    }
+    ]
+    },
+    {
+    "text": "k201 o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "k201"
+    }
+    ]
+    },
+    {
+    "text": "p. k3.2 tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. k3.2"
+    }
+    ]
+    },
+    {
+    "text": "M 102 cho nao nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "M 102"
+    }
+    ]
+    },
+    {
+    "text": "phong m-04 di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong m-04"
+    }
+    ]
+    },
+    {
+    "text": "p. ab301 o khu nao vay hok biet",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ab301"
+    }
+    ]
+    },
+    {
+    "text": "phong cong tac sinh vien o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong cong tac sinh vien"
+    }
+    ]
+    },
+    {
+    "text": "phong y te tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong y te"
+    }
+    ]
+    },
+    {
+    "text": "phong tu hoc cho nao nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong tu hoc"
+    }
+    ]
+    },
+    {
+    "text": "phong thuc hanh vat ly di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong thuc hanh vat ly"
+    }
+    ]
+    },
+    {
+    "text": "phong thuc hanh hoa o khu nao vay hok biet",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong thuc hanh hoa"
+    }
+    ]
+    },
+    {
+    "text": "p.đs o dau z",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.đs"
+    }
+    ]
+    },
+    {
+    "text": "p. họp B tang may ban biet ko",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. họp B"
+    }
+    ]
+    },
+    {
+    "text": "phop B cho nao nha",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phop B"
+    }
+    ]
+    },
+    {
+    "text": "phong suc khoe di duong nao z ban",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong suc khoe"
+    }
+    ]
+    },
+    {
+    "text": "p ctSV o khu nao vay hok biet",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p ctSV"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, cd 4.2 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "cd 4.2"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học nhưng không biết p. ef 2.1 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. ef 2.1"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên nhà điều hành 5.6 nên không biết đường, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "nhà điều hành 5.6"
+    }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến phòng nhà điều hành 3.1 thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng nhà điều hành 3.1"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ giờ học rồi, p. e-301 ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. e-301"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, f 1.1 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "f 1.1"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học nhưng không biết phòng g204 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng g204"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên p. h 2.3 nên không biết đường, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. h 2.3"
+    }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến b 1-2 thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "b 1-2"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ giờ học rồi, phòng c.401 ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng c.401"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, p. x101 ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. x101"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học nhưng không biết Y 202 ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "Y 202"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên phòng z 3.3 nên không biết đường, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng z 3.3"
+    }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến p. q-404 thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. q-404"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ giờ học rồi, p105 ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p105"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, phòng thí nghiệm sinh học ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thí nghiệm sinh học"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học nhưng không biết phòng thực hành tin học ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành tin học"
+    }
+    ]
+    },
+    {
+    "text": "lần đầu lên phòng thực hành điện tử nên không biết đường, giúp mình với",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng thực hành điện tử"
+    }
+    ]
+    },
+    {
+    "text": "mình đang đứng ở cổng chính, muốn đến phòng đọc sách thì đi thế nào?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng đọc sách"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ giờ họp rồi, phòng họp B ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phòng họp B"
+    }
+    ]
+    },
+    {
+    "text": "mình mới vào trường chưa quen đường, p. tự học ở đâu vậy?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p. tự học"
+    }
+    ]
+    },
+    {
+    "text": "hôm nay có lịch học nhưng không biết p.th ở đâu",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.th"
+    }
+    ]
+    },
+    {
+    "text": "lan dau len phong dao tao nen khong biet duong, giup minh voi",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phong dao tao"
+    }
+    ]
+    },
+    {
+    "text": "minh dang dung o cong chinh, muon den p.ctSV thi di the nao?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "p.ctSV"
+    }
+    ]
+    },
+    {
+    "text": "sắp trễ giờ học rồi, phg y tế ở đâu bạn ơi?",
+    "intent": "navigation",
+    "entities": [
+    {
+    "label": "room",
+    "value": "phg y tế"
+    }
+    ]
+    }
+    ]
