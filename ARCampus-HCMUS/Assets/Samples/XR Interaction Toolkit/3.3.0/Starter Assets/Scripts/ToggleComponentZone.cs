@@ -2,10 +2,6 @@ using System.Collections.Generic;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// This component is designed to easily toggle a specific component and GameObject on or off when an object
-    /// enters the specified <see cref="triggerVolume"/>.
-    /// </summary>
     [RequireComponent(typeof(Collider))]
     public class ToggleComponentZone : MonoBehaviour
     {
@@ -13,10 +9,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Collider that will trigger the component to turn on or off when entering the Trigger Volume. Must have a Rigidbody component and be on the same physics layer as the Trigger Volume.")]
         Collider m_ActivationObject;
 
-        /// <summary>
-        /// Collider that will trigger the component to turn on or off when entering the Trigger Volume.
-        /// Must have a Rigidbody component and be on the same physics layer as the Trigger Volume.
-        /// </summary>
         public Collider activationObject
         {
             get => m_ActivationObject;
@@ -27,9 +19,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Sets whether to enable or disable the Component To Toggle and GameObject To Toggle upon entry into the Trigger Volume.")]
         bool m_EnableOnEntry = true;
 
-        /// <summary>
-        /// Sets whether to enable or disable the Component To Toggle and GameObject To Toggle upon entry into the Trigger Volume.
-        /// </summary>
         public bool enableOnEntry
         {
             get => m_EnableOnEntry;
@@ -40,10 +29,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Components to set the enabled state for. Will set the value to the Enable On Entry value upon entry and revert to original value on exit.")]
         List<Behaviour> m_ComponentsToToggle = new List<Behaviour>();
 
-        /// <summary>
-        /// Component to set the enabled state for. Will set the value to the
-        /// Enable On Entry value upon entry and revert to original value on exit.
-        /// </summary>
         public List<Behaviour> componentsToToggle
         {
             get => m_ComponentsToToggle;
@@ -54,10 +39,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Array of GameObjects to set the enabled state for. Will set the value to the Enable On Entry value upon entry and revert to original value on exit.")]
         List<GameObject> m_GameObjectsToToggle = new List<GameObject>();
 
-        /// <summary>
-        /// GameObject to set the enabled state for. Will set the value to the
-        /// Enable On Entry value upon entry and revert to original value on exit.
-        /// </summary>
         public List<GameObject> gameObjectsToToggle
         {
             get => m_GameObjectsToToggle;
@@ -68,9 +49,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         Dictionary<Behaviour, bool> m_InitialComponentStateOnEntry;
         Dictionary<GameObject, bool> m_InitialGameObjectStateOnEntry;
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void Start()
         {
             if (m_TriggerVolume == null && !TryGetComponent(out m_TriggerVolume))
@@ -86,15 +64,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void OnTriggerEnter(Collider other)
         {
             if (other == null || other != m_ActivationObject)
                 return;
 
-            // Save the target GameObject(s) active state to restore when leaving the zone
+            
             if (m_GameObjectsToToggle != null && m_GameObjectsToToggle.Count > 0)
             {
                 m_InitialGameObjectStateOnEntry ??= new Dictionary<GameObject, bool>(m_GameObjectsToToggle.Count);
@@ -108,7 +83,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 }
             }
 
-            // Save the target component(s) enabled state to restore when leaving the zone
+            
             if (m_ComponentsToToggle != null && m_ComponentsToToggle.Count > 0)
             {
                 m_InitialComponentStateOnEntry ??= new Dictionary<Behaviour, bool>(m_ComponentsToToggle.Count);
@@ -123,15 +98,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void OnTriggerExit(Collider other)
         {
             if (other == null || other != m_ActivationObject)
                 return;
 
-            // Restore original target component(s) enabled state
+            
             if (m_ComponentsToToggle != null && m_ComponentsToToggle.Count > 0 && m_InitialComponentStateOnEntry != null)
             {
                 if (m_InitialComponentStateOnEntry.Count == m_ComponentsToToggle.Count)
@@ -150,7 +122,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 }
             }
 
-            // Restore original target GameObject(s) active state
+            
             if (m_GameObjectsToToggle != null && m_GameObjectsToToggle.Count > 0 && m_InitialGameObjectStateOnEntry != null)
             {
                 if (m_InitialGameObjectStateOnEntry.Count == m_GameObjectsToToggle.Count)

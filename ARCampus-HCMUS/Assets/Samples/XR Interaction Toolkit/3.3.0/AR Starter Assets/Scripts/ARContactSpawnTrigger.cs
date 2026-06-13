@@ -6,9 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
 {
-    /// <summary>
-    /// Spawns an object on physics trigger enter with an <see cref="ARPlane"/>, at the point of contact on the plane.
-    /// </summary>
     [RequireComponent(typeof(Rigidbody))]
     public class ARContactSpawnTrigger : MonoBehaviour
     {
@@ -16,9 +13,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("If enabled, spawning will be blocked if the active interactor in the associated XR Interaction Group is hovering or selecting an interactable object.")]
         bool m_BlockSpawnDuringInteraction;
 
-        /// <summary>
-        /// If enabled, spawning will be blocked if the active interactor in the associated <see cref="interactionGroup"/> is hovering or selecting an interactable object.
-        /// </summary>
         public bool blockSpawnDuringInteraction
         {
             get => m_BlockSpawnDuringInteraction;
@@ -29,11 +23,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("XR Interaction Group associated with this contact spawn trigger.")]
         XRInteractionGroup m_InteractionGroup;
 
-        /// <summary>
-        /// XR Interaction Group associated with this contact spawn trigger. Spawning will be blocked if an interactor from this XR Interaction Group is
-        /// hovering or selecting and interactable and <see cref="blockSpawnDuringInteraction"/> is enabled.
-        /// </summary>
-        /// <remarks>If <see langword="null"/>, this scripts attempts to find an <see cref="XRInteractionGroup"/> component on the parent.</remarks>
         public XRInteractionGroup interactionGroup
         {
             get => m_InteractionGroup;
@@ -44,22 +33,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("Whether to require that the AR Plane has an alignment of horizontal up to spawn on it.")]
         bool m_RequireHorizontalUpSurface;
 
-        /// <summary>
-        /// Whether to require that the <see cref="ARPlane"/> has an alignment of <see cref="PlaneAlignment.HorizontalUp"/> to spawn on it.
-        /// </summary>
         public bool requireHorizontalUpSurface
         {
             get => m_RequireHorizontalUpSurface;
             set => m_RequireHorizontalUpSurface = value;
         }
 
-        /// <summary>
-        /// Calls the methods in its invocation list when an object is spawned.
-        /// </summary>
-        /// <remarks>
-        /// The first event parameter corresponds to the spawn position in world space
-        /// and the second event parameter corresponds to the vector normal to the surface.
-        /// </remarks>
+   
         public UnityEvent<Vector3, Vector3> objectSpawnTriggered
         {
             get => m_ObjectSpawnTriggered;
@@ -71,9 +51,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("Calls the methods in its invocation list when an object is spawned.")]
         UnityEvent<Vector3, Vector3> m_ObjectSpawnTriggered = new UnityEvent<Vector3, Vector3>();
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void Start()
         {
             if (m_InteractionGroup == null)
@@ -85,9 +62,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             }
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
+       
         void OnTriggerEnter(Collider other)
         {
             if ((blockSpawnDuringInteraction && IsInteractionBlockingSpawn()) ||
@@ -99,14 +74,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_ObjectSpawnTriggered.Invoke(contactPoint, surfaceNormal);
         }
 
-        /// <summary>
-        /// Tries to get the surface position and normal from an object to potentially spawn on.
-        /// </summary>
-        /// <param name="objectCollider">The collider of the object to potentially spawn on.</param>
-        /// <param name="surfacePosition">The potential world position of the spawn surface.</param>
-        /// <param name="surfaceNormal">The potential normal of the spawn surface.</param>
-        /// <returns>Returns <see langword="true"/> if <paramref name="objectCollider"/> is a valid spawn surface,
-        /// otherwise returns <see langword="false"/>.</returns>
         public bool TryGetSpawnSurfaceData(Collider objectCollider, out Vector3 surfacePosition, out Vector3 surfaceNormal)
         {
             surfacePosition = default;

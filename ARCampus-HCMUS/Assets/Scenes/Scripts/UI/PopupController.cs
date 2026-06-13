@@ -1,4 +1,10 @@
-// UI/PopupController.cs
+
+
+
+
+
+
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,26 +14,25 @@ public class PopupController : MonoBehaviour
 {
     public static PopupController Instance;
 
-    [Header("UI References (Thiết kế mới)")]
+    [Header("UI References")]
     public GameObject popupCanvas;
 
     [Header("Top Header")]
-    public Image imgBuildingIcon;       // Icon tòa nhà (Vuông xanh)
-    public TMP_Text titleText;          // Tên địa điểm chính (VD: Toà F)
+    public UnityEngine.UI.Image imgBuildingIcon;
+    public TMP_Text titleText;
 
     [Header("Info Box")]
-    public TMP_Text descriptionText;    // Lấy từ Firebase
-    public TMP_Text txtDistanceETA;     // Cách 1000m
+    public TMP_Text descriptionText;
+    public TMP_Text txtDistanceETA;
 
     [Header("Action Buttons")]
-    public Button btnClose;             // Nút X
-    public Button btnStartNavigation;   // Nút Bắt đầu chỉ đường (Xanh đậm bự)
-    public Button btnIndoorMap;         // Nút Map nhỏ bên cạnh
+    public Button btnClose;
+    public Button btnStartNavigation;
+    public Button btnIndoorMap;
 
-    // BỘ NHỚ ĐỆM (CACHE)
     private Dictionary<string, string> _descriptionCache = new Dictionary<string, string>(16);
     private string _currentBuildingIdForMap = "";
-    private LocationData _currentLocation; // Nhớ data để lát bấm nút còn biết đường mà đi
+    private LocationData _currentLocation;
 
     void Awake() => Instance = this;
 
@@ -35,7 +40,6 @@ public class PopupController : MonoBehaviour
     {
         if (popupCanvas != null) popupCanvas.SetActive(false);
 
-        // Cắm dây sự kiện
         if (btnClose != null) btnClose.onClick.AddListener(ClosePopup);
         if (btnIndoorMap != null) btnIndoorMap.onClick.AddListener(OnIndoorMapClicked);
         if (btnStartNavigation != null) btnStartNavigation.onClick.AddListener(OnStartNavigationClicked);
@@ -48,26 +52,22 @@ public class PopupController : MonoBehaviour
         LocationData loc = FirebaseService.Instance.AllLocations.Find(x => x.display_name == buildingName);
         if (loc == null) return;
 
-        _currentLocation = loc; // Lưu lại để dùng cho nút Chỉ đường
+        _currentLocation = loc;
 
-        // Đổ Text Tiêu đề
         if (titleText != null) titleText.text = loc.display_name;
 
-        // Tính khoảng cách
         if (txtDistanceETA != null && GPSService.Instance != null && GPSService.Instance.IsReady)
         {
-            float distance = GeoMath.Haversine(GPSService.Instance.Latitude, GPSService.Instance.Longitude, loc.lat, loc.lng);
+            float distance = GeoMath.HaversineDouble(
+                GPSService.Instance.Latitude, GPSService.Instance.Longitude,
+                loc.lat, loc.lng);
             txtDistanceETA.text = $"Cách {distance:F0}m";
         }
 
-        // Logic ẩn/hiện nút Indoor Map
         _currentBuildingIdForMap = GetBaseBuildingName(loc.location_id);
         if (btnIndoorMap != null)
-        {
             btnIndoorMap.gameObject.SetActive(!string.IsNullOrEmpty(_currentBuildingIdForMap));
-        }
 
-        // Tải Description từ Firebase
         if (_descriptionCache.TryGetValue(buildingName, out string cached))
         {
             if (descriptionText != null) descriptionText.text = cached;
@@ -76,7 +76,7 @@ public class PopupController : MonoBehaviour
         else
         {
             if (descriptionText != null) descriptionText.text = "Đang tải thông tin...";
-            if (popupCanvas != null) popupCanvas.SetActive(true); // Cứ bật lên trước cho mượt
+            if (popupCanvas != null) popupCanvas.SetActive(true);
 
             FirebaseService.Instance.GetBuildingDescription(buildingName, (desc) => {
                 _descriptionCache[buildingName] = desc;
@@ -85,17 +85,18 @@ public class PopupController : MonoBehaviour
         }
     }
 
-    // ✅ NÚT BẮT ĐẦU CHỈ ĐƯỜNG
     void OnStartNavigationClicked()
     {
         if (_currentLocation == null) return;
 
-        ClosePopup(); // Đóng bảng lại cho đỡ vướng
+        ClosePopup();
 
-        // Tìm Node gần tòa nhà nhất và bắt đầu dẫn đường
+        
         string nearestNode = FindNearestNodeToLocation(_currentLocation);
-        if (CampusUIManager.Instance != null) CampusUIManager.Instance.StartNavigation();
-        if (NavigationSession.Instance != null) NavigationSession.Instance.StartNavigation(nearestNode);
+        if (nearestNode == null) return;
+
+        CampusUIManager.Instance?.StartNavigation();
+        NavigationSession.Instance?.StartNavigation(nearestNode);
     }
 
     void OnIndoorMapClicked()
@@ -116,20 +117,27 @@ public class PopupController : MonoBehaviour
         if (nodeId.StartsWith("NĐH")) return "NĐH";
         if (nodeId.StartsWith("NTD")) return "NTD";
         if (nodeId.StartsWith("NXS") || nodeId.StartsWith("NXT")) return "NX";
+
+        
+        if (nodeId.StartsWith("CT") || nodeId.StartsWith("Căn") || nodeId.StartsWith("FOOD") || nodeId.StartsWith("DRINK")) return "";
+
         char c = nodeId[0];
         if (c >= 'A' && c <= 'G') return c.ToString();
+
         return nodeId;
     }
 
-    // Hàm toán học tìm đường
+    
     string FindNearestNodeToLocation(LocationData loc)
     {
+        if (GraphService.Instance == null || GraphService.Instance.Nodes == null) return null;
+
         string nearest = null;
         float minDist = float.MaxValue;
-        if (GraphService.Instance == null || GraphService.Instance.Nodes == null) return null;
+
         foreach (var node in GraphService.Instance.Nodes.Values)
         {
-            float d = GeoMath.Haversine((float)loc.lat, (float)loc.lng, (float)node.lat, (float)node.lng);
+            float d = GeoMath.HaversineDouble(loc.lat, loc.lng, node.lat, node.lng);
             if (d < minDist) { minDist = d; nearest = node.id; }
         }
         return nearest;

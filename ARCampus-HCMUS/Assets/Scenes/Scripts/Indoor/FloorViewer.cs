@@ -1,4 +1,4 @@
-// Đè đoạn này vào file FloorViewer.cs
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -45,29 +45,29 @@ public class FloorViewer : MonoBehaviour
     private RectTransform viewportRect;
     private Coroutine _loadCoroutine;
 
-    // ✅ BỘ NÃO QUẢN LÝ TẦNG: (ID Tòa -> [Mã đuôi ảnh, Tên Hiển Thị])
-    // ✅ BỘ NÃO QUẢN LÝ TẦNG FULL TOPPING CỦA SẾP
+    
+    
     private Dictionary<string, List<(string fileSuffix, string displayName)>> buildingStructure = new Dictionary<string, List<(string, string)>>()
     {
-        // Tòa A (VD: Có hầm và 4 tầng) -> Tên file ảnh cần có: A_ham, A_1, A_2, A_3, A_4
+        
         { "A", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
         
-        // Tòa C (VD: Có hầm và 2 tầng) -> C_ham, C_1, C_2
+        
         { "C", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2") } },
         
-        // Tòa D (VD: Có 3 tầng, không hầm) -> D_1, D_2, D_3
+        
         { "D", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2") } },
         
-        // Tòa E (VD: Có 3 tầng) -> E_1, E_2, E_3
+        
         { "E", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
         
-        // Tòa F (VD: Có 3 tầng) -> F_1, F_2, F_3
+        
         { "F", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3") } },
         
-        // Tòa G (VD: Có 3 tầng) -> G_1, G_2, G_3
+        
         { "G", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3"), ("4", "Tầng 4"), ("5", "Tầng 5") } },
         
-        // Nhà Điều Hành (Từng cụm 2 tầng) -> NDH_1, NDH_2...
+        
         { "NĐH", new List<(string, string)> { ("ham", "Tầng Hầm"), ("1", "Tầng 1"), ("2", "Tầng 2"), ("3", "Tầng 3"), ("4", "Tầng 4"), ("5", "Tầng 5"), ("6", "Tầng 6"), ("7", "Tầng 7"), ("8", "Tầng 8"), ("9", "Tầng 9") } }
     };
 
@@ -139,7 +139,7 @@ public class FloorViewer : MonoBehaviour
             if (buildingId == "NĐH")
                 txtBuildingTitle.text = "Nhà điều hành";
             else if (buildingId.Length == 1)
-                txtBuildingTitle.text = "Tòa " + buildingId; // Dịch "A" thành "Tòa A"
+                txtBuildingTitle.text = "Tòa " + buildingId; 
             else
                 txtBuildingTitle.text = buildingId;
         }
@@ -153,13 +153,13 @@ public class FloorViewer : MonoBehaviour
             foreach (Transform child in floorButtonParent) Destroy(child.gameObject);
         }
 
-        // ✅ LOGIC MỚI: DÒ TÌM TRONG TỪ ĐIỂN
+        
         if (buildingStructure.ContainsKey(buildingId))
         {
             var floorsInfo = buildingStructure[buildingId];
             foreach (var floor in floorsInfo)
             {
-                // Gọi load file (VD: C_ham, C_1)
+                
                 var request = Resources.LoadAsync<Sprite>($"IndoorMaps/{buildingId}_{floor.fileSuffix}");
                 yield return request;
                 if (request.asset != null)
@@ -175,7 +175,7 @@ public class FloorViewer : MonoBehaviour
         }
         else
         {
-            // NẾU TÒA NÀO CHƯA ĐƯỢC CHIA TẦNG -> LOAD 1 ẢNH GỐC Y NHƯ CŨ
+            
             var fallbackRequest = Resources.LoadAsync<Sprite>($"IndoorMaps/{buildingId}");
             yield return fallbackRequest;
             if (fallbackRequest.asset != null)
@@ -191,7 +191,7 @@ public class FloorViewer : MonoBehaviour
         if (scrollRect != null) scrollRect.enabled = true;
         if (viewportRect == null && scrollRect != null) viewportRect = scrollRect.viewport;
 
-        // TẠO NÚT BẤM
+        
         if (loadedFloorSprites.Count > 1 && floorButtonPrefab != null && floorButtonParent != null)
         {
             floorButtonParent.parent.gameObject.SetActive(true);
@@ -229,7 +229,7 @@ public class FloorViewer : MonoBehaviour
         if (txtCurrentFloorLabel != null) txtCurrentFloorLabel.text = loadedFloorNames[index];
         if (contentRect != null) contentRect.localScale = Vector3.one;
 
-        float containerWidth = 1080f; // UIConstants.DefaultContainerWidth - Dùng cứng số cho an toàn
+        float containerWidth = 1080f; 
         if (viewportRect != null) containerWidth = viewportRect.rect.width;
         else if (indoorViewerCanvas != null) containerWidth = indoorViewerCanvas.GetComponent<RectTransform>().rect.width;
 

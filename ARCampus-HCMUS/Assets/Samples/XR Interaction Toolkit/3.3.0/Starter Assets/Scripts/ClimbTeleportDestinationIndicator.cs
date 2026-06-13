@@ -4,19 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit.Utilities;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// Affordance component used in conjunction with a <see cref="ClimbTeleportInteractor"/> to display an object
-    /// pointing at the target teleport destination while climbing.
-    /// </summary>
     public class ClimbTeleportDestinationIndicator : MonoBehaviour
     {
         [SerializeField]
         [Tooltip("The interactor that drives the display and placement of the pointer object.")]
         ClimbTeleportInteractor m_ClimbTeleportInteractor;
 
-        /// <summary>
-        /// The interactor that drives the display and placement of the pointer object.
-        /// </summary>
         public ClimbTeleportInteractor climbTeleportInteractor
         {
             get => m_ClimbTeleportInteractor;
@@ -28,10 +21,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             "destination and point its forward vector at the destination and its up vector at the camera.")]
         GameObject m_PointerPrefab;
 
-        /// <summary>
-        /// The prefab to spawn when a teleport destination is chosen. The instance will spawn next to the destination
-        /// and point its forward vector at the destination and its up vector at the camera.
-        /// </summary>
         public GameObject pointerPrefab
         {
             get => m_PointerPrefab;
@@ -42,9 +31,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The distance from the destination at which the pointer object spawns.")]
         float m_PointerDistance = 0.3f;
 
-        /// <summary>
-        /// The distance from the destination at which the pointer object spawns.
-        /// </summary>
         public float pointerDistance
         {
             get => m_PointerDistance;
@@ -54,9 +40,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         TeleportationMultiAnchorVolume m_ActiveTeleportVolume;
         Transform m_PointerInstance;
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnEnable()
         {
             if (m_ClimbTeleportInteractor == null)
@@ -73,9 +56,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_ClimbTeleportInteractor.hoverExited.AddListener(OnInteractorHoverExited);
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnDisable()
         {
             HideIndicator();

@@ -6,19 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// A custom reticle for a <see cref="TeleportationMultiAnchorVolume"/> that displays its progress towards evaluating
-    /// a destination anchor and an indicator pointing in the direction of the destination anchor.
-    /// </summary>
     public class MultiAnchorTeleportReticle : MonoBehaviour, IXRInteractableCustomReticle
     {
         [SerializeField]
         [Tooltip("Filled image that displays the progress towards evaluating a destination anchor.")]
         Image m_TimerProgressFilledImage;
 
-        /// <summary>
-        /// <see cref="Image.Type.Filled"/> image that displays the progress towards evaluating a destination anchor.
-        /// </summary>
         public Image timerProgressFilledImage
         {
             get => m_TimerProgressFilledImage;
@@ -29,9 +22,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Object that is rotated about its Z axis to point at the destination anchor.")]
         GameObject m_DestinationIndicator;
 
-        /// <summary>
-        /// Object that is rotated about its Z axis to point at the destination anchor.
-        /// </summary>
         public GameObject destinationIndicator
         {
             get => m_DestinationIndicator;
@@ -42,9 +32,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Object that is rotated about its Z axis to point at the potential destination while still evaluating.")]
         GameObject m_PotentialDestinationIndicator;
 
-        /// <summary>
-        /// Object that is rotated about its Z axis to point at the potential destination while still evaluating.
-        /// </summary>
         public GameObject potentialDestinationIndicator
         {
             get => m_PotentialDestinationIndicator;
@@ -55,9 +42,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The amount of time, in seconds, between updates to the indicator pointing at the potential destination.")]
         float m_PotentialIndicatorUpdateFrequency = 0.1f;
 
-        /// <summary>
-        /// The amount of time, in seconds, between updates to the indicator pointing at the potential destination.
-        /// </summary>
         public float potentialIndicatorUpdateFrequency
         {
             get => m_PotentialIndicatorUpdateFrequency;
@@ -67,7 +51,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         TeleportationMultiAnchorVolume m_AnchorVolume;
         float m_LastPotentialIndicatorUpdateTime;
 
-        /// <inheritdoc/>
         public void OnReticleAttached(XRBaseInteractable interactable, IXRCustomReticleProvider reticleProvider)
         {
             m_AnchorVolume = interactable as TeleportationMultiAnchorVolume;
@@ -81,7 +64,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_AnchorVolume.destinationAnchorChanged += OnDestinationAnchorChanged;
         }
 
-        /// <inheritdoc/>
         public void OnReticleDetaching()
         {
             if (m_AnchorVolume == null)
@@ -91,9 +73,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_AnchorVolume = null;
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void Update()
         {
             if (m_AnchorVolume == null)

@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Chatbot/Scenes/LoginScene.unity
+    guid: cf632aa105fedcd459706d16c66fed5b
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
     guid: 4755b35b590504809a7525fd2109c2e2
+  - enabled: 1
+    path: Assets/Chatbot/Scenes/ConversationListScene.unity
+    guid: 41e74b58e92e6c4408a89383eb3b2181
+  - enabled: 1
+    path: Assets/Chatbot/Scenes/ChatScene.unity
+    guid: e375a676c052dde4e8963a6ac94d34e3
+  - enabled: 1
+    path: Assets/Chatbot/Scenes/UpdateInforScene.unity
+    guid: 17c5c136d37f2f24a83c733e145f8b46
+  - enabled: 1
+    path: Assets/Chatbot/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259, type: 2}
@@ -15,4 +30,3 @@ EditorBuildSettings:
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 0b53a025a635a4393ba0b49822242280, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3fd4fc0127790db4bae83f7b77da8d45, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b07c4ba7650be4c25b3d0c497e7e2bb8, type: 2}
-  m_UseUCBPForAssetBundles: 0

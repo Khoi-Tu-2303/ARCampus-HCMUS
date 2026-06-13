@@ -4,28 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// A version of continuous movement that automatically controls the frame of reference that
-    /// determines the forward direction of movement based on user preference for each hand.
-    /// For example, can configure to use head relative movement for the left hand and controller relative movement for the right hand.
-    /// </summary>
     public class DynamicMoveProvider : ContinuousMoveProvider
     {
-        /// <summary>
-        /// Defines which transform the XR Origin's movement direction is relative to.
-        /// </summary>
-        /// <seealso cref="leftHandMovementDirection"/>
-        /// <seealso cref="rightHandMovementDirection"/>
         public enum MovementDirection
         {
-            /// <summary>
-            /// Use the forward direction of the head (camera) as the forward direction of the XR Origin's movement.
-            /// </summary>
             HeadRelative,
 
-            /// <summary>
-            /// Use the forward direction of the hand (controller) as the forward direction of the XR Origin's movement.
-            /// </summary>
             HandRelative,
         }
 
@@ -34,9 +18,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Directs the XR Origin's movement when using the head-relative mode. If not set, will automatically find and use the XR Origin Camera.")]
         Transform m_HeadTransform;
 
-        /// <summary>
-        /// Directs the XR Origin's movement when using the head-relative mode. If not set, will automatically find and use the XR Origin Camera.
-        /// </summary>
         public Transform headTransform
         {
             get => m_HeadTransform;
@@ -47,9 +28,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Directs the XR Origin's movement when using the hand-relative mode with the left hand.")]
         Transform m_LeftControllerTransform;
 
-        /// <summary>
-        /// Directs the XR Origin's movement when using the hand-relative mode with the left hand.
-        /// </summary>
         public Transform leftControllerTransform
         {
             get => m_LeftControllerTransform;
@@ -70,10 +48,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Whether to use the specified head transform or left controller transform to direct the XR Origin's movement for the left hand.")]
         MovementDirection m_LeftHandMovementDirection;
 
-        /// <summary>
-        /// Whether to use the specified head transform or controller transform to direct the XR Origin's movement for the left hand.
-        /// </summary>
-        /// <seealso cref="MovementDirection"/>
         public MovementDirection leftHandMovementDirection
         {
             get => m_LeftHandMovementDirection;
@@ -84,10 +58,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Whether to use the specified head transform or right controller transform to direct the XR Origin's movement for the right hand.")]
         MovementDirection m_RightHandMovementDirection;
 
-        /// <summary>
-        /// Whether to use the specified head transform or controller transform to direct the XR Origin's movement for the right hand.
-        /// </summary>
-        /// <seealso cref="MovementDirection"/>
         public MovementDirection rightHandMovementDirection
         {
             get => m_RightHandMovementDirection;
@@ -98,7 +68,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         Pose m_LeftMovementPose = Pose.identity;
         Pose m_RightMovementPose = Pose.identity;
 
-        /// <inheritdoc />
         protected override void Awake()
         {
             base.Awake();
@@ -111,15 +80,14 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             forwardSource = m_CombinedTransform;
         }
 
-        /// <inheritdoc />
         protected override Vector3 ComputeDesiredMove(Vector2 input)
         {
-            // Don't need to do anything if the total input is zero.
-            // This is the same check as the base method.
+            
+            
             if (input == Vector2.zero)
                 return base.ComputeDesiredMove(input);
 
-            // Initialize the Head Transform if necessary, getting the Camera from XR Origin
+            
             if (m_HeadTransform == null)
             {
                 var xrOrigin = mediator.xrOrigin;
@@ -131,7 +99,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 }
             }
 
-            // Get the forward source for the left hand input
+            
             switch (m_LeftHandMovementDirection)
             {
                 case MovementDirection.HeadRelative:
@@ -151,7 +119,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     break;
             }
 
-            // Get the forward source for the right hand input
+            
             switch (m_RightHandMovementDirection)
             {
                 case MovementDirection.HeadRelative:
@@ -171,7 +139,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     break;
             }
 
-            // Combine the two poses into the forward source based on the magnitude of input
+            
             var leftHandValue = leftHandMoveInput.ReadValue();
             var rightHandValue = rightHandMoveInput.ReadValue();
 

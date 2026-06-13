@@ -1,7 +1,7 @@
-﻿// UI/CampusUIManager.cs — PATCHED
-// FIXES:
-// [HIGH] Singleton Awake() had no duplicate check — if scene reloads, old Instance
-//        becomes a dangling reference. Added standard guard pattern.
+﻿
+
+
+
 
 using UnityEngine;
 
@@ -19,7 +19,7 @@ public class CampusUIManager : MonoBehaviour
 
     void Awake()
     {
-        // Safe singleton: destroy duplicate, never leave dangling reference
+        
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -33,9 +33,9 @@ public class CampusUIManager : MonoBehaviour
         CloseAllPanels();
     }
 
-    // ──────────────────────────────────────────────────────────
-    // BOTTOM BAR NAVIGATION
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     public void ToggleSearch()
     {
@@ -51,9 +51,9 @@ public class CampusUIManager : MonoBehaviour
         if (!isCurrentlyOn && searchOverlay != null) searchOverlay.SetActive(false);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // PANEL MANAGEMENT
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     public void CloseAllPanels()
     {

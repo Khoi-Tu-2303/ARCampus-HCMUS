@@ -1,7 +1,7 @@
-﻿// Debug/InGameConsole.cs — PATCHED
-// FIXES:
-// [LOW] seenLogs HashSet grew unboundedly — unique stackTraces could consume MBs over a long
-//       debug session. Solution: evict oldest entry when limit is exceeded (FIFO via Queue).
+﻿
+
+
+
 
 using UnityEngine;
 using TMPro;
@@ -18,10 +18,10 @@ public class InGameConsole : MonoBehaviour
     private List<string> logLines = new List<string>();
     private const int MAX_LINES = 50;
 
-    // Bounded deduplication: HashSet for O(1) lookup, Queue for eviction order
+    
     private HashSet<string> seenLogs = new HashSet<string>();
     private Queue<string> seenLogsQ = new Queue<string>();
-    private const int MAX_SEEN = 200; // cap memory usage
+    private const int MAX_SEEN = 200; 
 
     void OnEnable() { Application.logMessageReceived += HandleLog; }
     void OnDisable() { Application.logMessageReceived -= HandleLog; }
@@ -41,15 +41,15 @@ public class InGameConsole : MonoBehaviour
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
-        // Filter known-harmless Unity font warnings
+        
         if (logString.Contains("Unicode value") || logString.Contains("LiberationSans SDF"))
             return;
 
-        // Deduplication — bounded by MAX_SEEN
+        
         string uniqueKey = logString + stackTrace;
         if (seenLogs.Contains(uniqueKey)) return;
 
-        // Evict oldest entry if at capacity
+        
         if (seenLogs.Count >= MAX_SEEN)
         {
             string oldest = seenLogsQ.Dequeue();

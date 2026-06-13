@@ -3,21 +3,15 @@ using UnityEngine.InputSystem;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// Manages input fallback for <see cref="XRGazeInteractor"/> when eye tracking is not available.
-    /// </summary>
     public class GazeInputManager : MonoBehaviour
     {
-        // This is the name of the layout that is registered by EyeGazeInteraction in the OpenXR Plugin package
+        
         const string k_EyeGazeLayoutName = "EyeGaze";
 
         [SerializeField]
         [Tooltip("Enable fallback to head tracking if eye tracking is unavailable.")]
         bool m_FallbackIfEyeTrackingUnavailable = true;
 
-        /// <summary>
-        /// Enable fallback to head tracking if eye tracking is unavailable.
-        /// </summary>
         public bool fallbackIfEyeTrackingUnavailable
         {
             get => m_FallbackIfEyeTrackingUnavailable;
@@ -27,12 +21,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         bool m_EyeTrackingDeviceFound;
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void Awake()
         {
-            // Check if we have eye tracking support
+            
             var inputDeviceList = new List<InputDevice>();
             InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.EyeTracking, inputDeviceList);
             if (inputDeviceList.Count > 0)
@@ -60,9 +51,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             gameObject.SetActive(m_FallbackIfEyeTrackingUnavailable);
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnDestroy()
         {
             InputDevices.deviceConnected -= OnDeviceConnected;

@@ -1,11 +1,11 @@
-// Services/GPSService.cs — PRODUCTION-READY GPS STATE MACHINE
-// FIXES:
-// [CRITICAL] GPS toggle runtime failure — replaced InvokeRepeating with coroutine state machine
-// [CRITICAL] Stale location not invalidated after GPS disabled
-// [CRITICAL] OnRetryClicked did not restart Input.location
-// [CRITICAL] Modal spam from repeated InvokeRepeating calls
-// [HIGH]     OnApplicationPause not handled
-// [HIGH]     GeoMath compass cache not reset on GPS recovery
+
+
+
+
+
+
+
+
 
 using UnityEngine;
 using System.Collections;
@@ -31,7 +31,7 @@ public class GPSService : MonoBehaviour
     public double Longitude;
     public float Accuracy;
 
-    // IsReady is TRUE only when State == Running AND last update is fresh
+    
     public bool IsReady => State == GPSState.Running && !_locationStale;
 
     [Header("Debug - Mock GPS")]
@@ -41,13 +41,16 @@ public class GPSService : MonoBehaviour
 
     [Header("Settings")]
     public float maxAllowedAccuracy = 25f;
-    public float staleLocationTimeout = 12f;   // seconds without timestamp change → stale
-    public float gpsCheckInterval = 2f;         // monitor loop interval
+    public float staleLocationTimeout = 12f;   
+    public float gpsCheckInterval = 2f;         
+    private double _smoothLat = 0;
+    private double _smoothLng = 0;
+    private const float GPS_ALPHA = 0.4f;
 
     [Header("Simulate Error (Editor)")]
     public bool simulateGPSLost = false;
 
-    // C# events — other systems subscribe instead of polling
+    
     public event Action OnGPSReady;
     public event Action OnGPSLost;
     public event Action OnGPSRecovered;
@@ -56,7 +59,7 @@ public class GPSService : MonoBehaviour
     private double _lastLocationTimestamp = -1.0;
     private float _lastTimestampChangeRealtime = -1f;
     private bool _locationStale = false;
-    private bool _modalShown = false;    // anti-spam guard
+    private bool _modalShown = false;    
 
     void Awake()
     {
@@ -82,9 +85,9 @@ public class GPSService : MonoBehaviour
         yield return StartCoroutine(InitializeGPS());
     }
 
-    // ──────────────────────────────────────────────────────────
-    // INITIALIZATION
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     IEnumerator InitializeGPS()
     {
@@ -115,7 +118,7 @@ public class GPSService : MonoBehaviour
     {
         State = GPSState.Starting;
 
-        // Stop first if already running (safe for re-start)
+        
         if (Input.location.status == LocationServiceStatus.Running ||
             Input.location.status == LocationServiceStatus.Failed)
         {
@@ -155,9 +158,9 @@ public class GPSService : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // MONITOR LOOP  — replaces InvokeRepeating entirely
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     IEnumerator MonitorGPSLoop()
     {
@@ -165,7 +168,7 @@ public class GPSService : MonoBehaviour
         {
             yield return new WaitForSeconds(gpsCheckInterval);
 
-            // ── MOCK PATH ──
+            
             if (useMockGPS)
             {
                 if (simulateGPSLost)
@@ -180,7 +183,7 @@ public class GPSService : MonoBehaviour
                 continue;
             }
 
-            // ── REAL DEVICE PATH ──
+            
             var status = Input.location.status;
             if (!Input.location.isEnabledByUser)
             {
@@ -193,11 +196,11 @@ public class GPSService : MonoBehaviour
                 continue;
             }
 
-            // Detect stale location: timestamp unchanged for too long
+            
             double currentTs = Input.location.lastData.timestamp;
             if (currentTs != _lastLocationTimestamp)
             {
-                // Timestamp changed — location is fresh
+                
                 _lastLocationTimestamp = currentTs;
                 _lastTimestampChangeRealtime = Time.realtimeSinceStartup;
                 _locationStale = false;
@@ -214,11 +217,11 @@ public class GPSService : MonoBehaviour
                 }
             }
 
-            // Accuracy check
+            
             float accuracy = Input.location.lastData.horizontalAccuracy;
             if (accuracy > maxAllowedAccuracy)
             {
-                // Bad accuracy — do NOT immediately lose; wait for next tick
+                
                 Debug.LogWarning($"⚠️ GPS accuracy poor: {accuracy:F0}m");
             }
             else
@@ -230,13 +233,15 @@ public class GPSService : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // STATE TRANSITIONS
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void HandleGPSLost()
     {
         State = GPSState.Lost;
+        _smoothLat = 0;
+        _smoothLng = 0;
         OnGPSLost?.Invoke();
         Debug.LogWarning("❌ GPS Lost!");
         ShowGPSModal(BackActionTarget.GoToMain);
@@ -258,21 +263,33 @@ public class GPSService : MonoBehaviour
     void UpdateLocationData()
     {
         var data = Input.location.lastData;
-        Latitude = data.latitude;
-        Longitude = data.longitude;
         Accuracy = data.horizontalAccuracy;
+
+        
+        if (_smoothLat == 0 || _smoothLng == 0)
+        {
+            _smoothLat = data.latitude;
+            _smoothLng = data.longitude;
+        }
+        else if (Accuracy <= maxAllowedAccuracy)
+        {
+            
+            _smoothLat = _smoothLat + GPS_ALPHA * (data.latitude - _smoothLat);
+            _smoothLng = _smoothLng + GPS_ALPHA * (data.longitude - _smoothLng);
+        }
+
+        
+        Latitude = _smoothLat;
+        Longitude = _smoothLng;
+
         _lastLocationTimestamp = data.timestamp;
         _lastTimestampChangeRealtime = Time.realtimeSinceStartup;
     }
 
-    // ──────────────────────────────────────────────────────────
-    // PUBLIC API — called by SystemModalController.OnRetryClicked
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
-    /// <summary>
-    /// Restart GPS services. Safe to call multiple times.
-    /// Modal hides automatically when GPS recovers (HandleGPSRestored).
-    /// </summary>
     public void RequestRestart()
     {
         if (State == GPSState.Running && !_locationStale) return;
@@ -291,9 +308,9 @@ public class GPSService : MonoBehaviour
         StartCoroutine(StartLocationService());
     }
 
-    // ──────────────────────────────────────────────────────────
-    // MODAL — anti-spam: only show once until state changes
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void ShowGPSModal(BackActionTarget target)
     {
@@ -302,9 +319,9 @@ public class GPSService : MonoBehaviour
         SystemModalController.Instance?.ShowWarning(WarningType.GPS, target);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // APP LIFECYCLE
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void OnApplicationPause(bool paused)
     {
@@ -326,7 +343,7 @@ public class GPSService : MonoBehaviour
 
     IEnumerator ResumeGPSCheck()
     {
-        yield return new WaitForSeconds(1f); // let OS settle
+        yield return new WaitForSeconds(1f); 
 
         if (Input.location.status != LocationServiceStatus.Running)
         {
@@ -338,6 +355,29 @@ public class GPSService : MonoBehaviour
             UpdateLocationData();
             if (_monitorCoroutine == null)
                 _monitorCoroutine = StartCoroutine(MonitorGPSLoop());
+        }
+    }
+    [Header("Sensor Fusion AR")]
+    public float ARNorthOffset { get; private set; }
+    private bool _offsetInitialized = false;
+
+    
+    void Update()
+    {
+        if (Input.compass.enabled && Camera.main != null)
+        {
+            float instantOffset = Camera.main.transform.eulerAngles.y - Input.compass.trueHeading;
+
+            if (!_offsetInitialized)
+            {
+                ARNorthOffset = instantOffset;
+                _offsetInitialized = true;
+            }
+            else
+            {
+                
+                ARNorthOffset = Mathf.LerpAngle(ARNorthOffset, instantOffset, Time.deltaTime * 1.0f);
+            }
         }
     }
 }

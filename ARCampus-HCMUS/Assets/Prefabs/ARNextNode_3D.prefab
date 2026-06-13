@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3728672459443330047}
   - component: {fileID: 6216505105200700843}
   - component: {fileID: 3397797866135906320}
-  - component: {fileID: 5807194911835741245}
+  - component: {fileID: 7719113322046676092}
   m_Layer: 5
   m_Name: ARNextNode
   m_TagString: Untagged
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5807194911835741245
+--- !u!114 &7719113322046676092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41166a72dbaceb94b87f0eba8414083b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BillboardLabel
+  m_EditorClassIdentifier: AppCore::BillboardLabel
   keepConstantScreenSize: 1
   sizeFactor: 0.05
 --- !u!1 &3595809427664716635

@@ -5,11 +5,6 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// Helper component that binds an <see cref="XRInteractableAffordanceStateProvider"/> to a
-    /// <see cref="TeleportationMultiAnchorVolume"/> when the teleport volume sets its destination anchor to a child transform
-    /// of the state provider's originally bound interactable.
-    /// </summary>
     [RequireComponent(typeof(XRInteractableAffordanceStateProvider))]
     [Obsolete("The Affordance System namespace and all associated classes have been deprecated. The existing affordance system will be moved, replaced and updated with a new interaction feedback system in a future version of XRI.")]
     public class TeleportVolumeAnchorAffordanceStateLink : MonoBehaviour
@@ -18,10 +13,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The teleport volume that will drive affordance states when its destination anchor belongs to this interactable.")]
         TeleportationMultiAnchorVolume m_ContainingTeleportVolume;
 
-        /// <summary>
-        /// The teleport volume that will drive affordance states when its destination anchor belongs to the
-        /// state provider's originally bound interactable.
-        /// </summary>
         public TeleportationMultiAnchorVolume containingTeleportVolume
         {
             get => m_ContainingTeleportVolume;
@@ -31,9 +22,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         XRInteractableAffordanceStateProvider m_AffordanceStateProvider;
         IXRInteractable m_Interactable;
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnEnable()
         {
             m_AffordanceStateProvider = GetComponent<XRInteractableAffordanceStateProvider>();
@@ -66,9 +54,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_ContainingTeleportVolume.destinationAnchorChanged += OnDestinationAnchorChanged;
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnDisable()
         {
             if (m_ContainingTeleportVolume != null)
@@ -87,7 +72,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 return;
             }
 
-            // Use teleport volume to drive affordance states if its current anchor belongs to this interactable
+            
             m_AffordanceStateProvider.SetBoundInteractionReceiver(
                 anchor.IsChildOf(m_Interactable.transform)
                     ? m_ContainingTeleportVolume

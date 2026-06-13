@@ -1,8 +1,3 @@
-// Core/AppConstants.cs
-/// <summary>
-/// Toàn bộ magic numbers và hardcoded values của project.
-/// Khi cần thay đổi một con số, chỉ cần sửa ở đây.
-/// </summary>
 public static class GeoConstants
 {
     public const float EarthRadiusMeters = 6371000f;
@@ -12,7 +7,7 @@ public static class GeoConstants
 
 public static class NavigationConstants
 {
-    public const float ArrivalThresholdMeters = 8f;
+    public const float ArrivalThresholdMeters = 10f;
     public const float ArrowDistance = 2f;
     public const float ArrowHeightOffset = -0.3f;
     public const float LineYOffset = -0.5f;
@@ -29,7 +24,6 @@ public static class UIConstants
 
 public static class CampusMapConstants
 {
-    // Tọa độ góc bản đồ campus — chỉnh ở đây khi cần update
     public const double TopLeftLat = 10.879541374505507;
     public const double TopLeftLng = 106.79134049825655;
     public const double BotRightLat = 10.873023893401822;

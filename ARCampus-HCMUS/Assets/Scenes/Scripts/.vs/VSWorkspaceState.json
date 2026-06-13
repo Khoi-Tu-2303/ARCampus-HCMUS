@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Core"
+    "\\UI"
   ],
-  "SelectedNode": "\\Core\\GeoMath.cs",
+  "SelectedNode": "\\UI\\LocationDetailController.cs",
   "PreviewInSolutionExplorer": false
 }
