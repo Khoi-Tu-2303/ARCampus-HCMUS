@@ -195,56 +195,251 @@ Update Information Scene
 * [Ollama](https://ollama.com/) (Khởi chạy cục bộ mô hình ngôn ngữ lớn).
 
 ---
-
 # Cài đặt dự án
 
-## Clone repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Khoi-Tu-2303/ARCampus-HCMUS.git
+cd ARCampus-HCMUS
 ```
- 
-## Khởi động AI Backend 
-1. **Khởi động Ollama**
-   * Mở ứng dụng Ollama trên máy tính.
-   * Đảm bảo đã tải mô hình ngôn ngữ lớn được cấu hình trong dự án bằng lệnh:
-     ```bash
-     ollama run qwen
-     ```
 
-2. **Cài đặt môi trường và khởi chạy Server:**
-   * Mở một cửa sổ Terminal mới, di chuyển vào thư mục backend của dự án:
-     ```bash
-     cd backend
-     ```
-   * Cài đặt toàn bộ các thư viện Python cần thiết được liệt kê trong file cấu hình:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   * Khởi chạy API Server bằng Uvicorn:
-     ```bash
-     uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-     ```
+## Thiết lập Firebase (dùng chung cho cả Backend và Unity App)
+
+### Bước 1: Tạo Firebase Project
+
+Truy cập [Firebase Console](https://console.firebase.google.com), tạo project mới hoặc dùng project đã được cấu hình sẵn.
+
+### Bước 2: Kích hoạt Firestore Database
+
+```text
+Build → Firestore Database
+```
+
+Tạo Firestore Database và nhập dữ liệu địa điểm theo cấu trúc của dự án.
+
+### Bước 3: Kích hoạt Authentication
+
+```text
+Build → Authentication
+```
+
+Bật phương thức xác thực Email/Password.
+
+### Bước 4: Lấy key cho Unity App
+
+```text
+Project Settings → General → Your apps → Add app (Android)
+```
+
+Tải file `google-services.json` và đặt vào:
+
+```text
+Assets/google-services.json
+```
+
+### Bước 5: Lấy key cho Backend
+
+```text
+Project Settings → Service Accounts → Generate New Private Key
+```
+
+Tải file JSON về, đổi tên (nếu cần) và đặt vào:
+
+```text
+backend/key/firebase_key.json
+```
+
+Cấu trúc thư mục:
+
+```text
+backend/
+├── key/
+│   └── firebase_key.json
+├── .env
+└── main.py
+```
+
 ---
 
-### Cài đặt và mở dự án Unity
+## Cấu hình Backend (.env)
 
-1. **Mở dự án qua Unity Hub:**
-   * Khởi động **Unity Hub**.
-   * Nhấn vào nút **Add Project** (hoặc Open) ở góc trên bên phải và trỏ trực tiếp đến thư mục dự án đã tải về.
-   * Cấu hình phiên bản Editor chính xác là **6000.4.7f1** để đảm bảo tính tương thích tốt nhất cho hệ thống AR Foundation và XR.
+Trong thư mục `backend`, tạo file `.env`:
 
-2. **Cấu hình dịch vụ Firebase:**
-   * Thiết lập các dịch vụ **Firebase Firestore** và **Firebase Authentication** tương ứng trên giao diện điều khiển Firebase Console.
-   * Tải tệp cấu hình bảo mật `google-services.json` (dành cho nền tảng Android) từ Firebase về máy.
-   * Di chuyển tệp tin này đặt trực tiếp vào thư mục gốc `Assets/` trong cấu trúc Project của Unity để kích hoạt quyền kết nối cơ sở dữ liệu.
+```env
+HF_TOKEN=<YOUR_HUGGINGFACE_TOKEN>
+FIREBASE_CREDENTIALS_PATH=.\key\firebase_key.json
+PORT=8000
+```
 
-3. **Giải quyết các thư viện phụ thuộc (Dependencies):**
-   * Để đồng bộ hóa các lớp thư viện Firebase vừa thêm, trên thanh công cụ của Unity Editor, truy cập theo đường dẫn: `Assets > External Dependency Manager > Android Resolver > Force Resolver`. Hệ thống sẽ tự động quét và tải các gói Gradle cần thiết cho Android.
-   * **Xử lý lỗi định dạng dữ liệu (Newtonsoft JSON):** Nếu bảng điều khiển Console xuất hiện các lỗi biên dịch liên quan đến việc thiếu không gian tên `Newtonsoft` hoặc `JsonPropertyAttribute`, truy cập vào `Window > Package Manager`, nhấn vào biểu tượng dấu cộng `+`, chọn **Add package by git URL...**, sau đó nhập chuỗi ký tự bên dưới và tải về:
-     ```text
-     com.unity.nuget.newtonsoft-json
-     ```
+| Biến môi trường | Mô tả |
+|---|---|
+| `HF_TOKEN` | Hugging Face Access Token dùng để truy cập mô hình AI |
+| `FIREBASE_CREDENTIALS_PATH` | Đường dẫn tới file Firebase Service Account Key |
+| `PORT` | Cổng chạy FastAPI Server |
+
+### Lấy Hugging Face Token
+
+1. Truy cập: `https://huggingface.co/settings/tokens`
+2. Tạo Access Token mới.
+3. Sao chép token và dán vào `.env`:
+
+```env
+HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxx
+```
+
+### Lưu ý bảo mật
+
+Không đưa các file sau lên GitHub:
+
+```text
+.env
+firebase_key.json
+```
+
+Thêm vào `.gitignore`:
+
+```gitignore
+.env
+key/firebase_key.json
+```
+
+---
+
+## Khởi động AI Backend
+
+### Bước 1: Khởi động Ollama
+
+Mở ứng dụng Ollama trên máy tính, kiểm tra model:
+
+```bash
+ollama run qwen
+```
+
+Nếu model chưa có, Ollama sẽ tự tải về.
+
+### Bước 2: Tạo môi trường Python
+
+```bash
+cd backend
+python -m venv venv
+```
+
+Kích hoạt môi trường:
+
+```bash
+# Windows
+venv\Scripts\activate
+
+# Linux / macOS
+source venv/bin/activate
+```
+
+### Bước 3: Cài đặt thư viện
+
+```bash
+pip install -r requirements.txt
+```
+
+### Bước 4: Tải mô hình NLU
+
+Model được lưu trên Google Drive, cần tải về thủ công hoặc bằng `gdown`.
+
+**Link tải model:**
+https://drive.google.com/drive/folders/1JzU94a2Fm3KkbrHpA34UdWZu_OXNfLGn?usp=drive_link
+
+#### Cách 1: Tải thủ công
+
+Truy cập link Drive → tải toàn bộ thư mục model → giải nén nếu cần (.zip, .rar).
+
+#### Cách 2: Tải bằng gdown (khuyến nghị)
+
+```bash
+pip install gdown
+gdown --folder https://drive.google.com/drive/folders/1JzU94a2Fm3KkbrHpA34UdWZu_OXNfLGn
+```
+
+Sau khi tải xong, đặt model vào `backend/model/` theo cấu trúc:
+
+```text
+backend/
+└── model/
+    ├── intent_model/
+    ├── tokenizer/
+    └── config.json
+```
+
+### Bước 5: Khởi chạy Server
+
+```bash
+python app/main.py
+```
+
+---
+
+## Lấy ứng dụng 
+
+### Build từ Unity
+
+#### Mở dự án Unity
+
+1. Mở Unity Hub → chọn **Add Project** hoặc **Open**, trỏ tới thư mục dự án vừa clone.
+2. Đảm bảo dùng đúng phiên bản: `Unity 6000.4.7f1` (khuyến nghị để tránh lỗi package và AR Foundation).
+
+#### Đồng bộ Dependencies
+
+```text
+Assets → External Dependency Manager → Android Resolver → Force Resolver
+```
+
+Unity sẽ tự động tải các thư viện Android còn thiếu.
+
+#### Cài đặt Newtonsoft JSON (nếu cần)
+
+Nếu Console báo lỗi:
+
+```text
+The type or namespace name 'Newtonsoft' could not be found
+```
+
+Vào:
+
+```text
+Window → Package Manager → + → Add package by git URL...
+```
+
+Nhập:
+
+```text
+com.unity.nuget.newtonsoft-json
+```
+
+#### Build Android
+
+```text
+File → Build Profiles → Android
+```
+
+Nếu chưa cài Android Build Support:
+
+```text
+Unity Hub → Installs → Add Modules
+```
+
+Cài đặt:
+- Android Build Support
+- Android SDK & NDK Tools
+- OpenJDK
+
+
+---
+
+## Yêu cầu thiết bị khi chạy app
+
+- Thiết bị Android có hỗ trợ ARCore.
+- Camera hoạt động ổn định.
+- GPS và Dịch vụ định vị được bật.
+- Kết nối Internet (Wifi/4G) để giao tiếp với AI Backend.
 
 ---
 
