@@ -57,7 +57,7 @@ giúp người dùng tiếp cận thông tin một cách trực quan và thuận
 ## Bản đồ trong nhà
 
 * Hiển thị sơ đồ tầng.
-* Tìm kiếm phòng học.
+* Tìm kiếm phòng học, đề xuất các địa điểm gần nhất với vị trí hiện tại của người dùng.
 * Điều hướng trong các tòa nhà.
 
 ## Tra cứu thông tin địa điểm
