@@ -1,10 +1,3 @@
-// AR/ARLabelBehavior.cs — PATCHED (BẢN KHÓA TỌA ĐỘ)
-// FIXES:
-// [CRITICAL] Race condition: Setup() called AFTER SetActive(true) → OnEnable fired with lat=0, lng=0
-//            Solution: SetupBeforeEnable() injects data BEFORE SetActive, OnEnable guards on _lat!=0
-// [HIGH]     DistanceUpdateLoop now guards against GPS not ready to avoid bad positions
-// [🔥 NEW FIX] Removed GPS drift correction in UpdateDistance. 
-//            Label X/Z positions are now baked upon spawn to let ARFoundation handle spatial tracking, preventing jitter.
 
 using UnityEngine;
 using TMPro;
@@ -27,9 +20,6 @@ public class ARLabelBehavior : MonoBehaviour
     private bool _dataReady = false;
     private Coroutine _distanceRoutine;
 
-    // ──────────────────────────────────────────────────────────
-    // SETUP — MUST be called BEFORE SetActive(true)
-    // ──────────────────────────────────────────────────────────
 
     public void SetupBeforeEnable(string name, double lat, double lng)
     {
@@ -48,9 +38,6 @@ public class ARLabelBehavior : MonoBehaviour
         UpdateDistance();
     }
 
-    // ──────────────────────────────────────────────────────────
-    // LIFECYCLE
-    // ──────────────────────────────────────────────────────────
 
     void OnEnable()
     {
@@ -73,9 +60,6 @@ public class ARLabelBehavior : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // DISTANCE UPDATE LOOP
-    // ──────────────────────────────────────────────────────────
 
     IEnumerator DistanceUpdateLoop()
     {
@@ -97,15 +81,11 @@ public class ARLabelBehavior : MonoBehaviour
         double userLat = GPSService.Instance.Latitude;
         double userLng = GPSService.Instance.Longitude;
 
-        // 1. CHỈ CẬP NHẬT CHỮ TEXT KHOẢNG CÁCH (10m, 15m...)
         if (txtDistance != null)
         {
             float dist = GeoMath.HaversineDouble(userLat, userLng, _lat, _lng);
             txtDistance.text = $"{dist:F0}m";
         }
 
-        // 2. ❌ ĐÃ XÓA HOÀN TOÀN ĐOẠN CẬP NHẬT TỌA ĐỘ THEO GPS (DRIFT CORRECTION)
-        // Hành động này giúp nhãn bị "đổ bê tông" xuống đường. 
-        // Khi sếp di chuyển, ARFoundation (SLAM) sẽ tự động quản lý vị trí của nó, không bị sóng GPS làm giật/nhảy nữa!
     }
 }

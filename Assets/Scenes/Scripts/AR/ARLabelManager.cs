@@ -1,16 +1,10 @@
-// AR/ARLabelManager.cs — PATCHED
-// FIXES:
-// [LOW-MEDIUM] ToggleGrayLabels called GetComponentInChildren<Canvas>() and
-//              GetComponentsInChildren<Renderer>() inside a loop over all labels.
-//              These are expensive hierarchy traversals (O(depth) per call).
-//              Solution: Cache Canvas and Renderer[] inside LabelEntry at Register time.
+
 
 using UnityEngine;
 using System.Collections.Generic;
 
 public class ARLabelManager : MonoBehaviour
 {
-    // ── LabelEntry stores cached components to avoid repeated GetComponent calls ──
     private struct LabelEntry
     {
         public Transform labelTransform;
@@ -18,7 +12,6 @@ public class ARLabelManager : MonoBehaviour
         public float maxHeight;
         public float nearDistance;
         public float farDistance;
-        // Cached at Register time
         public Canvas canvas;
         public Renderer[] renderers;
     }
@@ -29,22 +22,19 @@ public class ARLabelManager : MonoBehaviour
     private List<LabelEntry> _labels = new List<LabelEntry>(16);
     private Transform _camTransform;
     private float _updateTimer;
-    private const float UPDATE_INTERVAL = 0.05f; // 20 Hz
+    private const float UPDATE_INTERVAL = 0.05f; 
 
-    /// <summary>When true, LateUpdate skips position management and labels are hidden.</summary>
     public bool isPausedByNav = false;
 
     void Awake() => _instance = this;
 
-    // ──────────────────────────────────────────────────────────
-    // REGISTER / UNREGISTER
-    // ──────────────────────────────────────────────────────────
+     
+    
 
     public static void Register(Transform t, float minH, float maxH, float near, float far)
     {
         if (_instance == null) return;
 
-        // Cache components at registration time (once per label lifetime)
         Canvas cv = t.GetComponentInChildren<Canvas>(true);
         Renderer[] renderers = t.GetComponentsInChildren<Renderer>(true);
 
@@ -59,7 +49,6 @@ public class ARLabelManager : MonoBehaviour
             renderers = renderers
         });
 
-        // If navigation is active, immediately hide this newly registered label
         if (_instance.isPausedByNav)
         {
             if (cv != null) cv.enabled = false;
@@ -80,9 +69,6 @@ public class ARLabelManager : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // LIFECYCLE
-    // ──────────────────────────────────────────────────────────
 
     void Start() => _camTransform = Camera.main?.transform;
 
@@ -108,14 +94,11 @@ public class ARLabelManager : MonoBehaviour
             float dz = pos.z - camPos.z;
             float dist = Mathf.Sqrt(dx * dx + dz * dz);
 
-            // 🛑 BẢN FIX: ẨN NHÃN KHI USER ĐỨNG QUÁ GẦN (< nearDistance)
             bool shouldBeVisible = dist >= e.nearDistance;
 
-            // Bật/Tắt Canvas
             if (e.canvas != null && e.canvas.enabled != shouldBeVisible)
                 e.canvas.enabled = shouldBeVisible;
 
-            // Bật/Tắt các Renderer (Model 3D nếu có)
             if (e.renderers != null)
             {
                 foreach (var r in e.renderers)
@@ -125,25 +108,19 @@ public class ARLabelManager : MonoBehaviour
                 }
             }
 
-            // Đã tàng hình rồi thì không cần phải xoay mặt hay tính toán độ cao nữa cho đỡ tốn CPU
             if (!shouldBeVisible) continue;
 
-            // Billboard — face camera on Y axis only
             float bx = camPos.x - pos.x;
             float bz = camPos.z - pos.z;
             if (bx * bx + bz * bz > 0.01f)
                 e.labelTransform.rotation = Quaternion.LookRotation(new Vector3(-bx, 0f, -bz));
 
-            // Height lerp based on distance
             float ratio = Mathf.Clamp01((dist - e.nearDistance) / (e.farDistance - e.nearDistance));
             pos.y = Mathf.Lerp(e.minHeight, e.maxHeight, ratio);
             e.labelTransform.position = pos;
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // TOGGLE VISIBILITY — uses cached Canvas/Renderer, O(n) not O(n*depth)
-    // ──────────────────────────────────────────────────────────
 
     public void ToggleGrayLabels(bool isNavigating)
     {
@@ -155,11 +132,9 @@ public class ARLabelManager : MonoBehaviour
         {
             if (entry.labelTransform == null) continue;
 
-            // Use cached Canvas reference
             if (entry.canvas != null)
                 entry.canvas.enabled = !isNavigating;
 
-            // Use cached Renderer[] reference
             if (entry.renderers != null)
                 foreach (var r in entry.renderers)
                     if (r != null) r.enabled = !isNavigating;

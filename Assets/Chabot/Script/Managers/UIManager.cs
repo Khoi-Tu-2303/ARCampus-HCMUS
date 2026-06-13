@@ -13,13 +13,19 @@ namespace ChatApp.Managers
         private const string SCENE_UPDATE_INFO = "UpdateInforScene";
         private const string SCENE_MAIN = "MainScene";
 
+        
         private void Awake()
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("UIManager initialized");
         }
-
+        public void LogoutToLogin()
+        {
+            AuthManager.Instance.Logout();
+            SceneManager.LoadScene("LoginScene");
+        }
         public void GoToLogin()
         {
             AuthManager.Instance.Logout(null);

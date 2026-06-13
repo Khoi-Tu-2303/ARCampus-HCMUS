@@ -117,8 +117,13 @@ namespace ChatApp.UI
                 yield break; 
             }
 
-            if (AuthManager.Instance.IsLoggedIn)
+            string savedUserId = PlayerPrefs.GetString("user_id", "");
+
+            if (AuthManager.Instance.IsLoggedIn &&
+                !string.IsNullOrEmpty(savedUserId))
+            {
                 UIManager.Instance.GoToMainScene();
+            }
         }
         public void ShowLoginPanel()
         {

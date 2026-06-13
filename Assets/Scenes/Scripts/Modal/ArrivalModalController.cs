@@ -13,7 +13,7 @@ public class ArrivalModalController : MonoBehaviour
 
     [Header("Buttons")]
     public Button btnReturnToMain;
-    public Button btnOpenIndoorMap;     // ✅ Đã đổi tên chuẩn thành Indoor Map
+    public Button btnOpenIndoorMap;    
 
     // Biến lưu ID tòa nhà để truyền cho Map
     private string _currentBuildingId = "";
@@ -26,15 +26,12 @@ public class ArrivalModalController : MonoBehaviour
 
     void Start()
     {
-        // Vừa vào game là phải giấu nó đi ngay
         if (modalPanel != null) modalPanel.SetActive(false);
 
-        // Cắm dây sự kiện cho 2 nút
         if (btnReturnToMain != null) btnReturnToMain.onClick.AddListener(OnReturnClicked);
         if (btnOpenIndoorMap != null) btnOpenIndoorMap.onClick.AddListener(OnIndoorMapClicked);
     }
 
-    // ✅ Thêm tham số nodeId (VD: "C_CongChinh") để code tự bóc tách ra chữ "C"
     public void ShowModal(string destinationName, string nodeId = "")
     {
         if (txtWelcome != null)

@@ -46,7 +46,6 @@ public class ARLabelSpawner : MonoBehaviour
                 if (kvp.Value != null) ReturnToPool(kvp.Value);
             }
             _active.Clear();
-            // Nó sẽ tự động spawn lại ở vị trí ĐÚNG trong Update
         }
     }
     // ──────────────────────────────────────────────────────────
@@ -92,7 +91,7 @@ public class ARLabelSpawner : MonoBehaviour
         Vector3 camPos = _arCamera.transform.position;
         float radiusSq = spawnRadius * spawnRadius;
 
-        _outOfRangeBuffer.Clear(); // Đổ rác cũ ra để xài lại túi
+        _outOfRangeBuffer.Clear(); 
 
         foreach (var kvp in _active)
         {

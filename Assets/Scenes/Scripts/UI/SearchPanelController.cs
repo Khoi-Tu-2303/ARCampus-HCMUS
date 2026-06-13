@@ -51,6 +51,7 @@ public class SearchPanelController : MonoBehaviour
 
     void OnEnable()
     {
+        
         searchInput.onValueChanged.AddListener(OnSearchChanged);
         if (FirebaseService.Instance != null)
             FirebaseService.Instance.OnLocationsLoaded -= ProcessAndShowData;
@@ -96,11 +97,52 @@ public class SearchPanelController : MonoBehaviour
     void GenerateRecommendations()
     {
         _recommendedResults.Clear();
-        if (_buildingNames.Count == 0) return;
-        var randomList = _buildingNames.OrderBy(x => Random.value).Take(4).ToList();
-        foreach (var name in randomList)
+
+        if (_buildingNames.Count == 0)
+            return;
+
+        if (GPSService.Instance == null || !GPSService.Instance.IsReady)
+            return;
+
+        float userLat = (float)GPSService.Instance.Latitude;
+        float userLng = (float)GPSService.Instance.Longitude;
+
+        var buildingDistances = new List<(string buildingName, float distance)>();
+
+        foreach (var building in groupedBuildings)
         {
-            _recommendedResults.Add(new SearchResultItem { DisplayText = name, TargetBuildingName = name, IndoorDocId = "" });
+            float nearestDistance = float.MaxValue;
+
+            foreach (var loc in building.Value)
+            {
+                float dist = GeoMath.Haversine(
+                    userLat,
+                    userLng,
+                    (float)loc.lat,
+                    (float)loc.lng
+                );
+
+                if (dist < nearestDistance)
+                    nearestDistance = dist;
+            }
+
+            buildingDistances.Add(
+                (building.Key, nearestDistance)
+            );
+        }
+
+        foreach (var item in buildingDistances
+            .OrderBy(x => x.distance)
+            .Take(4))
+        {
+            _recommendedResults.Add(
+                new SearchResultItem
+                {
+                    DisplayText = item.buildingName,
+                    TargetBuildingName = item.buildingName,
+                    IndoorDocId = ""
+                }
+            );
         }
     }
 
