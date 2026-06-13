@@ -48,7 +48,7 @@ def joint_loss(
 
     intent_loss = nn.CrossEntropyLoss()(intent_logits, intent_labels)
 
-    # slot: flatten (B, L, S) → (B*L, S) và bỏ qua PAD_SLOT_ID (-100)
+    # slot: flatten (B, L, S) to (B*L, S) and skip PAD_SLOT_ID (-100)
     B, L, S = slot_logits.shape
     slot_loss = nn.CrossEntropyLoss(ignore_index=PAD_SLOT_ID)(
         slot_logits.view(B * L, S),
@@ -233,8 +233,8 @@ def train():
         dev_metrics = evaluate(model, dev_loader, device)
         print(
             f"\nEpoch {epoch}/{CFG['epochs']}\n"
-            f"  Train → loss={train_metrics['loss']:.4f}  intent_loss={train_metrics['intent_loss']:.4f}  slot_loss={train_metrics['slot_loss']:.4f}\n"
-            f"  Dev   → loss={dev_metrics['loss']:.4f}  intent_f1={dev_metrics['intent_f1']:.4f}  slot_f1={dev_metrics['slot_f1']:.4f}"
+            f"  Train: loss={train_metrics['loss']:.4f}  intent_loss={train_metrics['intent_loss']:.4f}  slot_loss={train_metrics['slot_loss']:.4f}\n"
+            f"  Dev:   loss={dev_metrics['loss']:.4f}  intent_f1={dev_metrics['intent_f1']:.4f}  slot_f1={dev_metrics['slot_f1']:.4f}"
         )
         epoch_log = {
             "epoch": epoch,
@@ -249,7 +249,7 @@ def train():
 
         save_path = os.path.join(CFG["save_dir"], f"model_epoch{epoch}.pt")
         torch.save(model.state_dict(), save_path)
-        print(f"          ✓ Saved model → {save_path}")
+        print(f"          Saved model to {save_path}")
 
 
 if __name__ == "__main__":

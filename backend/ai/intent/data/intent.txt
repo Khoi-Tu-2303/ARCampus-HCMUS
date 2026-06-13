@@ -1,6 +1,0 @@
-facility_query
-academic_query
-schedule_management
-document_service
-navigation
-general_chat

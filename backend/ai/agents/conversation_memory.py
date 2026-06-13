@@ -1,26 +1,18 @@
-from typing import Any, List, Dict
+from typing import Dict, List
+
 from database.db import fetch_all
 
 K_DEFAULT = 10
 
 
 class ConversationMemoryManager:
-    """
-    Quản lý lịch sử hội thoại sử dụng SQLite
-    """
+    """Read recent conversation history from SQLite."""
 
     def get_history(self, conversation_id: str, k: int = K_DEFAULT) -> List[Dict]:
-        """
-        Lấy k tin nhắn gần nhất của conversation (cũ → mới)
-        """
         return get_conversation_history(conversation_id, k)
 
-    
-def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[Dict]:
-    """
-    Lấy k tin nhắn gần nhất từ SQLite (cũ → mới)
-    """
 
+def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[Dict]:
     query = """
     SELECT role, content, created_at
     FROM messages
@@ -31,7 +23,6 @@ def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[D
 
     rows = fetch_all(query, (conversation_id, k))
 
-    # đảo ngược để cũ → mới
     return [
         {
             "role": row["role"],
@@ -40,7 +31,3 @@ def get_conversation_history(conversation_id: str, k: int = K_DEFAULT) -> List[D
         }
         for row in reversed(rows)
     ]
-    
-    
-if __name__ == "__main__":
-    print(get_conversation_history(conversation_id="conv_4cfb8c17", k=2))

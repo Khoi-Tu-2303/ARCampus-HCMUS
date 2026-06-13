@@ -5,6 +5,9 @@ from ai.agents.agents import InformAgent, NavigationAgent, GeneralAgent
 from version2.chatbot.history import find_entities_in_history, find_intent_in_history
 from firebase.firebase_service import FirebaseService
 from ai.agents.conversation_memory import ConversationMemoryManager
+import logging
+
+logger = logging.getLogger(__name__)
 
 HISTORY_K = 3
 CONTEXT_PREVIEW_CHARS = 180
@@ -227,10 +230,10 @@ class ChatbotPipeline:
         fields: list[str],
         contexts: list,
     ) -> None:
-        print("[DEBUG] [RAG] Retrieve collection =", CONTEXT_COLLECTION)
-        print("[DEBUG] [RAG] Keys =", keys)
-        print("[DEBUG] [RAG] Field order =", fields)
-        print("[DEBUG] [RAG] Context count =", len(contexts or []))
+        logger.debug("RAG collection: %s", CONTEXT_COLLECTION)
+        logger.debug("RAG keys: %s", keys)
+        logger.debug("RAG field order: %s", fields)
+        logger.debug("RAG context count: %d", len(contexts or []))
 
         for index, item in enumerate(contexts or [], start=1):
             if isinstance(item, dict):
@@ -243,7 +246,7 @@ class ChatbotPipeline:
             if len(content) > CONTEXT_PREVIEW_CHARS:
                 content = content[:CONTEXT_PREVIEW_CHARS] + "..."
 
-            print(f"[DEBUG] [RAG] Context {index} [{source}] = {content}")
+            logger.debug("RAG context %d [%s] = %s", index, source, content)
 
     def _rank_context_fields(self, query: str) -> tuple[list[str], list[str]]:
         normalized = query.lower()
@@ -315,10 +318,3 @@ def get_pipeline() -> ChatbotPipeline:
 
 def chat(conversation_id: str, message: str) -> str:
     return get_pipeline().process(conversation_id, message)
-
-
-if __name__ == "__main__":
-    while True:
-        q = input("q = ")
-        result = chat("conv_123", q)
-        print(result)

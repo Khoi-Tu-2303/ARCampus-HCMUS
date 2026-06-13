@@ -1,13 +1,15 @@
 from typing import List, Optional
 from dataclasses import dataclass
+import logging
 import torch
 import torch.nn as nn
 from transformers import AutoTokenizer, AutoModel
-import time
 from rapidfuzz import fuzz
 import re
 from version2.schemas import MatchResult, Entity
 import json
+
+logger = logging.getLogger(__name__)
 
 class PhoBERTClassifier(nn.Module):
     def __init__(self, num_labels: int, dropout: float = 0.1):
@@ -47,7 +49,7 @@ class EntityLinking:
             re.IGNORECASE
         )
 
-        # Anchor B: [1 số][.][1 số]  →  nhà điều hành
+        # Anchor B: [1 so][.][1 so] for nha dieu hanh.
         self.pattern_ndh_anchor = re.compile(
             r'(\d)[.](\d)'
         )
@@ -58,7 +60,7 @@ class EntityLinking:
         self.threshold = threshold
         self.device    = torch.device(device or ("cuda" if torch.cuda.is_available() else "cpu"))
 
-        # ── Tầng 3: load model ─────────────────────────────────────────────
+        # Load model resources.
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
         self.num_labels = checkpoint["num_labels"]
         self.id2label = checkpoint["id2label"]
@@ -70,8 +72,11 @@ class EntityLinking:
         self.model     = PhoBERTClassifier(num_labels=self.num_labels).to(self.device)
         self.model.load_state_dict(checkpoint["model_state"])
         self.model.eval()
-        print(f"Loaded model từ '{checkpoint_path}' "
-              f"F1={checkpoint['val_f1']:.4f})")
+        logger.info(
+            "Loaded entity linking model from %s with F1=%.4f.",
+            checkpoint_path,
+            checkpoint["val_f1"],
+        )
 
         self._initialized = True
         
@@ -85,7 +90,7 @@ class EntityLinking:
     def _best_fuzzy_score(self, candidate: str, keywords: list[str]) -> tuple[float, str]:
         """Trả về (score cao nhất, keyword khớp nhất).
         
-        Nếu candidate rỗng → hợp lệ luôn, trả (100.0, "").
+        Nếu candidate rỗng thì hợp lệ luôn, trả (100.0, "").
         """
         candidate = self._normalize_unicode(candidate)
         if candidate == "":
@@ -102,16 +107,16 @@ class EntityLinking:
 
         return (best_score, best_kw)
 
-    # ── Tầng 1: Rule-based ─────────────────────────────────────────────────
+    # Rule-based matching
     def _match_anchor_fuzzy(self, text: str, label: str) -> Optional[MatchResult]:
         if label != "room":
             return None
         
         text_stripped = text.strip()
-        # ── Xử lý Anchor B: nhà điều hành ─────────────────────────────────
+        # Handle nha dieu hanh anchor.
         m = self.pattern_ndh_anchor.search(text_stripped)
         if m:
-            # Phần còn lại = tất cả text TRƯỚC anchor (bỏ khoảng trắng, dấu)
+            # Use the text before the anchor as an optional keyword prefix.
             prefix_text = text_stripped[: m.start()].strip(" \t\n-.")
             score, _ = self._best_fuzzy_score(prefix_text, self.NDH_KEYWORDS)
 
@@ -129,7 +134,7 @@ class EntityLinking:
                     status=status,
                 )
 
-        # ── Xử lý Anchor A: phòng thường ──────────────────────────────────
+        # Handle regular room anchor.
         m = self.pattern_room_anchor.search(text_stripped)
         if m:
             prefix_text = text_stripped[: m.start()].strip(" \t\n-.")
@@ -151,7 +156,7 @@ class EntityLinking:
 
         return None
 
-    # ── Tầng 2: Alias search ───────────────────────────────────────────────
+    # Alias search
     def _match_alias_search(self, text: str, label: str) -> Optional[MatchResult]:
         text_preprocessed = text.strip().lower()
         if text_preprocessed in self.ALIAS:
@@ -164,7 +169,7 @@ class EntityLinking:
                 )
         return None
 
-    # ── Tầng 3: PhoBERT classifier ─────────────────────────────────────────
+    # PhoBERT classifier
     def _match_phobert(self, text: str, label: str) -> MatchResult:
         encoding = self.tokenizer(
             text,
@@ -194,7 +199,7 @@ class EntityLinking:
             status="matched",
         )
 
-    # ── Pipeline chính ─────────────────────────────────────────────────────
+    # Main pipeline
     def predict(self, entity : Entity) -> MatchResult:
         text = entity.text
         label = entity.label
@@ -209,12 +214,3 @@ class EntityLinking:
 
     def predict_batch(self, entities: List[Entity]) -> List[MatchResult]:
         return [self.predict(entity) for entity in entities]
-if __name__ == "__main__":
-    m = EntityLinking(checkpoint_path="./version2/enity_linking/best_model.pt")
-    while True:
-        q = input("enity = ")
-        s = time.time()
-        a = m.predict(q, label="room")
-        e = time.time()
-        print(a)
-        print(e -s)

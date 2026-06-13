@@ -1,24 +1,14 @@
-"""
-AI Campus Chatbot — Backend Entry Point
-=======================================
-Khởi động FastAPI + Cloudflare Tunnel + Firebase publisher
-bằng một lệnh duy nhất:
-
-    python main.py
-    hoặc
-    uvicorn main:app --host 0.0.0.0 --port 8000
-"""
+"""Backend entry point for the AR Campus chatbot API."""
 
 import logging
 import os
-import sys
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ENV_PATH = BASE_DIR / ".env"
@@ -30,32 +20,28 @@ from app.routes.conversations import router as conv_router
 from app.tunnel import CloudflareTunnel, publish_url
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
 
-
 PORT = int(os.getenv("PORT", 8000))
 
+
 def _on_tunnel_url(public_url: str) -> None:
-    """
-    Callback được gọi mỗi khi cloudflared publish một URL mới.
-    Chạy trong background thread — KHÔNG được block quá lâu.
-    """
-    print(f"\n{'='*55}")
-    print(f"  🌐  Backend running at: {public_url}")
-    print(f"{'='*55}\n")
+    """Publish a new Cloudflare tunnel URL."""
+    logger.info("Backend public URL: %s", public_url)
 
     try:
         if os.getenv("FIREBASE_ENABLED", "true").lower() == "true":
             publish_url(public_url)
-            print("    Firebase updated successfully\n")
+            logger.info("Firebase backend URL updated successfully.")
         else:
             logger.info("Firebase publishing disabled (FIREBASE_ENABLED=false).")
     except Exception as exc:
         logger.error("Failed to publish URL to Firebase: %s", exc)
+
 
 tunnel = CloudflareTunnel(
     port=PORT,
@@ -63,6 +49,7 @@ tunnel = CloudflareTunnel(
     max_retries=10,
     retry_delay=5.0,
 )
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -79,6 +66,7 @@ async def lifespan(app: FastAPI):
     yield
     logger.info("Shutting down Cloudflare Tunnel...")
     tunnel.stop()
+
 
 app = FastAPI(
     title="AI Campus Chatbot API",
@@ -104,7 +92,7 @@ app.include_router(conv_router)
 def health_check():
     return {
         "status": "ok",
-        "tunnel_url": tunnel.url, 
+        "tunnel_url": tunnel.url,
     }
 
 
@@ -113,6 +101,6 @@ if __name__ == "__main__":
         "main:app",
         host="0.0.0.0",
         port=PORT,
-        reload=False, 
+        reload=False,
         log_level="info",
     )

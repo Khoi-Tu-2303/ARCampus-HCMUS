@@ -43,7 +43,7 @@ class HardNegativeMNRLDataset(torch.utils.data.Dataset):
         self.confusable_pairs = confusable_pairs  # [(id_a, id_b, sim), ...]
         self.hard_neg_ratio = hard_neg_ratio
         
-        # Xây dựng lookup: nhãn → danh sách hard negatives của nó
+        # Xây dựng lookup từ nhãn sang danh sách hard negatives của nó.
         self.hard_negatives = {}
         for id_a, id_b, _ in confusable_pairs:
             self.hard_negatives.setdefault(id_a, []).append(id_b)

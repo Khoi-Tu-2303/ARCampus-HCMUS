@@ -64,14 +64,12 @@ class JointNLUPredictor:
 
         intent_logits, slot_logits = self.model(input_ids, attention_mask)
 
-        # ── Intent ────────────────────────────────────────────────────────
         intent_probs  = F.softmax(intent_logits, dim=-1).squeeze(0)
-        print(intent_probs)
         intent_id     = intent_probs.argmax().item()
         intent_conf   = intent_probs[intent_id].item()
         intent_name   = ID2INTENT.get(intent_id, "unknown")
 
-        # ── Slots → span entities ─────────────────────────────────────────
+        # Decode slots into span entities.
         slot_preds = slot_logits.argmax(dim=-1).squeeze(0).tolist()  # (L,)
         entities   = self._decode_bio(text, slot_preds, offsets)
 
@@ -126,7 +124,7 @@ class JointNLUPredictor:
 
         return entities
 
-# ── CLI nhanh ──────────────────────────────────────────────────────────────
+# Quick CLI
 
 if __name__ == "__main__":
     import sys

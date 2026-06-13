@@ -13,9 +13,9 @@ def load_alias_pairs(path: str, strategy: str = "all") -> list[tuple[str, str]]:
     Tạo cặp (anchor, positive) từ file JSON alias.
     
     strategy:
-      "all"      → mọi tổ hợp 2 câu trong alias (C(n,2) cặp)
-      "random"   → chỉ 1 cặp ngẫu nhiên mỗi alias (nhẹ hơn)
-      "ordered"  → giữ thứ tự: (alias[0], alias[1]), (alias[0], alias[2])...
+      "all"      : mọi tổ hợp 2 câu trong alias (C(n,2) cặp)
+      "random"   : chỉ 1 cặp ngẫu nhiên mỗi alias (nhẹ hơn)
+      "ordered"  : giữ thứ tự: (alias[0], alias[1]), (alias[0], alias[2])...
     """
     with open(path, encoding='utf-8') as f:
         data = json.load(f)

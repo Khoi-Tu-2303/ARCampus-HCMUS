@@ -9,7 +9,7 @@ from transformers import AutoTokenizer
 from typing import Any
 
 
-# ── Label maps ──────────────────────────────────────────────────────────────
+# Label maps
 
 INTENT2ID = {
     "navigation": 0,
@@ -34,7 +34,7 @@ NUM_SLOTS = len(SLOT_LABELS)
 PAD_SLOT_ID = -100   # bỏ qua khi tính loss (special / padding tokens)
 
 
-# ── Span → BIO alignment ────────────────────────────────────────────────────
+# Span to BIO alignment
 
 def align_labels(
     entities: list[dict],
@@ -77,7 +77,7 @@ def align_labels(
     return labels
 
 
-# ── Dataset ─────────────────────────────────────────────────────────────────
+# Dataset
 
 class CampusNLUDataset(Dataset):
     """
@@ -116,7 +116,7 @@ class CampusNLUDataset(Dataset):
         entities = sample.get("entities", [])
         intent   = sample.get("intent", "unknown")
 
-        # ── Tokenise ────────────────────────────────────────────────────────
+        # Tokenize input text.
         encoding = self.tokenizer(
             text,
             max_length=self.max_length,
@@ -130,7 +130,7 @@ class CampusNLUDataset(Dataset):
         attention_mask = encoding["attention_mask"].squeeze(0)  # (L,)
         offsets        = encoding["offset_mapping"].squeeze(0).tolist()
 
-        # ── Labels ──────────────────────────────────────────────────────────
+        # Build labels.
         slot_labels = align_labels(entities, offsets)
 
         # single-label intent
@@ -146,15 +146,3 @@ class CampusNLUDataset(Dataset):
             "slot_labels":    torch.tensor(slot_labels, dtype=torch.long),
         }
         
-if __name__ == "__main__":
-    tokenizer = AutoTokenizer.from_pretrained(
-        "xlm-roberta-base",
-        use_fast=True
-    )
-    test_path = "./version2/data/test.json"
-    dataset = CampusNLUDataset(
-        data_path=test_path,
-        tokenizer=tokenizer,
-        max_length=64
-    )
-    print(dataset[0])

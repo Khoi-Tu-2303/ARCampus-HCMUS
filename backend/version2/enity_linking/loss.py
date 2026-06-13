@@ -5,11 +5,11 @@ import torch.nn.functional as F
 class MultipleNegativesRankingLoss(torch.nn.Module):
     """
     Với batch (a₁..aₙ, p₁..pₙ):
-    - Tính similarity matrix S[i,j] = cos(aᵢ, pⱼ)  → shape (N, N)
+    - Tính similarity matrix S[i,j] = cos(anchor_i, positive_j), shape (N, N)
     - Label: đường chéo chính (i==j) là positive
     - Loss = CrossEntropy(S * scale, labels=range(N))
     
-    scale (temperature): giá trị lớn → margin cứng hơn (thường 20.0)
+    scale (temperature): giá trị lớn tạo margin cứng hơn (thường 20.0)
     """
     def __init__(self, scale: float = 20.0):
         super().__init__()
@@ -20,7 +20,7 @@ class MultipleNegativesRankingLoss(torch.nn.Module):
         # Cosine similarity matrix: (N, N)
         scores = torch.matmul(emb_anchor, emb_positive.T) * self.scale
         
-        # Labels: mỗi anchor i → positive i (đường chéo)
+        # Labels: mỗi anchor i khớp với positive i trên đường chéo.
         labels = torch.arange(scores.size(0), device=scores.device)
         
         # Symmetric loss (tùy chọn — cải thiện đáng kể)

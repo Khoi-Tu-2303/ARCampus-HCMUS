@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 import pandas as pd
 import json
+import logging
 from transformers import AutoTokenizer
 from version2.schemas import NLUResult, Intent, IntentType, Entity
 from version2.nlu.model import JointNLUModel
@@ -11,6 +12,8 @@ from version2.nlu.data import (
     ID2SLOT,
     ID2INTENT,
 )
+
+logger = logging.getLogger(__name__)
 
 class IntentEnityClassifier:
     _instance = None
@@ -43,10 +46,10 @@ class IntentEnityClassifier:
 
         self.max_length = max_length
 
-        print("Loading tokenizer...")
+        logger.info("Loading NLU tokenizer.")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-        print("Loading model...")
+        logger.info("Loading NLU model.")
         self.model = JointNLUModel(
             model_name=model_name,
             num_intents=NUM_INTENTS,
@@ -134,9 +137,3 @@ class IntentEnityClassifier:
             entities.append(current)
 
         return entities
-
-if __name__ == "__main__":
-    predictor = IntentEnityClassifier()
-    while True:
-        q = input("q = ")
-        print(predictor.predict(q))

@@ -98,15 +98,15 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
     với điều kiện chưa có "completed turn" nào xảy ra sau message đó.
 
     "Completed turn" = message có CẢ intents hợp lệ VÀ entities matched
-    → nghĩa là một truy vấn đã được giải quyết xong.
+    Nghĩa là một truy vấn đã được giải quyết xong.
 
     Thuật toán:
-      1. Lấy toàn bộ messages của conversation theo thứ tự giảm dần (mới → cũ).
+      1. Lấy toàn bộ messages của conversation theo thứ tự giảm dần.
       2. Duyệt từng message:
-         - Nếu gặp "completed turn" → dừng ngay (mọi thứ trước đó không còn
+         - Nếu gặp "completed turn" thì dừng ngay (mọi thứ trước đó không còn
            hiệu lực, user đang bắt đầu ý định mới).
          - Nếu gặp message có intent hợp lệ mà không có entity matched
-           → đây là message cần tìm, trả về IntentType.
+           thì đây là message cần tìm, trả về IntentType.
       3. Trả None nếu không tìm thấy.
 
     Trả về IntentType (NAVIGATION hoặc INFORM) hoặc None.
@@ -128,7 +128,7 @@ def find_intent_in_history(conversation_id: str) -> list[Intent]:
         is_complete = row["is_complete"]
         
 
-        # Gặp completed turn → dừng tìm kiếm
+        # Stop when a completed turn closes the previous topic.
         if is_complete:
             return []
 
@@ -217,5 +217,3 @@ def update_message_nlu(
         ),
     )
     
-if __name__ == "__main__":
-    pass
