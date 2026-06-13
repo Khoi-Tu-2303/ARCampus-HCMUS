@@ -176,17 +176,23 @@ Update Information Scene
 
 ## Thiết bị
 
-* Android hỗ trợ ARCore.
-* Camera hoạt động.
-* GPS được bật.
-* Kết nối Internet.
-
+* Thiết bị Android có hỗ trợ nền tảng ARCore.
+* Camera hoạt động ổn định.
+* GPS và Dịch vụ định vị được bật.
+* Kết nối Internet (Wifi/4G) để giao tiếp với AI Backend.
+  
 ## Môi trường phát triển
 
-* Unity
-* Android SDK
-* Firebase SDK
-* AR Foundation
+**1. Unity (Frontend & AR):**
+* Unity Editor (Dùng phiên bản **6000.4.7f1** để tránh xung đột).
+* Android SDK & NDK (Cài đặt kèm qua Unity Hub).
+* AR Foundation & ARCore XR Plugin.
+* Firebase SDK.
+
+**2. AI Backend:**
+* Python 3.9 trở lên.
+* FastAPI (API Server) & Uvicorn.
+* [Ollama](https://ollama.com/) (Khởi chạy cục bộ mô hình ngôn ngữ lớn).
 
 ---
 
@@ -197,23 +203,48 @@ Update Information Scene
 ```bash
 git clone https://github.com/Khoi-Tu-2303/ARCampus-HCMUS.git
 ```
+ 
+## Khởi động AI Backend 
+1. **Khởi động Ollama**
+   * Mở ứng dụng Ollama trên máy tính.
+   * Đảm bảo đã tải mô hình ngôn ngữ lớn được cấu hình trong dự án bằng lệnh:
+     ```bash
+     ollama run qwen
+     ```
 
-## Mở dự án
+2. **Cài đặt môi trường và khởi chạy Server:**
+   * Mở một cửa sổ Terminal mới, di chuyển vào thư mục backend của dự án:
+     ```bash
+     cd backend
+     ```
+   * Cài đặt toàn bộ các thư viện Python cần thiết được liệt kê trong file cấu hình:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   * Khởi chạy API Server bằng Uvicorn:
+     ```bash
+     uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+     ```
+---
 
-1. Mở Unity Hub.
-2. Chọn Add Project.
-3. Chọn thư mục dự án.
-4. Mở bằng phiên bản Unity được nhóm sử dụng.
+### Cài đặt và mở dự án Unity
 
-## Firebase
+1. **Mở dự án qua Unity Hub:**
+   * Khởi động **Unity Hub**.
+   * Nhấn vào nút **Add Project** (hoặc Open) ở góc trên bên phải và trỏ trực tiếp đến thư mục dự án đã tải về.
+   * Cấu hình phiên bản Editor chính xác là **6000.4.7f1** để đảm bảo tính tương thích tốt nhất cho hệ thống AR Foundation và XR.
 
-Đảm bảo đã cấu hình:
+2. **Cấu hình dịch vụ Firebase:**
+   * Thiết lập các dịch vụ **Firebase Firestore** và **Firebase Authentication** tương ứng trên giao diện điều khiển Firebase Console.
+   * Tải tệp cấu hình bảo mật `google-services.json` (dành cho nền tảng Android) từ Firebase về máy.
+   * Di chuyển tệp tin này đặt trực tiếp vào thư mục gốc `Assets/` trong cấu trúc Project của Unity để kích hoạt quyền kết nối cơ sở dữ liệu.
 
-* Firebase Firestore
-* Firebase Authentication
-* Google Services
-
-theo cấu hình của dự án.
+3. **Giải quyết các thư viện phụ thuộc (Dependencies):**
+   * Để đồng bộ hóa các lớp thư viện Firebase vừa thêm, trên thanh công cụ của Unity Editor, truy cập theo đường dẫn: `Assets > External Dependency Manager > Android Resolver > Force Resolver`. Hệ thống sẽ tự động quét và tải các gói Gradle cần thiết cho Android.
+   * **Xử lý lỗi định dạng dữ liệu (Newtonsoft JSON):** Nếu bảng điều khiển Console xuất hiện các lỗi biên dịch liên quan đến việc thiếu không gian tên `Newtonsoft` hoặc `JsonPropertyAttribute`, truy cập vào `Window > Package Manager`, nhấn vào biểu tượng dấu cộng `+`, chọn **Add package by git URL...**, sau đó nhập chuỗi ký tự bên dưới và tải về:
+     ```text
+     com.unity.nuget.newtonsoft-json
+     ```
 
 ---
 
