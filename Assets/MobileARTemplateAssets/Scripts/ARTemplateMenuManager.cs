@@ -8,20 +8,12 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 namespace UnityEngine.XR.Templates.AR
 {
-    /// <summary>
-    /// Handles dismissing the object menu when clicking out the UI bounds, and showing the
-    /// menu again when the create menu button is clicked after dismissal. Manages object deletion in the AR demo scene,
-    /// and also handles the toggling between the object creation menu button and the delete button.
-    /// </summary>
     public class ARTemplateMenuManager : MonoBehaviour
     {
         [SerializeField]
         [Tooltip("Button that opens the create menu.")]
         Button m_CreateButton;
 
-        /// <summary>
-        /// Button that opens the create menu.
-        /// </summary>
         public Button createButton
         {
             get => m_CreateButton;
@@ -32,9 +24,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("Button that deletes a selected object.")]
         Button m_DeleteButton;
 
-        /// <summary>
-        /// Button that deletes a selected object.
-        /// </summary>
         public Button deleteButton
         {
             get => m_DeleteButton;
@@ -45,9 +34,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The menu with all the creatable objects.")]
         GameObject m_ObjectMenu;
 
-        /// <summary>
-        /// The menu with all the creatable objects.
-        /// </summary>
         public GameObject objectMenu
         {
             get => m_ObjectMenu;
@@ -58,9 +44,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The modal with debug options.")]
         GameObject m_ModalMenu;
 
-        /// <summary>
-        /// The modal with debug options.
-        /// </summary>
         public GameObject modalMenu
         {
             get => m_ModalMenu;
@@ -71,9 +54,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The animator for the object creation menu.")]
         Animator m_ObjectMenuAnimator;
 
-        /// <summary>
-        /// The animator for the object creation menu.
-        /// </summary>
         public Animator objectMenuAnimator
         {
             get => m_ObjectMenuAnimator;
@@ -84,9 +64,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The object spawner component in charge of spawning new objects.")]
         ObjectSpawner m_ObjectSpawner;
 
-        /// <summary>
-        /// The object spawner component in charge of spawning new objects.
-        /// </summary>
         public ObjectSpawner objectSpawner
         {
             get => m_ObjectSpawner;
@@ -97,9 +74,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("Button that closes the object creation menu.")]
         Button m_CancelButton;
 
-        /// <summary>
-        /// Button that closes the object creation menu.
-        /// </summary>
         public Button cancelButton
         {
             get => m_CancelButton;
@@ -110,9 +84,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The interaction group for the AR demo scene.")]
         XRInteractionGroup m_InteractionGroup;
 
-        /// <summary>
-        /// The interaction group for the AR demo scene.
-        /// </summary>
         public XRInteractionGroup interactionGroup
         {
             get => m_InteractionGroup;
@@ -123,9 +94,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The slider for activating plane debug visuals.")]
         DebugSlider m_DebugPlaneSlider;
 
-        /// <summary>
-        /// The slider for activating plane debug visuals.
-        /// </summary>
         public DebugSlider debugPlaneSlider
         {
             get => m_DebugPlaneSlider;
@@ -136,9 +104,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The plane manager in the AR demo scene.")]
         ARPlaneManager m_PlaneManager;
 
-        /// <summary>
-        /// The plane manager in the AR demo scene.
-        /// </summary>
         public ARPlaneManager planeManager
         {
             get => m_PlaneManager;
@@ -149,9 +114,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("Determines whether or not to fade the AR Planes when visualization is toggled.")]
         bool m_UseARPlaneFading = true;
 
-        /// <summary>
-        /// Determines whether or not to fade the AR Planes when visualization is toggled.
-        /// </summary>
         public bool useARPlaneFading
         {
             get => m_UseARPlaneFading;
@@ -162,9 +124,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The AR debug menu.")]
         ARDebugMenu m_ARDebugMenu;
 
-        /// <summary>
-        /// The AR debug menu.
-        /// </summary>
         public ARDebugMenu arDebugMenu
         {
             get => m_ARDebugMenu;
@@ -175,9 +134,6 @@ namespace UnityEngine.XR.Templates.AR
         [Tooltip("The slider for activating the debug menu.")]
         DebugSlider m_DebugMenuSlider;
 
-        /// <summary>
-        /// The slider for activating the debug menu.
-        /// </summary>
         public DebugSlider debugMenuSlider
         {
             get => m_DebugMenuSlider;
@@ -187,10 +143,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         XRInputValueReader<Vector2> m_TapStartPositionInput = new XRInputValueReader<Vector2>("Tap Start Position");
 
-        /// <summary>
-        /// Input to use for the screen tap start position.
-        /// </summary>
-        /// <seealso cref="TouchscreenGestureInputController.tapStartPosition"/>
         public XRInputValueReader<Vector2> tapStartPositionInput
         {
             get => m_TapStartPositionInput;
@@ -200,10 +152,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         XRInputValueReader<Vector2> m_DragCurrentPositionInput = new XRInputValueReader<Vector2>("Drag Current Position");
 
-        /// <summary>
-        /// Input to use for the screen tap start position.
-        /// </summary>
-        /// <seealso cref="TouchscreenGestureInputController.dragCurrentPosition"/>
         public XRInputValueReader<Vector2> dragCurrentPositionInput
         {
             get => m_DragCurrentPositionInput;
@@ -223,9 +171,6 @@ namespace UnityEngine.XR.Templates.AR
         readonly Dictionary<ARPlane, ARPlaneMeshVisualizer> m_ARPlaneMeshVisualizers = new Dictionary<ARPlane, ARPlaneMeshVisualizer>();
         readonly Dictionary<ARPlane, ARPlaneMeshVisualizerFader> m_ARPlaneMeshVisualizerFaders = new Dictionary<ARPlane, ARPlaneMeshVisualizerFader>();
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void OnEnable()
         {
             m_CreateButton.onClick.AddListener(ShowMenu);
@@ -234,9 +179,6 @@ namespace UnityEngine.XR.Templates.AR
             m_PlaneManager.trackablesChanged.AddListener(OnPlaneChanged);
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void OnDisable()
         {
             m_ShowObjectMenu = false;
@@ -246,13 +188,10 @@ namespace UnityEngine.XR.Templates.AR
             m_PlaneManager.trackablesChanged.RemoveListener(OnPlaneChanged);
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void Start()
         {
-            // Auto turn on/off debug menu. We want it initially active so it calls into 'Start', which will
-            // allow us to move the menu properties later if the debug menu is turned on.
+            
+            
             if (m_ARDebugMenu != null)
             {
                 m_ARDebugMenu.gameObject.SetActive(true);
@@ -267,9 +206,6 @@ namespace UnityEngine.XR.Templates.AR
             m_DebugPlaneSlider.value = m_VisualizePlanes ? 1 : 0;
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         void Update()
         {
             if (m_InitializingDebugMenu)
@@ -313,11 +249,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Set the index of the object in the list on the ObjectSpawner to a specific value.
-        /// This is effectively an override of the default behavior or randomly spawning an object.
-        /// </summary>
-        /// <param name="objectIndex">The index in the array of the object to spawn with the ObjectSpawner</param>
         public void SetObjectToSpawn(int objectIndex)
         {
             if (m_ObjectSpawner == null)
@@ -350,9 +281,6 @@ namespace UnityEngine.XR.Templates.AR
             AdjustARDebugMenuPosition();
         }
 
-        /// <summary>
-        /// Shows or hides the menu modal when the options button is clicked.
-        /// </summary>
         public void ShowHideModal()
         {
             if (m_ModalMenu.activeSelf)
@@ -367,9 +295,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Shows or hides the plane debug visuals.
-        /// </summary>
         public void ShowHideDebugPlane()
         {
             m_VisualizePlanes = !m_VisualizePlanes;
@@ -377,21 +302,18 @@ namespace UnityEngine.XR.Templates.AR
             ChangePlaneVisibility(m_VisualizePlanes);
         }
 
-        /// <summary>
-        /// Shows or hides the AR debug menu.
-        /// </summary>
         public void ShowHideDebugMenu()
         {
             m_ShowDebugMenu = !m_ShowDebugMenu;
             m_DebugMenuSlider.value = m_ShowDebugMenu ? 1 : 0;
 
-            // There is a bug in the ARDebugMenu that when the debug menu is enabled, it will always
-            // turn off the line visualizers regardless of previous state. This means that the toggle
-            // UI can appear "on" while the vizualizers are "off" and the toggle will behave opposite
-            // of the value shown in the UI.
-            // In the code below, we capture the previous value and only set the value back to 1 if it
-            // is different than what the ARDebugMenu is tracking for that UI element. Otherwise it will
-            // cause the same toggle behavior described above.
+            
+            
+            
+            
+            
+            
+            
             if (m_ShowDebugMenu)
             {
                 m_ARDebugMenu.gameObject.SetActive(true);
@@ -409,9 +331,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Clear all created objects in the scene.
-        /// </summary>
         public void ClearAllObjects()
         {
             foreach (Transform child in m_ObjectSpawner.transform)
@@ -420,9 +339,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Triggers hide animation for menu.
-        /// </summary>
         public void HideMenu()
         {
             m_ObjectMenuAnimator.SetBool("Show", false);
@@ -580,7 +496,7 @@ namespace UnityEngine.XR.Templates.AR
                 }
             }
 
-            // Fallback if the counts do not match after an update
+            
             if (m_PlaneManager.trackables.count != m_ARPlanes.Count)
             {
                 m_ARPlanes.Clear();

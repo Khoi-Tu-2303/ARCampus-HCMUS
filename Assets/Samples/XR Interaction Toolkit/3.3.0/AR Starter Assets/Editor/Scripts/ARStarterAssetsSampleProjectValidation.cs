@@ -10,10 +10,6 @@ using UnityEngine;
 
 namespace UnityEditor.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor
 {
-    /// <summary>
-    /// Unity Editor class which registers Project Validation rules for the AR Starter Assets sample,
-    /// checking that other required samples are installed.
-    /// </summary>
     static class ARStarterAssetsSampleProjectValidation
     {
         const string k_SampleDisplayName = "AR Starter Assets";

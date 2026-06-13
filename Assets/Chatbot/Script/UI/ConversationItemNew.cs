@@ -49,10 +49,9 @@ namespace ChatApp.UI
             SetNormalMode();
         }
 
-        // ───────────────────────────────────────────────
+        
         #region Mode Switching
 
-        /// <summary>Hiện Select / Rename / Delete — ẩn Input / Confirm / Cancel.</summary>
         private void SetNormalMode()
         {
             selectButton.gameObject.SetActive(true);
@@ -64,7 +63,6 @@ namespace ChatApp.UI
             cancelRenameButton.gameObject.SetActive(false);
         }
 
-        /// <summary>Ẩn Select / Rename / Delete — hiện Input / Confirm / Cancel.</summary>
         private void SetRenameMode()
         {
             selectButton.gameObject.SetActive(false);
@@ -75,7 +73,7 @@ namespace ChatApp.UI
             confirmRenameButton.gameObject.SetActive(true);
             cancelRenameButton.gameObject.SetActive(true);
 
-            // Điền sẵn tên hiện tại và focus
+            
             renameInputField.text = titleText.text;
             renameInputField.Select();
             renameInputField.ActivateInputField();
@@ -83,7 +81,7 @@ namespace ChatApp.UI
 
         #endregion
 
-        // ───────────────────────────────────────────────
+        
         #region Button Handlers
 
         private void OnSelectClicked() => _onSelect?.Invoke();
@@ -107,7 +105,7 @@ namespace ChatApp.UI
 
         #endregion
 
-        // ───────────────────────────────────────────────
+        
 
         public void SetTitle(string title) => titleText.text = title;
     }

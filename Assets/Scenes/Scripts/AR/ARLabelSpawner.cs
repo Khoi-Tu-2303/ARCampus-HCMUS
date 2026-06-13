@@ -48,23 +48,19 @@ public class ARLabelSpawner : MonoBehaviour
             _active.Clear();
         }
     }
-    // ──────────────────────────────────────────────────────────
-    // POOL HELPERS
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
-    /// <summary>
-    /// Returns a pooled (or new) object WITHOUT activating it.
-    /// Caller must call SetupBeforeEnable() then SetActive(true) manually.
-    /// </summary>
     GameObject GetFromPoolInactive()
     {
         if (_pool.Count > 0)
         {
             var obj = _pool.Dequeue();
-            // Do NOT call SetActive here — caller does it after setup
+            
             return obj;
         }
-        // Pool exhausted — instantiate a new one (inactive by default from prefab)
+        
         var newObj = Instantiate(labelPrefab);
         newObj.SetActive(false);
         return newObj;
@@ -76,9 +72,9 @@ public class ARLabelSpawner : MonoBehaviour
         _pool.Enqueue(obj);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // VISIBILITY UPDATE — runs at 10Hz, culls out-of-range labels
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void Update()
     {
@@ -103,21 +99,21 @@ public class ARLabelSpawner : MonoBehaviour
             if (diff.sqrMagnitude >= radiusSq)
             {
                 ReturnToPool(kvp.Value);
-                _outOfRangeBuffer.Add(kvp.Key); // Xài buffer
+                _outOfRangeBuffer.Add(kvp.Key); 
             }
         }
 
-        foreach (var key in _outOfRangeBuffer) // Xài buffer
+        foreach (var key in _outOfRangeBuffer) 
             _active.Remove(key);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // SPAWN LOOP
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     IEnumerator SpawnLoop()
     {
-        // Wait indefinitely until both GPS and Firebase are ready
+        
         while (FirebaseService.Instance == null || !FirebaseService.Instance.IsReady ||
                GPSService.Instance == null || !GPSService.Instance.IsReady)
         {
@@ -134,10 +130,10 @@ public class ARLabelSpawner : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // SPAWN LABELS
-    // FIX: SetupBeforeEnable() called BEFORE SetActive(true)
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
+    
 
     void SpawnLabels()
     {
@@ -154,26 +150,26 @@ public class ARLabelSpawner : MonoBehaviour
                 GPSService.Instance.Latitude, GPSService.Instance.Longitude,
                 _arCamera.transform);
 
-            // STEP 1: Get inactive object from pool (NOT activated yet)
+            
             GameObject label = GetFromPoolInactive();
 
-            // STEP 2: Configure canvas camera
+            
             Canvas labelCanvas = label.GetComponent<Canvas>();
             if (labelCanvas != null) labelCanvas.worldCamera = _arCamera;
 
-            // STEP 3: Set display name text
+            
             var tmp = label.GetComponentInChildren<TextMeshProUGUI>();
             if (tmp != null) tmp.text = loc.display_name;
 
-            // STEP 4: Inject GPS data BEFORE activation — prevents OnEnable race condition
+            
             ARLabelBehavior behavior = label.GetComponent<ARLabelBehavior>();
             if (behavior != null)
                 behavior.SetupBeforeEnable(loc.display_name, loc.lat, loc.lng);
 
-            // STEP 5: Place in world
+            
             label.transform.SetPositionAndRotation(worldPos, Quaternion.identity);
 
-            // STEP 6: NOW activate — OnEnable will find _lat/_lng already set
+            
             label.SetActive(true);
 
             _active[loc.location_id] = label;

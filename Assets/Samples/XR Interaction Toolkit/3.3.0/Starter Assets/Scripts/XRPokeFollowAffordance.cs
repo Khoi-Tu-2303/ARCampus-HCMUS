@@ -7,15 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit.Utilities.Tweenables.Primitives;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// Follow animation affordance for <see cref="IPokeStateDataProvider"/>, such as <see cref="XRPokeFilter"/>.
-    /// Used to animate a pressed transform, such as a button to follow the poke position.
-    /// </summary>
-    /// <remarks>
-    /// The Affordance System namespace and all associated classes have been deprecated.
-    /// The existing affordance system will be moved, replaced and updated with a new interaction
-    /// feedback system in a future version of XRI, including this sample script.
-    /// </remarks>
     [AddComponentMenu("XR/XR Poke Follow Affordance", 22)]
     public class XRPokeFollowAffordance : MonoBehaviour
     {
@@ -24,10 +15,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                  "\nNote: Should be a direct child GameObject.")]
         Transform m_PokeFollowTransform;
 
-        /// <summary>
-        /// Transform that will animate along the axis of interaction when this interactable is poked.
-        /// Note: Must be a direct child GameObject as it moves in local space relative to the poke target's transform.
-        /// </summary>
         public Transform pokeFollowTransform
         {
             get => m_PokeFollowTransform;
@@ -39,9 +26,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Multiplies transform position interpolation as a factor of Time.deltaTime. If 0, no smoothing will be applied.")]
         float m_SmoothingSpeed = 16f;
 
-        /// <summary>
-        /// Multiplies transform position interpolation as a factor of <see cref="Time.deltaTime"/>. If <c>0</c>, no smoothing will be applied.
-        /// </summary>
         public float smoothingSpeed
         {
             get => m_SmoothingSpeed;
@@ -52,9 +36,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("When this component is no longer the target of the poke, the Poke Follow Transform returns to the original position.")]
         bool m_ReturnToInitialPosition = true;
 
-        /// <summary>
-        /// When this component is no longer the target of the poke, the <see cref="pokeFollowTransform"/> returns to the original position.
-        /// </summary>
         public bool returnToInitialPosition
         {
             get => m_ReturnToInitialPosition;
@@ -66,10 +47,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                  "This is useful for UI objects that may have child graphics.")]
         bool m_ApplyIfChildIsTarget = true;
 
-        /// <summary>
-        /// Whether to apply the follow animation if the target of the poke is a child of this transform.
-        /// This is useful for UI objects that may have child graphics.
-        /// </summary>
         public bool applyIfChildIsTarget
         {
             get => m_ApplyIfChildIsTarget;
@@ -80,9 +57,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Whether to keep the Poke Follow Transform from moving past a maximum distance from the poke target.")]
         bool m_ClampToMaxDistance;
 
-        /// <summary>
-        /// Whether to keep the <see cref="pokeFollowTransform"/> from moving past <see cref="maxDistance"/> from the poke target.
-        /// </summary>
         public bool clampToMaxDistance
         {
             get => m_ClampToMaxDistance;
@@ -93,19 +67,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("The maximum distance from this transform that the Poke Follow Transform can move.")]
         float m_MaxDistance;
 
-        /// <summary>
-        /// The maximum distance from this transform that the <see cref="pokeFollowTransform"/> can move when
-        /// <see cref="clampToMaxDistance"/> is <see langword="true"/>.
-        /// </summary>
         public float maxDistance
         {
             get => m_MaxDistance;
             set => m_MaxDistance = value;
         }
 
-        /// <summary>
-        /// The original position of this interactable before any pushes have been applied.
-        /// </summary>
         public Vector3 initialPosition
         {
             get => m_InitialPosition;
@@ -115,9 +82,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         IPokeStateDataProvider m_PokeDataProvider;
         IMultiPokeStateDataProvider m_MultiPokeStateDataProvider;
 
-#pragma warning disable CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 
         readonly Vector3TweenableVariable m_TransformTweenableVariable = new Vector3TweenableVariable();
-#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning restore CS0618 
         readonly BindingsGroup m_BindingsGroup = new BindingsGroup();
         Vector3 m_InitialPosition;
         bool m_IsFirstFrame;
@@ -126,9 +93,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [SerializeField]
         XRPokeFilter m_PokeFilter = null;
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void Awake()
         {
             m_MultiPokeStateDataProvider = GetComponentInParent<IMultiPokeStateDataProvider>();
@@ -136,9 +100,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_PokeDataProvider = GetComponentInParent<IPokeStateDataProvider>();
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void Start()
         {
             if (m_PokeFollowTransform != null)
@@ -158,18 +119,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void OnDestroy()
         {
             m_BindingsGroup.Clear();
             m_TransformTweenableVariable?.Dispose();
         }
 
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
         protected void LateUpdate()
         {
             if (m_IsFirstFrame)
@@ -184,7 +139,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         protected virtual void OnTransformTweenableVariableUpdated(float3 position)
         {
-            // UI Anchors can cause this to not work correctly, so we check if it's a RectTransform and set the localPosition Z only
+            
             if (m_PokeFollowTransform is RectTransform)
             {
                 var targetPosition = m_PokeFollowTransform.localPosition;
@@ -290,7 +245,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_PokeFilter = GetComponentInParent<XRPokeFilter>();
             }
 
-            // Visually update the end point to match the target clamped position
+            
             if (m_PokeFollowTransform != null && TryGetTargetEndPoint(out var endPoint))
                 m_PokeFollowTransform.position = endPoint;
         }

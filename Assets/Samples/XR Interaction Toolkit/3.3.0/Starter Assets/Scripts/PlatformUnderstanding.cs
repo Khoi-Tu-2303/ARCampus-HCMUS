@@ -6,47 +6,25 @@ using UnityEngine.XR.OpenXR;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
-    /// <summary>
-    /// Enumeration of supported XR Platforms for OpenXR.
-    /// </summary>
     public enum XRPlatformType
     {
-        /// <summary>
-        /// Meta Quest devices supported through OpenXR.
-        /// </summary>
         [InspectorName("OpenXR: Meta")]
         OpenXRMeta,
 
-        /// <summary>
-        /// Android XR devices supported through OpenXR.
-        /// </summary>
         [InspectorName("OpenXR: Android XR")]
         OpenXRAndroidXR,
 
-        /// <summary>
-        /// Other OpenXR devices.
-        /// </summary>
         [InspectorName("OpenXR: Other")]
         OpenXROther,
 
-        /// <summary>
-        /// Other device that does not support OpenXR or not running on an OpenXR runtime.
-        /// </summary>
         Other,
     }
 
-    /// <summary>
-    /// Helper class that determines the current XR platform based on the active runtime.
-    /// Currently, this only supports OpenXR Runtimes from Meta and Google.
-    /// </summary>
     public static class XRPlatformUnderstanding
     {
         const string k_RuntimeNameMeta = "Oculus";
         const string k_RuntimeNameAndroidXR = "Android XR";
 
-        /// <summary>
-        /// The current platform based on the OpenXR Runtime name.
-        /// </summary>
         public static XRPlatformType CurrentPlatform
         {
             get
@@ -64,13 +42,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         static bool s_Initialized;
 
-        /// <summary>
-        /// Returns the current platform based on the active OpenXR Runtime name.
-        /// </summary>
-        /// <returns>The current platform based on the active OpenXR Runtime name.</returns>
         static XRPlatformType GetCurrentXRPlatform()
         {
-            // If we have already initialized, just return the current platform
+            
             if (s_Initialized)
                 return s_CurrentPlatform;
 

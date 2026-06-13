@@ -1,4 +1,4 @@
-// Models/LocationData.cs
+
 using System;
 using UnityEngine;
 using System.Collections.Generic;
@@ -23,10 +23,10 @@ public class LocationData
     public string description;
 
     [Header("Google Maps Style Data")]
-    // ✅ THÊM DATA MỚI ĐỂ ĐỔ LÊN GIAO DIỆN DETAIL
+    
     public string working_hours = "7:00 - 21:00";
     public List<string> image_urls = new List<string>();
 
-    // DistanceTo() đã được XÓA.
-    // Thay bằng: GeoMath.Haversine(userLat, userLng, loc.lat, loc.lng)
+    
+    
 }

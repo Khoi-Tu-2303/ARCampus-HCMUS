@@ -1,10 +1,10 @@
-// Map/RouteRenderer2D.cs — PATCHED v2
-// FIXES (Phase 6 — Memory & GC):
-// [MEDIUM] DrawRoute() allocated a new List<Vector2> points on every call.
-//          Fix: Pre-allocate _pointsBuffer (reused across calls, grown only when needed).
-// [LOW]    activeRouteLines was cleared via foreach + ReturnLine which is correct,
-//          but List.Clear() after the loop is now explicit (was relying on prior clear).
-//          No behaviour change — just clarity.
+
+
+
+
+
+
+
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,12 +23,12 @@ public class RouteRenderer2D : MonoBehaviour
     private List<RectTransform> activeRouteLines = new List<RectTransform>(64);
     private Queue<RectTransform> _linePool = new Queue<RectTransform>(64);
 
-    // FIX: Reusable point buffer — no allocation per DrawRoute call.
-    // Grows only when path count exceeds current capacity (rare after first large route).
+    
+    
     private Vector2[] _pointsBuffer = new Vector2[64];
     private int _pointsCount = 0;
 
-    // ── POOL ────────────────────────────────────────────────────
+    
     RectTransform GetLine()
     {
         if (_linePool.Count > 0)
@@ -46,7 +46,7 @@ public class RouteRenderer2D : MonoBehaviour
         _linePool.Enqueue(l);
     }
 
-    // ── DRAW ─────────────────────────────────────────────────────
+    
     public void DrawRoute(List<GraphNode> path)
     {
         ClearRoute();
@@ -55,10 +55,10 @@ public class RouteRenderer2D : MonoBehaviour
         var map = MapController.Instance;
         if (map == null || !GPSService.Instance.IsReady) return;
 
-        // FIX: Fill reusable buffer instead of allocating new List<Vector2>
-        int needed = path.Count + 1; // user pos + all nodes
+        
+        int needed = path.Count + 1; 
         if (_pointsBuffer.Length < needed)
-            _pointsBuffer = new Vector2[needed + 16]; // grow with headroom
+            _pointsBuffer = new Vector2[needed + 16]; 
 
         _pointsBuffer[0] = map.GetLocalPositionFromGPS(
             GPSService.Instance.Latitude,
@@ -69,7 +69,7 @@ public class RouteRenderer2D : MonoBehaviour
 
         _pointsCount = needed;
 
-        // ── Rải Đinh algorithm (dot spacing) ──
+        
         Vector2 prefabSize = routeLinePrefab.GetComponent<RectTransform>().sizeDelta;
         float accumulated = 0f;
 
@@ -80,7 +80,7 @@ public class RouteRenderer2D : MonoBehaviour
             Vector2 dir = posB - posA;
             float segLen = dir.magnitude;
             if (segLen < 0.001f) { accumulated -= segLen; continue; }
-            Vector2 dirN = dir / segLen; // normalized without extra alloc
+            Vector2 dirN = dir / segLen; 
 
             while (accumulated < segLen)
             {
@@ -94,10 +94,10 @@ public class RouteRenderer2D : MonoBehaviour
                 activeRouteLines.Add(rect);
                 accumulated += dotSpacing;
             }
-            accumulated -= segLen; // carry remainder to next segment
+            accumulated -= segLen; 
         }
 
-        // ── Destination pin ──
+        
         if (destinationPin != null)
         {
             destinationPin.gameObject.SetActive(true);
@@ -109,7 +109,7 @@ public class RouteRenderer2D : MonoBehaviour
         if (map.blueDot != null) map.blueDot.SetAsLastSibling();
     }
 
-    // ── CLEAR ────────────────────────────────────────────────────
+    
     public void ClearRoute()
     {
         for (int i = 0; i < activeRouteLines.Count; i++)

@@ -11,21 +11,21 @@ public class PopupUpdateManager : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
 
     [Header("Buttons")]
-    //[SerializeField] private Button btnExit;
+    
     [SerializeField] private Button btnConfirm;
     [SerializeField] private Button btnCancel;
 
-    // Trạng thái nội tại
+    
     private string _currentFieldKey;
-    private Action<string, string> _onConfirmCallback; // (fieldKey, newValue)
+    private Action<string, string> _onConfirmCallback; 
 
     void Start()
     {
-        //btnExit.onClick.AddListener(Close);
+        
         btnCancel.onClick.AddListener(Close);
         btnConfirm.onClick.AddListener(OnConfirmClicked);
 
-        // Ẩn overlay + popup khi start
+        
         SetVisible(false);
     }
 
@@ -41,24 +41,24 @@ public class PopupUpdateManager : MonoBehaviour
         inputField.DeactivateInputField();
         inputField.text = initialValue;
         inputField.ReleaseSelection();
-        // Không cần ActivateInputField — user tự tap vào để nhập
+        
     }
 
 
-    // ─────────────────────────────────────────────
-    //  Đóng popup
-    // ─────────────────────────────────────────────
+    
+    
+    
     public void Close()
     {
-        // ✅ Deactivate trước khi ẩn, tránh caret bị treo
+        
         inputField.DeactivateInputField();
         inputField.ReleaseSelection();
         SetVisible(false);
     }
 
-    // ─────────────────────────────────────────────
-    //  Xác nhận
-    // ─────────────────────────────────────────────
+    
+    
+    
     private void OnConfirmClicked()
     {
         string newValue = inputField.text.Trim();
@@ -66,7 +66,7 @@ public class PopupUpdateManager : MonoBehaviour
         Close();
     }
 
-    // ─────────────────────────────────────────────
+    
     private void SetVisible(bool visible)
     {
         if (overlay != null) overlay.SetActive(visible);

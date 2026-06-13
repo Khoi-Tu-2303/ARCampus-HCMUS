@@ -1,9 +1,9 @@
-// UI/PopupController.cs — PATCHED
-// FIXES:
-// [MEDIUM] FindNearestNodeToLocation() used float-cast GeoMath.Haversine() — inconsistent
-//          precision vs NavigationSession and LocationDetailController. Switched to HaversineDouble.
-// [LOW]    OnStartNavigationClicked() passed nearestNode to StartNavigation() without null-guard.
-//          Added null check to prevent NullReferenceException when graph is not loaded.
+
+
+
+
+
+
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -91,7 +91,7 @@ public class PopupController : MonoBehaviour
 
         ClosePopup();
 
-        // FIX: null-guard — graph may not be loaded yet
+        
         string nearestNode = FindNearestNodeToLocation(_currentLocation);
         if (nearestNode == null) return;
 
@@ -118,7 +118,7 @@ public class PopupController : MonoBehaviour
         if (nodeId.StartsWith("NTD")) return "NTD";
         if (nodeId.StartsWith("NXS") || nodeId.StartsWith("NXT")) return "NX";
 
-        // ✅ THÊM DÒNG NÀY: Căn tin không có map Indoor, trả về rỗng để nút Indoor Map ẩn đi
+        
         if (nodeId.StartsWith("CT") || nodeId.StartsWith("Căn") || nodeId.StartsWith("FOOD") || nodeId.StartsWith("DRINK")) return "";
 
         char c = nodeId[0];
@@ -127,7 +127,7 @@ public class PopupController : MonoBehaviour
         return nodeId;
     }
 
-    // FIX: Use HaversineDouble — consistent precision with NavigationSession
+    
     string FindNearestNodeToLocation(LocationData loc)
     {
         if (GraphService.Instance == null || GraphService.Instance.Nodes == null) return null;

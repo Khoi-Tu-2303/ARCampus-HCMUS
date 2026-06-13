@@ -1,34 +1,42 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class KeyboardAdjuster : MonoBehaviour
+public class RegisterKeyboardAdjuster : MonoBehaviour
 {
     [Header("References")]
-    public RectTransform chatPanel;
-    public TMP_InputField inputMessage; 
+    public RectTransform loginPanel;
+    public TMP_InputField inputRegFullName;
+    public TMP_InputField inputRegStudentID;
 
     private float _defaultPanelY;
-    private bool _keyboardVisible = false;
     private Canvas _canvas;
+    private bool _isAdjusted = false;  
 
     void Start()
     {
-        _canvas = chatPanel.GetComponentInParent<Canvas>();
-        _defaultPanelY = chatPanel.anchoredPosition.y;
+        _canvas = loginPanel.GetComponentInParent<Canvas>();
+        _defaultPanelY = loginPanel.anchoredPosition.y;
 
-        inputMessage.onSelect.AddListener(OnInputSelected);
-        inputMessage.onDeselect.AddListener(OnInputDeselected);
+        inputRegFullName.onSelect.AddListener(OnLowerInputSelected);
+        inputRegStudentID.onSelect.AddListener(OnLowerInputSelected);
+
+        inputRegFullName.onDeselect.AddListener(OnInputDeselected);
+        inputRegStudentID.onDeselect.AddListener(OnInputDeselected);
     }
 
-    void OnInputSelected(string text)
+    void OnLowerInputSelected(string text)
     {
-        StartCoroutine(AdjustForKeyboard());
+        StopCoroutine("DelayedReset");
+
+        if (!_isAdjusted)
+        {
+            StartCoroutine(AdjustForKeyboard());
+        }
     }
 
     void OnInputDeselected(string text)
     {
-        ResetPanel();
+        StartCoroutine(DelayedReset());
     }
 
     System.Collections.IEnumerator AdjustForKeyboard()
@@ -39,6 +47,19 @@ public class KeyboardAdjuster : MonoBehaviour
         if (keyboardHeight > 0)
         {
             ShiftPanelUp(keyboardHeight);
+            _isAdjusted = true;
+        }
+    }
+
+    System.Collections.IEnumerator DelayedReset()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+
+        if (!inputRegFullName.isFocused && !inputRegStudentID.isFocused)
+        {
+            ResetPanel();
+            _isAdjusted = false;
         }
     }
 
@@ -76,25 +97,29 @@ public class KeyboardAdjuster : MonoBehaviour
         float scaleFactor = _canvas.scaleFactor;
         float offset = keyboardHeight / scaleFactor;
 
-        Vector2 pos = chatPanel.anchoredPosition;
+        Vector2 pos = loginPanel.anchoredPosition;
         pos.y = _defaultPanelY + offset;
-        chatPanel.anchoredPosition = pos;
+        loginPanel.anchoredPosition = pos;
     }
 
     void ResetPanel()
     {
-        _keyboardVisible = false;
-        Vector2 pos = chatPanel.anchoredPosition;
+        Vector2 pos = loginPanel.anchoredPosition;
         pos.y = _defaultPanelY;
-        chatPanel.anchoredPosition = pos;
+        loginPanel.anchoredPosition = pos;
     }
 
     void OnDestroy()
     {
-        if (inputMessage != null)
+        if (inputRegFullName != null)
         {
-            inputMessage.onSelect.RemoveListener(OnInputSelected);
-            inputMessage.onDeselect.RemoveListener(OnInputDeselected);
+            inputRegFullName.onSelect.RemoveListener(OnLowerInputSelected);
+            inputRegFullName.onDeselect.RemoveListener(OnInputDeselected);
+        }
+        if (inputRegStudentID != null)
+        {
+            inputRegStudentID.onSelect.RemoveListener(OnLowerInputSelected);
+            inputRegStudentID.onDeselect.RemoveListener(OnInputDeselected);
         }
     }
 }

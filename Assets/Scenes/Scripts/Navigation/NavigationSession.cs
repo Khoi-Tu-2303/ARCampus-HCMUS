@@ -1,11 +1,11 @@
-// Navigation/NavigationSession.cs — PATCHED
-// FIXES:
-// [HIGH]     Checkpoint detection: added 3-sample hysteresis to eliminate GPS jitter false triggers
-// [HIGH]     Switched to GeoMath.HaversineDouble() — eliminates ~1-2m float precision error
-// [HIGH]     FindNearestNode() now has 200m distance guard — prevents wrong snap outside campus
-// [HIGH]     CancelNavigation() null-guarded CampusUIManager.Instance?.StopNavigation()
-// [MEDIUM]   Intermediate waypoint threshold raised to 15m for GPS inaccuracy tolerance
-// [MEDIUM]   AdvanceWaypoint() skips already-passed nearby waypoints (fast walk edge case)
+
+
+
+
+
+
+
+
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,23 +36,23 @@ public class NavigationSession : MonoBehaviour
     private float bearing;
     private float distanceToTarget;
 
-    // Pre-computed remaining path distances (avoid recalculating every tick)
+    
     private float[] _remainingPathDistances;
     private string _destinationName;
 
     private float _navUpdateTimer;
-    private const float NAV_UPDATE_RATE = 0.5f; // 2 Hz
+    private const float NAV_UPDATE_RATE = 0.5f; 
 
     private float _lastDisplayedTotalDist = -1f;
 
-    // ── HYSTERESIS: checkpoint triggers only after N consecutive in-range samples ──
+    
     private int _arrivalConfirmCount = 0;
-    private const int ARRIVAL_CONFIRM_REQUIRED = 3; // require 3 consecutive readings
-    // THÊM 2 BIẾN NÀY ĐỂ BẢO VỆ GPS JITTER KHI ĐI LẠC:
+    private const int ARRIVAL_CONFIRM_REQUIRED = 3; 
+    
     private int _rerouteConfirmCount = 0;
     private const int REROUTE_CONFIRM_REQUIRED = 3;
-    // ── MAX DISTANCE FOR NODE SNAP ──
-    private const float MAX_SNAP_DISTANCE = 200f; // metres
+    
+    private const float MAX_SNAP_DISTANCE = 200f; 
 
     void OnEnable()
     {
@@ -67,9 +67,9 @@ public class NavigationSession : MonoBehaviour
         ARSession.stateChanged -= OnARTrackingChanged;
     }
 
-    // ──────────────────────────────────────────────────────────
-    // START NAVIGATION
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     public void StartNavigation(string destinationNodeId)
     {
@@ -95,7 +95,7 @@ public class NavigationSession : MonoBehaviour
         }
 
         waypointIndex = 0;
-        _navUpdateTimer = NAV_UPDATE_RATE; // fire immediately on first Update
+        _navUpdateTimer = NAV_UPDATE_RATE; 
         _lastDisplayedTotalDist = -1f;
         _arrivalConfirmCount = 0;
 
@@ -103,7 +103,7 @@ public class NavigationSession : MonoBehaviour
             ? (!string.IsNullOrEmpty(dn.name) ? dn.name : dn.id)
             : destinationNodeId;
 
-        // Pre-compute remaining distances per waypoint
+        
         _remainingPathDistances = new float[currentPath.Count];
         float total = 0f;
         for (int i = currentPath.Count - 1; i > 0; i--)
@@ -126,9 +126,9 @@ public class NavigationSession : MonoBehaviour
         hud?.UpdateTopCard(_destinationName, total);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // UPDATE LOOP — 2 Hz
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void Update()
     {
@@ -144,16 +144,16 @@ public class NavigationSession : MonoBehaviour
         double lat = GPSService.Instance.Latitude;
         double lng = GPSService.Instance.Longitude;
 
-        // Use double-precision Haversine to avoid ~1-2m float error
+        
         distanceToTarget = GeoMath.HaversineDouble(lat, lng, target.lat, target.lng);
-        // TÍNH NĂNG AUTO-REROUTE (QUAY XE KHI ĐI LẠC)
+        
         if (waypointIndex > 0)
         {
             double prevLat = currentPath[waypointIndex - 1].lat;
             double prevLng = currentPath[waypointIndex - 1].lng;
             float distToPrev = GeoMath.HaversineDouble(lat, lng, prevLat, prevLng);
 
-            // Đi lạc quá 80m
+            
             if (distanceToTarget > 80f && distToPrev > 80f)
             {
                 _rerouteConfirmCount++;
@@ -166,11 +166,11 @@ public class NavigationSession : MonoBehaviour
                     CampusUIManager.Instance?.StartNavigation();
                     StartNavigation(finalDestId);
                 }
-                return; // Dừng khung hình này lại, đợi check tiếp
+                return; 
             }
             else
             {
-                _rerouteConfirmCount = 0; // Nếu nhiễu sóng giật về lại đường cũ thì reset bộ đếm đi lạc
+                _rerouteConfirmCount = 0; 
             }
         }
         bool isFinalNode = (waypointIndex == currentPath.Count - 1);
@@ -180,21 +180,21 @@ public class NavigationSession : MonoBehaviour
         {
             _arrivalConfirmCount++;
 
-            // HYSTERESIS: only advance after N consecutive in-range readings
+            
             if (_arrivalConfirmCount >= ARRIVAL_CONFIRM_REQUIRED)
             {
                 _arrivalConfirmCount = 0;
                 AdvanceWaypoint();
-                return; // recalculate next frame
+                return; 
             }
         }
         else
         {
-            // Out of range — reset hysteresis counter
+            
             _arrivalConfirmCount = 0;
         }
 
-        // Update arrow bearing
+        
         bearing = GeoMath.CalculateBearing(lat, lng, target.lat, target.lng);
 
         float smoothedHeading = Camera.main.transform.eulerAngles.y - GPSService.Instance.ARNorthOffset;
@@ -203,7 +203,7 @@ public class NavigationSession : MonoBehaviour
         arView?.UpdateARPathLine(waypointIndex);
         arView?.UpdateNextNodeLabel(target, distanceToTarget);
 
-        // Update total distance display only when it rounds to a new integer
+        
         float totalDist = distanceToTarget + _remainingPathDistances[waypointIndex];
         float roundedTotalDist = Mathf.Round(totalDist);
 
@@ -214,9 +214,9 @@ public class NavigationSession : MonoBehaviour
         }
     }
 
-    // ──────────────────────────────────────────────────────────
-    // WAYPOINT ADVANCE
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     void AdvanceWaypoint()
     {
@@ -228,8 +228,8 @@ public class NavigationSession : MonoBehaviour
             return;
         }
 
-        // Skip any immediately adjacent waypoints the user has already passed
-        // (handles fast walking through densely placed nodes)
+        
+        
         const int MAX_SKIP = 2;
         for (int skip = 0; skip < MAX_SKIP && waypointIndex < currentPath.Count - 1; skip++)
         {
@@ -237,7 +237,7 @@ public class NavigationSession : MonoBehaviour
                 GPSService.Instance.Latitude, GPSService.Instance.Longitude,
                 currentPath[waypointIndex].lat, currentPath[waypointIndex].lng);
 
-            if (nextDist < 10f) // already within 10m of next node
+            if (nextDist < 10f) 
                 waypointIndex++;
             else
                 break;
@@ -266,12 +266,12 @@ public class NavigationSession : MonoBehaviour
 
         ARLabelManager.Instance?.ToggleGrayLabels(false);
 
-        currentPath = null; // stops Update loop
+        currentPath = null; 
     }
 
-    // ──────────────────────────────────────────────────────────
-    // CANCEL NAVIGATION
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     public void CancelNavigation()
     {
@@ -283,15 +283,15 @@ public class NavigationSession : MonoBehaviour
         arView?.ClearAll();
         MapController.Instance?.ClearRoute();
 
-        // FIX: null-guard — crash if CampusUIManager destroyed on scene reload
+        
         CampusUIManager.Instance?.StopNavigation();
 
         ARLabelManager.Instance?.ToggleGrayLabels(false);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // FIND NEAREST NODE — with distance guard
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     string FindBestStartNode(string destId)
     {
@@ -300,14 +300,14 @@ public class NavigationSession : MonoBehaviour
         double uLat = GPSService.Instance.Latitude;
         double uLng = GPSService.Instance.Longitude;
 
-        // Lấy thông tin node đích để tính toán hướng
+        
         if (!GraphService.Instance.Nodes.TryGetValue(destId, out var destNode))
             return null;
 
         string bestNode = null;
         float bestScore = float.MaxValue;
 
-        // 1. Vector Hướng từ Vị trí User đâm thẳng tới Đích
+        
         Vector2 vecToDest = new Vector2((float)(destNode.lng - uLng), (float)(destNode.lat - uLat)).normalized;
         float distUserToDest = GeoMath.HaversineDouble(uLat, uLng, destNode.lat, destNode.lng);
 
@@ -315,10 +315,10 @@ public class NavigationSession : MonoBehaviour
         {
             float distUserToNode = GeoMath.HaversineDouble(uLat, uLng, node.lat, node.lng);
 
-            // Guard: don't snap to a node that is far outside campus
+            
             if (distUserToNode > MAX_SNAP_DISTANCE) continue;
 
-            // 2. TÍCH VÔ HƯỚNG (Dot Product)
+            
             Vector2 vecToNode = new Vector2((float)(node.lng - uLng), (float)(node.lat - uLat));
             float dotProduct = 0f;
             if (vecToNode.sqrMagnitude > 0)
@@ -326,13 +326,13 @@ public class NavigationSession : MonoBehaviour
                 dotProduct = Vector2.Dot(vecToDest, vecToNode.normalized);
             }
 
-            // 3. TÍNH ĐIỂM (Càng thấp càng tốt)
-            // Hệ số phạt góc: (1.5 - 0.5 * dot) -> Cùng hướng = x1.0, Vuông góc = x1.5, Ngược hướng = x2.0
+            
+            
             float anglePenalty = 1.5f - 0.5f * dotProduct;
             float score = distUserToNode * anglePenalty;
 
-            // 4. Phạt lỗi "Đi lùi"
-            // Nếu node bắt đầu lại nằm xa đích hơn cả vị trí sếp đang đứng -> Phạt nặng!
+            
+            
             float distNodeToDest = GeoMath.HaversineDouble(node.lat, node.lng, destNode.lat, destNode.lng);
             if (distNodeToDest > distUserToDest)
             {
@@ -354,18 +354,18 @@ public class NavigationSession : MonoBehaviour
 
         return bestNode;
     }
-    // THUẬT TOÁN ĐÓNG ĐINH AR KHI TỈNH DẬY
+    
     private void OnARTrackingChanged(ARSessionStateChangedEventArgs args)
     {
-        // Khi Camera AR nhận diện lại được không gian (Hết bị Tracking Lost)
+        
         if (args.state == ARSessionState.SessionTracking && currentPath != null)
         {
             if (GPSService.Instance != null && GPSService.Instance.IsReady)
             {
                 Debug.Log("🔄 [AR] Tái định vị lại Không gian AR...");
-                // Dời Tâm Vũ Trụ về lại dưới chân sếp
+                
                 arView?.InitAnchor(GPSService.Instance.Latitude, GPSService.Instance.Longitude);
-                // Vẽ lại toàn bộ sợi dây
+                
                 arView?.DrawARPath(currentPath);
             }
         }

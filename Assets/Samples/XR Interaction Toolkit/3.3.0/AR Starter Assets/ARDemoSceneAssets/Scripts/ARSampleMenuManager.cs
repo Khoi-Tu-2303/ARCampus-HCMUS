@@ -8,20 +8,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
 {
-    /// <summary>
-    /// Handles dismissing the object menu when clicking out the UI bounds, and showing the
-    /// menu again when the create menu button is clicked after dismissal. Manages object deletion in the AR demo scene,
-    /// and also handles the toggling between the object creation menu button and the delete button.
-    /// </summary>
     public class ARSampleMenuManager : MonoBehaviour
     {
         [SerializeField]
         [Tooltip("Button that opens the create menu.")]
         Button m_CreateButton;
 
-        /// <summary>
-        /// Button that opens the create menu.
-        /// </summary>
         public Button createButton
         {
             get => m_CreateButton;
@@ -32,9 +24,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("Button that deletes a selected object.")]
         Button m_DeleteButton;
 
-        /// <summary>
-        /// Button that deletes a selected object.
-        /// </summary>
         public Button deleteButton
         {
             get => m_DeleteButton;
@@ -45,9 +34,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("The menu with all the creatable objects.")]
         GameObject m_ObjectMenu;
 
-        /// <summary>
-        /// The menu with all the creatable objects.
-        /// </summary>
         public GameObject objectMenu
         {
             get => m_ObjectMenu;
@@ -58,9 +44,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("The animator for the object creation menu.")]
         Animator m_ObjectMenuAnimator;
 
-        /// <summary>
-        /// The animator for the object creation menu.
-        /// </summary>
         public Animator objectMenuAnimator
         {
             get => m_ObjectMenuAnimator;
@@ -71,9 +54,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("Button that closes the object creation menu.")]
         Button m_CancelButton;
 
-        /// <summary>
-        /// Button that closes the object creation menu.
-        /// </summary>
         public Button cancelButton
         {
             get => m_CancelButton;
@@ -84,9 +64,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [Tooltip("The interaction group for the AR demo scene.")]
         XRInteractionGroup m_InteractionGroup;
 
-        /// <summary>
-        /// The interaction group for the AR demo scene.
-        /// </summary>
         public XRInteractionGroup interactionGroup
         {
             get => m_InteractionGroup;
@@ -96,19 +73,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         [SerializeField]
         XRInputValueReader<Vector2> m_TapStartPositionInput = new XRInputValueReader<Vector2>("Tap Start Position");
 
-        /// <summary>
-        /// Input to use for the screen tap start position.
-        /// </summary>
-        /// <seealso cref="TouchscreenGestureInputController.tapStartPosition"/>
         public XRInputValueReader<Vector2> tapStartPositionInput
         {
             get => m_TapStartPositionInput;
             set => XRInputReaderUtility.SetInputProperty(ref m_TapStartPositionInput, value, this);
         }
 
-        /// <summary>
-        /// Calls the methods in its invocation list when the spawned object selection changes.
-        /// </summary>
         public UnityEvent<int> spawnedObjectSelectionChanged
         {
             get => m_SpawnedObjectSelectionChanged;
@@ -188,9 +158,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             }
         }
 
-        /// <summary>
-        /// Triggers hide animation for menu.
-        /// </summary>
         public void HideMenu()
         {
             m_ObjectMenuAnimator.SetBool("Show", false);

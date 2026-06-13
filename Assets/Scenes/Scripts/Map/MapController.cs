@@ -1,8 +1,8 @@
-// Map/MapController.cs
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.InputSystem; // Thêm thư viện Input Mới
+using UnityEngine.InputSystem; 
 
 public class MapController : MonoBehaviour
 {
@@ -45,8 +45,8 @@ public class MapController : MonoBehaviour
     {
         if (mapContent != null) currentZoom = mapContent.localScale.x;
 
-        // ✅ FIX MAP TEO NHỎ: 
-        // Bắt code đợi 1 frame để màn hình giãn nở xong xuôi rồi mới đo đạc kích thước!
+        
+        
         StartCoroutine(WaitAndRecalculateZoom());
 
         if (mapScrollRect != null)
@@ -73,20 +73,20 @@ public class MapController : MonoBehaviour
         }
     }
 
-    // ✅ ĐÃ FIX: CHUYỂN SANG DÙNG HỆ THỐNG INPUT MỚI HOÀN TOÀN
+    
     void HandleZoom()
     {
-        // Nếu KHÔNG CÓ ngón tay nào chạm vào (Đang xài PC) -> Cho phép lăn chuột
+        
         if (Input.touchCount == 0)
         {
             if (Input.mouseScrollDelta.y != 0)
             {
-                // Chuẩn hóa con lăn chuột (1 hoặc -1) để không bị zoom quá lố
+                
                 float normalizedScroll = Input.mouseScrollDelta.y > 0 ? 1f : -1f;
                 ZoomMap(normalizedScroll * zoomSpeedPC);
             }
         }
-        // Dành cho Mobile: Phải có ĐÚNG 2 NGÓN TAY trở lên mới cho Zoom
+        
         else if (Input.touchCount >= 2)
         {
             Touch t0 = Input.GetTouch(0);

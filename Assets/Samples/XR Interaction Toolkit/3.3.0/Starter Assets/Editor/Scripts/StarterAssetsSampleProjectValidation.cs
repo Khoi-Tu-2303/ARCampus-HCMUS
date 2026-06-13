@@ -13,9 +13,6 @@ using UnityEngine.InputSystem;
 
 namespace UnityEditor.XR.Interaction.Toolkit.Samples
 {
-    /// <summary>
-    /// Unity Editor class which registers Project Validation rules for the Starter Assets sample package.
-    /// </summary>
     class StarterAssetsSampleProjectValidation
     {
         const string k_Category = "XR Interaction Toolkit";
@@ -44,8 +41,8 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
         [InitializeOnLoadMethod]
         static void RegisterProjectValidationRules()
         {
-            // In the Player Settings UI we have to delay the call one frame to let the settings provider get initialized
-            // since we need to access the settings asset to set the rule's non-delegate properties (FixItAutomatic).
+            
+            
             EditorApplication.delayCall += AddRulesAndRunCheck;
         }
 
@@ -133,8 +130,8 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
 
         internal static void ShowWindow()
         {
-            // Delay opening the window since sometimes other settings in the player settings provider redirect to the
-            // project validation window causing serialized objects to be nullified.
+            
+            
             EditorApplication.delayCall += () =>
             {
                 SettingsService.OpenProjectSettings(k_ProjectValidationSettingsPath);
@@ -158,7 +155,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
 #if UNITY_INPUT_SYSTEM_PROJECT_WIDE_ACTIONS
         static void InstallOrUpdateInputSystem()
         {
-            // Set a 3-second timeout for request to avoid editor lockup
+            
             var currentTime = DateTime.Now;
             var endTime = currentTime + TimeSpan.FromSeconds(3);
 

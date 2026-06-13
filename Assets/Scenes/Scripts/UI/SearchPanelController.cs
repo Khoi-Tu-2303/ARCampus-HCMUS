@@ -1,16 +1,16 @@
-// UI/SearchPanelController.cs
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
 
-// ✅ TẠO 1 STRUCT ĐỂ LƯU KẾT QUẢ TÌM KIẾM (Cho cả Tòa nhà thật lẫn Phòng ảo)
+
 public struct SearchResultItem
 {
     public string DisplayText;
-    public string TargetBuildingName; // Tên tòa nhà để dẫn đường tới
-    public string IndoorDocId;        // ID của phòng (VD: F102, library). Rỗng thì là tòa nhà bthg.
+    public string TargetBuildingName; 
+    public string IndoorDocId;        
 }
 
 public class SearchPanelController : MonoBehaviour
@@ -31,7 +31,7 @@ public class SearchPanelController : MonoBehaviour
     private List<string> _buildingNames = new List<string>(32);
     private List<string> _normalizedNames = new List<string>(32);
     
-    // ✅ ĐỔI TỪ LIST STRING SANG LIST CỦA STRUCT
+    
     private List<SearchResultItem> _filteredResults = new List<SearchResultItem>(32);
     private List<SearchResultItem> _recentResults = new List<SearchResultItem>();
     private List<SearchResultItem> _recommendedResults = new List<SearchResultItem>(4);
@@ -40,7 +40,7 @@ public class SearchPanelController : MonoBehaviour
     private List<Button> _buttonComponents = new List<Button>(32);
     private List<TextMeshProUGUI> _buttonTexts = new List<TextMeshProUGUI>(32);
 
-    // ✅ BỘ TỪ ĐIỂN MAPPING (Khách gõ chữ bên trái -> Map ra dữ liệu bên phải)
+    
     private Dictionary<string, (string building, string indoorId, string displayName)> specialAliases = new Dictionary<string, (string, string, string)>()
     {
         { "thư viện", ("Tòa C", "library", "Thư viện (Tòa C)") },
@@ -200,7 +200,7 @@ public class SearchPanelController : MonoBehaviour
             bool isSearchingFood = lkw.Contains("quán ăn") || lkw.Contains("đồ ăn") || lkw.Contains("ăn uống");
             bool isSearchingDrink = lkw.Contains("quán nước") || lkw.Contains("cafe") || lkw.Contains("cà phê")
                                  || lkw.Contains("trà sữa") || lkw.Contains("giải khát") || lkw.Contains("ăn uống");
-            // 1. TÌM THEO TÊN TÒA NHÀ GỐC NHƯ BÌNH THƯỜNG
+            
             for (int i = 0; i < _normalizedNames.Count; i++)
             {
                 string bName = _buildingNames[i];
@@ -209,10 +209,10 @@ public class SearchPanelController : MonoBehaviour
 
                 bool isMatch = bNameLower.Contains(lkw);
 
-                // Nếu gõ tìm đồ ăn -> Móc hết ID FOOD_ ra
+                
                 if (isSearchingFood && firstId.StartsWith("FOOD_")) isMatch = true;
 
-                // Nếu gõ tìm nước uống -> Móc hết ID DRINK_ ra
+                
                 if (isSearchingDrink && firstId.StartsWith("DRINK_")) isMatch = true;
 
                 if (isMatch)
@@ -221,7 +221,7 @@ public class SearchPanelController : MonoBehaviour
                 }
             }
 
-            // 2. KÍCH HOẠT BỘ NÃO TÌM KIẾM PHÒNG/TIỆN ÍCH
+            
             var indoorMatches = ParseIndoorSearch(lkw);
             _filteredResults.AddRange(indoorMatches);
 
@@ -229,12 +229,12 @@ public class SearchPanelController : MonoBehaviour
         }
     }
 
-    // ✅ BỘ NÃO PHÂN TÍCH TỪ KHÓA ĐỂ SINH RA KẾT QUẢ ẢO (Đã nâng cấp Tường Lửa Firebase)
+    
     List<SearchResultItem> ParseIndoorSearch(string lkw)
     {
         List<SearchResultItem> list = new List<SearchResultItem>();
 
-        // 1. Check Tiện ích (Canteen, Thư viện)
+        
         foreach (var alias in specialAliases)
         {
             if (alias.Key.Contains(lkw) || lkw.Contains(alias.Key))
@@ -250,20 +250,20 @@ public class SearchPanelController : MonoBehaviour
 
         string cleanKw = lkw.Replace(" ", "");
 
-        // 2. Check Phòng Học (VD: f102, a205)
+        
         if (cleanKw.Length >= 2 && cleanKw.Length <= 4)
         {
             char buildingChar = char.ToUpper(cleanKw[0]);
-            if (buildingChar >= 'A' && buildingChar <= 'G') // Tòa A đến G
+            if (buildingChar >= 'A' && buildingChar <= 'G') 
             {
                 string roomNumber = cleanKw.Substring(1);
-                if (int.TryParse(roomNumber, out _)) // Đảm bảo phần đuôi là số
+                if (int.TryParse(roomNumber, out _)) 
                 {
-                    string indoorId = $"{buildingChar}{roomNumber}"; // Nặn ra F102
+                    string indoorId = $"{buildingChar}{roomNumber}"; 
                     string bName = $"Tòa {buildingChar}";
 
-                    // 🛑 BỨC TƯỜNG LỬA CHẶN PHÒNG ẢO 🛑
-                    // Chỉ hiển thị nếu Firebase thực sự có lưu ID phòng này
+                    
+                    
                     if (FirebaseService.Instance.ValidIndoorIds.Contains(indoorId))
                     {
                         list.Add(new SearchResultItem
@@ -277,10 +277,10 @@ public class SearchPanelController : MonoBehaviour
             }
         }
 
-        // 3. Check Nhà điều hành (VD: dh2.3, dh23, ndh2.3, nd2.3)
+        
         if (cleanKw.StartsWith("dh") || cleanKw.StartsWith("đh") || cleanKw.StartsWith("ndh") || cleanKw.StartsWith("nđh") || cleanKw.StartsWith("nd"))
         {
-            // Bóc hết đống chữ cái rườm rà ra, chỉ chừa lại phần số
+            
             string nums = cleanKw.Replace("ndh", "").Replace("nđh", "").Replace("dh", "").Replace("đh", "").Replace("nd", "")
                      .Replace(".", "_").Replace("-", "_");
 
@@ -289,12 +289,12 @@ public class SearchPanelController : MonoBehaviour
                 string indoorId = "";
                 string displayRoom = "";
 
-                if (nums.Contains("_")) // User gõ dh2_3 hoặc nd6.3
+                if (nums.Contains("_")) 
                 {
                     indoorId = $"DH_{nums}";
                     displayRoom = nums.Replace("_", ".");
                 }
-                else if (nums.Length >= 2) // User gõ lười dh23 hoặc nd63 -> tự bóc tách thành 6 và 3
+                else if (nums.Length >= 2) 
                 {
                     string floor = nums.Substring(0, 1);
                     string room = nums.Substring(1);
@@ -302,7 +302,7 @@ public class SearchPanelController : MonoBehaviour
                     displayRoom = $"{floor}.{room}";
                 }
 
-                // 🛑 BỨC TƯỜNG LỬA CHẶN PHÒNG ẢO 🛑
+                
                 if (!string.IsNullOrEmpty(indoorId) && FirebaseService.Instance.ValidIndoorIds.Contains(indoorId))
                 {
                     list.Add(new SearchResultItem
@@ -361,7 +361,7 @@ public class SearchPanelController : MonoBehaviour
         }
     }
 
-    // ✅ HÀM CLICK ĐÃ ĐƯỢC NÂNG CẤP ĐỂ HIỂU ĐƯỢC KẾT QUẢ ẢO
+    
     void OnItemSelected(SearchResultItem item)
     {
         if (groupedBuildings.ContainsKey(item.TargetBuildingName))
@@ -385,7 +385,7 @@ public class SearchPanelController : MonoBehaviour
             if (LocationDetailController.Instance != null)
             {
 
-                // ⚠️ BƯỚC 3 SẮP TỚI MÌNH SẼ SỬA THÀNH:
+                
                 LocationDetailController.Instance.OpenDetailPanel(nearestGate, item.IndoorDocId, item.DisplayText);
             }
         }

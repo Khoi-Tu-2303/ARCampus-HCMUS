@@ -1,4 +1,4 @@
-// Navigation/NavigationHUD.cs
+
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -15,9 +15,9 @@ public class NavigationHUD : MonoBehaviour
     public TextMeshProUGUI mapTxtDistanceETA;
 
     [Header("Map Morph Animation (MỚI)")]
-    public RectTransform mapScrollView;    // Kéo cái Scroll View của bản đồ vào đây
-    public float mapBottomPaddingActive = 350f; // Độ cao lúc có Card dẫn đường (tùy chỉnh)
-    public float mapBottomPaddingInactive = 0f; // Độ cao lúc bình thường (0 là full màn)
+    public RectTransform mapScrollView;    
+    public float mapBottomPaddingActive = 350f; 
+    public float mapBottomPaddingInactive = 0f; 
 
     [Header("Compass")]
     public RectTransform arrowImage;
@@ -34,7 +34,7 @@ public class NavigationHUD : MonoBehaviour
         if (mapTxtDestination != null) mapTxtDestination.text = destinationName;
         if (mapTxtDistanceETA != null) mapTxtDistanceETA.text = etaText;
 
-        // Hiện thẻ Bottom Card & Kéo Map co lại
+        
         if (mapNavCardPanel != null && !mapNavCardPanel.activeSelf)
         {
             mapNavCardPanel.SetActive(true);
@@ -51,7 +51,7 @@ public class NavigationHUD : MonoBehaviour
         if (txtDestination != null) txtDestination.text = "Đang tìm đường...";
         if (txtDistanceETA != null) txtDistanceETA.text = "-- m  •  -- min walk";
 
-        // Tắt thẻ Bottom Card & Kéo Map giãn dài ra full màn hình
+        
         if (mapNavCardPanel != null && mapNavCardPanel.activeSelf)
         {
             mapNavCardPanel.SetActive(false);
@@ -68,19 +68,19 @@ public class NavigationHUD : MonoBehaviour
         if (arrowImage != null) arrowImage.rotation = Quaternion.Euler(0, 0, -angleDeg);
     }
 
-    // ✅ HIỆU ỨNG KÉO GIÃN BẢN ĐỒ MƯỢT MÀ
+    
     private IEnumerator MorphMapBottom(float targetBottom)
     {
         Vector2 offsetMin = mapScrollView.offsetMin;
         float startBottom = offsetMin.y;
         float time = 0;
-        float duration = 0.3f; // Thời gian chạy hiệu ứng: 0.3 giây
+        float duration = 0.3f; 
 
         while (time < duration)
         {
             time += Time.deltaTime;
             float t = time / duration;
-            t = 1f - Mathf.Pow(1f - t, 3f); // Ease-out mượt mà
+            t = 1f - Mathf.Pow(1f - t, 3f); 
             offsetMin.y = Mathf.Lerp(startBottom, targetBottom, t);
             mapScrollView.offsetMin = offsetMin;
             yield return null;

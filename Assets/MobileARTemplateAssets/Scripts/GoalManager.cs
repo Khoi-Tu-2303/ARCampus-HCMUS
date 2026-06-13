@@ -6,25 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 namespace UnityEngine.XR.Templates.AR
 {
-    /// <summary>
-    /// Onboarding goal to be achieved as part of the <see cref="GoalManager"/>.
-    /// </summary>
     public struct Goal
     {
-        /// <summary>
-        /// Goal state this goal represents.
-        /// </summary>
         public GoalManager.OnboardingGoals CurrentGoal;
 
-        /// <summary>
-        /// This denotes whether a goal has been completed.
-        /// </summary>
         public bool Completed;
 
-        /// <summary>
-        /// Creates a new Goal with the specified <see cref="GoalManager.OnboardingGoals"/>.
-        /// </summary>
-        /// <param name="goal">The <see cref="GoalManager.OnboardingGoals"/> state to assign to this Goal.</param>
         public Goal(GoalManager.OnboardingGoals goal)
         {
             CurrentGoal = goal;
@@ -32,64 +19,30 @@ namespace UnityEngine.XR.Templates.AR
         }
     }
 
-    /// <summary>
-    /// The GoalManager cycles through a list of Goals, each representing
-    /// an <see cref="GoalManager.OnboardingGoals"/> state to be completed by the user.
-    /// </summary>
     public class GoalManager : MonoBehaviour
     {
-        /// <summary>
-        /// State representation for the onboarding goals for the GoalManager.
-        /// </summary>
         public enum OnboardingGoals
         {
-            /// <summary>
-            /// Current empty scene
-            /// </summary>
             Empty,
 
-            /// <summary>
-            /// Find/scan for AR surfaces
-            /// </summary>
             FindSurfaces,
 
-            /// <summary>
-            /// Tap a surface to spawn an object
-            /// </summary>
             TapSurface,
 
-            /// <summary>
-            /// Show movement hints
-            /// </summary>
             Hints,
 
-            /// <summary>
-            /// Show scale and rotate hints
-            /// </summary>
             Scale
         }
 
-        /// <summary>
-        /// Individual step instructions to show as part of a goal.
-        /// </summary>
         [Serializable]
         public class Step
         {
-            /// <summary>
-            /// The GameObject to enable and show the user in order to complete the goal.
-            /// </summary>
             [SerializeField]
             public GameObject stepObject;
 
-            /// <summary>
-            /// The text to display on the button shown in the step instructions.
-            /// </summary>
             [SerializeField]
             public string buttonText;
 
-            /// <summary>
-            /// This indicates whether to show an additional button to skip the current goal/step.
-            /// </summary>
             [SerializeField]
             public bool includeSkipButton;
         }
@@ -98,9 +51,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         List<Step> m_StepList = new List<Step>();
 
-        /// <summary>
-        /// List of Goals/Steps to complete as part of the user onboarding.
-        /// </summary>
         public List<Step> stepList
         {
             get => m_StepList;
@@ -111,9 +61,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         ObjectSpawner m_ObjectSpawner;
 
-        /// <summary>
-        /// Object Spawner used to detect whether the spawning goal has been achieved.
-        /// </summary>
         public ObjectSpawner objectSpawner
         {
             get => m_ObjectSpawner;
@@ -124,9 +71,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         GameObject m_GreetingPrompt;
 
-        /// <summary>
-        /// The greeting prompt Game Object to show when onboarding begins.
-        /// </summary>
         public GameObject greetingPrompt
         {
             get => m_GreetingPrompt;
@@ -137,9 +81,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         GameObject m_OptionsButton;
 
-        /// <summary>
-        /// The Options Button to enable once the greeting prompt is dismissed.
-        /// </summary>
         public GameObject optionsButton
         {
             get => m_OptionsButton;
@@ -150,9 +91,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         GameObject m_CreateButton;
 
-        /// <summary>
-        /// The Create Button to enable once the greeting prompt is dismissed.
-        /// </summary>
         public GameObject createButton
         {
             get => m_CreateButton;
@@ -163,9 +101,6 @@ namespace UnityEngine.XR.Templates.AR
         [SerializeField]
         ARTemplateMenuManager m_MenuManager;
 
-        /// <summary>
-        /// The AR Template Menu Manager object to enable once the greeting prompt is dismissed.
-        /// </summary>
         public ARTemplateMenuManager menuManager
         {
             get => m_MenuManager;
@@ -237,12 +172,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Tells the Goal Manager to wait for a specific number of seconds before completing
-        /// the goal and showing the next card.
-        /// </summary>
-        /// <param name="seconds">The number of seconds to wait before showing the card.</param>
-        /// <returns>Returns an IEnumerator for the current coroutine running.</returns>
         public IEnumerator WaitUntilNextCard(float seconds)
         {
             yield return new WaitForSeconds(seconds);
@@ -254,9 +183,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Forces the completion of the current goal and moves to the next.
-        /// </summary>
         public void ForceCompleteGoal()
         {
             CompleteGoal();
@@ -271,9 +197,6 @@ namespace UnityEngine.XR.Templates.AR
             }
         }
 
-        /// <summary>
-        /// Triggers a restart of the onboarding/coaching process.
-        /// </summary>
         public void StartCoaching()
         {
             if (m_OnboardingGoals != null)

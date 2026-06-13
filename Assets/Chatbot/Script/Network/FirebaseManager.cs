@@ -33,14 +33,14 @@ public class FirebaseManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        // Gọi init ngay trong Awake, không chờ Start
+        
         _ = InitializeFirebase();
     }
 
-    // Xóa hoặc để trống Start()
+    
     void Start() { }
 
-    // ───────────────── INIT ─────────────────
+    
     private async Task InitializeFirebase()
     {
         Debug.Log("[FirebaseManager] >>> STEP 1: Begin");
@@ -74,7 +74,7 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
-    // ───────────────── WAIT INIT ─────────────────
+    
     private async Task<bool> EnsureInitializedAsync()
     {
         Debug.Log("[FirebaseManager] Waiting for Firebase init...");
@@ -97,7 +97,7 @@ public class FirebaseManager : MonoBehaviour
         return true;
     }
 
-    // ───────────────── WRITE ─────────────────
+    
     public async Task<bool> UpdateDepartmentField(
         string documentId,
         string fieldKey,
@@ -153,7 +153,7 @@ public class FirebaseManager : MonoBehaviour
         }
     }
 
-    // ───────────────── READ ─────────────────
+    
     public async Task<string> GetDepartmentField(
         string documentId,
         string fieldKey)

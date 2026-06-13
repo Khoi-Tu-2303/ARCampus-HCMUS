@@ -7,7 +7,7 @@ namespace ChatApp.Models
     {
         public string id;
         public string username;
-        public string user_role;   // "guest", "student", "staff"
+        public string user_role;   
         public bool IsGuest => user_role == "guest";
         public bool IsStudent => user_role == "student";
         public bool IsStaff => user_role == "staff";

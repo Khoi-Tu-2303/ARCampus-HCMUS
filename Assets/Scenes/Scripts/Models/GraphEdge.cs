@@ -1,4 +1,4 @@
-// Models/GraphEdge.cs
+
 [System.Serializable]
 public class GraphEdge
 {

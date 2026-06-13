@@ -1,10 +1,10 @@
-// Services/FirebaseService.cs — PATCHED v2
-// FIXES (Phase 6 — Scalability & Robustness):
-// [HIGH] Offline fallback: FetchAllLocations() no longer wipes AllLocations on network failure.
-//        Old behaviour: AllLocations.Clear() ran BEFORE confirming fetch success → data lost.
-//        Fix: Accumulate into a staging list, only replace AllLocations on full success.
-// [LOW]  FetchAllIndoorRooms() now fires OnLocationsLoaded even if description collection empty,
-//        so UI never hangs waiting for an event that never arrives.
+
+
+
+
+
+
+
 
 using UnityEngine;
 using Firebase;
@@ -20,8 +20,8 @@ public class FirebaseService : MonoBehaviour
     private FirebaseFirestore db;
     public bool IsReady = false;
 
-    // ── PUBLIC DATA ──────────────────────────────────────────────
-    // Never cleared unless a fresh fetch fully succeeds.
+    
+    
     public List<LocationData> AllLocations = new List<LocationData>();
     public HashSet<string> ValidIndoorIds = new HashSet<string>();
 
@@ -50,9 +50,9 @@ public class FirebaseService : MonoBehaviour
         });
     }
 
-    // ── FETCH LOCATIONS ─────────────────────────────────────────
-    // FIX: Use a staging list. Only swap AllLocations on full success.
-    // If fetch fails, the old AllLocations data is preserved for offline use.
+    
+    
+    
     public void FetchAllLocations()
     {
         db.Collection("locations").GetSnapshotAsync().ContinueWithOnMainThread((Task<QuerySnapshot> task) => {
@@ -60,8 +60,8 @@ public class FirebaseService : MonoBehaviour
             {
                 Debug.LogError("❌ Fetch failed: " + task.Exception);
 
-                // FIX: Only show modal if we have NO cached data at all.
-                // If AllLocations already has data from a previous fetch, keep running silently.
+                
+                
                 if (AllLocations.Count == 0)
                 {
                     if (SystemModalController.Instance != null)
@@ -74,7 +74,7 @@ public class FirebaseService : MonoBehaviour
                 return;
             }
 
-            // FIX: Accumulate into staging list first
+            
             var staging = new List<LocationData>(task.Result.Count);
             foreach (var doc in task.Result.Documents)
             {
@@ -91,7 +91,7 @@ public class FirebaseService : MonoBehaviour
                 });
             }
 
-            // Only replace the live list when we have a good result
+            
             AllLocations = staging;
             Debug.Log($"✅ Total locations loaded: {AllLocations.Count}");
 
@@ -99,9 +99,9 @@ public class FirebaseService : MonoBehaviour
         });
     }
 
-    // ── FETCH INDOOR ROOM IDs ────────────────────────────────────
-    // FIX: Always fire OnLocationsLoaded, even if the description collection is empty or errors.
-    //      Previously, a Firestore error here silently swallowed the event and left UI stuck.
+    
+    
+    
     private void FetchAllIndoorRooms()
     {
         db.Collection("description").GetSnapshotAsync().ContinueWithOnMainThread((Task<QuerySnapshot> task) => {
@@ -114,16 +114,16 @@ public class FirebaseService : MonoBehaviour
             }
             else
             {
-                // FIX: Non-fatal — log warning but don't block app startup
+                
                 Debug.LogWarning("⚠️ [Firebase] Could not load indoor room IDs. Indoor search may be limited.");
             }
 
-            // FIX: Fire event unconditionally so UI never hangs
+            
             OnLocationsLoaded?.Invoke();
         });
     }
 
-    // ── DESCRIPTION QUERIES (unchanged) ─────────────────────────
+    
     public void GetBuildingDescription(string buildingName, Action<string> onComplete)
     {
         FirebaseFirestore.DefaultInstance

@@ -29,7 +29,7 @@ public class ARRaycastInput : MonoBehaviour
     void ShootRaycast(Vector2 screenPosition)
     {
         Camera cam = GetCamera();
-        if (cam == null) return; /
+        if (cam == null) return; 
         Ray ray = cam.ScreenPointToRay(screenPosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {

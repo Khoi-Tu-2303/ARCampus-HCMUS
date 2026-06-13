@@ -1,8 +1,8 @@
-// UI/SystemModalController.cs — PATCHED
-// FIXES:
-// [CRITICAL] OnRetryClicked only checked IsReady flag — now calls GPSService.RequestRestart()
-//            which actually restarts Input.location.Start(), allowing true GPS recovery.
-// [HIGH]     Added public HideModal() already present — kept for GPSService to auto-dismiss.
+
+
+
+
+
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,9 +42,9 @@ public class SystemModalController : MonoBehaviour
         if (btnBack != null) btnBack.onClick.AddListener(OnBackClicked);
     }
 
-    // ──────────────────────────────────────────────────────────
-    // PUBLIC API
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     public void ShowWarning(WarningType type, BackActionTarget backTarget)
     {
@@ -74,9 +74,9 @@ public class SystemModalController : MonoBehaviour
         _retryInProgress = false;
     }
 
-    // ──────────────────────────────────────────────────────────
-    // BUTTON HANDLERS
-    // ──────────────────────────────────────────────────────────
+    
+    
+    
 
     private void OnRetryClicked()
     {
@@ -86,16 +86,16 @@ public class SystemModalController : MonoBehaviour
 
             if (GPSService.Instance.IsReady)
             {
-                // GPS already recovered (monitor loop called HandleGPSRestored)
+                
                 HideModal();
                 return;
             }
 
-            if (_retryInProgress) return; // prevent double-tap
+            if (_retryInProgress) return; 
             _retryInProgress = true;
 
-            // FIX: Call RequestRestart() which actually calls Input.location.Start()
-            // Modal will auto-dismiss when GPSService fires OnGPSRecovered → HandleGPSRestored → HideModal()
+            
+            
             if (txtDesc != null) txtDesc.text = "Đang kết nối lại GPS...";
             GPSService.Instance.RequestRestart();
         }
@@ -113,7 +113,7 @@ public class SystemModalController : MonoBehaviour
         if (_currentBackTarget == BackActionTarget.GoToLogin)
         {
             Debug.Log("🚪 [Modal] Quay về màn hình Đăng Nhập");
-            // UnityEngine.SceneManagement.SceneManager.LoadScene("LoginScene");
+            
         }
         else if (_currentBackTarget == BackActionTarget.GoToMain)
         {

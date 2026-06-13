@@ -1,9 +1,9 @@
-// UI/TopHeaderController.cs — PATCHED
-// FIXES:
-// [LOW] O(n) Haversine scan over ALL graph nodes every second.
-//       Solution: Pre-filter named nodes (exclude W_ and CP_ prefixes) in Start()
-//       and cache the filtered list. Scan only runs once against ~10-30 named nodes
-//       instead of 200+ nodes.
+
+
+
+
+
+
 
 using UnityEngine;
 using System.Collections;
@@ -17,7 +17,7 @@ public class TopHeaderController : MonoBehaviour
 
     private float _checkTimer = 0f;
 
-    // Pre-filtered list of named nodes (no waypoints, no checkpoints)
+    
     private List<GraphNode> _namedNodes;
     private bool _nodesReady = false;
 
@@ -28,7 +28,7 @@ public class TopHeaderController : MonoBehaviour
 
     IEnumerator WaitAndCacheNodes()
     {
-        // Wait until graph is loaded
+        
         while (GraphService.Instance == null || !GraphService.Instance.IsLoaded)
             yield return new WaitForSeconds(0.5f);
 
@@ -57,7 +57,7 @@ public class TopHeaderController : MonoBehaviour
         float minDist = float.MaxValue;
         string nearestName = "Đang xác định...";
 
-        // Scan only pre-filtered named nodes
+        
         foreach (var node in _namedNodes)
         {
             float dist = GeoMath.Haversine(userLat, userLng, (float)node.lat, (float)node.lng);

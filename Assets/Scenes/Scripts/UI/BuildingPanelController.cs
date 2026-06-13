@@ -1,6 +1,6 @@
-// UI/BuildingPanelController.cs
-// THAY: hardcoded list → load từ FirebaseService
-// THAY: GPSManager → GPSService (nếu có dùng)
+
+
+
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +18,7 @@ public class BuildingPanelController : MonoBehaviour
 
     IEnumerator LoadBuildingsFromFirebase()
     {
-        // Chờ Firebase sẵn sàng
+        
         float timeout = 5f;
         while ((FirebaseService.Instance == null || !FirebaseService.Instance.IsReady
                 || FirebaseService.Instance.AllLocations.Count == 0) && timeout > 0)
@@ -27,10 +27,10 @@ public class BuildingPanelController : MonoBehaviour
             yield return null;
         }
 
-        // Xóa buttons cũ
+        
         foreach (Transform child in contentParent) Destroy(child.gameObject);
 
-        // Lấy danh sách tên tòa nhà duy nhất từ Firebase (dùng building field)
+        
         var seen = new HashSet<string>();
         foreach (var loc in FirebaseService.Instance.AllLocations)
         {
@@ -49,6 +49,6 @@ public class BuildingPanelController : MonoBehaviour
     {
         Debug.Log($"🏢 Selected: {buildingName}");
         CampusUIManager.Instance.CloseAllPanels();
-        // TODO: Mở FloorMap panel với tòa được chọn
+        
     }
 }

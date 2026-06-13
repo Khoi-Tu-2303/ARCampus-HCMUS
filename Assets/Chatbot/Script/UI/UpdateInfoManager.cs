@@ -5,22 +5,6 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using ChatApp.Managers;
 
-/// <summary>
-/// Gắn vào: UpdateInfoPanel (root panel của scene UpdateInfoScene)
-///
-/// Hierarchy cần thiết:
-///   UpdateInfoPanel
-///     Header
-///       Btn_Back          → Button
-///       Text_UpdateInfo   → TMP (tiêu đề)
-///       Text_UserLabel    → TMP (username)
-///     DepartmentScrollView
-///       Viewport
-///         Content
-///           Dep_ThuVien   → chứa Button + Text(TMP)
-///           Dep_PCTSV     → chứa Button + Text(TMP)
-///           Dep_PDT       → chứa Button + Text(TMP)
-/// </summary>
 public class UpdateInfoManager : MonoBehaviour
 {
     [Header("Header")]
@@ -37,12 +21,12 @@ public class UpdateInfoManager : MonoBehaviour
     [SerializeField] private string loginSceneName = "LoginScene";
 
     [Header("Dep Info Panel (cùng Canvas, ẩn ban đầu)")]
-    [SerializeField] private DepInfoManager depInfoManager;   // panel con
+    [SerializeField] private DepInfoManager depInfoManager;   
 
     [Header("Panels")]
     [SerializeField] private GameObject depPanel;
 
-    // ── Map tên department → documentId trên Firestore ──
+    
     private readonly Dictionary<string, string> _depDocIdMap = new()
     {
         { "ThuVien", "TV"    },
@@ -50,7 +34,7 @@ public class UpdateInfoManager : MonoBehaviour
         { "PDT",     "P_DT"   }
     };
 
-    // ── Tên hiển thị tương ứng ──
+    
     private readonly Dictionary<string, string> _depDisplayName = new()
     {
         { "ThuVien", "Thư viện"                  },
@@ -58,16 +42,16 @@ public class UpdateInfoManager : MonoBehaviour
         { "PDT",     "Phòng Đào tạo"             }
     };
 
-    private string _currentUserId;     // ← UserID lấy từ AuthManager
+    private string _currentUserId;     
     private string _defaultTitle;
 
     void Start()
     {
-        // ── Lấy thông tin user theo cơ chế AuthManager ──
+        
         var user = AuthManager.Instance.CurrentUser;
         if (user == null)
         {
-            // Chưa đăng nhập → về Login
+            
             SceneManager.LoadScene(loginSceneName);
             return;
         }
@@ -80,24 +64,24 @@ public class UpdateInfoManager : MonoBehaviour
         if (textTitle != null)
             _defaultTitle = textTitle.text;
 
-        // Gán sự kiện nút
+        
         btnBack.onClick.AddListener(OnBackClicked);
         btnThuVien.onClick.AddListener(() => OnDepartmentClicked("ThuVien"));
         btnPCTSV.onClick.AddListener(() => OnDepartmentClicked("PCTSV"));
         btnPDT.onClick.AddListener(() => OnDepartmentClicked("PDT"));
 
-        // Ẩn panel dep info ban đầu
+        
         if (depInfoManager != null)
             depInfoManager.gameObject.SetActive(false);
     }
 
-    // ─────────────────────────────────────────────
+    
     private void OnBackClicked()
     {
         if (depInfoManager != null && depInfoManager.gameObject.activeSelf)
         {
-            depInfoManager.gameObject.SetActive(false); // ẩn DepInfoPanel
-            if (depPanel != null) depPanel.SetActive(true); // ← thêm dòng này
+            depInfoManager.gameObject.SetActive(false); 
+            if (depPanel != null) depPanel.SetActive(true); 
             if (textTitle != null)
                 textTitle.text = _defaultTitle;
             return;

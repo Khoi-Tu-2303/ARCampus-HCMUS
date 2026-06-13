@@ -1,7 +1,7 @@
-// Services/GraphService.cs
-// ĐỔI TÊN từ GraphLoader → GraphService
-// XÓA class GraphNode và GraphEdge (đã tách sang Models/)
-// THAY HaversineDistance() bằng GeoMath.Haversine()
+
+
+
+
 
 using UnityEngine;
 using System.Collections;
@@ -43,7 +43,7 @@ public class GraphService : MonoBehaviour
         Nodes.Clear();
         Edges.Clear();
 
-        // Đọc điểm (Points)
+        
         for (int i = 0; i < features.Count; i++)
         {
             var feature = features[i];
@@ -61,7 +61,7 @@ public class GraphService : MonoBehaviour
             };
         }
 
-        // Đọc đường nối (LineStrings)
+        
         for (int i = 0; i < features.Count; i++)
         {
             var feature = features[i];
@@ -73,7 +73,7 @@ public class GraphService : MonoBehaviour
             if (string.IsNullOrEmpty(source) || string.IsNullOrEmpty(target)) continue;
             if (!Nodes.ContainsKey(source) || !Nodes.ContainsKey(target)) continue;
 
-            // THAY: HaversineDistance() → GeoMath.Haversine()
+            
             float dist = GeoMath.Haversine(Nodes[source].lat, Nodes[source].lng,
                                            Nodes[target].lat, Nodes[target].lng);
 
